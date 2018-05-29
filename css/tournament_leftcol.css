@@ -2092,33 +2092,53 @@
   .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .week-slider .nm-dropdown .nm-dropdown-content ul::before {
     left: 13%;
   }
-  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .slider-select {
+  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select {
+    background: url(../img/select.jpg) no-repeat transparent;
+    background-position: 100% 100%;
+    width: 89px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+  }
+  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select::after {
+    content: '';
+    display: inline-block;
+    background: url(../img/triangle.jpg) no-repeat transparent 0 0;
+    position: absolute;
+    right: 0;
+    height: 29px;
+    width: 20px;
+  }
+  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select .slider-select {
     display: block;
     font-size: 14px;
     color: #a1b1b7;
     border: none;
-    -webkit-border-radius: 4px;
-            border-radius: 4px;
-    padding: 5px 10px;
+    padding: 5px 8px;
     padding-right: 0;
     outline: none;
-    background: url("../img/select.jpg") no-repeat transparent;
-    background-position: 100% 100%;
-    width: 89px;
-    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
-  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .slider-select:active,
-  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .slider-select:focus,
-  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .slider-select:hover {
+  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:active,
+  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:focus,
+  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:hover {
     background-image: url("../img/select_active.jpg");
   }
-  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .slider-select:hover {
-    color: #3e80a9;
-    cursor: pointer;
+  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:active::after,
+  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:focus::after,
+  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:hover::after {
+    background-image: url("../img/triangle_active.jpg");
   }
-  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .slider-select option {
-    background-color: transparent;
-    border: none;
+  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:active .slider-select,
+  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:focus .slider-select,
+  .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:hover .slider-select {
+    color: #486e7c;
+    cursor: pointer;
   }
   .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-main-content .pr-main-content-row.favorites-match-row .pr-match-rows-wrap .pr-match-row .pr-match-row-right .pr-match-row-right-wrap {
     display: none;
