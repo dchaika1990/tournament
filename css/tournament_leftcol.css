@@ -2104,12 +2104,12 @@
   .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select::after {
     content: '';
     display: inline-block;
-    background: url(../img/triangle.jpg) no-repeat transparent center;
+    border-style: solid;
+    border-width: 7px 3px 0 3px;
+    border-color: #a1b1b7 transparent transparent transparent;
     position: absolute;
-    right: 0;
-    top: 0;
-    height: 27px;
-    width: 20px;
+    right: 8px;
+    top: 10px;
   }
   .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select .slider-select {
     background-color: transparent;
@@ -2137,7 +2137,7 @@
   .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:active::after,
   .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:focus::after,
   .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:hover::after {
-    background-image: url("../img/triangle_active.jpg");
+    border-color: #486e7c transparent transparent transparent;
   }
   .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:active .slider-select,
   .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select:focus .slider-select,
