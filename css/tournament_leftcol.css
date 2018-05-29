@@ -2112,6 +2112,7 @@
     width: 20px;
   }
   .tournament-leftcol .nm-grow main .pr-main-wrap.matches-sm .pr-main .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .label-select .slider-select {
+    background-color: transparent;
     display: block;
     font-size: 14px;
     color: #a1b1b7;
