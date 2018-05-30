@@ -186,14 +186,14 @@ $('.pr-dropdown-favorite .pr-mute').on('click', function () {
 /*           Tournament-leftcol button            */
 /*================================================*/
 
-
 //Above
 
 $('.pr-dropdown-time-period li').on('click', function () {
     var textLi = $(this).children('span').text();
     $(this).parents('.pr-time-period-btn').children('.active').text(textLi);
-    console.log(textLi);
-    console.log($(this).parents('.pr-time-period-btn').children('.active').text());
+
+    $('.pr-time-period-btn .active.nm-toggler').removeClass('open');
+    $(this).parents('.pr-dropdown-time-period').fadeOut(200);
 });
 
 $('.pr-dropdown-time-period li:first').hover(
