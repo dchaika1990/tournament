@@ -1,0 +1,149 @@
+/*================================================*/
+/*					 Team         		      */
+/*================================================*/
+.team .nm-grow .pr-main-wrap.about .pr-main-body {
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 20px 30px 0 30px;
+  margin-bottom: -20px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+}
+.team .nm-grow .pr-main-wrap.about .pr-main-body p {
+  margin-bottom: 20px;
+  color: #000000;
+}
+.team .nm-grow .pr-main-wrap.about .pr-main-body p a {
+  color: #486e7c;
+}
+.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a {
+  color: #c9cccf;
+}
+.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:nth-child(1) {
+  background: url(../img/icons/arrow-point-to-left-grey.svg) no-repeat 13% 50%;
+  padding: 5px 10px 5px 26px;
+  background-size: 10%;
+}
+.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:last-child {
+  background: url(../img/icons/arrow-point-to-right-grey.svg) no-repeat 88% 50%;
+  padding: 5px 26px 5px 10px;
+  background-size: 13%;
+}
+.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover {
+  color: #486e7c;
+  border-color: #486e7c;
+}
+.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover:nth-child(1) {
+  background-image: url("../img/icons/arrow-point-to-left-blue.svg");
+}
+.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover:last-child {
+  background-image: url("../img/icons/arrow-point-to-right-blue.svg");
+}
+.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-main-content {
+  margin-top: 30px;
+}
+.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-selected {
+  padding: 5px 20px 5px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #486e7c;
+  position: relative;
+  cursor: pointer;
+}
+.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-selected::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 5px 3px 0 3px;
+  border-color: #486e7c transparent transparent transparent;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-40%);
+      -ms-transform: translateY(-40%);
+          transform: translateY(-40%);
+}
+.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list {
+  position: absolute;
+  display: none;
+  -webkit-box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  left: 0;
+  top: 23px;
+  z-index: 10;
+}
+.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul li {
+  background-color: #fff;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  min-width: 80px;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Gotham Pro', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul li a {
+  display: inline-block;
+  padding: 9px;
+  width: 100%;
+  position: relative;
+}
+.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul li:first-child {
+  -webkit-border-radius: 4px 4px 0 0;
+          border-radius: 4px 4px 0 0;
+  position: relative;
+}
+.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul li:first-child::before {
+  position: absolute;
+  display: block;
+  content: "";
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #fff transparent;
+  top: -2px;
+  right: 30px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul li:last-child {
+  -webkit-border-radius: 0 0 4px 4px;
+          border-radius: 0 0 4px 4px;
+}
+.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul li + li {
+  border-top: 1px solid #c9cccf;
+}

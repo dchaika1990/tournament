@@ -219,12 +219,12 @@ $('.progressbar li').hover(
     function () {
         $(this).children('span').addClass('open');
         $(this).addClass('show');
-        $(this).children('.nm-dropdown').fadeIn(200);
+        $(this).children('.nm-dropdown').show();
     },
     function () {
         $(this).children('span').removeClass('open');
         $(this).removeClass('show');
-        $(this).children('.nm-dropdown').fadeOut(200);
+        $(this).children('.nm-dropdown').hide();
     }
 );
 
