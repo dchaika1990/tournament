@@ -1,76 +1,34 @@
 /*================================================*/
 /*					 Team         		      */
 /*================================================*/
-.team .nm-grow .pr-main-wrap.about .pr-main-body {
-  font-family: 'HelveticaNeueCyr', sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  padding: 20px 30px 0 30px;
-  margin-bottom: -20px;
-  -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
-  -webkit-column-count: 2;
-     -moz-column-count: 2;
-          column-count: 2;
+.forward {
+  color: #f69051;
 }
-.team .nm-grow .pr-main-wrap.about .pr-main-body p {
-  margin-bottom: 20px;
-  color: #000000;
+.midfielder {
+  color: #33ed5f;
 }
-.team .nm-grow .pr-main-wrap.about .pr-main-body p a {
-  color: #486e7c;
+.goalkeeper {
+  color: #dedc25;
 }
-.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a {
-  color: #c9cccf;
+.defender {
+  color: #90b5f4;
 }
-.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:nth-child(1) {
-  background: url(../img/icons/arrow-point-to-left-grey.svg) no-repeat 13% 50%;
-  padding: 5px 10px 5px 26px;
-  background-size: 10%;
-}
-.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:last-child {
-  background: url(../img/icons/arrow-point-to-right-grey.svg) no-repeat 88% 50%;
-  padding: 5px 26px 5px 10px;
-  background-size: 13%;
-}
-.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover {
-  color: #486e7c;
-  border-color: #486e7c;
-}
-.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover:nth-child(1) {
-  background-image: url("../img/icons/arrow-point-to-left-blue.svg");
-}
-.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover:last-child {
-  background-image: url("../img/icons/arrow-point-to-right-blue.svg");
-}
-.team .nm-grow .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-main-content {
-  margin-top: 30px;
-}
-.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown {
+.division-dropdown {
   position: relative;
   cursor: pointer;
+  margin-left: -10px;
 }
-.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-selected {
-  padding: 5px 20px 5px 0;
+.division-dropdown .division-dropdown-selected {
+  padding: 10px 20px 10px 10px;
+  display: inline-block;
   font-size: 14px;
   font-weight: 500;
   color: #486e7c;
   position: relative;
   cursor: pointer;
+  min-width: 175px;
 }
-.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-selected::after {
+.division-dropdown .division-dropdown-selected::after {
   content: '';
   position: absolute;
   border-style: solid;
@@ -82,16 +40,23 @@
       -ms-transform: translateY(-40%);
           transform: translateY(-40%);
 }
-.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list {
+.division-dropdown .division-dropdown-selected.open {
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  -webkit-border-radius: 4px 4px 0 0;
+          border-radius: 4px 4px 0 0;
+}
+.division-dropdown .division-dropdown-list {
   position: absolute;
   display: none;
   -webkit-box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
           box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
   left: 0;
-  top: 23px;
+  top: 35px;
   z-index: 10;
 }
-.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul {
+.division-dropdown .division-dropdown-list ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,30 +67,266 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul li {
+.division-dropdown .division-dropdown-list ul li {
   background-color: #fff;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
-  min-width: 80px;
+  min-width: 175px;
   text-align: left;
   cursor: pointer;
   font-family: 'Gotham Pro', sans-serif;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 500;
   text-transform: uppercase;
 }
-.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul li a {
+.division-dropdown .division-dropdown-list ul li a {
   display: inline-block;
   padding: 9px;
   width: 100%;
   position: relative;
+  color: #a1a6ac;
 }
-.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul li:first-child {
-  -webkit-border-radius: 4px 4px 0 0;
-          border-radius: 4px 4px 0 0;
+.division-dropdown .division-dropdown-list ul li + li {
+  border-top: 1px solid #c9cccf;
+}
+.division-dropdown .division-dropdown-list ul li.active a {
+  position: relative;
+  padding-left: 30px;
+}
+.division-dropdown .division-dropdown-list ul li.active a::before {
+  position: absolute;
+  content: '';
+  left: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 7px;
+  width: 7px;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #3e80a9;
+}
+.division-dropdown .division-dropdown-list ul li.active:hover a::before {
+  background-color: #fff;
+}
+.division-dropdown .division-dropdown-list ul li:hover {
+  background-color: #3e80a9;
+}
+.division-dropdown .division-dropdown-list ul li:hover a {
+  color: #fff;
+}
+.division-dropdown .division-dropdown-list ul li:last-child {
+  -webkit-border-radius: 0 0 4px 4px;
+          border-radius: 0 0 4px 4px;
+}
+.week-win {
+  background-color: #58e9a7;
+}
+.strong-win {
+  background-color: #1ccc30;
+}
+.week-loss {
+  background-color: #da8792;
+}
+.strong-loss {
+  background-color: #ed485d;
+}
+.draw {
+  background-color: #d2d4d7;
+}
+.progress-loss {
+  background-color: #ed334d;
+}
+.progress-win {
+  background-color: #486e7c;
+}
+.progress-draw {
+  background-color: #d3d3d3;
+}
+@media (max-width: 569px) {
+  .team .above-content-block-homepage {
+    margin-bottom: 25px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .team .above-content-block-homepage .nm-content .nm-page-maintext {
+    width: 100%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .team .above-content-block-homepage .nm-content .nm-page-maintext div:first-child {
+    width: auto;
+  }
+  .team .above-content-block-homepage .nm-content .nm-page-maintext div:first-child .nm-h1 {
+    margin-top: 0;
+  }
+  .team .above-content-block-homepage .nm-content .nm-page-maintext div:last-child .pr-favorite-btn {
+    width: 20px;
+    height: 20px;
+  }
+  .team .above-content-block-homepage .nm-content .nm-page-maintext div:last-child .pr-favorite-btn i {
+    font-size: 10px;
+  }
+}
+.team .nm-grow main .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a {
+  color: #c9cccf;
+}
+.team .nm-grow main .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:nth-child(1) {
+  background: url(../img/icons/arrow-point-to-left-grey.svg) no-repeat 13% 50%;
+  padding: 5px 10px 5px 26px;
+  background-size: 10%;
+}
+.team .nm-grow main .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:last-child {
+  background: url(../img/icons/arrow-point-to-right-grey.svg) no-repeat 88% 50%;
+  padding: 5px 26px 5px 10px;
+  background-size: 13%;
+}
+.team .nm-grow main .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover {
+  color: #486e7c;
+  border-color: #486e7c;
+}
+.team .nm-grow main .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover:nth-child(1) {
+  background-image: url("../img/icons/arrow-point-to-left-blue.svg");
+}
+.team .nm-grow main .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover:last-child {
+  background-image: url("../img/icons/arrow-point-to-right-blue.svg");
+}
+.team .nm-grow main .pr-main-wrap.matches-sm .pr-favorites-main .pr-favorites-left .pr-main-content {
+  margin-top: 30px;
+}
+.team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-title-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block .left {
+  width: 81%;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding-bottom: 0;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-page-btn {
+  font-size: 11px;
+  font-family: 'Gotham Pro', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 8px 9px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  border: 1px solid #fff;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-page-btn:hover {
+  cursor: pointer;
+  background-color: #fff;
+  border-color: #395a67;
+  color: #3e80a9;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn {
   position: relative;
 }
-.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul li:first-child::before {
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn {
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  border: 1px solid #fff;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn i {
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-40%) translateY(-50%);
+      -ms-transform: translateX(-40%) translateY(-50%);
+          transform: translateX(-40%) translateY(-50%);
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn:hover {
+  cursor: pointer;
+  background-color: #fff;
+  border-color: #395a67;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn:hover i {
+  color: #3e80a9;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn.pr-favorite-btn-active {
+  border-color: #4186b0;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn.pr-favorite-btn-active i {
+  color: #4186b0;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn.pr-favorite-btn-active:hover {
+  background-color: transparent;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn.default-btn {
+  border-color: #c9cccf;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn.default-btn i {
+  color: #c9cccf;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn.default-btn:hover {
+  background-color: #4186b1;
+  border-color: #4186b0;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn.default-btn:hover i {
+  color: #fff;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn.pr-fvr-muted {
+  position: relative;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn.pr-fvr-muted::after {
+  content: '';
+  width: 39px;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transform: rotate(-45deg) translateX(-49%);
+      -ms-transform: rotate(-45deg) translateX(-49%);
+          transform: rotate(-45deg) translateX(-49%);
+  top: 0;
+  right: -19px;
+  position: absolute;
+  display: block;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-favorite-btn.pr-fvr-muted:hover::after {
+  background-color: #395a67;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-dropdown-favorite {
+  display: none;
+  position: absolute;
+  top: 34px;
+  right: 0;
+  z-index: 90 !important;
+  will-change: opacity;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-dropdown-favorite ul {
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  min-width: 150px;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-dropdown-favorite ul:before {
   position: absolute;
   display: block;
   content: "";
@@ -133,17 +334,1301 @@
   border-width: 0 5px 5px 5px;
   border-color: transparent transparent #fff transparent;
   top: -2px;
-  right: 30px;
+  right: 8px;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: .2s;
   transition: .2s;
 }
-.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul li:last-child {
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-dropdown-favorite ul.first-hover:before {
+  border-color: transparent transparent #4186B1 transparent;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-dropdown-favorite ul li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-dropdown-favorite ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #a1a6ac;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 100%;
+  min-height: 30px;
+  height: 30px;
+  padding: 5px 12px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-dropdown-favorite ul li a.pr-remove {
+  color: #ed334d;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-dropdown-favorite ul li a i {
+  font-size: 12px;
+  color: #c9cccf;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-dropdown-favorite ul li a:hover {
+  color: #fff;
+  background-color: #4186B1;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-dropdown-favorite ul li:not(:last-child) {
+  border-bottom: 1px solid #c9cccf;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-main-title {
+  border-bottom-color: #dcdce3;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-main-title .pr-main-title-box .pr-main-title-left p {
+  text-transform: capitalize;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile {
+  display: none;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-top: 15px;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box {
+  width: 20%;
+  padding: 2px;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  background-color: #fff;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 11px 13px;
+  border-bottom: 1px solid #f4f4f4;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-content .team-player-icon {
+  margin-top: 15px;
+  text-align: center;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-content .team-player-icon img {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 1px solid #f4f4f4;
+  height: 97px;
+  width: 97px;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-content .team-player-name {
+  font-weight: 100;
+  font-size: 18px;
+  margin: 10px 15px 0px 15px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid #f4f4f4;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-content .team-player-controls {
+  display: none;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-footer {
+  padding: 8px 15px 7px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-footer .flag {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  margin-right: 10px;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-footer .name {
+  font-size: 11px;
+  font-weight: 300;
+  color: #43474d;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#486e7c), to(#3e80a9));
+  background-image: -webkit-linear-gradient(bottom, #486e7c, #3e80a9);
+  background-image: linear-gradient(to top, #486e7c, #3e80a9);
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover .team-player-header {
+  display: none;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover .team-player-content {
+  padding-top: 25px;
+  padding-bottom: 13px;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover .team-player-content .team-player-icon img {
+  border-color: transparent;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover .team-player-content .team-player-name {
+  color: #fff;
+  border-color: transparent;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover .team-player-content .team-player-controls {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 16px;
+  margin-top: 2px;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover .team-player-content .team-player-controls .team-player-favorite-btn .pr-favorite-btn.pr-favorite-btn-active {
+  background-color: #fff;
+  border-color: #395a67;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover .team-player-footer {
+  display: none;
+}
+.team .nm-grow main .pr-main-wrap.about .pr-main-body {
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 20px 30px 0 30px;
+  margin-bottom: -20px;
+  -webkit-column-gap: 28px;
+     -moz-column-gap: 28px;
+          column-gap: 28px;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+}
+.team .nm-grow main .pr-main-wrap.about .pr-main-body p {
+  margin-bottom: 16px;
+  color: #000000;
+  line-height: 16px;
+}
+.team .nm-grow main .pr-main-wrap.about .pr-main-body p a {
+  color: #486e7c;
+}
+.team .nm-header-bottom .nm-big-wrapper ul li.about-btn {
+  background: url("../img/icons/about.svg") no-repeat center top;
+}
+.team .nm-header-bottom .nm-big-wrapper ul li.about-btn.active {
+  background-image: url("../img/icons/about-filled.svg");
+}
+@media (max-width: 1169px) {
+  .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites {
+    height: 674px;
+  }
+  .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-left {
+    width: 100%;
+  }
+  .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-right.pr-favorites-scrollable {
+    position: absolute;
+    z-index: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 617px;
+    width: 434px;
+    background-color: #fff;
+    -webkit-transform: translateX(200%);
+        -ms-transform: translateX(200%);
+            transform: translateX(200%);
+    transition: transform 0.4s linear, -webkit-transform 0.4s linear;
+  }
+  .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-right.pr-favorites-scrollable.open {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    z-index: 100;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper {
+    display: none;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile {
+    display: block;
+    margin-top: 15px;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0 8px;
+    background-color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    height: 44px;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-box-mobile__content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 180px;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-box-mobile__content .team-player-mobile__icon {
+    width: 27px;
+    height: 27px;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    margin-right: 7px;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-box-mobile__content .team-player-mobile__icon img {
+    max-width: 100%;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    border: 1px solid #f4f4f4;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-box-mobile__content .team-player-mobile__text {
+    color: #43474d;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-box-mobile__content .team-player-mobile__text span:last-child {
+    margin-left: 6px;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-box-mobile__position {
+    border-left: 1px solid #f4f4f4;
+    border-right: 1px solid #f4f4f4;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-transform: capitalize;
+    padding: 0 7px;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-controls {
+    display: none;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: auto;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country .flag {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    margin-left: 8px;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country a {
+    font-size: 11px;
+    font-weight: 300;
+    color: #43474d;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country a:hover {
+    color: #4186b1;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile + div {
+    margin-top: 8px;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#486e7c), to(#3e80a9));
+    background-image: -webkit-linear-gradient(bottom, #486e7c, #3e80a9);
+    background-image: linear-gradient(to top, #486e7c, #3e80a9);
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-box-mobile__content .team-player-mobile__text {
+    padding-right: 10px;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-box-mobile__content .team-player-mobile__text span:first-child {
+    color: #fff;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-box-mobile__content .team-player-mobile__text span:last-child {
+    color: #e8e8e8;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-box-mobile__position span {
+    color: #8bb2c1;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-controls {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 8px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-controls .team-player-page-btn {
+    height: 30px;
+    margin-right: 10px;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-country a {
+    color: #fff;
+  }
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-country a:hover {
+    color: #4186b1;
+  }
+  .team .nm-grow main .pr-main-wrap.about {
+    display: none;
+  }
+  .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block .left {
+    width: 100%;
+  }
+}
+@media (max-width: 920px) {
+  .team .nm-grow main .pr-main-wrap.players {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 869px) {
+  .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav {
+    padding-left: 2px;
+    padding-right: 7px;
+  }
+  .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-left .pr-main-content {
+    margin-top: 34px;
+  }
+  .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper ul.nm-tabs-list {
+    margin-right: 30px;
+  }
+  .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .left {
+    width: 100%;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .team .nm-grow main .pr-main-wrap.players,
+  .team .nm-grow main .pr-main-wrap.matches-sm,
+  .team .nm-grow main .pr-main-wrap.league-standing {
+    display: none;
+  }
+  .team .nm-grow main .pr-main-wrap.players.show,
+  .team .nm-grow main .pr-main-wrap.matches-sm.show,
+  .team .nm-grow main .pr-main-wrap.league-standing.show,
+  .team .nm-grow main .pr-main-wrap.mobile.show,
+  .team .nm-grow main .pr-main-wrap.about.show {
+    display: block;
+  }
+  .team .nm-grow main .pr-main-wrap.players.hide,
+  .team .nm-grow main .pr-main-wrap.matches-sm.hide,
+  .team .nm-grow main .pr-main-wrap.league-standing.hide,
+  .team .nm-grow main .pr-main-wrap.mobile.hide,
+  .team .nm-grow main .pr-main-wrap.about.hide {
+    display: none;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .block.show {
+    display: block;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .block.hide {
+    display: none;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .block2 .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list {
+    right: -11px;
+    left: auto;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .block2 .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list::before {
+    left: auto;
+    right: 7px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .block4,
+  .team .nm-grow main .pr-main-wrap.mobile .block5 {
+    display: none;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .block5 {
+    width: 100%;
+    margin-right: 0;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .block5 .media {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .block5 .media .s-title {
+    width: 100%;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .block5 .media .odds {
+    width: 50%;
+    margin-top: 0;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .block5 .media .odds:not(:nth-child(even)) {
+    padding-left: 15px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .block4 .top-scores .s-main .division-dropdown .division-dropdown-list {
+    top: 31px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .block4 .top-scores .s-main .s-main-head span + span {
+    margin-left: 12px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .block4 .top-scores .s-main .s-main-content .nm-player-info-row .nm-player-skills span {
+    width: 39px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box {
+    width: 50%;
+    margin-right: 0;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left {
+    padding-right: 15px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-right {
+    padding-left: 15px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .aside-right-wrapper {
+    width: 100%;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .aside-right-wrapper .goal-distribution .s-main .goal-filter.radio-filter {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .aside-right-wrapper .goal-distribution .s-main .goal-filter.radio-filter label:not(:first-of-type) {
+    margin-left: 0;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main {
+    padding-top: 0;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile {
+    padding-right: 5px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-box-mobile__position {
+    margin-left: auto;
+    width: 58px;
+    padding-right: 0;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-box-mobile__position span {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country {
+    margin-left: 0;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country .name {
+    display: none;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country .flag {
+    margin-left: 4px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover {
+    position: relative;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-country,
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-box-mobile__position {
+    display: none;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-controls {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-controls .team-player-page-btn,
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-controls .pr-favorite-btn {
+    white-space: nowrap;
+    background-color: #486e7c;
+    border-color: #486e7c;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-controls .team-player-page-btn:hover,
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-controls .pr-favorite-btn:hover {
+    background-color: #fff;
+    color: #3e80a9;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-controls .team-player-page-btn:hover i,
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-controls .pr-favorite-btn:hover i {
+    color: #3e80a9;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block.show {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block.hide {
+    display: none;
+  }
+  .team .nm-grow main .pr-main-wrap.about .pr-main .pr-main-body {
+    -webkit-column-count: inherit;
+       -moz-column-count: inherit;
+            column-count: inherit;
+    -webkit-column-gap: normal;
+       -moz-column-gap: normal;
+            column-gap: normal;
+  }
+  .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-title {
+    padding-bottom: 10px;
+  }
+  .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-title .pr-main-title-box .division-dropdown .division-dropdown-selected {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-title .pr-main-title-box .division-dropdown .division-dropdown-list {
+    top: 18px;
+  }
+  .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper {
+    margin-top: -25px;
+  }
+  .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .nm-tabs-content {
+    padding-right: 25px;
+  }
+  .team .nm-header-bottom {
+    display: block;
+  }
+}
+@media (max-width: 569px) {
+  .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-title .pr-main-title-box .division-dropdown .division-dropdown-selected {
+    margin-left: 3px;
+    padding-left: 7px;
+  }
+  .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-title .pr-main-title-box .division-dropdown .division-dropdown-list {
+    left: 3px;
+  }
+  .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper {
+    margin-top: 15px;
+  }
+  .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right {
+    padding-bottom: 10px;
+  }
+  .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .nm-tabs-content {
+    padding-right: 8px;
+  }
+}
+@media (max-width: 555px) {
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .block5 .media .odds {
+    width: 100%;
+    padding-left: 30px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .block5 .media .odds + .odds {
+    margin-top: 10px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left {
+    width: 100%;
+    max-width: inherit;
+    padding-right: 0;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper {
+    padding-bottom: 10px;
+    margin-bottom: 11px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper .goal-distribution .s-main .goal-filter.radio-filter {
+    width: 211px;
+    padding-left: 13px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time .result-by-time__all-results .result-by-time__result {
+    width: 24px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper.block1 .s-title,
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper.block3 .s-title {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper.block1 .s-main,
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper.block3 .s-main {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper.block2 .form-progress .s-title {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper.block2 .form-progress .s-main {
+    padding: 0 8px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper.block2 .form-progress .s-main .form-progress-box {
+    padding: 0 22px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper.block3 .team-info .s-main .structure-wrapper .structure-wrapper__context {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper.block3 .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__total {
+    width: 85px;
+    margin-bottom: 8px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper.block3 .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__foreign {
+    width: 118px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper.block3 .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__national {
+    width: 85px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .aside-right-wrapper.block3 .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__cup-box {
+    width: 96px;
+    margin-bottom: 4px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .players {
+    margin-bottom: 18px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .players .pr-main .pr-main-title .pr-main-title-box {
+    padding-left: 30px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country .flag {
+    margin-right: 9px;
+    margin-left: 28px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block4 .top-scores {
+    padding-bottom: 2px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block4 .top-scores .s-title {
+    padding-left: 8px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block4 .top-scores .s-main {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block4 .top-scores .s-main .division-dropdown .division-dropdown-selected {
+    padding-left: 8px;
+    margin-left: 2px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block4 .top-scores .s-main .division-dropdown .division-dropdown-list {
+    left: 2px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block2 .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list {
+    min-width: 220px;
+    max-width: 240px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block2 .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(1) .form-progress-wrapper__progressbar .form-progress__list {
+    right: auto;
+    left: -11px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block2 .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(1) .form-progress-wrapper__progressbar .form-progress__list::before {
+    right: auto;
+    left: 7px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block2 .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(2) .form-progress-wrapper__progressbar .form-progress__list {
+    right: auto;
+    left: -28px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block2 .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(2) .form-progress-wrapper__progressbar .form-progress__list::before {
+    right: auto;
+    left: 24px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block2 .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(3) .form-progress-wrapper__progressbar .form-progress__list {
+    right: auto;
+    left: -64px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block2 .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(3) .form-progress-wrapper__progressbar .form-progress__list::before {
+    right: auto;
+    left: 60px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block2 .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(4) .form-progress-wrapper__progressbar .form-progress__list {
+    right: auto;
+    left: -106px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block2 .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(4) .form-progress-wrapper__progressbar .form-progress__list::before {
+    right: auto;
+    left: 102px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block2 .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(5) .form-progress-wrapper__progressbar .form-progress__list {
+    right: -64px;
+  }
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .block2 .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(5) .form-progress-wrapper__progressbar .form-progress__list::before {
+    right: 60px;
+  }
+  .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites {
+    height: auto;
+  }
+  .team .nm-grow main .pr-main-wrap.about .pr-main {
+    padding-bottom: 15px;
+  }
+  .team .nm-grow main .pr-main-wrap.about .pr-main .pr-main-body {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+.team .aside-right-default.nm-block .aside-right-wrapper {
+  overflow: visible;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .top-scores {
+  padding-bottom: 6px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .top-scores .s-main {
+  padding-top: 2px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .top-scores .s-main .s-main-head {
+  margin-top: 5px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .top-scores .s-main .s-main-content {
+  margin-top: 0;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .top-scores .s-main .s-main-content .nm-player-info-row {
+  padding-top: 7px;
+  padding-bottom: 8px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .top-scores .s-main .s-main-content .nm-player-info-row .nm-player-skills span {
+  width: 31px;
+  text-align: right;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .radio-filter {
+  margin-top: 15px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .radio-filter input[type=radio] + label:not(:first-of-type) {
+  margin-left: 14px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 16px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 11px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time + div {
+  margin-top: 2px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time .result-by-time__title {
+  color: #43474d;
+  text-transform: capitalize;
+  margin-right: auto;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time .result-by-time__sum-result {
+  margin-right: 10px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time .result-by-time__all-results {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time .result-by-time__all-results .result-by-time__result {
+  color: #fff;
+  width: 20px;
+  height: 14px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time .result-by-time__all-results .result-by-time__result + div {
+  margin-left: 1px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time:last-child .result-by-time__all-results .result-by-time__result {
+  border-right: 1px solid #d2d4d7;
+  position: relative;
+  height: 8px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time:last-child .result-by-time__all-results .result-by-time__result::after {
+  content: '';
+  position: absolute;
+  font-size: 8px;
+  font-weight: bold;
+  color: #9c9b9b;
+  bottom: -12px;
+  right: -6px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time:last-child .result-by-time__all-results .result-by-time__result:first-child {
+  border-left: 1px solid #d2d4d7;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time:last-child .result-by-time__all-results .result-by-time__result:first-child::before {
+  content: '00';
+  position: absolute;
+  font-size: 8px;
+  font-weight: bold;
+  color: #9c9b9b;
+  bottom: -12px;
+  left: -4px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time:last-child .result-by-time__all-results .result-by-time__result:first-child::after {
+  content: '15';
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time:last-child .result-by-time__all-results .result-by-time__result:nth-child(2)::after {
+  content: '30';
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time:last-child .result-by-time__all-results .result-by-time__result:nth-child(3)::after {
+  content: '45';
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time:last-child .result-by-time__all-results .result-by-time__result:nth-child(4)::after {
+  content: '60';
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time:last-child .result-by-time__all-results .result-by-time__result:nth-child(5)::after {
+  content: '75';
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time:last-child .result-by-time__all-results .result-by-time__result:nth-child(6)::after {
+  content: '90';
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .s-main__text {
+  margin-top: 35px;
+  text-align: justify;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 17px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__icon {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin-bottom: 10px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar {
+  width: 8px;
+  -webkit-border-radius: 4px 4px 0 0;
+          border-radius: 4px 4px 0 0;
+  position: relative;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__winn {
+  position: relative;
+  height: 148px;
+  background-color: #f4f4f4;
+  -webkit-border-radius: 4px 4px 0 0;
+          border-radius: 4px 4px 0 0;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__winn span {
+  position: absolute;
+  width: 8px;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-border-radius: 4px 4px 0 0;
+          border-radius: 4px 4px 0 0;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__winn span:hover {
+  background-color: #3e80a9;
+  cursor: pointer;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__loss {
+  max-height: 148px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__loss .progress-loss {
+  display: inline-block;
+  width: 8px;
   -webkit-border-radius: 0 0 4px 4px;
           border-radius: 0 0 4px 4px;
 }
-.team .nm-grow .pr-main-wrap.league-standing .pr-main .pr-main-title-box .division-dropdown .division-dropdown-list ul li + li {
-  border-top: 1px solid #c9cccf;
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__loss .progress-loss:hover {
+  background-color: #3e80a9;
+  cursor: pointer;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list {
+  display: none;
+  position: absolute;
+  top: 96%;
+  left: -11px;
+  z-index: 10;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list .form-progress__list-title {
+  font-size: 14px;
+  font-weight: 300;
+  background-color: #3e80a9;
+  color: #fff;
+  white-space: nowrap;
+  padding: 13px 17px;
+  -webkit-border-radius: 4px 4px 0 0;
+          border-radius: 4px 4px 0 0;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list .form-progress__list-title span {
+  color: #58a5d4;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list .form-progress__list-content {
+  background-color: #58a5d4;
+  color: #fff;
+  padding: 11px 17px 12px 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Gotham Pro', sans-serif;
+  font-size: 11px;
+  -webkit-border-radius: 0 0 4px 4px;
+          border-radius: 0 0 4px 4px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list.show {
+  display: block;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list::before {
+  position: absolute;
+  display: block;
+  content: "";
+  border-style: solid;
+  border-width: 0 8px 10px 8px;
+  border-color: transparent transparent #3e80a9 transparent;
+  top: -5px;
+  left: 7px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list.top {
+  top: 105%;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper:first-child span.progress-win {
+  height: 100px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(2) span.progress-win {
+  height: 62px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(3) span.progress-loss {
+  height: 37px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(4) span.progress-win {
+  height: 126px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(5) span.progress-draw {
+  height: 31px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(6) span.progress-loss {
+  height: 15px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper:nth-child(7) span.progress-win {
+  height: 136px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-wrapper__content {
+  font-size: 14px;
+  margin-top: 23px;
+  padding-bottom: 4px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-wrapper__content p {
+  color: #bdc0c4;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-wrapper__content .form-progress-wrapper__content-spec {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-wrapper__content .form-progress-wrapper__content-spec span {
+  color: #43474d;
+  position: relative;
+  padding-left: 15px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-wrapper__content .form-progress-wrapper__content-spec span::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-wrapper__content .form-progress-wrapper__content-spec span:first-child::before {
+  background-color: #425066;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-wrapper__content .form-progress-wrapper__content-spec span:nth-child(2)::before {
+  background-color: #d3d3d3;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-wrapper__content .form-progress-wrapper__content-spec span:nth-child(3)::before {
+  background-color: #ed334d;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__title {
+  font-size: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f4f4f4;
+  font-weight: 500;
+  margin-top: 19px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  font-family: 'Gotham Pro';
+  padding-top: 12px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__total {
+  width: 40%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-top: 16px;
+  width: 35%;
+  margin-bottom: 16px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__total span:first-child {
+  font-size: 14px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__total span:last-child {
+  margin-top: 22px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__foreign {
+  width: 53%;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__national {
+  width: 35%;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__foreign .canvas-bar,
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__national .canvas-bar {
+  text-align: center;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__foreign .canvas-bar canvas,
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__national .canvas-bar canvas {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #f4f4f4;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__foreign .canvas-bar__context,
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__national .canvas-bar__context {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-top: 4px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:nth-child(2) .structure-wrapper__title {
+  margin-top: 11px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:nth-child(2) .structure-wrapper__context .structure-wrapper__cup-box {
+  width: 40%;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:nth-child(2) .structure-wrapper__context .structure-wrapper__cup-box .structure-wrapper__cup-box_icon {
+  text-align: center;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:nth-child(2) .structure-wrapper__context .structure-wrapper__cup-box .structure-wrapper__cup-box_title {
+  margin-top: 15px;
+  font-size: 11px;
+  text-align: center;
+  font-family: 'Gotham Pro';
+  color: #43474d;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:nth-child(2) .structure-wrapper__context .structure-wrapper__cup-box:nth-child(2) {
+  width: 53%;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:last-child .structure-wrapper__title {
+  padding-bottom: 7px;
+  margin-top: 14px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:last-child .structure-wrapper__context {
+  padding-top: 0;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:last-child .structure-wrapper__context .structure-wrapper__location {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: initial;
+  font-family: 'HelveticaNeueCyr';
+  font-size: 14px;
+  margin-top: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f4f4f4;
+  width: 100%;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:last-child .structure-wrapper__context .structure-wrapper__location .structure-wrapper__location_title {
+  width: 41%;
+  color: #43474d;
+  padding-right: 10px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:last-child .structure-wrapper__context .structure-wrapper__location .structure-wrapper__location_text {
+  width: 59%;
+  text-align: right;
+  font-weight: 300;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:last-child .structure-wrapper__context .structure-wrapper__location + div {
+  margin-top: 6px;
+}
+@media (max-width: 1169px) {
+  .team .aside-right-default.nm-block {
+    display: block;
+    margin-left: 30px;
+  }
+  .team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list {
+    left: auto;
+    right: -11px;
+  }
+  .team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list::before {
+    left: auto;
+    right: 7px;
+  }
+}
+@media (max-width: 920px) {
+  .team .aside-right-default.nm-block {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .team .aside-right-default.nm-block .aside-right-wrapper:last-child {
+    width: 270px;
+  }
+  .team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list {
+    left: -11px;
+    right: auto;
+  }
+  .team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box .form-progress-wrapper .form-progress-wrapper__progressbar .form-progress__list::before {
+    right: auto;
+    left: 7px;
+  }
+}
+@media (max-width: 768px) {
+  .team .aside-right-default.nm-block {
+    display: none;
+  }
 }

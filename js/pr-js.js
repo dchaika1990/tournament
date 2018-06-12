@@ -183,7 +183,7 @@ $('.pr-dropdown-favorite .pr-mute').on('click', function () {
 });
 
 /*================================================*/
-/*           Tournament-leftcol button            */
+/*          		 Tournament-page           */
 /*================================================*/
 
 //Above
@@ -347,83 +347,46 @@ $('body').on('click', function () {
     $('.week-slider .nm-dropdown').removeClass('show');
 });
 
+
 //Header-bottom on mobile version
-var hideAllElementsInMain = function(){
-    $('.pr-main-wrap.progress').addClass('hide');
-    $('.pr-main-wrap.league-md.league-sm').addClass('hide');
-    $('.pr-main-wrap.league-standing').addClass('hide');
-    $('.pr-main-wrap.matches-sm').addClass('hide');
-    $('.pr-main-wrap.top-scores-md').addClass('hide');
+var hideAllElementsInMain = function () {
+    $('.bmenu .pr-main-wrap').each(function () {
+       $(this).addClass('hide').removeClass('show');
+       $(this).find('.block').addClass('hide').removeClass('show');
+    });
 };
 
 var LiActive = function ( elem ) {
-    var allLiinNav = $('.nm-header-bottom li');
-    allLiinNav.removeClass('active');
+    var allLiInNav = $('.nm-header-bottom li');
+    allLiInNav.removeClass('active');
     elem.addClass('active');
 };
 
-$('.nm-header-bottom .summary-btn').on('click', function () {
+$('.bmenu .nm-header-bottom li').on('click', function () {
+   var dataClasses = $(this).attr('data-tab');
+   var dataClassesArr = dataClasses.split(',');
+
     hideAllElementsInMain();
-    LiActive($(this));
-    $('.pr-main-wrap.progress').removeClass('hide').addClass('show');
-    $('.pr-main-wrap.league-md.league-sm').removeClass('hide').addClass('show');
-});
 
-$('.nm-header-bottom .standings-btn').on('click', function () {
-    hideAllElementsInMain();
-    LiActive($(this));
-    $('.pr-main-wrap.league-standing').removeClass('hide').addClass('show');
-    $('.pr-main-wrap.matches-sm').removeClass('hide').addClass('show');
-});
+    LiActive( $(this) );
 
-$('.nm-header-bottom .team-btn').on('click', function () {
-    hideAllElementsInMain();
-    LiActive($(this));
-    $('.pr-main-wrap.top-scores-md').removeClass('hide').addClass('show');
-    $('.pr-main-wrap.top-scores-md .aside-right-wrapper:eq(0)').show();
-    $('.pr-main-wrap.top-scores-md .aside-right-wrapper:eq(1)').hide();
-});
+    dataClassesArr.forEach( function (elem) {
+        console.log( elem );
+        $('.pr-main-wrap.' + elem).removeClass('hide').addClass('show');
+        $('.pr-main-wrap .' + elem).removeClass('hide').addClass('show');
+    } )
 
-$('.nm-header-bottom .media-btn').on('click', function () {
-    hideAllElementsInMain();
-    LiActive($(this));
-    $('.pr-main-wrap.top-scores-md').removeClass('hide').addClass('show');
-    $('.pr-main-wrap.top-scores-md .aside-right-wrapper:eq(0)').hide();
-    $('.pr-main-wrap.top-scores-md .aside-right-wrapper:eq(1)').show();
 });
-
-$(window).on('resize', function () {
-	if ($(this).width() > 569){
-        $('.pr-main-wrap.progress').removeClass('hide show');
-        $('.pr-main-wrap.league-md.league-sm').removeClass('hide show');
-        $('.pr-main-wrap.league-standing').removeClass('hide show');
-        $('.pr-main-wrap.matches-sm').removeClass('hide show');
-        $('.pr-main-wrap.top-scores-md').removeClass('hide show');
-        $('.pr-main-wrap.top-scores-md .aside-right-wrapper:eq(0)').show();
-        $('.pr-main-wrap.top-scores-md .aside-right-wrapper:eq(1)').show();
-        LiActive($('.nm-header-bottom .summary-btn'))
-	}
-});
-
 
 //Block matches-sm - opening pr-favotites-right on click
-$('.pr-main-wrap.matches-sm .pr-match-row').on('click', function () {
+$('.pr-main-wrap.matches-sm .pr-match-row .pr-match-row-left').on('click', function () {
 
-    if ( $(window).width() > 849) {
-        console.log($(".nm-content-overlay").delay(1000).css('display'));
-        setTimeout(function () {
-            $(".nm-content-overlay").hide();
-            $('.pr-main.favorites').css('z-index','0');
-            $('.pr-favorites-right.pr-favorites-scrollable').removeClass('open');
-            $('.pr-main-wrap.matches-sm .aside-right.nm-block').removeClass('open');
-        },5)
-    }
-
-    if ($(window).width() <= 869) {
+    if ($(window).width() <= 1169) {
         $('.pr-main.favorites').css('z-index','auto');
+        $('.pr-main-wrap').css('z-index','auto');
     }
 
-    if ( $(window).width() <= 620 && $(window).width() >= 553 ){
+    if ( $(window).width() <= 1169 && $(window).width() >= 553 ){
         $('.nm-content-overlay').fadeIn(200);
         $('.pr-favorites-right.pr-favorites-scrollable').addClass('open');
         $('.pr-main-wrap.matches-sm .aside-right.nm-block').addClass('open');
@@ -458,7 +421,7 @@ $('.pr-main .nm-tab-dropdown .nm-dropdown li a').on('click', function () {
     $('.pr-main .nm-tab-dropdown .nm-dropdown').fadeOut(200);
 });
 
-// //Choosing the need li
+// Choosing the need li
 
 $('.nm-tabs-list-mobile > ul li').on('click', function () {
    var text = $(this).text().toLowerCase();
@@ -473,6 +436,204 @@ $('.nm-tabs-list-mobile > ul li').on('click', function () {
     });
 });
 
+
+/*================================================*/
+/*          		 Team-page           */
+/*================================================*/
+
+//division-dropdown-btn
+
+//Matched blocks width in division-dropdown-btn
+
+function divisionDropdownBtnWidth( list ,selected ) {
+    var divisionDropDownSelected = selected.width();
+    var divisionDropDownSelectedPL = selected.css('padding-left');
+    var divisionDropDownSelectedPR = selected.css('padding-right');
+    var divisionDropDownSelectedWidth = divisionDropDownSelected + parseFloat(divisionDropDownSelectedPL) + parseFloat(divisionDropDownSelectedPR);
+
+    list.width(divisionDropDownSelectedWidth);
+}
+
+divisionDropdownBtnWidth( $('.league-standing .division-dropdown-list') ,$('.league-standing .division-dropdown-selected') );
+divisionDropdownBtnWidth( $('.aside-right .division-dropdown-list') ,$('.aside-right .division-dropdown-selected') );
+
+//Select need text
+
+$('.division-dropdown-list li').on('click', function (e) {
+	e.preventDefault();
+
+	var needText = $(this).text();
+	$(this).parents('.division-dropdown-list').prev('.division-dropdown-selected').text(needText);
+
+    removeActiveinLi( $(this).parent().children('li') );
+
+    $(this).addClass('active');
+
+    divisionDropdownBtnWidth( $(this).parents('.division-dropdown-list') ,$(this).parents('.division-dropdown-list').prev('.division-dropdown-selected') );
+});
+
+//Remove class active in li
+function removeActiveinLi( html ) {
+	html.each(function () {
+		$(this).removeClass('active')
+    })
+};
+
+//Form progress block
+
+$('.form-progress-wrapper .nm-toggler').hover(
+	function () {
+        var dropDown = $(this).parents('.form-progress-wrapper__progressbar').children('.nm-dropdown');
+		$(this).addClass('open');
+        dropDown.addClass('show').show();
+        if ( $(this).hasClass('progress-loss') ) dropDown.addClass('top')
+    },
+	function(){
+        var dropDown = $(this).parents('.form-progress-wrapper__progressbar').children('.nm-dropdown');
+        $(this).removeClass('open');
+        dropDown.removeClass('show').removeClass('top').hide();
+	}
+);
+
+$('.form-progress-wrapper .nm-toggler').on('click', function () {
+    var dropDown = $(this).parents('.form-progress-wrapper__progressbar').children('.nm-dropdown');
+    dropDown.toggle();
+});
+
+//Circle progressbar
+console.dir(document.getElementById('canvas-foreign'));
+
+$(window).on('load', function () {
+
+	if ( $('.main-wrapper').hasClass('team') ) {
+        var can1 = document.getElementById('canvas-foreign'),
+            c1 = can1.getContext('2d'),
+            can2 = document.getElementById('canvas-national'),
+            c2 = can2.getContext('2d'),
+            foreignText = $('.structure-wrapper__foreign .canvas-bar__context span:first').text(),
+            nationalText = $('.structure-wrapper__national .canvas-bar__context span:first').text(),
+            total = $('.structure-wrapper__total span:first').text();
+
+
+        var pos1X = can1.width / 2,
+            pos1Y = can1.height / 2,
+            pos2X = can2.width / 2,
+            pos2Y = can2.height / 2,
+            fps = 1000 / 200,
+            oneProcent = 360 / 100,
+            result1 = oneProcent * (foreignText / total) * 100,
+            result2 = oneProcent * (nationalText / total) * 100;
+
+        c1.lineCap = 'round';
+        c2.lineCap = 'round';
+
+        arcMove( c1, pos1X, pos1Y, result1 );
+        arcMove( c2, pos2X, pos2Y, result2 );
+
+        function arcMove( c ,posX, posY, result ){
+            var deegres = 0;
+            var acrInterval = setInterval (function() {
+                deegres += 1;
+                c.beginPath();
+                c.fillStyle = '#d0d1d2';
+                c.arc( posX, posY, 17, (Math.PI/180) * 270, (Math.PI/180) * (270 + deegres) );
+                c.lineTo(posX, posY);
+                c.fill();
+                if( deegres >= result ) clearInterval(acrInterval);
+            }, fps);
+        }
+	}
+});
+
+//Append blocks for tablet version
+
+$(window).on('load', function () {
+    if ( $(window).width() <= 768 ) {
+        createTablteBlocks();
+    }
+
+    if ( $(window).width() <= 555 ) {
+        createMobile();
+    }
+});
+
+function createTablteBlocks() {
+    $('.team main').append('<div class="pr-main-wrap mobile">');
+
+    var block1 = $('aside.aside-right.aside-right-default.nm-block .block1'),
+        block2 = $('aside.aside-right.aside-right-default.nm-block .block2'),
+        block3 = $('aside.aside-right.aside-right-default.nm-block .block3'),
+        block4 = $('aside.aside-right.aside-right-default.nm-block .block4'),
+        block5 = $('aside.aside-right.aside-right-default.nm-block .block5'),
+		players = $('.pr-main-wrap.players');
+
+    console.log(block2)
+
+    $('.team main .pr-main-wrap.mobile').append( '<aside class="aside-right aside-right-default nm-block">' );
+
+    // $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block').append( block4 );
+    $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block').append( block5 );
+    $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block').append( '<div class="half-box half-box-left">' );
+    $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block').append( '<div class="half-box half-box-right">' );
+
+    $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box:first').append( block1 );
+    $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box:first').append( block3 );
+    $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box:first').append( players );
+
+    $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box:eq(1)').append( block2 );
+    $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box:eq(1)').append( block4 );
+}
+
+//Append blocks to mobile version
+$(window).on('resize', function () {
+	if ( $(window).width() <= 555 ) {
+        createMobile();
+	} else if ( $(window).width() >=556 && $(window).width() <= 768 ) {
+        createMobileBack();
+	}
+});
+
+function createMobile() {
+    var block2 = $('aside.aside-right.aside-right-default.nm-block .block2'),
+        block4 = $('aside.aside-right.aside-right-default.nm-block .block4');
+    $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box:first .block1').after(block2);
+    $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box:first .players').after( block4 );
+}
+
+function createMobileBack() {
+    var block2 = $('aside.aside-right.aside-right-default.nm-block .block2'),
+        block4 = $('aside.aside-right.aside-right-default.nm-block .block4');
+    $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box:eq(1)').append( block2 );
+    $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box:eq(1)').append( block4 );
+}
+
+
+//Clipping text
+
+function clippingText( html, count ) {
+    html.each(function () {
+        var htmlText = $(this).text();
+        if ( htmlText.length > count ){
+            console.log(htmlText);
+            var result = htmlText.slice(0, count) + '.';
+            $(this).text( result );
+        }
+    })
+};
+
+//Clipping text in players block
+
+$(window).on('load',function () {
+    if ( $(window).width() <= 569 ) {
+        clippingText( $('.team-player-box-mobile__position span'), 7);
+    }
+});
+
+$(window).on('resize',function () {
+    if ( $(window).width() <= 569 ) {
+        clippingText( $('.team-player-box-mobile__position span'), 7);
+    }
+});
 
 
 
