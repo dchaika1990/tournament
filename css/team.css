@@ -1283,6 +1283,9 @@
   margin-top: 35px;
   text-align: justify;
 }
+.team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-title {
+  padding-top: 5px;
+}
 .team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1478,6 +1481,9 @@
 .team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-wrapper__content .form-progress-wrapper__content-spec span:nth-child(3)::before {
   background-color: #ed334d;
 }
+.team .aside-right-default.nm-block .aside-right-wrapper .team-info {
+  margin-top: -5px;
+}
 .team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__title {
   font-size: 14px;
   padding-bottom: 8px;
@@ -1504,7 +1510,6 @@
   text-transform: uppercase;
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__total {
-  width: 40%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1526,10 +1531,10 @@
   margin-top: 22px;
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__foreign {
-  width: 53%;
+  width: 52%;
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__national {
-  width: 35%;
+  width: 38%;
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__foreign .canvas-bar,
 .team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper .structure-wrapper__context .structure-wrapper__national .canvas-bar {
@@ -1559,13 +1564,26 @@
   margin-top: 11px;
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:nth-child(2) .structure-wrapper__context .structure-wrapper__cup-box {
+  height: 80px;
   width: 40%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:nth-child(2) .structure-wrapper__context .structure-wrapper__cup-box .structure-wrapper__cup-box_icon {
   text-align: center;
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:nth-child(2) .structure-wrapper__context .structure-wrapper__cup-box .structure-wrapper__cup-box_title {
-  margin-top: 15px;
   font-size: 11px;
   text-align: center;
   font-family: 'Gotham Pro';
