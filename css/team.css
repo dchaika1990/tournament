@@ -187,12 +187,12 @@
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:nth-child(1) {
   background: url(../img/icons/arrow-point-to-left-grey.svg) no-repeat 8% 50%;
   padding: 5px 8px 5px 23px;
-  background-size: 10%;
+  background-size: 8px;
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:last-child {
   background: url(../img/icons/arrow-point-to-right-grey.svg) no-repeat 88% 50%;
   padding: 5px 23px 5px 10px;
-  background-size: 13%;
+  background-size: 8px;
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover {
   color: #486e7c;
