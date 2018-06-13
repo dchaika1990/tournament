@@ -167,6 +167,10 @@
 .aside-right.aside-right-favorites .nm-tabs-content {
   padding: 0;
 }
+.aside-right.aside-right-favorites .nm-aside-bigtabs-block .nm-tabs-wrapper {
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
 .aside-right.aside-right-favorites .nm-aside-bigtabs-block .nm-tabs-wrapper .nm-tabs-list {
   padding-top: 20px;
 }

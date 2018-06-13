@@ -1,0 +1,214 @@
+/*================================================*/
+/*					 Cup         		      */
+/*================================================*/
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw {
+  padding-left: 60px;
+  padding-right: 30px;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff-header ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff-header ul li {
+  width: 155px;
+  text-align: center;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 470px;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round {
+  width: 155px;
+  height: 100%;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation {
+  position: relative;
+  padding-left: 13px;
+  padding-right: 15px;
+  height: 110px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation::after {
+  content: '';
+  display: inline-block;
+  height: 62px;
+  width: 1px;
+  background-color: #c9cccf;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match {
+  border: solid 1px #c9cccf;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match::before {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  width: 14px;
+  background-color: #c9cccf;
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match::after {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  width: 15px;
+  background-color: #c9cccf;
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant {
+  font-size: 11px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #c9ccd1;
+  padding: 2px 4px;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant.show-bcg {
+  background-color: #3e80a9;
+  color: #fff;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant.winner {
+  color: #000;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant:hover {
+  background-color: #3e80a9;
+  color: #fff;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant .team-name-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant .team-name-box .team-logo {
+  margin-right: 10px;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant .team-name-box .team-name {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 70%;
+  text-overflow: ellipsis;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round:first-child .matches .relation .match::before {
+  background-color: transparent;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round:nth-child(2) .matches {
+  padding: 30px 0;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round:nth-child(2) .matches .relation {
+  height: 170px;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round:nth-child(2) .matches .relation::after {
+  height: 121px;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round:nth-child(3) .matches {
+  padding: 90px 0;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round:nth-child(3) .matches .relation {
+  height: 288px;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round:nth-child(3) .matches .relation::after {
+  height: 239px;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round:last-child .matches {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round:last-child .matches .relation {
+  height: auto;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round:last-child .matches .relation::after {
+  content: none;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round:last-child .matches .relation .match::after {
+  content: none;
+}
