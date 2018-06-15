@@ -183,6 +183,8 @@
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a {
   color: #c9cccf;
+  -webkit-transition: background .00s;
+  transition: background .00s;
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:nth-child(1) {
   padding: 5px 8px 5px 23px;
