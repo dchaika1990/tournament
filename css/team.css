@@ -188,8 +188,24 @@
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:nth-child(1) {
   padding: 5px 8px 5px 23px;
-  background-position: 10% 50%;
+  background: none;
+}
+.team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:nth-child(1) p {
   position: relative;
+}
+.team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:nth-child(1) p::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  background: url('../img/icons/left-arrow-grey.svg') no-repeat 8% 50%;
+  background-size: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -15px;
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:last-child {
   padding: 5px 23px 5px 10px;
@@ -199,8 +215,8 @@
   color: #486e7c;
   border-color: #486e7c;
 }
-.team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover:nth-child(1) {
-  background-position: 10% 50%;
+.team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover:nth-child(1) p::before {
+  background-image: url("../img/icons/left-arrow-blue.svg");
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover:last-child {
   background-position: 87% 50%;
