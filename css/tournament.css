@@ -32,7 +32,7 @@
 .radio-filter input[type=radio] + label:not(:first-of-type) {
   margin-left: 10px;
 }
-.radio-filter input[type=radio] + label:before {
+.radio-filter input[type=radio] + label::before {
   content: "";
   position: absolute;
   background: url("../img/icons/icon-checker-unchecked.svg") no-repeat 0;
@@ -43,11 +43,26 @@
   bottom: 0;
   width: 10px;
 }
+
+.radio-filter input[type=radio] + label::after {
+  content: "";
+  position: absolute;
+  background: url("../img/icons/icon-checker-checked.svg") no-repeat 0;
+  display: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+}
 .radio-filter input[type=radio]:checked + label {
   color: #4186b1;
 }
-.radio-filter input[type=radio]:checked + label:before {
-  background-image: url("../img/icons/icon-checker-checked.svg");
+.radio-filter input[type=radio]:checked + label::before {
+  display: none;
+}
+.radio-filter input[type=radio]:checked + label::after {
+  display: inline-block;
 }
 .tournament .nm-big-wrapper {
   z-index: 11;
