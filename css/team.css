@@ -186,6 +186,9 @@
   position: relative;
   background: none;
 }
+.team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:first-child {
+  padding-right: 6px;
+}
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:first-child::before {
   background: url("../img/icons/left-arrow-grey.svg") 8% 50%;
   left: 8px;
@@ -213,6 +216,9 @@
   width: 8px;
   height: 8px;
   background-size: 8px;
+}
+.team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:last-child {
+  padding-left: 6px;
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:last-child::before {
   background: url("../img/icons/right-arrow-grey.svg") 8% 50%;
@@ -1235,11 +1241,17 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 11px;
+}
+.team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time:last-child {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  font-size: 11px;
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .result-by-time__wrapper .result-by-time + div {
   margin-top: 2px;

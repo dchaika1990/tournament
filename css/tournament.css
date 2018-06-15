@@ -24,18 +24,20 @@
 .radio-filter input[type=radio] + label {
   display: inline-block;
   cursor: pointer;
-  position: relative;
-  padding-left: 15px;
   font-size: 14px;
   color: #a1b1b7;
 }
 .radio-filter input[type=radio] + label:not(:first-of-type) {
   margin-left: 10px;
 }
-.radio-filter input[type=radio] + label::before {
+.radio-filter input[type=radio] + label span:first-child {
+  position: relative;
+}
+.radio-filter input[type=radio] + label span:first-child:before {
   content: "";
   position: absolute;
-  background: url("../img/icons/icon-checker-unchecked.svg") no-repeat 0;
+  background: url("../img/icons/icon-checker-unchecked.svg") no-repeat 50% 50%;
+  background-size: contain;
   display: inline-block;
   left: 0;
   right: 0;
@@ -43,11 +45,10 @@
   bottom: 0;
   width: 10px;
 }
-
-.radio-filter input[type=radio] + label::after {
+.radio-filter input[type=radio] + label span:first-child:after {
   content: "";
   position: absolute;
-  background: url("../img/icons/icon-checker-checked.svg") no-repeat 0;
+  background: url("../img/icons/icon-checker-checked.svg") no-repeat 50% 50%;
   display: none;
   left: 0;
   right: 0;
@@ -55,13 +56,16 @@
   bottom: 0;
   width: 10px;
 }
+.radio-filter input[type=radio] + label span:last-child {
+  padding-left: 15px;
+}
 .radio-filter input[type=radio]:checked + label {
   color: #4186b1;
 }
-.radio-filter input[type=radio]:checked + label::before {
+.radio-filter input[type=radio]:checked + label span:first-child:before {
   display: none;
 }
-.radio-filter input[type=radio]:checked + label::after {
+.radio-filter input[type=radio]:checked + label span:first-child:after {
   display: inline-block;
 }
 .tournament .nm-big-wrapper {
@@ -2606,5 +2610,10 @@
 @media (max-width: 1169px) {
   .tournament .aside-right-default.nm-block {
     display: none;
+  }
+}
+@media (max-width: 480px) {
+  .pr-main-content-row .pr-match-row-right-wrap .pr-favorite-container .nm-dropdown {
+    opacity: 1;
   }
 }
