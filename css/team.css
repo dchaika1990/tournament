@@ -185,12 +185,12 @@
   color: #c9cccf;
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:nth-child(1) {
-  background: url(../img/icons/arrow-point-to-left-grey.svg) no-repeat 8% 50%;
+  background: url('../img/icons/arrow-point-to-left-grey.svg') no-repeat 8% 50%;
   padding: 5px 8px 5px 23px;
   background-size: 8px;
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:last-child {
-  background: url(../img/icons/arrow-point-to-right-grey.svg) no-repeat 88% 50%;
+  background: url('../img/icons/arrow-point-to-right-grey.svg') no-repeat 88% 50%;
   padding: 5px 23px 5px 10px;
   background-size: 8px;
 }
@@ -202,10 +202,11 @@
   background-image: url("../img/icons/arrow-point-to-left-blue.svg");
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover:last-child {
+  background-size: 8px;
   background-image: url("../img/icons/arrow-point-to-right-blue.svg");
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-main-content {
-  margin-top: 35px;
+  margin-top: 34px;
 }
 .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-title-box {
   display: -webkit-box;
@@ -220,6 +221,9 @@
 }
 .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block .left {
   width: 81%;
+}
+.team .nm-grow main .pr-main-wrap.players {
+  margin-bottom: 27px;
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main {
   background-color: transparent;
@@ -416,7 +420,7 @@
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin-top: 15px;
+  margin-top: 13px;
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box {
   width: 20%;
@@ -477,7 +481,7 @@
   display: none;
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-footer {
-  padding: 8px 15px 9px;
+  padding: 9px 15px 10px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -767,9 +771,6 @@
   .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav {
     padding-left: 2px;
     padding-right: 7px;
-  }
-  .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-left .pr-main-content {
-    margin-top: 34px;
   }
   .team .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper ul.nm-tabs-list {
     margin-right: 30px;
@@ -1167,6 +1168,9 @@
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .radio-filter {
   margin-top: 15px;
+  margin-left: -2px;
+  padding-left: 10px;
+  margin-right: 3px;
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .goal-distribution .s-main .radio-filter input[type=radio] + label:not(:first-of-type) {
   margin-left: 14px;
@@ -1452,6 +1456,7 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-right: 5px;
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .form-progress .s-main .form-progress-wrapper__content .form-progress-wrapper__content-spec span {
   color: #43474d;
