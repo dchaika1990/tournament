@@ -609,13 +609,13 @@ function createTablteBlocks() {
 }
 
 //Append blocks to mobile version
-// $(window).on('resize', function () {
-// 	if ( $(window).width() <= 555 ) {
-//         createMobile();
-// 	} else if ( $(window).width() >=556 && $(window).width() <= 768 ) {
-//         createMobileBack();
-// 	}
-// });
+$(window).on('resize', function () {
+	if ( $(window).width() <= 555 ) {
+        createMobile();
+	} else if ( $(window).width() >=556 && $(window).width() <= 768 ) {
+        createMobileBack();
+	}
+});
 
 function createMobile() {
     var block2 = $('aside.aside-right.aside-right-default.nm-block .block2'),
@@ -652,11 +652,11 @@ $(window).on('load',function () {
     }
 });
 
-// $(window).on('resize',function () {
-//     if ( $(window).width() <= 768 ) {
-//         clippingText( $('.team-player-box-mobile__position span'), 7);
-//     }
-// });
+$(window).on('resize',function () {
+    if ( $(window).width() <= 768 ) {
+        clippingText( $('.team-player-box-mobile__position span'), 7);
+    }
+});
 
 /*================================================*/
 /*          		 Cup-page           */
