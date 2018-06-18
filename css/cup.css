@@ -1,8 +1,16 @@
 /*================================================*/
 /*					 Cup         		      */
 /*================================================*/
+.cup .above-content-block-homepage .nm-content .nm-page-maintext div + div {
+  margin-left: 21px;
+}
+@media (max-width: 569px) {
+  .cup .above-content-block-homepage .nm-content .nm-page-maintext div + div {
+    margin-left: 0;
+  }
+}
 .cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw {
-  margin-top: 30px;
+  margin-top: 32px;
   padding-left: 60px;
   padding-right: 30px;
   padding-bottom: 8px;
@@ -80,16 +88,20 @@
       -ms-flex-negative: 0;
           flex-shrink: 0;
 }
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff-header .viewport-head .overflow-head ul li:first-child span,
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff-header .viewport-head .overflow-head ul li:last-child span {
+  padding-left: 5px;
+}
 .cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap {
   position: relative;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .something-pair {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .tabs-pair {
   position: absolute;
   top: 0;
   bottom: 0;
   left: -30px;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .something-pair ul {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .tabs-pair ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,18 +113,24 @@
           flex-direction: column;
   height: 100%;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .something-pair ul li {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .tabs-pair ul li {
   border-right: 4px solid transparent;
   height: 12.5%;
   width: 34px;
   background: url("../img/icons/pair-icon.svg") no-repeat center left / cover;
   background-size: 23px;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .something-pair ul li.active {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .tabs-pair ul li.active {
   background-image: url("../img/icons/pair-icon-active.svg");
   border-color: #ff5f27;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .tabs-pair ul li a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport {
+  display: none;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -122,7 +140,7 @@
   -webkit-border-radius: 0 0 4px 0;
           border-radius: 0 0 4px 0;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview {
   position: absolute;
   left: 0;
   top: 0;
@@ -133,18 +151,19 @@
   display: -ms-flexbox;
   display: flex;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round {
   width: 155px;
   height: 100%;
-  padding: 15px 0;
+  padding-top: 15px;
+  padding-bottom: 17px;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round:nth-child(even) {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round:nth-child(even) {
   background-color: #fcfcfc;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -160,9 +179,9 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation {
   position: relative;
-  padding-left: 13px;
+  padding-left: 12px;
   padding-right: 15px;
   height: 98px;
   display: -webkit-box;
@@ -179,7 +198,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation::after {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation::after {
   content: '';
   display: inline-block;
   height: 56px;
@@ -192,7 +211,7 @@
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation .match {
   border: solid 1px #c9cccf;
   -webkit-border-radius: 4px;
           border-radius: 4px;
@@ -207,7 +226,7 @@
           flex-direction: column;
   position: relative;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match::before {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation .match::before {
   content: '';
   display: inline-block;
   height: 1px;
@@ -220,7 +239,7 @@
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match::after {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation .match::after {
   content: '';
   display: inline-block;
   height: 1px;
@@ -233,7 +252,7 @@
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation .match .participant {
   font-size: 11px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -248,33 +267,33 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #c9ccd1;
-  padding: 1px 4px;
+  padding: 1px 7px 1px 4px;
   background-color: #fff;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant:first-child {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation .match .participant:first-child {
   -webkit-border-radius: 4px 4px 0 0;
           border-radius: 4px 4px 0 0;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant:last-child {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation .match .participant:last-child {
   -webkit-border-radius: 0 0 4px 4px;
           border-radius: 0 0 4px 4px;
   padding-bottom: 0;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant.winner {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation .match .participant.winner {
   color: #000;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant.show-bcg {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation .match .participant.show-bcg {
   background-color: #3e80a9;
   color: #fff;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant.show-bcg.winner {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation .match .participant.show-bcg.winner {
   color: #fff;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant:hover {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation .match .participant:hover {
   background-color: #3e80a9;
   color: #fff;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant .team-name-box {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation .match .participant .team-name-box {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -284,52 +303,56 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant .team-name-box .team-logo {
-  margin-right: 10px;
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation .match .participant .team-name-box .team-logo {
+  margin-right: 7px;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round .matches .relation .match .participant .team-name-box .team-name {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round .matches .relation .match .participant .team-name-box .team-name {
   white-space: nowrap;
   overflow: hidden;
-  width: 70%;
+  width: 80%;
   text-overflow: ellipsis;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round.one-of-8 .matches .relation .match::before {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round.one-of-8 .matches .relation .match::before {
   background-color: transparent;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round.one-of-4 .matches {
-  padding: 30px 0;
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round.one-of-4 .matches {
+  padding: 29px 0;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round.one-of-4 .matches .relation {
-  height: 150px;
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round.one-of-4 .matches .relation {
+  height: 151px;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round.one-of-4 .matches .relation::after {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round.one-of-4 .matches .relation::after {
   height: 108px;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round.one-of-2 .matches {
-  padding: 90px 0;
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round.one-of-2 .matches {
+  padding: 83px 0;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round.one-of-2 .matches .relation {
-  height: 285px;
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round.one-of-2 .matches .relation {
+  height: 268px;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round.one-of-2 .matches .relation::after {
-  height: 206px;
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round.one-of-2 .matches .relation::after {
+  height: 220px;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round.last-round .matches {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round.last-round .matches {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round.last-round .matches .relation {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round.last-round .matches .relation {
   height: auto;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round.last-round .matches .relation::after {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round.last-round .matches .relation::after {
   content: none;
 }
-.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .viewport .overview .round.last-round .matches .relation .match::after {
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content .viewport .overview .round.last-round .matches .relation .match::after {
   content: none;
+}
+.cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport-wrap .nm-tabs-content .nm-tab-content.active .viewport {
+  display: block;
 }
 .cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper {
+  padding-bottom: 0;
   margin-top: 0;
 }
 .cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block {
@@ -340,7 +363,7 @@
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  padding-top: 20px;
+  padding-top: 24px;
   overflow: inherit;
 }
 .cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .standings-table__left,
@@ -356,6 +379,15 @@
 .cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content {
   padding-top: 0;
 }
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content {
+  padding-top: 8px;
+}
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-thead .nm-tr .nm-table-pts {
+  width: 27px;
+}
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-pts {
+  width: 27px;
+}
 .cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content {
   padding-right: 30px;
 }
@@ -363,20 +395,31 @@
   padding: 0;
   border: none;
 }
-.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-left .pr-left-col .pr-match-time {
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-rows-wrap {
+  padding-top: 3px;
+}
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-rows-wrap .pr-match-row {
+  margin: 2px 0;
+  padding: 4px 0;
+}
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-rows-wrap .pr-match-row .pr-match-row-left .pr-left-col {
+  padding-left: 7px;
+  margin-right: 4px;
+}
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-rows-wrap .pr-match-row .pr-match-row-left .pr-left-col .pr-match-time {
   font-size: 11px;
   color: #43474d;
   font-weight: 500;
 }
-.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-left .pr-left-col::after {
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-rows-wrap .pr-match-row .pr-match-row-left .pr-left-col::after {
   content: none;
 }
-.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-center {
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-rows-wrap .pr-match-row .pr-match-row-center {
   padding-left: 11px;
   margin-left: -4px;
   border-left: 1px solid #e1e8ee;
 }
-.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-center .pr-match-row-center-left .pr-team-name-cont {
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-rows-wrap .pr-match-row .pr-match-row-center .pr-match-row-center-left .pr-team-name-cont {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
@@ -386,10 +429,10 @@
       -ms-flex-align: end;
           align-items: flex-end;
 }
-.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-center .pr-match-row-center-left .pr-team-name-cont .pr-record {
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-rows-wrap .pr-match-row .pr-match-row-center .pr-match-row-center-left .pr-team-name-cont .pr-record {
   margin-bottom: 1px;
 }
-.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-center .pr-match-row-right {
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .pr-main-content .pr-main-content-row .pr-match-rows-wrap .pr-match-row .pr-match-row-center .pr-match-row-right {
   padding-right: 6px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -400,7 +443,88 @@
       -ms-flex-align: center;
           align-items: center;
 }
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block > .right {
+  padding-right: 10px;
+}
+.cup .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block > left {
+  padding-right: 0;
+}
+.cup .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left {
+  margin-top: 14px;
+}
+.cup .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-main-content .pr-main-content-row {
+  padding-top: 2px;
+  padding-bottom: 20px;
+}
+.cup .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-main-content .pr-main-content-row .pr-match-rows-wrap .pr-match-row {
+  margin: 2px 0;
+}
+@media (max-width: 1169px) {
+  .cup .nm-grow main .pr-main-wrap.league-md.league-sm .pr-main .league-info.aside-right-wrapper .s-main .new-commers .division-content .nm-img-wrap {
+    margin-right: 21px;
+  }
+  .cup .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-main-content .pr-main-content-row .pr-match-rows-wrap .pr-match-row .pr-match-row-right {
+    padding-right: 3px;
+  }
+  .cup .nm-grow main .pr-main-wrap.top-scores-md .aside-right-default.nm-block .aside-right-wrapper .top-scores .s-main > div {
+    padding-right: 5px;
+  }
+}
+@media (max-width: 869px) {
+  .cup .nm-grow main .pr-main-wrap.league-md .pr-main .league-info.aside-right-wrapper .s-main-sm > div.s-main-sm-block .new-commers {
+    margin-bottom: 29px;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-md .pr-main .league-info.aside-right-wrapper .s-main-sm > div.s-main-sm-block .new-commers > div:last-child {
+    padding-bottom: 13px;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .nm-tabs-content {
+    width: 100%;
+    padding-right: 30px;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .standings-table__right {
+    width: 100%;
+    padding-left: 22px;
+    padding-right: 0;
+    margin-bottom: 29px;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .standings-table__right .pr-main-content {
+    padding-right: 23px;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .standings-table__right .pr-main-content .pr-main-content-row {
+    border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 20px;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .left {
+    width: 60%;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .right {
+    padding-right: 30px;
+    width: 40%;
+  }
+}
+@media (max-width: 620px) {
+  .cup .pr-main-content-row .pr-match-rows-wrap {
+    display: block;
+  }
+}
 @media (max-width: 569px) {
+  .cup .nm-grow main .pr-main-wrap.draw-wrap {
+    display: none;
+  }
+  .cup .nm-grow main .pr-main-wrap.draw-wrap.show {
+    display: block;
+  }
+  .cup .nm-grow main .pr-main-wrap.draw-wrap.hide {
+    display: none;
+  }
+  .cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main {
+    padding-bottom: 4px;
+  }
+  .cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw {
+    padding-left: 35px;
+    padding-right: 9px;
+    margin-top: 11px;
+  }
   .cup .nm-grow main .pr-main-wrap.draw-wrap .pr-main .glib-stats-box-draw .playoff.scroll .viewport::after {
     position: absolute;
     content: '';
@@ -414,4 +538,35 @@
     bottom: 0;
     width: 65px;
   }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper {
+    margin-top: 0;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right {
+    padding-top: 2px;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .nm-tabs-content {
+    padding-left: 8px;
+    padding-right: 9px;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .standings-table__right {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .standings-table__right .pr-main-content {
+    padding-right: 8px;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .standings-table__right .pr-main-content .pr-main-content-row {
+    padding-bottom: 11px;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .left {
+    width: 100%;
+  }
+  .cup .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-mini-block.aside-right .right {
+    width: 100%;
+    padding-right: 8px;
+    margin-top: 15px;
+  }
+}
+.cup .aside-right-default.nm-block .aside-right-wrapper .s-main .new-commers {
+  margin-top: 28px;
 }
