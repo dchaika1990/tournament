@@ -744,30 +744,29 @@
             align-items: center;
     margin-left: auto;
   }
-  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country .team-player-country__icon {
+  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country .flag {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
     height: 16px;
     width: 16px;
-    display: inline-block;
-    margin-left: 8px;
     -webkit-border-radius: 50%;
             border-radius: 50%;
+    margin-left: 8px;
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
         -ms-flex-order: 2;
             order: 2;
   }
-  .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country .team-player-country__icon .flag {
-    -webkit-border-radius: 50%;
-            border-radius: 50%;
-    max-width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
   .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country a {
     font-size: 11px;
     font-weight: 300;
     color: #43474d;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country a:hover {
     color: #4186b1;
@@ -961,8 +960,8 @@
   .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country .name {
     display: none;
   }
-  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country .team-player-country__icon {
-    margin-left: 5px;
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country .flag {
+    margin-left: 4px;
   }
   .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover {
     position: relative;
@@ -1124,7 +1123,7 @@
   .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .players .pr-main .pr-main-title .pr-main-title-box {
     padding-left: 30px;
   }
-  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country .team-player-country__icon {
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box.half-box-left .players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country .flag {
     margin-right: 9px;
     margin-left: 28px;
   }
