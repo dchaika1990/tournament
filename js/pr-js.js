@@ -83,7 +83,7 @@ function oddsToggleShow() {
 $('.pr-match-rows-wrap').on('click', '*', function (e) {
 	if (e.target.nodeName.toLowerCase() !== 'i' && e.target.nodeName.toLowerCase() !== 'a') {
 		var aside = $('.aside-right:not(.aside-right-default)');
-		
+
 		//open odds
 		if (window.innerWidth <= 620) {
 			$('.pr-match-row-right').removeClass('active');
@@ -119,7 +119,7 @@ $(".nm-content-overlay").on("click", function(){
 })
 
 
-$('.favorites-match-row').on('click', '*', function (e) {
+$('.favorites-match-row:not(.league-standing .favorites-match-row)').on('click', '*', function (e) {
 	if (e.target.nodeName.toLowerCase() !== 'i' && e.target.nodeName.toLowerCase() !== 'a') {
 		var aside = $('.pr-favorites-right:not(.pr-favorites-right-default)');
 
@@ -379,12 +379,12 @@ $('.bmenu .nm-header-bottom li').on('click', function () {
 });
 
 //Block matches-sm - opening pr-favotites-right on click
-$('.pr-main-wrap.matches-sm .pr-match-row .pr-match-row-left').on('click', function () {
+$('.bblock .pr-main-wrap.matches-sm .pr-match-row .pr-match-row-left').on('click', function () {
 
-    if ($(window).width() <= 1169) {
-        $('.pr-main.favorites').css('z-index','auto');
-        $('.pr-main-wrap').css('z-index','auto');
-    }
+    $('.pr-main.favorites').css('z-index','auto');
+    $('.pr-main-wrap.matches-sm').css('z-index','auto');
+
+    if ( $(window).width() > 1169) return false;
 
     if ( $(window).width() <= 1169 && $(window).width() >= 553 ){
         $('.nm-content-overlay').fadeIn(200);
@@ -395,6 +395,30 @@ $('.pr-main-wrap.matches-sm .pr-match-row .pr-match-row-left').on('click', funct
         $('.pr-favorites-right.pr-favorites-scrollable').removeClass('open');
         $('.pr-main-wrap.matches-sm .aside-right.nm-block').removeClass('open');
     }
+
+});
+
+//Block matches-sm - opening pr-favotites-right on click
+$('.mblock .pr-main-wrap.matches-sm .pr-match-row .pr-match-row-left').on('click', function () {
+
+    $('.pr-main.favorites').css('z-index','auto');
+
+    if ( $(window).width() > 849) return false;
+
+    if ( $(window).width() <= 849 && $(window).width() >= 553 ){
+        $('.nm-content-overlay').fadeIn(200);
+        $('.pr-favorites-right.pr-favorites-scrollable').addClass('open');
+        $('.pr-main-wrap.matches-sm .aside-right.nm-block').addClass('open');
+    } else {
+        $('.nm-content-overlay').fadeOut(200);
+        $('.pr-favorites-right.pr-favorites-scrollable').removeClass('open');
+        $('.pr-main-wrap.matches-sm .aside-right.nm-block').removeClass('open');
+    }
+
+});
+
+$('.pr-main-wrap.league-standing .pr-match-row .pr-match-row-left').on('click', function () {
+    if ( $(window).width() > 480 ) return false;
 });
 
 $('.nm-content-overlay').on('click', function () {
@@ -614,7 +638,6 @@ function clippingText( html, count ) {
     html.each(function () {
         var htmlText = $(this).text();
         if ( htmlText.length > count ){
-            console.log(htmlText);
             var result = htmlText.slice(0, count) + '.';
             $(this).text( result );
         }
@@ -624,18 +647,156 @@ function clippingText( html, count ) {
 //Clipping text in players block
 
 $(window).on('load',function () {
-    if ( $(window).width() <= 569 ) {
+    if ( $(window).width() <= 768 ) {
         clippingText( $('.team-player-box-mobile__position span'), 7);
     }
 });
 
 $(window).on('resize',function () {
-    if ( $(window).width() <= 569 ) {
+    if ( $(window).width() <= 768 ) {
         clippingText( $('.team-player-box-mobile__position span'), 7);
     }
 });
 
+/*================================================*/
+/*          		 Cup-page           */
+/*================================================*/
 
+//Draw box
+
+// Choose winner team
+$('.draw-wrap .match').hover(
+    function () {
+        var teamNameMatchesArr = $('.participant .team-name');
+        $(this).find('.team-name').each(function () {
+            var currentText = $(this).text();
+
+            teamNameMatchesArr.each(function () {
+                if ( $(this).text() == currentText ) $(this).parents('.participant').addClass('show-bcg')
+            });
+        });
+    },
+    function () {
+        var teamNameMatchesArr = $('.participant .team-name');
+        $(this).find('.team-name').each(function () {
+            var currentText = $(this).text();
+
+            teamNameMatchesArr.each(function () {
+                if ( $(this).text() == currentText ) $(this).parents('.participant').removeClass('show-bcg')
+            });
+        });
+    }
+);
+
+// Viewport block height
+
+function viewportHeightResize() {
+    $('.viewport').each(function () {
+        var countBlocksInViewport = $(this).find('.matches').length;
+        var viewportPadTop = $(this).find('.round.first-round').css('padding-top');
+        var viewportPadBottom = $(this).find('.round.first-round').css('padding-bottom');
+        var viewportHeight = 98 * +countBlocksInViewport + (+countBlocksInViewport-1) * 12 + parseFloat(viewportPadTop) + parseFloat(viewportPadBottom);
+        return $('.viewport').css('height', viewportHeight);
+    });
+}
+
+$(window).on('load', function () {
+    viewportHeightResize()
+});
+
+$('.draw-wrap .nm-tabs-list a').on('click', function (e) {
+   e.preventDefault();
+    viewportHeightResize();
+});
+
+// Slider in rounds
+
+var countClickNext = 0;
+var countClickPrev = 0;
+
+var countRounds = function () {
+    $('.viewport-head ul').css({'left': '0'});
+    $('.playoff.scroll .overview').css({'left': '0'});
+
+    countClickPrev = 0;
+
+    var widthBoxScrollBody = $('.playoff.scroll .nm-tabs-content').width();
+    var lengthBoxScrollBody = $('.playoff.scroll .nm-tab-content.active .round').length;
+    var countShownBlocks = Math.floor(widthBoxScrollBody/155);
+
+    countClickNext = lengthBoxScrollBody - countShownBlocks;
+    console.log(countClickPrev, countClickNext, widthBoxScrollBody, lengthBoxScrollBody, countShownBlocks);
+};
+
+$('.playoff-header .btn-next').on('click', function (e) {
+    e.preventDefault();
+
+    if ( countClickNext > 0 ) {
+        $('.viewport-head ul').animate({'left': '-=155px'});
+        $('.playoff.scroll .overview').animate({'left': '-=155px'});
+
+        countClickNext--;
+        countClickPrev++;
+        console.log(countClickNext);
+        console.log(countClickPrev);
+    } else {
+        return false
+    }
+});
+
+$('.playoff-header .btn-prev').on('click', function (e) {
+    e.preventDefault();
+
+    if ( countClickPrev > 0 ) {
+        $('.viewport-head ul').animate({'left': '+=155px'});
+        $('.playoff.scroll .overview').animate({'left': '+=155px'});
+
+        countClickNext++;
+        countClickPrev--;
+        console.log(countClickNext);
+        console.log(countClickPrev);
+    } else {
+        return false
+    }
+});
+
+
+$(window).on('load', function () {
+    countRounds();
+});
+
+$(window).on('resize', function () {
+    countRounds();
+});
+
+$('.standings-btn').on('click', function () {
+    countRounds();
+});
+
+$('.nm-tabs-list a').on('click', function (e) {
+    e.preventDefault();
+    countRounds();
+});
+
+// Change place to block draw-wrap on tablet version
+
+function changePlace() {
+   var drawWrap = $('.pr-main-wrap.draw-wrap');
+   var leagueStanding = $('.pr-main-wrap.league-standing');
+    leagueStanding.before(drawWrap);
+}
+
+$(window).on('load', function () {
+    if ( $(window).width() < 1169 ) {
+        changePlace();
+    }
+});
+
+$(window).on('resize', function () {
+    if ( $(window).width() < 1169 ) {
+        changePlace();
+    }
+});
 
 
 /*================================================*/

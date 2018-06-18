@@ -522,6 +522,7 @@ $(document).on("mouseleave", ".nm-share-block", function() {
 //aside tabs
 $(document).on("click", ".nm-tabs-list a", function (e) {
 	e.preventDefault();
+	console.log( e.target );
 	var list = $(this).closest(".nm-tabs-list");
 	var container = $(this).closest(".nm-tabs-wrapper").find(".nm-tabs-content:first");
 	var cur = 0;
