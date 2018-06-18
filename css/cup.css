@@ -570,3 +570,6 @@
 .cup .aside-right-default.nm-block .aside-right-wrapper .s-main .new-commers {
   margin-top: 28px;
 }
+li {
+  list-style: none;
+}
