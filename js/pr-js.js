@@ -610,7 +610,7 @@ function createTablteBlocks() {
 
 //Append blocks to mobile version
 $(window).on('resize', function () {
-	if ( $(window).width() <= 555 && $(window).width() => 400 ) {
+	if ( $(window).width() <= 555 && $(window).width() >= 400 ) {
         createMobile();
 	} else if ( $(window).width() >=556 && $(window).width() <= 768 ) {
         createMobileBack();
