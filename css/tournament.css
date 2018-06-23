@@ -68,6 +68,161 @@
 .radio-filter input[type=radio]:checked + label span:first-child:after {
   display: inline-block;
 }
+.pr-favorite-container.above {
+  position: relative;
+}
+.pr-favorite-container.above .pr-favorite-btn {
+  width: 24px;
+  height: 24px;
+  padding-left: 1px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  border: solid 1px #486e7c;
+}
+.pr-favorite-container.above .pr-favorite-btn:hover {
+  background-color: #4186b1;
+  border-color: #4186b0;
+}
+.pr-favorite-container.above .pr-favorite-btn:hover i {
+  color: #fff;
+}
+.pr-favorite-container.above .pr-favorite-btn i {
+  font-size: 12px;
+  color: #486e7c;
+}
+.pr-favorite-container.above .pr-favorite-btn.pr-favorite-btn-active {
+  border-color: #4186b0;
+}
+.pr-favorite-container.above .pr-favorite-btn.pr-favorite-btn-active i {
+  color: #4186b0;
+}
+.pr-favorite-container.above .pr-favorite-btn.pr-favorite-btn-active:hover {
+  background-color: transparent;
+}
+.pr-favorite-container.above .pr-favorite-btn.default-btn {
+  border-color: #c9cccf;
+}
+.pr-favorite-container.above .pr-favorite-btn.default-btn i {
+  color: #c9cccf;
+}
+.pr-favorite-container.above .pr-favorite-btn.default-btn:hover {
+  background-color: #4186b1;
+  border-color: #4186b0;
+}
+.pr-favorite-container.above .pr-favorite-btn.default-btn:hover i {
+  color: #fff;
+}
+.pr-favorite-container.above .pr-favorite-btn.pr-fvr-muted {
+  position: relative;
+}
+.pr-favorite-container.above .pr-favorite-btn.pr-fvr-muted:after {
+  content: '';
+  width: 31px;
+  height: 1px;
+  background-color: #486e7c;
+  -webkit-transform: rotate(-46deg) translateX(-47%);
+      -ms-transform: rotate(-46deg) translateX(-47%);
+          transform: rotate(-46deg) translateX(-47%);
+  top: 0;
+  right: -15px;
+  position: absolute;
+  display: block;
+}
+.pr-favorite-container.above .pr-dropdown-favorite {
+  display: none;
+  position: absolute;
+  top: 34px;
+  right: 0;
+  z-index: 90 !important;
+  will-change: opacity;
+}
+.pr-favorite-container.above .pr-dropdown-favorite ul {
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  min-width: 150px;
+}
+.pr-favorite-container.above .pr-dropdown-favorite ul:before {
+  position: absolute;
+  display: block;
+  content: "";
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #fff transparent;
+  top: -2px;
+  right: 8px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+.pr-favorite-container.above .pr-dropdown-favorite ul.first-hover:before {
+  border-color: transparent transparent #4186B1 transparent;
+}
+.pr-favorite-container.above .pr-dropdown-favorite ul li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pr-favorite-container.above .pr-dropdown-favorite ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #a1a6ac;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 100%;
+  min-height: 30px;
+  height: 30px;
+  padding: 5px 12px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.pr-favorite-container.above .pr-dropdown-favorite ul li a.pr-remove {
+  color: #ed334d;
+}
+.pr-favorite-container.above .pr-dropdown-favorite ul li a i {
+  font-size: 12px;
+  color: #c9cccf;
+}
+.pr-favorite-container.above .pr-dropdown-favorite ul li a:hover {
+  color: #fff;
+  background-color: #4186B1;
+}
+.pr-favorite-container.above .pr-dropdown-favorite ul li:not(:last-child) {
+  border-bottom: 1px solid #c9cccf;
+}
 .tournament .nm-big-wrapper {
   z-index: 11;
 }
@@ -258,161 +413,6 @@
 }
 .tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-time-period-btn .pr-dropdown-time-period ul.first-hover::before {
   border-color: transparent transparent #4186B1 transparent;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container {
-  position: relative;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-favorite-btn {
-  width: 24px;
-  height: 24px;
-  padding-left: 1px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
-  border: solid 1px #486e7c;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-favorite-btn:hover {
-  background-color: #4186b1;
-  border-color: #4186b0;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-favorite-btn:hover i {
-  color: #fff;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-favorite-btn i {
-  font-size: 12px;
-  color: #486e7c;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-favorite-btn.pr-favorite-btn-active {
-  border-color: #4186b0;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-favorite-btn.pr-favorite-btn-active i {
-  color: #4186b0;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-favorite-btn.pr-favorite-btn-active:hover {
-  background-color: transparent;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-favorite-btn.default-btn {
-  border-color: #c9cccf;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-favorite-btn.default-btn i {
-  color: #c9cccf;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-favorite-btn.default-btn:hover {
-  background-color: #4186b1;
-  border-color: #4186b0;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-favorite-btn.default-btn:hover i {
-  color: #fff;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-favorite-btn.pr-fvr-muted {
-  position: relative;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-favorite-btn.pr-fvr-muted:after {
-  content: '';
-  width: 31px;
-  height: 1px;
-  background-color: #486e7c;
-  -webkit-transform: rotate(-46deg) translateX(-47%);
-      -ms-transform: rotate(-46deg) translateX(-47%);
-          transform: rotate(-46deg) translateX(-47%);
-  top: 0;
-  right: -15px;
-  position: absolute;
-  display: block;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-dropdown-favorite {
-  display: none;
-  position: absolute;
-  top: 34px;
-  right: 0;
-  z-index: 90 !important;
-  will-change: opacity;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-dropdown-favorite ul {
-  background-color: #fff;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
-  -webkit-box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-  min-width: 150px;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-dropdown-favorite ul:before {
-  position: absolute;
-  display: block;
-  content: "";
-  border-style: solid;
-  border-width: 0 5px 5px 5px;
-  border-color: transparent transparent #fff transparent;
-  top: -2px;
-  right: 8px;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: .2s;
-  transition: .2s;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-dropdown-favorite ul.first-hover:before {
-  border-color: transparent transparent #4186B1 transparent;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-dropdown-favorite ul li {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-dropdown-favorite ul li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #a1a6ac;
-  font-family: "Gotham Pro", sans-serif;
-  font-size: 9px;
-  font-weight: 500;
-  text-transform: uppercase;
-  white-space: nowrap;
-  width: 100%;
-  min-height: 30px;
-  height: 30px;
-  padding: 5px 12px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-dropdown-favorite ul li a.pr-remove {
-  color: #ed334d;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-dropdown-favorite ul li a i {
-  font-size: 12px;
-  color: #c9cccf;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-dropdown-favorite ul li a:hover {
-  color: #fff;
-  background-color: #4186B1;
-}
-.tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-favorite-container .pr-dropdown-favorite ul li:not(:last-child) {
-  border-bottom: 1px solid #c9cccf;
 }
 @media (max-width: 1200px) {
   .tournament .above-content-block-homepage {
@@ -1380,29 +1380,86 @@
           justify-content: flex-end;
   cursor: pointer;
 }
-.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.summary-btn {
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.summary-btn,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.standings-btn,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.stats-btn,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.props-btn,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.matches-btn,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn {
+  position: relative;
+}
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.summary-btn::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.standings-btn::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.stats-btn::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.props-btn::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.matches-btn::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 1;
+}
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.summary-btn::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.standings-btn::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.stats-btn::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.props-btn::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.matches-btn::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+}
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.summary-btn.active::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.standings-btn.active::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.stats-btn.active::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.props-btn.active::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.matches-btn.active::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn.active::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn.active::before {
+  opacity: 0;
+}
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.summary-btn.active::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.standings-btn.active::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.stats-btn.active::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.props-btn.active::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.matches-btn.active::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn.active::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn.active::after {
+  opacity: 1;
+}
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.summary-btn::before {
   background: url("../img/icons/summary.svg") no-repeat center top;
 }
-.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.summary-btn.active {
-  background-image: url("../img/icons/summary-filled.svg");
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.summary-btn::after {
+  background: url("../img/icons/summary-filled.svg") no-repeat center top;
 }
-.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.standings-btn {
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.standings-btn::before {
   background: url("../img/icons/matches.svg") no-repeat center top;
 }
-.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.standings-btn.active {
-  background-image: url("../img/icons/matches-filled.svg");
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.standings-btn::after {
+  background: url("../img/icons/matches-filled.svg") no-repeat center top;
 }
-.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn {
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn::before {
   background: url("../img/icons/team.svg") no-repeat center top;
 }
-.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn.active {
-  background-image: url("../img/icons/team-filled.svg");
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn::after {
+  background: url("../img/icons/team-filled.svg") no-repeat center top;
 }
-.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn {
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn::before {
   background: url("../img/icons/media.svg") no-repeat center top;
 }
-.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn.active {
-  background-image: url("../img/icons/media-filled.svg");
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn::after {
+  background: url("../img/icons/media-filled.svg") no-repeat center top;
 }
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li .nm-menu-icon {
   text-align: center;
@@ -1410,6 +1467,9 @@
   height: 17px;
 }
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li:hover {
+  color: #3e80a9;
+}
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.active {
   color: #3e80a9;
 }
 @media (max-width: 1300px) {
@@ -2565,6 +2625,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-weight: 400;
 }
 .tournament .aside-right-default.nm-block .aside-right-wrapper .top-scores .s-main-content .nm-player-info-row .nm-player-skills,
 .tournament .pr-main-wrap .aside-right-wrapper .top-scores .s-main-content .nm-player-info-row .nm-player-skills {

@@ -53,8 +53,11 @@
   -webkit-box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
           box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
   left: 0;
-  top: 35px;
+  top: auto;
+  bottom: auto;
   z-index: 10;
+  -webkit-border-radius: 0 0 4px 4px;
+          border-radius: 0 0 4px 4px;
 }
 .division-dropdown .division-dropdown-list ul {
   display: -webkit-box;
@@ -92,6 +95,7 @@
 .division-dropdown .division-dropdown-list ul li.active a {
   position: relative;
   padding-left: 30px;
+  color: #3e80a9;
 }
 .division-dropdown .division-dropdown-list ul li.active a::before {
   position: absolute;
@@ -147,7 +151,6 @@
 }
 @media (max-width: 569px) {
   .team .above-content-block-homepage {
-    margin-bottom: 25px;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -485,9 +488,15 @@
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  background: #fff;
   -webkit-border-radius: 4px;
           border-radius: 4px;
-  background-color: #fff;
+  -webkit-box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-header {
   display: -webkit-box;
@@ -516,7 +525,7 @@
   width: 97px;
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-content .team-player-name {
-  font-weight: 100;
+  font-weight: 400;
   font-size: 18px;
   margin: 10px 15px 0px 15px;
   padding-bottom: 10px;
@@ -553,20 +562,41 @@
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-footer .name {
   font-size: 11px;
-  font-weight: 300;
+  font-weight: 400;
   color: #43474d;
 }
-.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#486e7c), to(#3e80a9));
-  background-image: -webkit-linear-gradient(bottom, #486e7c, #3e80a9);
-  background-image: linear-gradient(to top, #486e7c, #3e80a9);
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item::before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(#486e7c), to(#3e80a9));
+  background: -webkit-linear-gradient(bottom, #486e7c, #3e80a9);
+  background: linear-gradient(to top, #486e7c, #3e80a9);
+  opacity: 1;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover .team-player-header {
   display: none;
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover .team-player-content {
   padding-top: 25px;
-  padding-bottom: 13px;
+  padding-bottom: 17px;
+  z-index: 3;
+  position: relative;
+}
+.team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover .team-player-content .team-player-icon {
+  z-index: 3;
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover .team-player-content .team-player-icon img {
   border-color: transparent;
@@ -586,6 +616,7 @@
           justify-content: space-between;
   padding: 0 16px;
   margin-top: 2px;
+  z-index: 3;
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover .team-player-content .team-player-controls .team-player-favorite-btn .pr-favorite-btn.pr-favorite-btn-active {
   background-color: #fff;
@@ -600,7 +631,7 @@
 }
 .team .nm-grow main .pr-main-wrap.about .pr-main .pr-main-body {
   font-family: 'HelveticaNeueCyr', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   padding: 20px 30px 0 30px;
   margin-bottom: -20px;
@@ -615,7 +646,6 @@
   margin-bottom: 16px;
   color: #000000;
   line-height: 17px;
-  letter-spacing: -0.1px;
 }
 .team .nm-grow main .pr-main-wrap.about .pr-main .pr-main-body p a {
   color: #486e7c;
@@ -633,7 +663,7 @@
   .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-left {
     width: 100%;
   }
-  .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-right.pr-favorites-scrollable {
+  .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-right {
     position: absolute;
     z-index: auto;
     top: 0;
@@ -647,7 +677,7 @@
             transform: translateX(200%);
     transition: transform 0.4s linear, -webkit-transform 0.4s linear;
   }
-  .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-right.pr-favorites-scrollable.open {
+  .team .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-right.open {
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
@@ -761,7 +791,7 @@
   }
   .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country a {
     font-size: 11px;
-    font-weight: 300;
+    font-weight: 400;
     color: #43474d;
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
@@ -775,9 +805,7 @@
     margin-top: 8px;
   }
   .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#486e7c), to(#3e80a9));
-    background-image: -webkit-linear-gradient(bottom, #486e7c, #3e80a9);
-    background-image: linear-gradient(to top, #486e7c, #3e80a9);
+    background-color: #486e7c;
   }
   .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile:hover .team-player-box-mobile__content .team-player-mobile__text {
     padding-right: 10px;
@@ -1054,6 +1082,9 @@
   }
 }
 @media (max-width: 555px) {
+  .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .block5 {
+    max-width: 100%;
+  }
   .team .nm-grow main .pr-main-wrap.mobile .aside-right-default.nm-block .block5 .media .odds {
     width: 100%;
     padding-left: 30px;
@@ -1685,14 +1716,14 @@
   width: 100%;
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:last-child .structure-wrapper__context .structure-wrapper__location .structure-wrapper__location_title {
-  width: 41%;
+  width: 37%;
   color: #43474d;
   padding-right: 10px;
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:last-child .structure-wrapper__context .structure-wrapper__location .structure-wrapper__location_text {
-  width: 59%;
+  width: 63%;
   text-align: right;
-  font-weight: 300;
+  font-weight: 400;
 }
 .team .aside-right-default.nm-block .aside-right-wrapper .team-info .s-main .structure-wrapper:last-child .structure-wrapper__context .structure-wrapper__location + div {
   margin-top: 6px;
