@@ -15,7 +15,7 @@ var pr_odds_timer;
 /*================================================*/
 function pr_switch_btn() {
 	if ($('.pr-switch').length) {
-		$('.pr-switch').on('click', function (e) {
+		$('.pr-switch:not(#pr-switch)').on('click', function (e) {
 			e.stopPropagation();
 			if ($(this).find('.pr-switch-circle').hasClass('pr-switch-circle-active')) {
 				clearTimeout(pr_odds_timer);
@@ -474,12 +474,27 @@ function divisionDropdownBtnWidth( list ,selected ) {
     var divisionDropDownSelectedPL = selected.css('padding-left');
     var divisionDropDownSelectedPR = selected.css('padding-right');
     var divisionDropDownSelectedWidth = divisionDropDownSelected + parseFloat(divisionDropDownSelectedPL) + parseFloat(divisionDropDownSelectedPR);
+    console.log(divisionDropDownSelectedWidth);
 
     list.width(divisionDropDownSelectedWidth);
 }
 
-divisionDropdownBtnWidth( $('.league-standing .division-dropdown-list') ,$('.league-standing .division-dropdown-selected') );
-divisionDropdownBtnWidth( $('.aside-right .division-dropdown-list') ,$('.aside-right .division-dropdown-selected') );
+$('.league-standing .division-dropdown').on('click', function () {
+    divisionDropdownBtnWidth( $(this).children('.division-dropdown-list') ,$(this).children('.division-dropdown-selected') );
+});
+
+$('.aside-right .division-dropdown').on('click', function () {
+    divisionDropdownBtnWidth( $(this).children('.division-dropdown-list') ,$(this).children('.division-dropdown-selected') );
+});
+
+
+$('.s-main__dropdown-left .division-dropdown').on('click', function () {
+    divisionDropdownBtnWidth( $(this).children('.division-dropdown-list') ,$(this).children('.division-dropdown-selected') );
+});
+
+$('.s-main__dropdown-right .division-dropdown').on('click', function () {
+    divisionDropdownBtnWidth( $(this).children('.division-dropdown-list') ,$(this).children('.division-dropdown-selected') );
+});
 
 //Select need text
 
@@ -530,7 +545,9 @@ console.dir(document.getElementById('canvas-foreign'));
 $(window).on('load', function () {
 
 	if ( $('.main-wrapper').hasClass('team') ) {
-        var can1 = document.getElementById('canvas-foreign'),
+        var can1 = document.getElementById('canvas-foreign');
+            console.log(can1);
+            if ( !can1 ) return false;
             c1 = can1.getContext('2d'),
             can2 = document.getElementById('canvas-national'),
             c2 = can2.getContext('2d'),
@@ -573,16 +590,18 @@ $(window).on('load', function () {
 
 $(window).on('load', function () {
     if ( $(window).width() <= 768 ) {
-        createTablteBlocks();
+        createTablteBlocksTeam();
     }
 
     if ( $(window).width() <= 555 ) {
-        createMobile();
+        createMobileTeam();
     }
 });
 
-function createTablteBlocks() {
-    $('.team main').append('<div class="pr-main-wrap mobile">');
+
+
+function createTablteBlocksTeam() {
+    $('.team main:not(.player main)').append('<div class="pr-main-wrap mobile">');
 
     var block1 = $('aside.aside-right.aside-right-default.nm-block .block1'),
         block2 = $('aside.aside-right.aside-right-default.nm-block .block2'),
@@ -595,7 +614,6 @@ function createTablteBlocks() {
 
     $('.team main .pr-main-wrap.mobile').append( '<aside class="aside-right aside-right-default nm-block">' );
 
-    // $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block').append( block4 );
     $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block').append( block5 );
     $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block').append( '<div class="half-box half-box-left">' );
     $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block').append( '<div class="half-box half-box-right">' );
@@ -611,20 +629,20 @@ function createTablteBlocks() {
 //Append blocks to mobile version
 $(window).on('resize', function () {
 	if ( $(window).width() <= 555 ) {
-        createMobile();
+        createMobileTeam();
 	} else if ( $(window).width() >=556 && $(window).width() <= 768 ) {
-        createMobileBack();
+        createMobileTeamBack();
 	}
 });
 
-function createMobile() {
+function createMobileTeam() {
     var block2 = $('aside.aside-right.aside-right-default.nm-block .block2'),
         block4 = $('aside.aside-right.aside-right-default.nm-block .block4');
     $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box:first .block1').after(block2);
     $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box:first .players').after( block4 );
 }
 
-function createMobileBack() {
+function createMobileTeamBack() {
     var block2 = $('aside.aside-right.aside-right-default.nm-block .block2'),
         block4 = $('aside.aside-right.aside-right-default.nm-block .block4');
     $('.team main .pr-main-wrap.mobile .aside-right-default.nm-block .half-box:eq(1)').append( block2 );
@@ -798,6 +816,256 @@ $(window).on('resize', function () {
     }
 });
 
+/*================================================*/
+/*              Player Page             */
+/*================================================*/
+
+// Chart pentagon
+
+$('#pr-switch').on('click', function (e) {
+    e.preventDefault();
+    $('.chart-container .team-skills').toggleClass('active');
+    $(this).find('.pr-switch-circle').toggleClass('pr-switch-circle-active');
+});
+
+// Move blocks on tablet version
+
+function createLaptopBlocksPlayer() {
+    if ( $('.player main .pr-main-wrap.stats-wrap').html() && $('.player main .pr-main-wrap.player-skills .pr-main.media-wrap').html() ) {
+        return false;
+    }
+
+    $('.player main .pr-main-wrap.player-skills').before('<div class="pr-main-wrap stats-wrap">');
+    $('.player main .pr-main-wrap.player-skills').append('<div class="pr-main media-wrap">');
+
+    var blockStats = $('aside.aside-right.aside-right-default.nm-block .block1'),
+        blockMedia = $('aside.aside-right.aside-right-default.nm-block .block2');
+
+    $('.player main .pr-main-wrap.stats-wrap').append( '<div class="aside-right aside-right-default nm-block">' );
+    $('.player main .pr-main.media-wrap').append( '<div class="aside-right aside-right-default nm-block">' );
+
+    $('.player main .pr-main-wrap.stats-wrap .aside-right').append(blockStats);
+    $('.player main .pr-main.media-wrap .aside-right').append(blockMedia);
+}
+
+// Move blocks from desctop version to laptop
+
+function createLaptopBlocksPlayerBack() {
+    var blockStats = $('.aside-right.aside-right-default.nm-block .block1'),
+        blockMedia = $('.aside-right.aside-right-default.nm-block .block2');
+
+    var motherBlock = $('aside.aside-right.aside-right-default.nm-block');
+    motherBlock.append(blockStats);
+    motherBlock.append(blockMedia);
+
+    $('.player main .pr-main-wrap.stats-wrap').remove();
+    $('.player main .pr-main-wrap.player-skills .pr-main.media-wrap').remove();
+}
+
+// Move blocks from laptop version to tablet
+
+function createTabletBlocksSkills() {
+    if ( $('.pr-main-wrap.player-skills .pr-main__block-left').html() || $('.pr-main-wrap.player-skills .pr-main__block-right').html() ) return false;
+    var attributes = $('.player-skills .pr-main.attributes'),
+        position = $('.player-skills .pr-main.position'),
+        props = $('.player-skills .pr-main.props'),
+        mediaWrap = $('.player-skills .pr-main.media-wrap');
+
+    $('.pr-main-wrap.player-skills').append('<div class="pr-main__block-left">');
+    $('.pr-main-wrap.player-skills').append('<div class="pr-main__block-right">');
+
+    $('.pr-main-wrap.player-skills .pr-main__block-left').append(mediaWrap).append(position);
+    $('.pr-main-wrap.player-skills .pr-main__block-right').append(attributes).append(props);
+}
+
+function createTabletBlocksSkillsBack() {
+    if ( $('.player-skills > .pr-main.attributes').html() ) return false;
+
+    var attributes = $('.player-skills .pr-main.attributes'),
+        position = $('.player-skills .pr-main.position'),
+        props = $('.player-skills .pr-main.props'),
+        mediaWrap = $('.player-skills .pr-main.media-wrap');
+
+    $('.pr-main-wrap.player-skills').append(attributes).append(position).append(props).append(mediaWrap);
+
+    $('.pr-main__block-left').remove();
+    $('.pr-main__block-right').remove();
+}
+
+// Move blocks from tablet version to mobile
+
+// On resize
+function createMobileVersionResize() {
+    if ( $('.player.empty-page').html() ) return false;
+
+    if ( !($('.player main .pr-main-wrap.player-profile').html()) ){
+        var profile = $('.above-wrapper .pr-main-wrap.player-profile'),
+            videos = $('.pr-main-wrap.player-skills .pr-main.media-wrap'),
+            position = $('.pr-main-wrap.player-skills .pr-main.position'),
+            attributes = $('.pr-main-wrap.player-skills .pr-main.attributes'),
+            props = $('.pr-main-wrap.player-skills .pr-main.props');
+
+        $('.player main').append(profile);
+        $('.player main .pr-main-wrap.player-skills').append(videos.addClass('block')).append(position.addClass('block')).append(attributes.addClass('block')).append(props.addClass('block'));
+
+        $('.pr-main__block-left').remove();
+        $('.pr-main__block-right').remove();
+
+        var statsBlock1 = $('#statsBlock1'),
+            statsBlock2 = $('#statsBlock2'),
+            statsBlock3 = $('#statsBlock3'),
+            statsBlock4 = $('#statsBlock4'),
+            statsBlock5 = $('#statsBlock5'),
+            statsBlock6 = $('#statsBlock6'),
+            statsBlock7 = $('#statsBlock7');
+        $('.pr-main-wrap.stats-wrap .s-main').append(statsBlock1).append(statsBlock2).append(statsBlock3).append(statsBlock4).append(statsBlock5).append(statsBlock6).append(statsBlock7)
+        $('.s-main__stats-block__tablet').remove();
+
+        $('.pr-main-wrap.player-skills .pr-main').each(function () {
+            $(this).addClass('block');
+        })
+    }
+}
+
+function createMobileVersionBack() {
+    $('.player main .pr-main-wrap.player-skills .pr-main').each(function () {
+        $(this).removeClass('block');
+    });
+
+
+    if ( !($('.above-wrapper .pr-main-wrap.player-profile').html()) ) {
+        var profileBack = $('.pr-main-wrap.player-profile');
+        $('.above-wrapper').append(profileBack);
+        console.log('profileBack')
+    }
+}
+
+// On load
+
+function createMobileVersionLoad() {
+    if ( $('.player.empty-page').html() ) return false;
+
+    createLaptopBlocksPlayer();
+
+    $('.pr-main-wrap.player-skills .pr-main').each(function () {
+        $(this).addClass('block');
+    });
+
+    if ( !($('.player main .pr-main-wrap.player-profile').html()) ) {
+        var profile = $('.above-wrapper .pr-main-wrap.player-profile');
+        $('.player main').append(profile);
+        console.log('profile')
+    }
+}
+
+// Create three blocks in block Stats
+
+function divideOnThree(){
+    if ( $('.s-main__stats-block').html() ) {
+        return false;
+    }
+
+    var statsBlock1 = $('#statsBlock1'),
+        statsBlock2 = $('#statsBlock2'),
+        statsBlock3 = $('#statsBlock3'),
+        statsBlock4 = $('#statsBlock4'),
+        statsBlock5 = $('#statsBlock5'),
+        statsBlock6 = $('#statsBlock6'),
+        statsBlock7 = $('#statsBlock7');
+
+    $('.aside-right.aside-right-default.nm-block .block1 .s-main').append('<div class="s-main__stats-block">');
+    $('.aside-right.aside-right-default.nm-block .block1 .s-main').append('<div class="s-main__stats-block">');
+    $('.aside-right.aside-right-default.nm-block .block1 .s-main').append('<div class="s-main__stats-block">');
+
+    $('.block1 .s-main .s-main__stats-block:eq(0)').append(statsBlock1).append(statsBlock2).append(statsBlock3);
+    $('.block1 .s-main .s-main__stats-block:eq(1)').append(statsBlock6).append(statsBlock5);
+    $('.block1 .s-main .s-main__stats-block:eq(2)').append(statsBlock4).append(statsBlock7);
+
+    $('.s-main__stats-block__tablet').remove();
+}
+
+function divideOnThreeBack() {
+    if ( $('aside.aside-right.aside-right-default.nm-block .block1 .s-main__stats-block') ) {
+        var blockStats = $('aside.aside-right.aside-right-default.nm-block .block1 .s-main'),
+            statsBlock1 = $('#statsBlock1'),
+            statsBlock2 = $('#statsBlock2'),
+            statsBlock3 = $('#statsBlock3'),
+            statsBlock4 = $('#statsBlock4'),
+            statsBlock5 = $('#statsBlock5'),
+            statsBlock6 = $('#statsBlock6'),
+            statsBlock7 = $('#statsBlock7');
+
+        blockStats.append(statsBlock1).append(statsBlock2).append(statsBlock3).append(statsBlock4).append(statsBlock5).append(statsBlock6).append(statsBlock7);
+    }
+
+    $('.s-main__stats-block').remove();
+}
+
+// Create Two blocks in block Stats
+
+function divideOnTwo() {
+    if ( $('.s-main__stats-block__tablet').html() ) {
+        return false;
+    }
+
+    var statsBlock1 = $('#statsBlock1'),
+        statsBlock2 = $('#statsBlock2'),
+        statsBlock3 = $('#statsBlock3'),
+        statsBlock4 = $('#statsBlock4'),
+        statsBlock5 = $('#statsBlock5'),
+        statsBlock6 = $('#statsBlock6'),
+        statsBlock7 = $('#statsBlock7');
+
+    $('.aside-right-wrapper.block1 .s-main').append('<div class="s-main__stats-block__tablet">');
+    $('.aside-right-wrapper.block1 .s-main').append('<div class="s-main__stats-block__tablet">');
+
+    $('.block1 .s-main .s-main__stats-block__tablet:eq(0)').append(statsBlock1).append(statsBlock2).append(statsBlock5).append(statsBlock4);
+    $('.block1 .s-main .s-main__stats-block__tablet:eq(1)').append(statsBlock3).append(statsBlock6).append(statsBlock7);
+
+    $('.s-main__stats-block').remove();
+}
+
+$(window).on('load', function () {
+    if ( $(window).width() <= 569 ) {
+        createMobileVersionLoad()
+    } else if ( $(window).width() <= 869 ) {
+        createLaptopBlocksPlayer();
+        divideOnTwo();
+        createTabletBlocksSkills();
+        createMobileVersionBack();
+    } else if( $(window).width() <= 1169 ){
+        divideOnThree();
+        createLaptopBlocksPlayer();
+        createTabletBlocksSkillsBack();
+        createMobileVersionBack();
+    } else {
+        createLaptopBlocksPlayerBack();
+        divideOnThreeBack();
+        createTabletBlocksSkillsBack();
+        createMobileVersionBack();
+    }
+});
+
+$(window).on('resize', function () {
+    if ( $(window).width() <= 569 ) {
+        createMobileVersionResize();
+    } else if ( $(window).width() <= 869 ) {
+        createLaptopBlocksPlayer();
+        divideOnTwo();
+        createTabletBlocksSkills();
+        createMobileVersionBack();
+    } else if( $(window).width() <= 1169 ){
+        divideOnThree();
+        createLaptopBlocksPlayer();
+        createTabletBlocksSkillsBack();
+        createMobileVersionBack();
+    } else {
+        createLaptopBlocksPlayerBack();
+        divideOnThreeBack();
+        createTabletBlocksSkillsBack();
+        createMobileVersionBack();
+    }
+});
 
 /*================================================*/
 /*              Redraw Blure sections             */
