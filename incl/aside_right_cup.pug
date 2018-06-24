@@ -1,0 +1,99 @@
+//ASIDE RIGHT BEGIN
+aside.aside-right.aside-right-default.nm-block
+    .aside-right-wrapper
+        .league-info
+            - var titleHolderObj = {name:'APOEL Niscosia', img: 'img/ma/football_3398.png', alt:'team-img' }
+            - var mostTitlesObj = {name:'APOEL Niscosia', img: 'img/ma/football_3398.png', alt:'team-img' }
+            - var factsArr = [{title: 'Average goals', count: '2.58'},{title: 'Home team wins', count: '45%'},{title: 'Draws', count: '27%'},{title: 'Away team wins', count: '28%'},{title: 'Yellow cards', count: '4.08'},{title: 'Red cards', count: '0.23'}]
+            .s-title league info
+            .s-main
+                .leagure-info-title
+                    .title-holder.titles
+                        .nm-img-wrap
+                            img(src=titleHolderObj.img alt=titleHolderObj.alt)
+                        .nm-content
+                            .nm-content-head
+                                span title holder
+                            .nm-content-text
+                                span #{titleHolderObj.name}
+                    .most-titles.titles
+                        .nm-img-wrap
+                            img(src=mostTitlesObj.img alt = titleHolderObj.alt)
+                        .nm-content
+                            .nm-content-head
+                                span most titles
+                                span.count 5
+                            .nm-content-text
+                                span #{mostTitlesObj.name}
+                .facts
+                    .facts-head
+                        span facts
+                    .facts-content
+                        for elem in factsArr
+                            div
+                                span= elem.title
+                                span= elem.count
+
+                .new-commers
+                    .upper-division
+                        .division-head
+                            span NEWCOMERS FROM UPPER DIVISION
+                        .division-content
+                            .nm-img-wrap
+                                img(src='./img/icons/newcommers.png' alt='news-icon')
+                            .division-content-text
+                                span Austria Klagenfurt
+                    .lower-division
+                        .division-head
+                            span NEWCOMERS FROM lower DIVISION
+                        .division-content
+                            .nm-img-wrap
+                                img(src='./img/icons/newcommers.png' alt='news-icon')
+                            .division-content-text
+                                span ATSV Wolfsberg
+
+    .aside-right-wrapper
+        .top-scores
+            - var headScorers = ['Matches', 'Goals', 'Rating'];
+            - var contentScorers = [{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg',alt: "photo-player",  name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7}]
+            .s-title TOP SCORERS
+            .s-main.nm-lineups-info-block
+                .s-main-head
+                    for name in headScorers
+                        span #{name}
+                .s-main-content.nm-players-info-section
+                    for player in contentScorers
+                        a.nm-player-info-row
+                            .nm-player-img
+                                img(src=player.img alt=player.alt)
+                            .nm-player-text
+                                .nm-player-name #{player.name}
+                                .nm-player-about #{player.team}
+                            .nm-player-skills
+                                span #{player.matches}
+                                span #{player.goals}
+                            .nm-player-icons
+                                .nm-player-icon-card.nm-card-rating #{player.rating}
+
+    .aside-right-wrapper
+        .media
+            .s-title top scorers
+            .odds
+                .odds__left
+                    a(href='#')
+                        img(src='img/ma/media-video-example.jpg' alt="img")
+                .odds__right
+                    a(href='#') Arsenal de Sarandi 1-2 Atletico Rafaela
+                    div Full highlights
+            .odds
+                .odds__left
+                    a(href='#')
+                        img(src='img/ma/media-video-example.jpg' alt="img")
+                .odds__right
+                    a(href='#') Arsenal de Sarandi 1-2 Atletico Rafaela long description...
+                    div Full highlights
+
+
+
+
+//ASIDE RIGHT END

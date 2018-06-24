@@ -1,0 +1,41 @@
+//ABOVE CONTENT BLOCK BEGIN
+.nm-big-wrapper
+    -var time_period = ['11/12','12/13','14/15','15/16','16/17'];
+    .above-content-block-homepage
+        .nm-icon-league.nm-img-wrap
+            img(src='./img/icons/icon-league.png' alt="icon-league")
+        .nm-content
+            ul.nm-breadcrumb
+                li
+                    a(href='#') TOURNAMENTS LIST
+                li
+                     a(href='#') england
+                li
+                    a(href='#') premier league live score
+            .nm-page-maintext
+                .nm-page-title
+                    h1.nm-h1 Premier League
+                .pr-time-period-btn.nm-toogle-div
+                    span.active.nm-toggler 16/17
+                    .nm-dropdown.pr-dropdown-time-period
+                        ul
+                            - for (i=0; i< time_period.length; i++){
+                            li
+                                span #{time_period[i]}
+                            -}
+                .pr-favorite-container.nm-toogle-div.above
+                    a(href='javascript:void(0)').pr-favorite-btn.nm-toggler
+                        i(class='icon-icon-favorite')
+                    .nm-dropdown.pr-dropdown-favorite
+                        ul
+                            li
+                                a(href="javascript:void(0)").pr-remove
+                                    | Remove
+                                    i(class='icon-icon-favorite')
+                            li
+                                a(href="javascript:void(0)").pr-mute
+                                    | Mute this event
+
+
+
+//ABOVE CONTENT BLOCK END

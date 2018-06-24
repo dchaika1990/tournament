@@ -1,0 +1,207 @@
+//ASIDE RIGHT BEGIN
+aside.aside-right.aside-right-default.nm-block
+    .aside-right-wrapper.block.block1
+        .goal-distribution
+            .s-title goal distribution
+            .s-main
+                form.goal-filter.radio-filter
+                    input(class='radio' type='radio' name='goal-filter-radio' id='goal-filter-by-overall')
+                    label(for='goal-filter-by-overall')
+                        span
+                        span Overall
+                    input(class='radio' type='radio' name='goal-filter-radio' id='goal-filter-by-home')
+                    label(for='goal-filter-by-home')
+                        span
+                        span Home
+                    input(class='radio' type='radio' name='goal-filter-radio' id='goal-filter-by-away')
+                    label(for='goal-filter-by-away')
+                        span
+                        span Away
+                .result-by-time__wrapper
+                    .result-by-time
+                        .result-by-time__title
+                            span scored
+                        .result-by-time__sum-result
+                            span 82
+                        .result-by-time__all-results
+                            .result-by-time__result.week-win
+                                span 9
+                            .result-by-time__result.strong-win
+                                span 13
+                            .result-by-time__result.strong-loss
+                                span 19
+                            .result-by-time__result.week-win
+                                span 10
+                            .result-by-time__result.week-win
+                                span 10
+                            .result-by-time__result.strong-loss
+                                span 21
+                    .result-by-time
+                        .result-by-time__title
+                            span conceded
+                        .result-by-time__sum-result
+                            span 33
+                        .result-by-time__all-results
+                            .result-by-time__result.week-loss
+                                span 6
+                            .result-by-time__result.draw
+                                span 2
+                            .result-by-time__result.week-loss
+                                span 6
+                            .result-by-time__result.strong-loss
+                                span 7
+                            .result-by-time__result.strong-loss
+                                span 7
+                            .result-by-time__result.week-loss
+                                span 5
+                    .result-by-time
+                        .result-by-time__all-results
+                            .result-by-time__result
+                            .result-by-time__result
+                            .result-by-time__result
+                            .result-by-time__result
+                            .result-by-time__result
+                            .result-by-time__result
+                .s-main__text.nm-grey-normal
+                    p Bundesliga 16/17 Goal distribution from 29 matches
+
+    .aside-right-wrapper.block.block2
+        .form-progress
+            .s-title form
+            .s-main
+                .form-progress-box
+                    - for ( i = 0; i < 7; i++)
+                        .form-progress-wrapper
+                            .form-progress-wrapper__icon
+                                img(src='./img/icons/newcommers.png' alt='team-icon')
+                            .form-progress-wrapper__progressbar
+                                .form-progress__winn
+                                    span.progress-win.nm-toggler
+                                    span.progress-draw.nm-toggler
+                                .form-progress__loss
+                                    span.progress-loss.nm-toggler
+                                .form-progress__list.nm-dropdown
+                                    .form-progress__list-title
+                                        p Real Madrid #[span vs] Rsc Anderiecht
+                                    .form-progress__list-content
+                                        span.form-progress__date 25.02.2017 19.30
+                                        span.form-progress__result 4 - 3
+                .form-progress-wrapper__content
+                    p The form graph is based on the opponent's strength.
+                    .form-progress-wrapper__content-spec
+                        span Won
+                        span Draw
+                        span Lost
+
+    .aside-right-wrapper.block.block3
+        .team-info
+            .s-title team info
+            .s-main
+                .structure-wrapper
+                    .structure-wrapper__title
+                        span Structure
+                    .structure-wrapper__context
+                        .structure-wrapper__total
+                            span 24
+                            span total players
+                        .structure-wrapper__foreign
+                            .canvas-bar.foreign
+                                canvas(id='canvas-foreign' width='35' height='35')
+                            .canvas-bar__context
+                                span 15
+                                span foreign players
+                        .structure-wrapper__national
+                            .canvas-bar.national
+                                canvas(id='canvas-national' width='35' height='35')
+                            .canvas-bar__context
+                                span 18
+                                span national players
+                .structure-wrapper
+                    .structure-wrapper__title
+                        span Competitions
+                    .structure-wrapper__context
+                        .structure-wrapper__cup-box
+                            .structure-wrapper__cup-box_icon
+                                img(src='./img/icons/cup-icon1.png' alt='icon-cup')
+                            .structure-wrapper__cup-box_title
+                                span FIFA club World cup
+                        .structure-wrapper__cup-box
+                            .structure-wrapper__cup-box_icon
+                                img(src='./img/icons/cup-icon2.png' alt='icon-cup')
+                            .structure-wrapper__cup-box_title
+                                span Int. Champions Cup
+                .structure-wrapper
+                    .structure-wrapper__title
+                        span Stadium
+                    .structure-wrapper__context
+                        .structure-wrapper__location
+                            .structure-wrapper__location_title
+                                span Location
+                            .structure-wrapper__location_text
+                                span Las Palmas de Gran Canaria, Spain
+                        .structure-wrapper__location
+                            .structure-wrapper__location_title
+                                span Venue
+                            .structure-wrapper__location_text
+                                span Gran Canaria
+
+    .aside-right-wrapper.block.block4
+        .top-scores
+            - var headScorers = ['Matches', 'Goals'];
+            -
+                var contentScorers = [
+                    {img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},
+                    {img: './img/temp/photo-player-3.jpg',alt: "photo-player",  name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},
+                    {img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},
+                    {img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},
+                    {img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},
+                    {img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},
+                    {img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},
+                    {img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7}
+                    ]
+            .s-title TOP SCORERS
+            .s-main.nm-lineups-info-block
+                .division-dropdown.nm-toogle-div
+                    span.division-dropdown-selected.nm-toggler
+                        | Primera Division 16/17
+                    .division-dropdown-list.nm-dropdown
+                        ul
+                            li(data-id=0).active
+                                a Primera Division 16/17
+                            li(data-id=1)
+                                a UEFA Europe league 16/17
+                            li(data-id=2)
+                                a Premier league 16/17
+                .s-main-head
+                    for name in headScorers
+                        span #{name}
+                .s-main-content.nm-players-info-section
+                    for player in contentScorers
+                        a.nm-player-info-row
+                            .nm-player-img
+                                img(src=player.img alt=player.alt)
+                            .nm-player-text
+                                .nm-player-name #{player.name}
+                            .nm-player-skills
+                                span #{player.matches}
+                                span #{player.goals}
+
+    .aside-right-wrapper.block.block5
+        .media
+            .s-title media
+            .odds
+                .odds__left
+                    a(href='#')
+                        img(src='img/ma/media-video-example.jpg' alt="img")
+                .odds__right
+                    a(href='#') Arsenal de Sarandi 1-2 Atletico Rafaela
+                    div Full highlights
+            .odds
+                .odds__left
+                    a(href='#')
+                        img(src='img/ma/media-video-example.jpg' alt="img")
+                .odds__right
+                    a(href='#') Arsenal de Sarandi 1-2 Atletico Rafaela long description...
+                    div Full highlights
+
+//ASIDE RIGHT END

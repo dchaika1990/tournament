@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+    head
+        title MetaScore: tournament-leftcol
+        include incl/head.pug
+    body.homepage
+        include incl/svg.pug
+
+        .nm-main-overlay
+        //MAIN-WRAPPER BEGIN
+        .main-wrapper.tournament.bcg.bmenu.mblock
+            include incl/header.pug
+            include incl/topbar.pug
+            include incl/above_tournament
+            include incl/header-bottom-fixed-tournament
+
+            //GROW BEGIN
+            .nm-grow.nm-big-wrapper
+                .nm-content-overlay
+
+                include incl/content_tournament
+                include incl/aside_right_tournament.pug
+
+            //GROW END
+            include incl/newstape.pug
+            include incl/footer.pug
+        //MAIN-WRAPPER END
+        include incl/modals.pug
+        include incl/scripts.pug

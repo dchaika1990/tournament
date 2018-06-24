@@ -1,0 +1,762 @@
+
+/*================================================*/
+/*					 Cup         		      */
+/*================================================*/
+
+.cup{
+
+  //Above
+  & .above-content-block-homepage{
+    & .nm-content{
+      & .nm-page-maintext{
+        & div + div{
+          margin-left: 21px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 569px) {
+    & .above-content-block-homepage{
+      & .nm-content{
+        & .nm-page-maintext{
+          & div + div{
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  //Content
+  & .nm-grow{
+    main{
+      & .pr-main-wrap{
+        &.draw-wrap{
+          & .pr-main{
+            & .glib-stats-box-draw{
+              margin-top: 32px;
+              padding-left: 60px;
+              padding-right: 30px;
+              padding-bottom: 8px;
+
+              & .playoff-header{
+                overflow: hidden;
+
+                & .viewport-head{
+                  & .overflow-head{
+                    position: relative;
+                    overflow: hidden;
+                    height: 30px;
+
+                    & .btn-prev{
+                      border-radius: 4px 0 0 0;
+                      background: url(../img/icons/arrow-point-to-left-white.svg) no-repeat 45% 50%;
+                      background-size: 8px;
+                      left: 0;
+                      top: 0;
+                      bottom: 0;
+                    }
+
+                    & .btn-next{
+                      border-radius: 0 4px 0 0;
+                      background: url(../img/icons/arrow-point-to-right-white.svg) no-repeat 55% 50%;
+                      background-size: 8px;
+                      right: 0;
+                      top: 0;
+                      bottom: 0;
+                    }
+
+                    & .btn-prev,
+                    & .btn-next{
+                      position: absolute;
+                      top: 0;
+                      bottom: 0;
+                      width: 28px;
+                      background-color: #e3e8f3;
+                      z-index: 10;
+
+                      &:hover{
+                        background-color: #3e80a9;
+                        cursor: pointer;
+                      }
+
+                      &.disabled{
+                        &:hover{
+                          background-color: #e3e8f3;
+                        }
+                      }
+                    }
+
+                    & ul{
+                      display: flex;
+                      justify-content: flex-start;
+                      background-color: #f5f5fd;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+
+                      & li{
+                        width: 155px;
+                        text-align: center;
+                        color: #c9cccf;
+                        font-family: 'Gotham Pro';
+                        font-size: 11px;
+                        font-weight: 500;
+                        padding: 9px 0;
+                        text-transform: uppercase;
+                        flex-shrink: 0;
+
+                        &:first-child,
+                        &:last-child{
+                          & span{
+                            padding-left: 5px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              & .playoff.scroll{
+                & .viewport-wrap{
+                  position: relative;
+
+                  & .tabs-pair{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: -30px;
+
+                    & ul{
+                      display: flex;
+                      flex-direction: column;
+                      height: 100%;
+
+                      & li{
+                        border-right: 4px solid transparent;
+                        height: 12.5%;
+                        width: 34px;
+                        background: url("../img/icons/pair-icon.svg") no-repeat center left / cover;
+                        background-size: 23px;
+
+                        &.active{
+                          background-image: url("../img/icons/pair-icon-active.svg");
+                          border-color: #ff5f27;
+                        }
+
+                        & a{
+                          display: inline-block;
+                          height: 100%;
+                          width: 100%;
+                        }
+                      }
+                    }
+                  }
+
+                  & .nm-tabs-content{
+
+                    & .nm-tab-content{
+                      & .viewport{
+                        display: none;
+                        position: relative;
+                        width: 100%;
+                        overflow: hidden;
+                        border-right: 1px solid #f4f4f4;
+                        border-bottom: 1px solid #f4f4f4;
+                        border-left: 4px solid #f5f5fd;
+                        border-radius: 0 0 4px 0;
+
+                        & .overview{
+                          position: absolute;
+                          left: 0;
+                          top: 0;
+                          bottom: 0;
+                          width: 100%;
+                          display: flex;
+
+                          & .round{
+                            width: 155px;
+                            height: 100%;
+                            padding-top: 15px;
+                            padding-bottom: 17px;
+                            flex-shrink: 0;
+
+                            &:nth-child(even){
+                              background-color: #fcfcfc;
+                            }
+
+                            & .matches{
+                              height: 100%;
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: space-between;
+
+                              & .relation{
+                                position: relative;
+                                padding-left: 12px;
+                                padding-right: 15px;
+                                height: 98px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+
+                                &::after{
+                                  content: '';
+                                  display: inline-block;
+                                  height: 56px;
+                                  width: 1px;
+                                  background-color: #c9cccf;
+                                  position: absolute;
+                                  right: 0;
+                                  top: 50%;
+                                  transform: translateY(-50%);
+                                }
+
+                                & .match{
+                                  border: solid 1px #c9cccf;
+                                  border-radius: 4px;
+                                  display: flex;
+                                  flex-direction: column;
+                                  position: relative;
+
+                                  &::before{
+                                    content: '';
+                                    display: inline-block;
+                                    height: 1px;
+                                    width: 14px;
+                                    background-color: #c9cccf;
+                                    position: absolute;
+                                    left: -14px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                  }
+
+                                  &::after{
+                                    content: '';
+                                    display: inline-block;
+                                    height: 1px;
+                                    width: 15px;
+                                    background-color: #c9cccf;
+                                    position: absolute;
+                                    right: -15px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                  }
+
+                                  & .participant{
+                                    font-size: 11px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    color: #c9ccd1;
+                                    padding: 1px 7px 1px 4px;
+                                    background-color: #fff;
+
+                                    &:first-child{
+                                      border-radius: 4px 4px 0 0;
+                                    }
+
+                                    &:last-child{
+                                      border-radius: 0 0 4px 4px;
+                                      padding-bottom: 0;
+                                    }
+
+                                    &.winner{
+                                      color: #000;
+                                    }
+
+                                    &.show-bcg{
+                                      background-color: #3e80a9;
+                                      color: #fff;
+
+                                      &.winner{
+                                        color: #fff;
+                                      }
+                                    }
+
+                                    &:hover{
+                                      background-color: #3e80a9;
+                                      color: #fff;
+                                    }
+
+                                    & .team-name-box{
+                                      display: flex;
+                                      align-items: center;
+
+                                      & .team-logo{
+                                        margin-right: 7px;
+                                      }
+
+                                      & .team-name{
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        width: 80%;
+                                        text-overflow: ellipsis;
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+
+                            &.one-of-8{
+                              & .matches{
+                                & .relation{
+                                  & .match{
+                                    &::before{
+                                      background-color: transparent;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+
+                            &.one-of-4{
+                              & .matches{
+                                padding: 29px 0;
+
+                                & .relation{
+                                  height: 151px;
+
+                                  &::after{
+                                    height: 108px;
+                                  }
+                                }
+                              }
+                            }
+
+                            &.one-of-2{
+                              & .matches{
+                                padding: 83px 0;
+
+                                & .relation{
+                                  height: 268px;
+
+                                  &::after{
+                                    height: 220px;
+                                  }
+                                }
+                              }
+                            }
+
+                            &.last-round{
+                              & .matches{
+                                justify-content: center;
+
+                                & .relation{
+                                  height: auto;
+
+                                  &::after{
+                                    content: none;
+                                  }
+
+                                  & .match{
+
+                                    &::after{
+                                      content: none;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+
+                      &.active{
+                        & .viewport{
+                          display: block;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+        }
+
+        &.league-standing{
+          & .pr-main-tab{
+            & .nm-tabs-wrapper{
+              padding-bottom: 0;
+              margin-top: 0;
+
+              & .nm-mini-block{
+                display: flex;
+                flex-wrap: wrap;
+                padding-top: 24px;
+                overflow: inherit;
+
+                & .standings-table__left,
+                & .standings-table__right{
+                  width: 50%;
+                }
+
+                & .standings-table__left{
+                  padding-right: 15px;
+                }
+
+                & .standings-table__right{
+                  padding-left: 15px;
+                }
+
+                & .nm-tabs-content{
+                  padding-top: 0;
+                }
+
+                & .nm-tabs-content{
+                  padding-top: 8px;
+
+                  & .nm-thead{
+                    & .nm-tr{
+                      & .nm-table-pts{
+                        width: 27px;
+                      }
+                    }
+                  }
+
+                  & .nm-tbody{
+                   & .nm-tr{
+                     & .nm-table-pts{
+                       width: 27px;
+                     }
+                   }
+                  }
+                }
+
+                & .pr-main-content{
+                  padding-right: 30px;
+
+                  & .pr-main-content-row{
+                    padding: 0;
+                    border: none;
+
+                    & .pr-match-rows-wrap{
+                      padding-top: 3px;
+
+                      & .pr-match-row{
+                        margin: 2px 0;
+                        padding: 4px 0;
+                        & .pr-match-row-left{
+                          & .pr-left-col{
+                            padding-left: 7px;
+                            margin-right: 4px;
+
+                            & .pr-match-time{
+                              font-size: 11px;
+                              color: #43474d;
+                              font-weight: 500;
+                            }
+
+                            &::after{
+                              content: none;
+                            }
+                          }
+                        }
+
+                        & .pr-match-row-center{
+                          padding-left: 11px;
+                          margin-left: -4px;
+                          border-left: 1px solid #e1e8ee;
+
+                          & .pr-match-row-center-left{
+                            & .pr-team-name-cont{
+                              justify-content: flex-start;
+                              align-items: flex-end;
+
+                              & .pr-record{
+                                margin-bottom: 1px;
+                              }
+                            }
+                          }
+
+                          & .pr-match-row-right{
+                            padding-right: 6px;
+                            display: flex;
+                            align-items: center;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                & > .right{
+                  padding-right: 10px;
+                }
+
+                & > left{
+                  padding-right: 0;
+                }
+              }
+            }
+          }
+        }
+
+        &.matches-sm{
+          & .favorites{
+            & .pr-favorites-main{
+              & .pr-favorites-left{
+                margin-top: 14px;
+
+                & .pr-main-content{
+                  & .pr-main-content-row{
+                    padding-top: 2px;
+                    padding-bottom: 20px;
+
+                    & .pr-match-rows-wrap{
+                      & .pr-match-row{
+                        margin: 2px 0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1169px) {
+    & .nm-grow{
+      main{
+        & .pr-main-wrap{
+          &.league-md.league-sm{
+            & .pr-main{
+              & .league-info.aside-right-wrapper{
+                & .s-main{
+                  & .new-commers{
+                    & .division-content{
+                      & .nm-img-wrap{
+                        margin-right: 21px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.matches-sm{
+            & .favorites{
+               & .pr-favorites-main{
+                 & .pr-favorites-left{
+                   & .pr-main-content{
+                     & .pr-main-content-row{
+                       & .pr-match-rows-wrap{
+                         & .pr-match-row{
+                           & .pr-match-row-right{
+                             padding-right: 3px;
+                           }
+                         }
+                       }
+                     }
+                   }
+                 }
+               }
+            }
+          }
+
+          &.top-scores-md{
+            & .aside-right-default.nm-block{
+              & .aside-right-wrapper{
+                & .top-scores{
+                  & .s-main > div{
+                    padding-right: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 869px) {
+    & .nm-grow{
+      main{
+        & .pr-main-wrap{
+          &.league-md{
+            & .pr-main{
+              & .league-info.aside-right-wrapper{
+                & .s-main-sm{
+                  & > div.s-main-sm-block{
+                    & .new-commers{
+                      margin-bottom: 29px;
+
+                      & > div:last-child{
+                        padding-bottom: 13px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.league-standing{
+            & .pr-main{
+              & .pr-main-tab{
+                & .nm-tabs-wrapper{
+                  & .nm-mini-block.aside-right{
+                    & .nm-tabs-content{
+                      width: 100%;
+                      padding-right: 30px;
+                    }
+
+                    & .standings-table__right{
+                      width: 100%;
+                      padding-left: 22px;
+                      padding-right: 0;
+                      margin-bottom: 29px;
+
+                      & .pr-main-content{
+                        padding-right: 23px;
+
+                        & .pr-main-content-row{
+                          border-bottom: 1px solid #f4f4f4;
+                          padding-bottom: 20px;
+                        }
+                      }
+                    }
+
+                    & .left{
+                      width: 60%;
+                    }
+
+                    & .right{
+                      padding-right: 30px;
+                      width: 40%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 620px) {
+    & .pr-main-content-row{
+      & .pr-match-rows-wrap{
+        display: block;
+      }
+    }
+  }
+
+  @media ( max-width: 569px ){
+    & .nm-grow{
+      main{
+        & .pr-main-wrap{
+          &.draw-wrap{
+            display: none;
+
+            &.show{
+              display: block;
+            }
+
+            &.hide{
+              display: none;
+            }
+
+            & .pr-main{
+              padding-bottom: 4px;
+
+              & .glib-stats-box-draw{
+                padding-left: 35px;
+                padding-right: 9px;
+                margin-top: 11px;
+
+                & .playoff.scroll{
+                  & .viewport{
+                    &::after{
+                      position: absolute;
+                      content: '';
+                      display: inline-block;
+                      height: 100%;
+                      background: linear-gradient(to right, rgba(255,255,255,.0) 0%, rgba(255,255,255,.7) 50%, rgba(255,255,255,1) 100%);
+                      right: 0;
+                      top: 0;
+                      bottom: 0;
+                      width: 65px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.league-standing{
+            & .pr-main{
+              & .pr-main-tab{
+                & .nm-tabs-wrapper{
+                  margin-top: 0;
+
+                  & .nm-mini-block.aside-right{
+                    padding-top: 2px;
+
+                    & .nm-tabs-content{
+                      padding-left: 8px;
+                      padding-right: 9px;
+                    }
+
+                    & .standings-table__right{
+                      padding-left: 0;
+                      margin-bottom: 0;
+
+                      & .pr-main-content{
+                        padding-right: 8px;
+
+                        & .pr-main-content-row{
+                          padding-bottom: 11px;
+                        }
+                      }
+                    }
+
+                    & .left{
+                      width: 100%;
+                    }
+
+                    & .right{
+                      width: 100%;
+                      padding-right: 8px;
+                      margin-top: 15px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Aside
+  & .aside-right-default{
+    &.nm-block{
+      & .aside-right-wrapper{
+        & .s-main{
+          & .new-commers{
+            margin-top: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+li{
+  list-style: none;
+}

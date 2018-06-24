@@ -1,0 +1,1686 @@
+//MAIN BEGIN
+main
+    .pr-main-wrap.progress
+        .pr-main
+            .progressbar
+                ul
+                    - for (i=0; i <= 27; i++) {
+                    li.active
+                        .li-popup.nm-dropdown
+                            .li-popup-content
+                                span.quantity-matches 4 matches
+                                span.week-count Week #{i+1}
+                            .li-popup-btn
+                                a(href='#') match list
+                    -}
+                    - for (i=27; i < 36; i++) {
+                    li
+                        .li-popup.nm-dropdown
+                            .li-popup-content
+                                span.quantity-matches 4 matches
+                                span.week-count Week #{i+1}
+                            .li-popup-btn
+                                a(href='#') match list
+                    -}
+                .date-begin.progress-date
+                    span 13 aug
+                .date-finish.progress-date
+                    span 25 may
+            .progressbar-sm
+                .progress-sm-bg
+                    .progress-sm-active
+                .date-begin.progress-date
+                    span 13 aug
+                .date-finish.progress-date
+                    span 25 may
+    .pr-main-wrap.draw-wrap
+        .pr-main
+            .pr-main-title
+                .pr-main-title-box
+                    .pr-main-title-left
+                        p draw
+            .glib-stats-box-draw
+                -
+                    var teamArrRound1 = [
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'APOEL Niscotia', score:'2' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'Feyenoord', score:'4' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'AEK Athens', score:'2' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'Ajax Amsterdam', score:'2' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'PSV', score:'2' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'FC Utrecht', score:'0' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'FCVitesse', score:'2' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'AZ', score:'4' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'FC Twente', score:'2' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'PEC Zwolle', score:'4' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'ADO Den Haag', score:'2' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'AZ Ps', score:'4' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'PSV Ps', score:'2' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'Twente Ps', score:'4' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'Utrecht Ps', score:'2' },
+                        {src: './img/icons/icon-team.png', alt: 'team-icon', name: 'Ajax Ps', score:'4' }
+                    ]
+
+                .playoff-header
+                    .viewport-head
+                        .overflow-head
+                            a(href='#').btn-prev.scroll-left
+                            a(href='#').btn-next.scroll-right
+                            ul
+                                li
+                                    span round 1
+                                li
+                                    span round 2
+                                li
+                                    span round 3
+                                li.last-round
+                                    span final
+
+                .playoff.scroll
+                    .viewport-wrap.nm-tabs-wrapper
+                        .nm-tabs-content
+                            .nm-tab-content.active
+                                .viewport
+                                    .overview
+                                        .round.first-round.one-of-8
+                                            .matches
+                                                .relation.first
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[0].src alt=teamArrRound1[0].alt)
+                                                                span.team-name #{teamArrRound1[0].name}
+                                                            span.team-score #{teamArrRound1[0].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[1].src alt=teamArrRound1[1].alt)
+                                                                span.team-name #{teamArrRound1[1].name}
+                                                            span.team-score #{teamArrRound1[1].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[2].src alt=teamArrRound1[2].alt)
+                                                                span.team-name #{teamArrRound1[2].name}
+                                                            span.team-score #{teamArrRound1[2].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[3].src alt=teamArrRound1[3].alt)
+                                                                span.team-name #{teamArrRound1[3].name}
+                                                            span.team-score #{teamArrRound1[3].score}
+                                                .relation
+                                                    .match
+                                                        span.participant.home.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[4].src alt=teamArrRound1[4].alt)
+                                                                span.team-name #{teamArrRound1[4].name}
+                                                            span.team-score #{teamArrRound1[4].score}
+                                                        span.participant.away
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[5].src alt=teamArrRound1[5].alt)
+                                                                span.team-name #{teamArrRound1[5].name}
+                                                            span.team-score #{teamArrRound1[5].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[6].src alt=teamArrRound1[6].alt)
+                                                                span.team-name #{teamArrRound1[6].name}
+                                                            span.team-score #{teamArrRound1[6].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[7].src alt=teamArrRound1[7].alt)
+                                                                span.team-name #{teamArrRound1[7].name}
+                                                            span.team-score #{teamArrRound1[7].score}
+                                                .relation
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[8].src alt=teamArrRound1[8].alt)
+                                                                span.team-name #{teamArrRound1[8].name}
+                                                            span.team-score #{teamArrRound1[8].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[9].src alt=teamArrRound1[9].alt)
+                                                                span.team-name #{teamArrRound1[9].name}
+                                                            span.team-score #{teamArrRound1[9].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[10].src alt=teamArrRound1[10].alt)
+                                                                span.team-name #{teamArrRound1[10].name}
+                                                            span.team-score #{teamArrRound1[10].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[11].src alt=teamArrRound1[11].alt)
+                                                                span.team-name #{teamArrRound1[11].name}
+                                                            span.team-score #{teamArrRound1[11].score}
+                                                .relation
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[12].src alt=teamArrRound1[12].alt)
+                                                                span.team-name #{teamArrRound1[12].name}
+                                                            span.team-score #{teamArrRound1[12].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[13].src alt=teamArrRound1[13].alt)
+                                                                span.team-name #{teamArrRound1[13].name}
+                                                            span.team-score #{teamArrRound1[13].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[14].src alt=teamArrRound1[14].alt)
+                                                                span.team-name #{teamArrRound1[14].name}
+                                                            span.team-score #{teamArrRound1[14].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[15].src alt=teamArrRound1[15].alt)
+                                                                span.team-name #{teamArrRound1[15].name}
+                                                            span.team-score #{teamArrRound1[15].score}
+
+                                        .round.one-of-4
+                                            .matches
+                                                .relation.first
+                                                    .match
+                                                        span.participant.home.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[1].src alt=teamArrRound1[1].alt)
+                                                                span.team-name #{teamArrRound1[1].name}
+                                                            span.team-score #{teamArrRound1[1].score}
+                                                        span.participant.away
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[3].src alt=teamArrRound1[3].alt)
+                                                                span.team-name #{teamArrRound1[3].name}
+                                                            span.team-score #{teamArrRound1[3].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[4].src alt=teamArrRound1[4].alt)
+                                                                span.team-name #{teamArrRound1[4].name}
+                                                            span.team-score #{teamArrRound1[4].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[7].src alt=teamArrRound1[7].alt)
+                                                                span.team-name #{teamArrRound1[7].name}
+                                                            span.team-score #{teamArrRound1[7].score}
+                                                .relation
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[9].src alt=teamArrRound1[9].alt)
+                                                                span.team-name #{teamArrRound1[9].name}
+                                                            span.team-score #{teamArrRound1[9].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[11].src alt=teamArrRound1[11].alt)
+                                                                span.team-name #{teamArrRound1[11].name}
+                                                            span.team-score #{teamArrRound1[11].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[13].src alt=teamArrRound1[13].alt)
+                                                                span.team-name #{teamArrRound1[13].name}
+                                                            span.team-score #{teamArrRound1[13].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[15].src alt=teamArrRound1[15].alt)
+                                                                span.team-name #{teamArrRound1[15].name}
+                                                            span.team-score #{teamArrRound1[15].score}
+
+                                        .round.one-of-2
+                                            .matches
+                                                .relation.first
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[1].src alt=teamArrRound1[1].alt)
+                                                                span.team-name #{teamArrRound1[1].name}
+                                                            span.team-score #{teamArrRound1[1].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[7].src alt=teamArrRound1[7].alt)
+                                                                span.team-name #{teamArrRound1[7].name}
+                                                            span.team-score #{teamArrRound1[7].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[11].src alt=teamArrRound1[11].alt)
+                                                                span.team-name #{teamArrRound1[11].name}
+                                                            span.team-score #{teamArrRound1[11].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[15].src alt=teamArrRound1[15].alt)
+                                                                span.team-name #{teamArrRound1[15].name}
+                                                            span.team-score #{teamArrRound1[15].score}
+                                        .round.last-round
+                                            .matches
+                                                .relation.first
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[1].src alt=teamArrRound1[1].alt)
+                                                                span.team-name #{teamArrRound1[1].name}
+                                                            span.team-score #{teamArrRound1[1].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[15].src alt=teamArrRound1[15].alt)
+                                                                span.team-name #{teamArrRound1[15].name}
+                                                            span.team-score #{teamArrRound1[15].score}
+                            - for (i=0; i<7; i++){
+                            .nm-tab-content
+                                .viewport
+                                    .overview
+                                        .round.first-round.one-of-8
+                                            .matches
+                                                .relation.first
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[0].src alt=teamArrRound1[0].alt)
+                                                                span.team-name #{teamArrRound1[0].name}
+                                                            span.team-score #{teamArrRound1[0].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[1].src alt=teamArrRound1[1].alt)
+                                                                span.team-name #{teamArrRound1[1].name}
+                                                            span.team-score #{teamArrRound1[1].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[2].src alt=teamArrRound1[2].alt)
+                                                                span.team-name #{teamArrRound1[2].name}
+                                                            span.team-score #{teamArrRound1[2].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[3].src alt=teamArrRound1[3].alt)
+                                                                span.team-name #{teamArrRound1[3].name}
+                                                            span.team-score #{teamArrRound1[3].score}
+                                                .relation
+                                                    .match
+                                                        span.participant.home.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[4].src alt=teamArrRound1[4].alt)
+                                                                span.team-name #{teamArrRound1[4].name}
+                                                            span.team-score #{teamArrRound1[4].score}
+                                                        span.participant.away
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[5].src alt=teamArrRound1[5].alt)
+                                                                span.team-name #{teamArrRound1[5].name}
+                                                            span.team-score #{teamArrRound1[5].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[6].src alt=teamArrRound1[6].alt)
+                                                                span.team-name #{teamArrRound1[6].name}
+                                                            span.team-score #{teamArrRound1[6].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[7].src alt=teamArrRound1[7].alt)
+                                                                span.team-name #{teamArrRound1[7].name}
+                                                            span.team-score #{teamArrRound1[7].score}
+                                                .relation
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[8].src alt=teamArrRound1[8].alt)
+                                                                span.team-name #{teamArrRound1[8].name}
+                                                            span.team-score #{teamArrRound1[8].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[9].src alt=teamArrRound1[9].alt)
+                                                                span.team-name #{teamArrRound1[9].name}
+                                                            span.team-score #{teamArrRound1[9].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[10].src alt=teamArrRound1[10].alt)
+                                                                span.team-name #{teamArrRound1[10].name}
+                                                            span.team-score #{teamArrRound1[10].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[11].src alt=teamArrRound1[11].alt)
+                                                                span.team-name #{teamArrRound1[11].name}
+                                                            span.team-score #{teamArrRound1[11].score}
+                                                .relation
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[12].src alt=teamArrRound1[12].alt)
+                                                                span.team-name #{teamArrRound1[12].name}
+                                                            span.team-score #{teamArrRound1[12].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[13].src alt=teamArrRound1[13].alt)
+                                                                span.team-name #{teamArrRound1[13].name}
+                                                            span.team-score #{teamArrRound1[13].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[14].src alt=teamArrRound1[14].alt)
+                                                                span.team-name #{teamArrRound1[14].name}
+                                                            span.team-score #{teamArrRound1[14].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[15].src alt=teamArrRound1[15].alt)
+                                                                span.team-name #{teamArrRound1[15].name}
+                                                            span.team-score #{teamArrRound1[15].score}
+
+                                        .round.one-of-4
+                                            .matches
+                                                .relation.first
+                                                    .match
+                                                        span.participant.home.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[1].src alt=teamArrRound1[1].alt)
+                                                                span.team-name #{teamArrRound1[1].name}
+                                                            span.team-score #{teamArrRound1[1].score}
+                                                        span.participant.away
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[3].src alt=teamArrRound1[3].alt)
+                                                                span.team-name #{teamArrRound1[3].name}
+                                                            span.team-score #{teamArrRound1[3].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[4].src alt=teamArrRound1[4].alt)
+                                                                span.team-name #{teamArrRound1[4].name}
+                                                            span.team-score #{teamArrRound1[4].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[7].src alt=teamArrRound1[7].alt)
+                                                                span.team-name #{teamArrRound1[7].name}
+                                                            span.team-score #{teamArrRound1[7].score}
+                                                .relation
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[9].src alt=teamArrRound1[9].alt)
+                                                                span.team-name #{teamArrRound1[9].name}
+                                                            span.team-score #{teamArrRound1[9].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[11].src alt=teamArrRound1[11].alt)
+                                                                span.team-name #{teamArrRound1[11].name}
+                                                            span.team-score #{teamArrRound1[11].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[13].src alt=teamArrRound1[13].alt)
+                                                                span.team-name #{teamArrRound1[13].name}
+                                                            span.team-score #{teamArrRound1[13].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[15].src alt=teamArrRound1[15].alt)
+                                                                span.team-name #{teamArrRound1[15].name}
+                                                            span.team-score #{teamArrRound1[15].score}
+
+                                        .round.one-of-2
+                                            .matches
+                                                .relation.first
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[1].src alt=teamArrRound1[1].alt)
+                                                                span.team-name #{teamArrRound1[1].name}
+                                                            span.team-score #{teamArrRound1[1].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[7].src alt=teamArrRound1[7].alt)
+                                                                span.team-name #{teamArrRound1[7].name}
+                                                            span.team-score #{teamArrRound1[7].score}
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[11].src alt=teamArrRound1[11].alt)
+                                                                span.team-name #{teamArrRound1[11].name}
+                                                            span.team-score #{teamArrRound1[11].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[15].src alt=teamArrRound1[15].alt)
+                                                                span.team-name #{teamArrRound1[15].name}
+                                                            span.team-score #{teamArrRound1[15].score}
+                                        .round.last-round
+                                            .matches
+                                                .relation.first
+                                                    .match
+                                                        span.participant.home
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[1].src alt=teamArrRound1[1].alt)
+                                                                span.team-name #{teamArrRound1[1].name}
+                                                            span.team-score #{teamArrRound1[1].score}
+                                                        span.participant.away.winner
+                                                            span.team-name-box
+                                                                span.team-logo
+                                                                    img(src=teamArrRound1[15].src alt=teamArrRound1[15].alt)
+                                                                span.team-name #{teamArrRound1[15].name}
+                                                            span.team-score #{teamArrRound1[15].score}
+                            - }
+
+                        .tabs-pair
+                                ul.nm-tabs-list
+                                    li.active
+                                        a(href="javascript:void(0)")
+                                    li
+                                        a(href="javascript:void(0)")
+                                    li
+                                        a(href="javascript:void(0)")
+                                    li
+                                        a(href="javascript:void(0)")
+                                    li
+                                        a(href="javascript:void(0)")
+                                    li
+                                        a(href="javascript:void(0)")
+                                    li
+                                        a(href="javascript:void(0)")
+                                    li
+                                        a(href="javascript:void(0)")
+    .pr-main-wrap.league-md.league-sm
+        .pr-main
+            .pr-main-title
+                .pr-main-title-box
+                    .pr-main-title-left
+                        p league info
+            .league-info.aside-right-wrapper
+                - var titleHolderObj = {name:'APOEL Niscosia', img: 'img/ma/football_3398.png', alt:'team-img'}
+                - var mostTitlesObj = {name:'APOEL Niscosia', img: 'img/ma/football_3398.png', alt:'team-img'}
+                - var factsArr = [{title: 'Average goals', count: '2.58'},{title: 'Home team wins', count: '45%'},{title: 'Draws', count: '27%'},{title: 'Away team wins', count: '28%'},{title: 'Yellow cards', count: '4.08'},{title: 'Red cards', count: '0.23'}]
+                .s-main
+                    .leagure-info-title
+                        .title-holder.titles
+                            .nm-img-wrap
+                                img(src=titleHolderObj.img alt=titleHolderObj.alt)
+                            .nm-content
+                                .nm-content-head
+                                    span title holder
+                                .nm-content-text
+                                    span #{titleHolderObj.name}
+                        .most-titles.titles
+                            .nm-img-wrap
+                                img(src=mostTitlesObj.img alt = titleHolderObj.alt)
+                            .nm-content
+                                .nm-content-head
+                                    span most titles
+                                    span.count 5
+                                .nm-content-text
+                                    span #{mostTitlesObj.name}
+                    .facts
+                        .facts-head
+                            span facts
+                        .facts-content
+                            for elem in factsArr
+                                div
+                                    span= elem.title
+                                    span= elem.count
+
+                    .new-commers
+                        .upper-division
+                            .division-head
+                                span NEWCOMERS FROM UPPER DIVISION
+                            .division-content
+                                .nm-img-wrap
+                                    img(src='./img/icons/newcommers.png' alt='news-icon')
+                                .division-content-text
+                                    span Austria Klagenfurt
+                        .lower-division
+                            .division-head
+                                span NEWCOMERS FROM lower DIVISION
+                            .division-content
+                                .nm-img-wrap
+                                    img(src='./img/icons/newcommers.png' alt='news-icon')
+                                .division-content-text
+                                    span ATSV Wolfsberg
+
+                .s-main-sm
+                    .s-main-sm-block
+                        .leagure-info-title
+                            .title-holder.titles
+                                .nm-img-wrap
+                                    img(src=titleHolderObj.img alt = titleHolderObj.alt)
+                                .nm-content
+                                    .nm-content-head
+                                        span title holder
+                                    .nm-content-text
+                                        span #{titleHolderObj.name}
+                            .most-titles.titles
+                                .nm-img-wrap
+                                    img(src=mostTitlesObj.img alt=titleHolderObj.alt)
+                                .nm-content
+                                    .nm-content-head
+                                        span most titles
+                                        span.count 5
+                                    .nm-content-text
+                                        span #{mostTitlesObj.name}
+                        .new-commers
+                            .upper-division
+                                .division-head
+                                    span NEWCOMERS FROM UPPER DIVISION
+                                .division-content
+                                    .nm-img-wrap
+                                        img(src='./img/icons/newcommers.png' alt="news-icon")
+                                    .division-content-text
+                                        span Austria Klagenfurt
+                            .lower-division
+                                .division-head
+                                    span NEWCOMERS FROM lower DIVISION
+                                .division-content
+                                    .nm-img-wrap
+                                        img(src='./img/icons/newcommers.png' alt="news-icon")
+                                    .division-content-text
+                                        span ATSV Wolfsberg
+
+                    .s-main-sm-block
+                        .facts
+                            .facts-head
+                                span facts
+                            .facts-content
+                                for elem in factsArr
+                                    div
+                                        span= elem.title
+                                        span= elem.count
+
+    .pr-main-wrap.league-standing
+        .pr-main
+            .pr-main-title
+                .pr-main-title-box
+                    .pr-main-title-left
+                        p PREMIER CUP STANDINGS TABLE
+                        span GROUP A
+
+            .pr-main-tab
+                .nm-tab-content#pl_standings-tab
+                - var standings_team = ["APOEL Niscotia", "Feyenoord", "AEK Athens", "Ajax Amsterdam", "PSV", "FC Utrecht", "FCVitesse", "AZ", "FC Twente", "PEC Zwolle", "ADO Den Haag", "FC Twente", "PEC Zwolle", "ADO Den Haag"];
+                - var standings_icons = ['./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png'];
+                - var standings_icons_alt = ['team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon' ]
+                - var standings_count1 = ["28", "28", "26", "22", "22", "20", "19", "22", "22", "20", "19", "22", "20", "19"];
+                - var standings_count2 = ["21", "18", "18", "12", "12", "11", "10", "12", "12", "11", "10", "12", "11", "10"];
+                - var standings_count3 = ["5", "5", "5", "8", "8", "9", "9", "8", "8", "9", "9", "8", "9", "9"];
+                - var standings_count4 = ["2", "3", "3", "1", "1", "1", "2", "1", "1", "1", "2", "1", "1", "2"];
+                - var standings_goals = ["65:16", "60:23", "59:11", "52:00", "52:00", "51:25", "50:58", "52:00", "52:00", "51:25", "50:58", "52:00", "51:25", "50:58"];
+                - var standings_pts = ["68", "61", "56", "52", "52", "50", "48", "52", "52", "50", "48", "52", "50", "48"];
+
+                .nm-tabs-wrapper
+                    .nm-mini-block.aside-right
+
+                        .nm-tabs-content.standings-table__left
+                            - var standings_id = ["overall-tab-big", "home-tab-big", "away-tab-big"];
+                            - var Position_class = ["green_bg", "light_bg", "light_bg", "no_bg", "red_bg", "light_bg", "light_bg", "no_bg", "red_bg", "no_bg", "red_bg"];
+                                .nm-table.nm-table-standings
+                                    .nm-thead
+                                        .nm-tr
+                                            .nm-td.nm-table-position
+                                            .nm-td.nm-table-team
+                                            .nm-td.nm-table-count.nm-grey-normal P
+                                            .nm-td.nm-table-count.nm-grey-normal W
+                                            .nm-td.nm-table-count.nm-grey-normal D
+                                            .nm-td.nm-table-count.nm-grey-normal L
+                                            .nm-td.nm-table-goals.nm-grey-normal Goals
+                                            .nm-td.nm-table-pts Pts
+
+                                    .nm-tbody
+                                        - for (j=0; j<4; j++) {
+                                        div(class="nm-tr " + ((j == 0) ? "team-away" : "") + ((j == (0 + 2)) ? "team-home" : ""))
+                                            div(class="nm-td nm-table-position " + Position_class[j])
+                                                .nm-number= (j + 1)
+                                            .nm-td.nm-table-icon
+                                                img(src=standings_icons[j + 0] alt=standings_icons_alt[j + 0])
+                                            .nm-td.nm-table-team
+                                                a(href="javascript:void(0)")= standings_team[j + 0]
+                                            .nm-td.nm-table-count= standings_count1[j + 0]
+                                            .nm-td.nm-table-count= standings_count2[j + 0]
+                                            .nm-td.nm-table-count= standings_count3[j + 0]
+                                            .nm-td.nm-table-count= standings_count4[j + 0]
+                                            .nm-td.nm-table-goals= standings_goals[j + 0]
+                                            .nm-td.nm-table-pts= standings_pts[j + 0]
+                                        -}
+
+
+                        .standings-table__right
+                            .pr-main-content
+                                .pr-main-content-row.favorites-match-row
+                                    - var matchTeamName = ['Apoel Niscotia', 'Trindad and Tobago', 'Apoel Niscotia'];
+                                    - var matchCountryName = ['RSC Anderlecht', 'Apoel Niscotia', 'USA'];
+                                    .pr-match-rows-wrap
+                                        -for(var k=0; k<3; k++){
+                                        .pr-match-row
+                                            a(href='javascript:void(0)').pr-match-row-left
+                                                .pr-left-col
+                                                    -if(k==0){
+                                                    p.pr-match-time 09 Apr 17
+                                                    -}
+                                                    -if(k==1){
+                                                    p.pr-match-time 03 Apr 17
+                                                    -}
+                                                    -if(k==2){
+                                                    p.pr-match-time 02 Apr 17
+                                                    -}
+                                                .pr-match-row-center
+                                                    -if(k==0){
+                                                    .pr-match-row-center-left(data-href="#")
+                                                        .pr-team-name-cont
+                                                            p.pr-match-team-name #{matchTeamName[k]}
+                                                            .pr-coeff.pr-dark 1
+                                                        .pr-team-name-cont
+                                                            p.pr-match-team-name #{matchCountryName[k]}
+                                                            .pr-coeff.pr-bold.pr-dark 2
+                                                    -}
+                                                    -if(k==1){
+                                                    .pr-match-row-center-left(data-href="#")
+                                                        .pr-team-name-cont
+                                                            p.pr-match-team-name #{matchTeamName[k]}
+                                                            .pr-coeff.pr-dark 2
+                                                        .pr-team-name-cont
+                                                            p.pr-match-team-name #{matchCountryName[k]}
+                                                            .pr-record.pr-record-red
+                                                            .pr-coeff.pr-bold.pr-dark 3
+                                                    -}
+                                                    -if(k==2){
+                                                    .pr-match-row-center-left(data-href="#")
+                                                        .pr-team-name-cont
+                                                            p.pr-match-team-name #{matchTeamName[k]}
+                                                            .pr-coeff.pr-dark 0
+                                                        .pr-team-name-cont
+                                                            p.pr-match-team-name #{matchCountryName[k]}
+                                                            .pr-coeff.pr-dark 0
+                                                    -}
+
+                                            .pr-match-row-right
+                                                .pr-match-row-right-wrap
+                                                    .pr-favorite-container.nm-toogle-div
+
+                                                        a(href='javascript:void(0)').pr-favorite-btn.nm-toggler
+                                                            i(class='icon-icon-favorite')
+                                                        .nm-dropdown.pr-dropdown-favorite
+                                                            ul
+                                                                li
+                                                                    a(href="javascript:void(0)").pr-remove
+                                                                        | Remove
+                                                                        i(class='icon-icon-favorite')
+                                                                li
+                                                                    a(href="javascript:void(0)").pr-mute
+                                                                        | Mute this event
+                                                    a(href='javascript:void(0)').pr-more-btn more
+                                                    .pr-odds-row
+                                                        .pr-odds-row-wrap
+                                                            div(class= (k == 3) ? " pr-odds-col pr-odds-yellow" : "pr-odds-col")
+                                                                .pr-odds-up
+                                                                a(href="javascript:void(0)") 2.90
+                                                            .pr-odds-col
+                                                                .pr-odds-down
+                                                                a(href="javascript:void(0)") 3.25
+                                                            .pr-odds-col
+                                                                .pr-odds-up
+                                                                a(href="javascript:void(0)") 2.70
+                                        -}
+
+                        .nm-grey-normal.left
+                            p The group winner, runner-up and the top four 3rd place teams are qualified for the Round of 16
+                            p In the event that two (or more) teams have an equal number of points, the following rules break the tie: 1. Head-to-head
+
+                        .text-right.right
+                            a.nm-add-to-web.nm-link(href="javascript:void(0)") Add live standings to your website!
+
+    .pr-main-wrap.matches-sm
+        .pr-main.favorites
+            .pr-main-title
+                .pr-main-title-box
+                    .pr-main-title-left
+                        p.match-show MATCHES
+                    .pr-main-title-right
+
+            .pr-favorites-main
+                .pr-favorites-left
+                    .pr-favorites-left-nav
+                        div.week
+                            div.week-slider
+                                .nm-toggler
+                                    span Week
+                                    span.current-week  32
+                                .nm-dropdown
+                                    .nm-dropdown-content
+                                        .prev
+                                            a(href='#')
+                                        ul
+                                        .next
+                                            a(href='#')
+                            label.label-select
+                                select.slider-select
+                                    - for (i=1; i <= 52; i++){
+                                    option(data-name=i) Week #{i}
+                                    -}
+
+                        form.matches-filter.radio-filter
+                            input(type="radio" class="radio" name="mathes-filter-radio" id="mathes-filter-by_date")
+                            label(for="mathes-filter-by_date")
+                                span
+                                span By date
+                            input(type="radio" class="radio" name="mathes-filter-radio" id="mathes-filter-by_round")
+                            label(for="mathes-filter-by_round")
+                                span
+                                span By Rounds
+                        .date-current
+                            span.date-from 10. apr -
+                            span.date-to 17. apr
+                    .pr-main-content
+                        .pr-main-content-row.favorites-match-row
+                            - var matchTeamName = ['Apo Niscotia', 'Trindad and Tobago', 'Apoel Niscotia'];
+                            - var matchCountryName = ['RSC Anderlecht', 'Apoel Niscotia', 'USA'];
+                            .pr-match-rows-wrap
+                                -for(var k=0; k<3; k++){
+                                .pr-match-row
+                                    .pr-match-row-left
+                                        .pr-left-col
+                                            -if(k==0){
+                                            p.pr-match-time 09 Apr 17
+                                            -}
+                                            -if(k==1){
+                                            p.pr-match-time 03 Apr 17
+                                            -}
+                                            -if(k==2){
+                                            p.pr-match-time 02 Apr 17
+                                            -}
+                                        .pr-match-row-center
+                                            .pr-match-row-center-left(data-href="#")
+                                                .pr-team-name-cont
+                                                    p.pr-match-team-name #{matchTeamName[k]}
+                                                    .pr-record 1
+                                                .pr-team-name-cont
+                                                    p.pr-match-team-name #{matchCountryName[k]}
+                                                    .pr-record.pr-record-red
+                                    .pr-match-row-right
+                                        .pr-match-row-right-wrap
+                                            .pr-favorite-container.nm-toogle-div
+                                                a(href='javascript:void(0)').pr-favorite-btn.nm-toggler
+                                                    i(class='icon-icon-favorite')
+                                                .nm-dropdown.pr-dropdown-favorite
+                                                    ul
+                                                        li
+                                                            a(href="javascript:void(0)").pr-remove
+                                                                | Remove
+                                                                i(class='icon-icon-favorite')
+                                                        li
+                                                            a(href="javascript:void(0)").pr-mute
+                                                                | Mute this event
+                                            a(href='javascript:void(0)').pr-more-btn more
+                                            .pr-odds-row
+                                                .pr-odds-row-wrap
+                                                    div(class= (k == 3) ? " pr-odds-col pr-odds-yellow" : "pr-odds-col")
+                                                        .pr-odds-up
+                                                        a(href="javascript:void(0)") 2.90
+                                                    .pr-odds-col
+                                                        .pr-odds-down
+                                                        a(href="javascript:void(0)") 3.25
+                                                    .pr-odds-col
+                                                        .pr-odds-up
+                                                        a(href="javascript:void(0)") 2.70
+                                -}
+
+                .pr-favorites-right.pr-favorites-scrollable
+                    .aside-right.nm-block
+                        .aside-right-wrapper.aside-right-scrollable-wrapper
+                            .nm-scroll-area.scrollbar-outer
+                                .nm-share-block
+                                    a.nm-share-toggle(href="javascript:void(0)")
+                                        svg.nm-svg(width="14" height="15")
+                                            use(xlink:href="#icon-share")
+
+                                    a.nm-share-btn.nm-share-fb(href="javascript:void(0)")
+                                        svg.nm-svg(width="6" height="10")
+                                            use(xlink:href="#icon-share-facebook")
+
+                                    a.nm-share-btn.nm-share-twitter(href="javascript:void(0)")
+                                        svg.nm-svg(width="10" height="8")
+                                            use(xlink:href="#icon-share-twitter")
+
+                                    a.nm-share-btn.nm-share-google(href="javascript:void(0)")
+                                        svg.nm-svg(width="12" height="8")
+                                            use(xlink:href="#icon-share-google")
+
+                                    a.nm-share-btn.nm-share-youtube(href="javascript:void(0)")
+                                        svg.nm-svg(width="14" height="10")
+                                            use(xlink:href="#icon-share-youtube")
+
+                                    a.nm-share-btn.nm-share-inst(href="javascript:void(0)")
+                                        svg.nm-svg(width="11" height="11")
+                                            use(xlink:href="#icon-share-inst")
+
+                                .nm-aside-headblock
+                                    ul.nm-mini-breadcrumbs
+                                        li: a(href="javascript:void(0)") Spain
+                                        li: a(href="javascript:void(0)") Primera Division
+
+                                    .nm-match-name APOEL Niscotia - RSC Anderlecht
+
+
+                                .nm-aside-match-headblock
+                                    .nm-team-col
+                                        .nm-team-badge
+                                            img(src="img/icons/badge-apoel.png" alt="APOEL Niscotia")
+
+                                        .nm-team-name APOEL Niscotia
+
+                                        a.nm-btn.nm-btn-border(href="javascript:void(0)") Follow
+
+                                    .nm-middle-col
+                                        .nm-info
+                                            .nm-date 14 days
+
+                                        a.nm-btn.nm-btn-border.nm-btn-play(href="javascript:void(0)")
+                                            svg.nm-svg(width="13" height="13")
+                                                use(xlink:href="#icon-tab-live")
+
+                                    .nm-team-col
+                                        .nm-team-badge
+                                            img(src="img/icons/badge-rsc-anderlecht.png" alt="RSC Anderlecht")
+
+                                        .nm-team-name RSC Anderlecht
+
+                                        a.nm-btn.nm-btn-border(href="javascript:void(0)") Follow
+
+
+                                .nm-aside-bigtabs-block
+                                    .nm-tabs-wrapper
+                                        .nm-scroll-area
+                                            .nm-scroll-wrapper
+                                                ul.nm-tabs-list.nm-big-tabs
+                                                    li.active: a(href="javascript:void(0)") Details
+                                                    li: a(href="javascript:void(0)") Statistics
+                                                    li: a(href="javascript:void(0)") Lineups
+                                                    li: a(href="javascript:void(0)") Matches
+                                                    li: a(href="javascript:void(0)") Standings
+
+                                        .nm-tabs-content
+                                            .nm-tab-content.details__wrap#details-tab.active
+                                                .details
+                                                    .cell.cell--justified.details__time
+                                                        .cell__section
+                                                            .cell__content Today at 21:45
+                                                        .cell__section
+                                                            .cell__content Not started
+                                                    .details__willwin.details-inner-wrap
+                                                        .s-title Who will win?
+                                                        .details__vote.vote
+                                                            .cell
+                                                                .cell__section
+                                                                    .cell__content
+                                                                        button.vote__button.vote__button-green 1
+                                                                .cell__section
+                                                                    .cell__content
+                                                                        button.vote__button X
+                                                                .cell__section
+                                                                    .cell__content
+                                                                        button.vote__button.vote__button-blue 2
+                                                    .details__willwin.odds__wrap.details-inner-wrap
+                                                        .match__odds.odds
+                                                            .odds__left
+                                                                .odds__left-bottom
+                                                                    .s-title Odds
+                                                                    a(href='#')
+                                                                        div Full time
+                                                            .odds__right
+                                                                .odds__right-top
+                                                                    div 1
+                                                                    div Х
+                                                                    div 2
+                                                                .odds__right-bottom
+                                                                    a(href='#' class='odds__value up') 2.90
+                                                                    a(href='#' class='odds__value down') 3.25
+                                                                    a(href='#' class='odds__value up') 2.70
+                                                        .match__odds.odds
+                                                            .odds__left
+                                                                .odds__left-bottom
+                                                                    a(href='#')
+                                                                        div Double chanse
+                                                            .odds__right
+                                                                .odds__right-top
+                                                                    div 1Х
+                                                                    div Х2
+                                                                    div 12
+                                                                .odds__right-bottom
+                                                                    a.nm-blue-bg(href='#' class='odds__value up')
+                                                                        span 2.90
+                                                                    a(href='#' class='odds__value down')
+                                                                        span 3.25
+                                                                    a.nm-grey-bg(href='#' class='odds__value up')
+                                                                        span 2.70
+                                                        .match__odds.odds
+                                                            .odds__left
+                                                                .odds__left-bottom
+                                                                    a(href='#')
+                                                                        div 1st half
+                                                            .odds__right
+                                                                .odds__right-top
+                                                                    div 1
+                                                                    div Х
+                                                                    div 2
+                                                                .odds__right-bottom
+                                                                    a.nm-grey-bg(href='#' class='odds__value up')
+                                                                        span 2.90
+                                                                    a.nm-grey-bg(href='#' class='odds__value down')
+                                                                        span 3.25
+                                                                    a(href='#' class='odds__value up')
+                                                                        span 2.70
+                                                        .match__odds.odds
+                                                            .odds__left
+                                                                .odds__left-bottom
+                                                                    a(href='#')
+                                                                        div Draw no bet
+                                                            .odds__right
+                                                                .odds__right-top
+                                                                    div 1
+                                                                    div
+                                                                    div 2
+                                                                .odds__right-bottom
+                                                                    a(href='#' class='odds__value up') 2.90
+                                                                    a(href='#' class='odds__value')
+                                                                    a(href='#' class='odds__value up') 2.70
+                                                        .match__odds.odds
+                                                            .odds__left
+                                                                .odds__left-bottom
+                                                                    a(href='#')
+                                                                        div Both teams to score
+                                                            .odds__right
+                                                                .odds__right-top
+                                                                    div Yes
+                                                                    div
+                                                                    div No
+                                                                .odds__right-bottom
+                                                                    a(href='#' class='odds__value up') 2.90
+                                                                    a(href='#' class='odds__value')
+                                                                    a(href='#' class='odds__value up') 2.70
+                                                        .match__odds.odds
+                                                            .odds__left
+                                                                .odds__left-bottom
+                                                                    a(href='#')
+                                                                        div First team to score
+                                                            .odds__right
+                                                                .odds__right-top
+                                                                    div team1
+                                                                    div no-goal
+                                                                    div team2
+                                                                .odds__right-bottom
+                                                                    a(href='#' class='odds__value up') 2.90
+                                                                    a(href='#' class='odds__value down') 3.25
+                                                                    a(href='#' class='odds__value up') 2.70
+
+                                                        .odds__goals
+                                                            .odds
+                                                                .odds__right
+                                                                    .odds__right-top
+                                                                        .odds__goals-title Match <br> goals
+                                                                        div Over
+                                                                        div Under
+                                                                    .odds__right-bottom
+                                                                        a(href='#' class='odds__value') 0.5
+                                                                        a(href='#' class='odds__value up') 2.90
+                                                                        a(href='#' class='odds__value up') 2.70
+                                                            .odds
+                                                                .odds__right
+                                                                    .odds__right-bottom
+                                                                        a(href='#' class='odds__value') 1.5
+                                                                        a(href='#' class='odds__value down') 2.90
+                                                                        a(href='#' class='odds__value up') 2.70
+                                                            .odds
+                                                                .odds__right
+                                                                    .odds__right-bottom
+                                                                        a(href='#' class='odds__value') 2.5
+                                                                        a(href='#' class='odds__value down') 2.90
+                                                                        a(href='#' class='odds__value up') 2.70
+                                                            .odds
+                                                                .odds__right
+                                                                    .odds__right-bottom
+                                                                        a(href='#' class='odds__value') 3.5
+                                                                        a(href='#' class='odds__value down') 2.90
+                                                                        a(href='#' class='odds__value up') 2.70
+                                                            .odds
+                                                                .odds__right
+                                                                    .odds__right-bottom
+                                                                        a(href='#' class='odds__value') 4.5
+                                                                        a(href='#' class='odds__value down') 2.90
+                                                                        a(href='#' class='odds__value up') 2.70
+                                                            .odds
+                                                                .odds__right
+                                                                    .odds__right-bottom
+                                                                        a(href='#' class='odds__value') 5.5
+                                                                        a(href='#' class='odds__value down') 2.90
+                                                                        a(href='#' class='odds__value up') 2.70
+
+
+                                                .h2h.bg-gray.details-inner-wrap
+                                                    .s-title H2H
+                                                    .nm-aside-match-headblock
+                                                        .nm-team-col
+                                                            .nm-team-badge
+                                                                img(src="img/icons/badge-apoel.png" alt="APOEL Niscotia")
+
+                                                            .nm-team-num 2
+
+                                                            .nm-team-name Apoel Niscotia
+
+                                                        .nm-middle-col
+                                                            .nm-info
+                                                                .nm-team-num 3
+
+                                                        .nm-team-col
+                                                            .nm-team-badge
+                                                                img(src="img/icons/badge-rsc-anderlecht.png" alt="RSC Anderlecht")
+
+                                                            .nm-team-num 0
+
+                                                            .nm-team-name Rsc Anderlecht
+
+
+                                                .pregame
+                                                    .s-title Pregame form
+                                                    .pregame__odds
+                                                        .odds
+                                                            .odds__right
+                                                                .odds__right-top
+                                                                    div Last 5
+                                                                    div Pts
+                                                        .odds
+                                                            .odds__left
+                                                                .odds__left-bottom
+                                                                    a(href='#')
+                                                                        .odds__rank.odds__rank-blue 5
+                                                                        div Apoel Niscotia
+                                                            .odds__right
+                                                                .odds__right-bottom
+                                                                    .odds__last
+                                                                        a(href='#' class='odds__w')
+                                                                        a(href='#' class='odds__l')
+                                                                        a(href='#' class='odds__w')
+                                                                        a(href='#' class='odds__d')
+                                                                        a(href='#' class='odds__w')
+                                                                    a(href='#' class='odds__value') 48
+                                                        .odds
+                                                            .odds__left
+                                                                .odds__left-bottom
+                                                                    a(href='#')
+                                                                        .odds__rank.odds__rank 12
+                                                                        div Rsc Anderlecht
+                                                            .odds__right
+                                                                .odds__right-bottom
+                                                                    .odds__last
+                                                                        a(href='#' class='odds__w')
+                                                                        a(href='#' class='odds__l')
+                                                                        a(href='#' class='odds__w')
+                                                                        a(href='#' class='odds__d')
+                                                                        a(href='#' class='odds__w')
+                                                                    a(href='#' class='odds__value') 48
+
+
+                                                .h2h.manager.bg-gray.details-inner-wrap
+                                                    .s-title Manager H2H
+                                                    .nm-aside-match-headblock
+                                                        .nm-team-col
+                                                            .nm-team-badge
+                                                                img(src="img/ma/avatar126.png" alt="APOEL Niscotia")
+
+                                                            .nm-team-num 2
+
+                                                            .nm-team-name Arnold Alois Schwarzenegger
+
+                                                        .nm-middle-col
+                                                            .nm-info
+                                                                .nm-team-num 3
+
+                                                        .nm-team-col
+                                                            .nm-team-badge
+                                                                img(src="img/ma/avatar127.png" alt="RSC Anderlecht")
+
+                                                            .nm-team-num 0
+
+                                                            .nm-team-name Jean-Claude Van Damme
+
+                                                .winnings
+                                                    .s-title Winning odds
+                                                    .winnings__items
+                                                        .winnings__item
+                                                            a(href='#' class='winnings__link')
+                                                                img(src="img/icons/badge-apoel.png" alt="APOEL Niscotia")
+                                                                div Apoel Niscotia
+                                                            .winnings__description
+                                                                | When the odds are <span class='dark'>2.63</span> the expected chance of winning is <span>38%</span>, but this team actually <mark>wins 46.7%</mark> matches with these odds.
+
+                                                        .winnings__item
+                                                            a(href='#' class='winnings__link')
+                                                                img(src="img/icons/badge-rsc-anderlecht.png" alt="RSC Anderlecht")
+                                                                div Rsc Anderlecht
+                                                            .winnings__description
+                                                                | When the odds are <span class='dark'>2.63</span> the expected chance of winning is <span>38%</span>, but this team actually <mark>wins 46.7%</mark> matches with these odds.
+
+                                                .matchinfo.bg-gray
+                                                    .s-title Match info
+                                                    .odds
+                                                        .odds__left
+                                                            div Start date
+                                                        .odds__right
+                                                            div 17. Mar 2017, 21:45
+                                                    .odds
+                                                        .odds__left
+                                                            div Referee
+                                                        .odds__right
+                                                            div Inaki Vicandi Garrido, Spain
+                                                    .odds
+                                                        .odds__left
+                                                            div Avg. cards
+                                                        .odds__right
+                                                            .card.card-red 0.28
+                                                            .card.card-yellow 4.12
+                                                    .odds
+                                                        .odds__left
+                                                            div Location
+                                                        .odds__right
+                                                            div Las Palmas de Gran Canaria, Spain
+                                                    .odds
+                                                        .odds__left
+                                                            div Venue
+                                                        .odds__right
+                                                            div Gran Canaria
+
+                                                .media
+                                                    .s-title Media
+                                                    .odds
+                                                        .odds__left
+                                                            a(href='#')
+                                                                img(src='img/ma/media-video-example.jpg' alt="img")
+                                                        .odds__right
+                                                            a(href='#') Arsenal de Sarandi 1-2 Atletico Rafaela
+                                                            div Full highlights
+                                                    .odds
+                                                        .odds__left
+                                                            a(href='#')
+                                                                img(src='img/ma/media-video-example.jpg' alt="img")
+                                                        .odds__right
+                                                            a(href='#') Arsenal de Sarandi 1-2 Atletico Rafaela long description...
+                                                            div Full highlights
+
+
+
+                                            .nm-tab-content#statistics-tab
+                                                .nm-tabs-wrapper
+                                                    ul.nm-tabs-list.nm-small-tabs.nm-statistics-tabs
+                                                        li.active: a(href="javascript:void(0)") All
+                                                        li: a(href="javascript:void(0)") 1ST
+                                                        li: a(href="javascript:void(0)") 2ND
+
+                                                    .nm-tabs-content
+                                                        mixin stat(l, m, r, leftbets, rightbest)
+                                                            .nm-statistic-row
+                                                                div(class= leftbets ? "nm-best" : "")
+                                                                    if ((i == 0) || !(l > 0))
+                                                                        span= l
+                                                                    if ((i == 1) && (l > 0))
+                                                                        span= ++l
+                                                                    if ((i == 2) && (l > 0))
+                                                                        span= --l
+                                                                div
+                                                                    span= m
+                                                                div(class= rightbest ? "nm-best" : "")
+                                                                    if ((i == 0) || !(r > 0))
+                                                                        span= r
+                                                                    if ((i == 1) && (r > 0))
+                                                                        span= ++r
+                                                                    if ((i == 2) && (r > 0))
+                                                                        span= --r
+
+                                                        - for (i=0; i<3; i++) {
+                                                        div(class="nm-tab-content" + ((i == 0) ? " active" : ""))
+                                                            .nm-statistics-section
+                                                                .nm-statistics-block
+                                                                    +stat("47%", "Ball possession", "53%", "", "")
+
+                                                                .nm-statistics-block
+                                                                    +stat("13", "Total shot", "10", "+", "")
+                                                                    +stat("13", "Shots on target ", "10", "+", "")
+                                                                    +stat("13", "Shots off target ", "13", "", "")
+                                                                    +stat("3", " Blocked shots ", "12", "", "+")
+
+                                                                .nm-statistics-block
+                                                                    +stat("2", "Shots inside box", "4", "", "+")
+                                                                    +stat("6", "Shots outside box", "6", "", "")
+                                                                    +stat("6", "Big canses created", "6", "", "")
+                                                                    +stat("13", "Hit woodwork", "10", "+", "")
+                                                                    +stat("13", "Goalkeepers saves", "10", "+", "")
+
+                                                                .nm-statistics-block
+                                                                    +stat("6", "Corner kicks", "2", "+", "")
+                                                                    +stat("1", "Passes", "4", "", "+")
+                                                                    +stat("6", "Accurate passes", "6", "", "")
+                                                                    +stat("75%", "Accurate passes %", "75%", "", "")
+
+                                                                .nm-statistics-block
+                                                                    +stat("0", "Offsides", "0", "", "")
+                                                                    +stat("4", "Fouls", "4", "", "")
+                                                                    +stat("2", "Yellow cards", "2", "", "")
+
+                                                                .nm-statistics-block
+                                                                    +stat("6", "Duels won", "6", "", "")
+                                                                    +stat("2", "Aerials won", "2", "", "")
+                                                        -}
+
+
+                                            .nm-tab-content#lineups-tab
+                                                .nm-btn-detail-wrap
+                                                    a.nm-btn.nm-btn-green-border(href="javascript:void(0)") Detailed Player statistics
+
+                                                .nm-tabs-wrapper
+                                                    ul.nm-tabs-list.nm-small-tabs.nm-double-tabs.nm-lineups-tabs
+                                                        li.active: a(href="javascript:void(0)") APOEL Niscotia
+                                                        li: a(href="javascript:void(0)") RSC Anderlecht
+
+                                                    mixin player(tshirt, TOP, position, name, rating, goal, substitution, card)
+                                                        .nm-player-block(style="top:" + TOP)
+                                                            .nm-shirt
+                                                                img(src="img/tshirts/tshirt-" + tshirt + ".svg" alt="t-shirt")
+                                                                .nm-position.white= position
+                                                                .nm-player-info-block
+                                                                    .nm-icons-row
+                                                                        .nm-extra-block
+                                                                            if goal
+                                                                                .nm-img-wrap.nm-goal
+                                                                                    img(src="img/icons/icon-lineup-goal.svg" alt="substitution")
+                                                                            if substitution
+                                                                                .nm-img-wrap.nm-substitution
+                                                                                    img(src="img/icons/icon-lineup-substitution.svg" alt="substitution")
+                                                                        .nm-card-block
+                                                                            if card
+                                                                                .nm-yellow-card
+                                                                    .nm-player-rating= rating
+                                                            a.nm-player-name(href="javascript:void(0)" data-remodal-target="player_info")= name
+
+                                                    .nm-players-lineups-block
+                                                        .nm-field-wrap.left-side
+                                                            .nm-lineup-scheme.left-scheme 4-2-3-1
+                                                            .nm-lineup-scheme.right-scheme 4-2-3-1
+
+                                                            .nm-columns-wrap
+                                                                .nm-column.nm-column-goalkeeper
+                                                                    +player('1', '50%', '24', 'Stefan Frei', '6.5', '', '', '')
+                                                                .nm-column
+                                                                    +player('2', '10%', '33', 'Joevin Jones', '7.0', '', '', '')
+                                                                    +player('2', '30%', '14', 'Chad Marshall', '6.0', '', '', '')
+                                                                    +player('2', '66%', '19', 'Gustav Stevenson', '6.0', '', '', '')
+                                                                    +player('2', '87%', '6', 'Oniel Fisher', '6.6', '', '', 'card')
+                                                                .nm-column
+                                                                    +player('2', '21%', '4', 'Cristian Roldan', '6.0', '', '', '')
+                                                                    +player('2', '78%', '8', 'Osvaldo  Alonso', '6.0', '', '', '')
+                                                                .nm-column
+                                                                    +player('2', '10%', '7', 'Harrison  Shipp', '7.2', 'goal', '', '')
+                                                                    +player('2', '50%', '2', 'Clint  Dempsey', '6.0', '', 's', '')
+                                                                    +player('2', '87%', '10', 'Nicolas Rodiero', '6.0', '', '', '')
+                                                                .nm-column
+                                                                    +player('2', '50%', '13', 'Oniel Fisher', '6.6', '', '', 'card')
+
+                                                                .nm-column.nm-column-central
+
+                                                                .nm-column
+                                                                    +player('2', '50%', '13', 'Oniel Fisher', '6.6', '', '', 'card')
+                                                                .nm-column
+                                                                    +player('2', '10%', '7', 'Harrison  Shipp', '7.2', 'goal', '', '')
+                                                                    +player('2', '50%', '2', 'Clint  Dempsey', '6.0', '', 's', '')
+                                                                    +player('2', '87%', '10', 'Nicolas Rodiero', '6.0', '', '', '')
+                                                                .nm-column
+                                                                    +player('2', '21%', '4', 'Cristian Roldan', '6.0', '', '', '')
+                                                                    +player('2', '78%', '8', 'Osvaldo  Alonso', '6.0', '', '', '')
+                                                                .nm-column
+                                                                    +player('2', '10%', '33', 'Joevin Jones', '7.0', '', '', '')
+                                                                    +player('2', '30%', '14', 'Chad Marshall', '6.0', '', '', '')
+                                                                    +player('2', '66%', '19', 'Gustav Stevenson', '6.0', '', '', '')
+                                                                    +player('2', '87%', '6', 'Oniel Fisher', '6.6', '', '', 'card')
+                                                                .nm-column.nm-column-goalkeeper
+                                                                    +player('1', '50%', '24', 'Stefan Frei', '6.5', '', '', '')
+
+                                                    .nm-light-grey-bg
+                                                        .nm-tabs-content
+                                                            .nm-tab-content.active
+                                                                .nm-lineups-info-block
+                                                                    .nm-team-info
+                                                                        .nm-team-badge.nm-img-wrap
+                                                                            img(src="img/icons/badge-apoel.png" alt="APOEL Niscotia")
+                                                                        .nm-text-block
+                                                                            .nm-team-name APOEL Niscotia
+                                                                            .nm-coach-row
+                                                                                span.nm-coach-name Brian Schmetizer
+                                                                                span.nm-grey-normal Coach
+
+                                                                    .nm-players-info-section
+                                                                        a.nm-player-info-row(href="javascript:void(0)" data-remodal-target="player_info")
+                                                                            .nm-player-img(style="background-image: url('img/temp/photo-player-2.jpg')")
+                                                                            .nm-player-text
+                                                                                .nm-player-name Tyler Austin Miller
+                                                                                .nm-player-about 1 Goalkeeper
+                                                                            .nm-player-icons
+
+                                                                        a.nm-player-info-row(href="javascript:void(0)" data-remodal-target="player_info")
+                                                                            .nm-player-img(style="background-image:url('img/temp/photo-player-3.jpg')")
+                                                                            .nm-player-text
+                                                                                .nm-player-name Tony Alfaro
+                                                                                .nm-player-about 15 Defender
+                                                                            .nm-player-icons
+                                                                                .nm-player-icon-card.nm-card-substitution
+                                                                                    img(src="img/icons/icon-lineup-substitution2.svg" alt="icon" width="9" height="8")
+                                                                                    .nm-time 52’
+
+                                                                                .nm-player-icon-card.nm-card-rating 7.3
+
+                                                            .nm-tab-content
+                                                                .nm-lineups-info-block
+                                                                    .nm-team-info
+                                                                        .nm-team-badge.nm-img-wrap
+                                                                            img(src="img/icons/badge-rsc-anderlecht.png" alt="rsc anderlecht")
+                                                                        .nm-text-block
+                                                                            .nm-team-name RSC ANDERLECHT
+                                                                            .nm-coach-row
+                                                                                span.nm-coach-name Brian Schmetizer
+                                                                                span.nm-grey-normal Coach
+
+                                                                    .nm-players-info-section
+                                                                        a.nm-player-info-row(href="javascript:void(0)" data-remodal-target="player_info")
+                                                                            .nm-player-img(style="background-image: url('img/temp/photo-player-1.jpg')")
+                                                                            .nm-player-text
+                                                                                .nm-player-name Austin Shmiller
+                                                                                .nm-player-about 24 Goalkeeper
+                                                                            .nm-player-icons
+
+                                                                        a.nm-player-info-row(href="javascript:void(0)" data-remodal-target="player_info")
+                                                                            .nm-player-img(style="background-image:url('img/temp/photo-player-2.jpg')")
+                                                                            .nm-player-text
+                                                                                .nm-player-name Tony Banderas
+                                                                                .nm-player-about 12 Defender
+                                                                            .nm-player-icons
+                                                                                .nm-player-icon-card.nm-card-rating 6.8
+
+                                                        .nm-lineups-addlink-wrap
+                                                            a.nm-add-to-web.nm-link(href="javascript:void(0)") Add live player ratings and lineups to your website!
+
+
+                                            .nm-tab-content#matches-tab
+                                                .nm-team-streaks-block
+                                                    .nm-subcaption Team Streaks
+                                                    .nm-team-row
+                                                        .nm-team-badge
+                                                            img(src="img/icons/badge-apoel.png" alt="APOEL Niscotia")
+
+                                                        .nm-team-name APOEL Niscotia
+
+                                                    .nm-team-stats-row
+                                                        .nm-losses No losses
+                                                        .nm-wins 7
+
+                                                .nm-tabs-wrapper
+                                                    .nm-scroll-area
+                                                        .nm-scroll-wrapper
+                                                            ul.nm-tabs-list.nm-small-tabs.nm-triple-tabs
+                                                                li.active: a(href="javascript:void(0)") APOEL Niscotia
+                                                                li: a(href="javascript:void(0)") H2H
+                                                                li: a(href="javascript:void(0)") RSC ANDERLECHT
+
+                                                    .nm-tabs-content
+                                                        - for (i=0; i<3; i++) {
+                                                        div(class="nm-tab-content " + ((i == 0) ? "active" : ""))
+                                                            - if (i!==1) {
+                                                            .nm-matches-filters-wrap
+                                                                .nm-matches-filters-row
+                                                                    .nm-radio-block
+                                                                        input.nm-invisible(type="checkbox" name="match_filters_home_" + (i + 1) id="match_filters_home_" + (i + 1))
+                                                                        label.nm-radio-label(for="match_filters_home_" + (i + 1))
+                                                                            span.nm-icon
+                                                                            span.nm-text Home
+
+                                                                    .nm-radio-block
+                                                                        input.nm-invisible(type="checkbox" name="match_filters_this_" + (i + 1) id="match_filters_this_" + (i + 1))
+                                                                        label.nm-radio-label(for="match_filters_this_" + (i + 1))
+                                                                            span.nm-icon
+                                                                            span.nm-text This tournament
+                                                            -}
+
+                                                            .nm-streaks-matches-wrapper
+                                                                .nm-streaks-matches-block
+                                                                    a.nm-division-name.nm-link(href="javascript:void(0)") 1st Division, Championship group
+
+                                                                    .nm-table.nm-table-group
+                                                                        - var table_score1=["", "2"];
+                                                                        - var table_score2=["", "3"];
+                                                                        - for (m=0; m<2; m++) {
+                                                                        div(class="nm-tr " + ((m==1) && (i==2) ? "line_win" : "") + ((m==1) && (i==0) ? "line_lose" : ""))
+                                                                            .nm-td.nm-table-datetime
+                                                                                .nm-grey-normal 01 Apr 17
+                                                                                .nm-grey-normal 19:00
+
+                                                                            .nm-td.nm-table-teams
+                                                                                div APOEL Niscotia
+                                                                                div RSC Anderlecht
+
+                                                                            .nm-td.nm-table-score
+                                                                                div= table_score1[m]
+                                                                                div(class= (m==1) ? "win" : "")= table_score2[m]
+
+                                                                            .nm-td.nm-table-icon
+                                                                                - if (m==0)
+                                                                                a(href="javascript:void(0)")
+                                                                                    img(src="img/icons/icon-matches-statistics.svg" alt="stat" width="9" height="9")
+                                                                                - if (m==1)
+                                                                                a(href="javascript:void(0)")
+                                                                                    img(src="img/icons/icon-matches-highlight.svg" alt="view" width="9" height="9")
+
+                                                                            .nm-td.nm-table-result
+                                                                                - if (m==0||i==1) {
+                                                                                .pr-favorite-container.nm-toogle-div
+                                                                                    a.pr-favorite-btn.nm-toggler(href='javascript:void(0)')
+                                                                                        i(class='icon-icon-favorite')
+                                                                                    .nm-dropdown.pr-dropdown-favorite
+                                                                                        ul
+                                                                                            li
+                                                                                                a(href="javascript:void(0)").pr-remove
+                                                                                                    | Remove
+                                                                                            li
+                                                                                                a(href="javascript:void(0)").pr-mute
+                                                                                                    | Mute this event
+                                                                                -}
+                                                                                - if (m==1&&i==2)
+                                                                                .nm-res-letter W
+                                                                                - if (m==1&&i==0)
+                                                                                .nm-res-letter L
+                                                                        -}
+
+                                                                .nm-streaks-matches-block
+                                                                    a.nm-division-name.nm-link(href="javascript:void(0)") 1st Division, Championship group
+
+                                                                    .nm-table.nm-table-group
+                                                                        - var table_score3=["2", "3"];
+                                                                        - var table_score4=["2", "2"];
+                                                                        - for (m=0; m<2; m++) {
+                                                                        div(class="nm-tr " + ((m == 0) ? "line_draw" : "") + ((m == 1 && i == 2) ? "line_lose" : "") + ((m == 1 && i == 0) ? "line_win" : ""))
+                                                                            .nm-td.nm-table-datetime
+                                                                                .nm-grey-normal 01 Apr 17
+                                                                                .nm-grey-normal 19:00
+
+                                                                            .nm-td.nm-table-teams
+                                                                                div APOEL Niscotia
+                                                                                div RSC Anderlecht
+
+                                                                            .nm-td.nm-table-score
+                                                                                div(class= (m == 1) ? "win" : "")= table_score3[m]
+                                                                                div= table_score4[m]
+
+                                                                            .nm-td.nm-table-icon
+
+                                                                            .nm-td.nm-table-result
+                                                                                - if (m==0&&i!==1)
+                                                                                .nm-res-letter D
+                                                                                - if (m==1 && i==2)
+                                                                                .nm-res-letter L
+                                                                                - if (m==1 && i==0)
+                                                                                .nm-res-letter W
+                                                                                - if (i==1)
+                                                                                .pr-favorite-container.nm-toogle-div
+                                                                                    a.pr-favorite-btn.nm-toggler(href='javascript:void(0)')
+                                                                                        i(class='icon-icon-favorite')
+                                                                                    .nm-dropdown.pr-dropdown-favorite
+                                                                                        ul
+                                                                                            li
+                                                                                                a(href="javascript:void(0)").pr-remove
+                                                                                                    | Remove
+                                                                                            li
+                                                                                                a(href="javascript:void(0)").pr-mute
+                                                                                                    | Mute this event
+                                                                        -}
+                                                        -}
+
+
+                                            .nm-tab-content#standings-tab
+                                                - var standings_team = ["APOEL Niscotia", "APOEL Niscotia", "AEK", "APOEL Niscotia", "APOEL Niscotia", "RSC Anderlecht", "RSC Anderlecht"];
+                                                - var standings_count1 = ["28", "28", "26", "22", "22", "20", "19"];
+                                                - var standings_count2 = ["21", "18", "18", "12", "12", "11", "10"];
+                                                - var standings_count3 = ["5", "5", "5", "8", "8", "9", "9"];
+                                                - var standings_count4 = ["2", "3", "3", "1", "1", "1", "2"];
+                                                - var standings_goals = ["65:16", "60:23", "59:11", "52:00", "52:00", "51:25", "50:58"];
+                                                - var standings_pts = ["68", "61", "56", "52", "52", "50", "48"];
+
+                                                .nm-tabs-wrapper
+                                                    ul.nm-tabs-list.nm-small-tabs.nm-triple-tabs
+                                                        li.active: a(href="javascript:void(0)") Overall
+                                                        li: a(href="javascript:void(0)") Home
+                                                        li: a(href="javascript:void(0)") Away
+
+                                                    .nm-mini-block
+                                                        a.nm-division-name.nm-link(href="javascript:void(0)") 1st Division, Championship group
+                                                        .nm-grey-normal Crypus
+
+                                                        .nm-tabs-content
+                                                            - var standings_id = ["overall-tab", "home-tab", "away-tab"];
+                                                            - var Position_class = ["green_bg", "light_bg", "light_bg", "no_bg", "red_bg"];
+                                                            - for (i=0; i<3; i++) {
+                                                            div(id=standings_id[i] class= (i == 0) ? "nm-tab-content active" : "nm-tab-content")
+                                                                .nm-table.nm-table-standings
+                                                                    .nm-thead
+                                                                        .nm-tr
+                                                                            .nm-td.nm-table-position
+                                                                            .nm-td.nm-table-team
+                                                                            .nm-td.nm-table-count.nm-grey-normal P
+                                                                            .nm-td.nm-table-count.nm-grey-normal W
+                                                                            .nm-td.nm-table-count.nm-grey-normal D
+                                                                            .nm-td.nm-table-count.nm-grey-normal L
+                                                                            .nm-td.nm-table-goals.nm-grey-normal Goals
+                                                                            .nm-td.nm-table-pts Pts
+
+                                                                    .nm-tbody
+                                                                        - for (j=0; j<5; j++) {
+                                                                        div(class="nm-tr " + ((j == i) ? "team-away" : "") + ((j == (i + 2)) ? "team-home" : ""))
+                                                                            div(class="nm-td nm-table-position " + Position_class[j])
+                                                                                .nm-number= (j + 1)
+                                                                            .nm-td.nm-table-team
+                                                                                a(href="javascript:void(0)")= standings_team[j + i]
+                                                                            .nm-td.nm-table-count= standings_count1[j + i]
+                                                                            .nm-td.nm-table-count= standings_count2[j + i]
+                                                                            .nm-td.nm-table-count= standings_count3[j + i]
+                                                                            .nm-td.nm-table-count= standings_count4[j + i]
+                                                                            .nm-td.nm-table-goals= standings_goals[j + i]
+                                                                            .nm-td.nm-table-pts= standings_pts[j + i]
+                                                                        -}
+                                                            -}
+
+                                                        .nm-grey-normal In the event that two teams finish with an equal number of points, the following system will be applied to break the tie: 1.
+
+                                                        .text-right
+                                                            a.nm-add-to-web.nm-link(href="javascript:void(0)") Add live standings to your website!
+    .pr-main-wrap.top-scores-md
+        .aside-right.aside-right-default.nm-block
+            .aside-right-wrapper.block.block1
+                .top-scores
+                    - var headScorers = ['Matches', 'Goals', 'Rating'];
+                    - var contentScorers = [{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg',alt: "photo-player",  name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7},{img: './img/temp/photo-player-3.jpg', alt: "photo-player", name: 'Tony Alfaro', team: 'Roma', matches: 8, goals: 8, rating: 7.7}]
+                    .s-title TOP SCORERS
+                    .s-main.nm-lineups-info-block
+                        .s-main-head
+                            for name in headScorers
+                                span #{name}
+                        .s-main-content.nm-players-info-section
+                            for player in contentScorers
+                                a.nm-player-info-row
+                                    .nm-player-img
+                                        img(src=player.img alt=player.alt)
+                                    .nm-player-text
+                                        .nm-player-name #{player.name}
+                                        .nm-player-about #{player.team}
+                                    .nm-player-skills
+                                        span #{player.matches}
+                                        span #{player.goals}
+                                    .nm-player-icons
+                                        .nm-player-icon-card.nm-card-rating #{player.rating}
+
+            .aside-right-wrapper.block.block2
+                .media
+                    .s-title top scorers
+                    .odds
+                        .odds__left
+                            a(href='#')
+                                img(src='img/ma/media-video-example.jpg' alt="img")
+                        .odds__right
+                            a(href='#') Arsenal de Sarandi 1-2 Atletico Rafaela
+                            div Full highlights
+                    .odds
+                        .odds__left
+                            a(href='#')
+                                img(src='img/ma/media-video-example.jpg' alt="img")
+                        .odds__right
+                            a(href='#') Arsenal de Sarandi 1-2 Atletico Rafaela long description...
+                            div Full highlights
