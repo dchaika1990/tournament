@@ -3,7 +3,7 @@
 /*					 TOURNAMENT-LEFTCOL			      */
 /*================================================*/
 
-& .radio-filter {
+.radio-filter {
   border: 1px solid #c9cccf;
   border-radius: 4px;
   padding-left: 8px;
@@ -82,7 +82,7 @@
 }
 
 //Stiles for btn add to favorites
-& .pr-favorite-container.above{
+.pr-favorite-container.above{
   position: relative;
 
   .pr-favorite-btn{
@@ -231,6 +231,49 @@
   }
 }
 
+.nm-breadcrumb{
+  display: flex;
+  width: 100%;
+  font-family: 'Gotham Pro', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+
+  & li{
+    & a{
+      color: #486e7c;
+    }
+
+    &:last-child{
+      & a{
+        color: #b8bcc0;
+      }
+    }
+
+    &:first-child{
+      & a{
+        color: #486e7c;
+      }
+    }
+
+    &:not(:last-child)::after{
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 8px;
+      background-repeat: no-repeat;
+      margin: 0 7px;
+      background-image: url('../img/icons/match-details-country-league-divider-copy.svg');
+    }
+
+    &:hover{
+      & a{
+        color: #4186b1;
+      }
+    }
+  }
+}
+
 .tournament{
 
   .nm-big-wrapper{
@@ -267,47 +310,47 @@
       flex-wrap: wrap;
       text-transform: uppercase;
 
-      & .nm-breadcrumb{
-        display: flex;
-        width: 100%;
-        font-family: 'Gotham Pro', sans-serif;
-        font-size: 11px;
-        letter-spacing: 0.6px;
-
-        & li{
-          & a{
-            color: #486e7c;
-          }
-
-          &:last-child{
-            & a{
-              color: #b8bcc0;
-            }
-          }
-
-          &:first-child{
-            & a{
-              color: #486e7c;
-            }
-          }
-
-          &:not(:last-child)::after{
-            content: '';
-            display: inline-block;
-            width: 5px;
-            height: 8px;
-            background-repeat: no-repeat;
-            margin: 0 7px;
-            background-image: url('../img/icons/match-details-country-league-divider-copy.svg');
-          }
-
-          &:hover{
-            & a{
-              color: #4186b1;
-            }
-          }
-        }
-      }
+      //& .nm-breadcrumb{
+      //  display: flex;
+      //  width: 100%;
+      //  font-family: 'Gotham Pro', sans-serif;
+      //  font-size: 11px;
+      //  letter-spacing: 0.6px;
+      //
+      //  & li{
+      //    & a{
+      //      color: #486e7c;
+      //    }
+      //
+      //    &:last-child{
+      //      & a{
+      //        color: #b8bcc0;
+      //      }
+      //    }
+      //
+      //    &:first-child{
+      //      & a{
+      //        color: #486e7c;
+      //      }
+      //    }
+      //
+      //    &:not(:last-child)::after{
+      //      content: '';
+      //      display: inline-block;
+      //      width: 5px;
+      //      height: 8px;
+      //      background-repeat: no-repeat;
+      //      margin: 0 7px;
+      //      background-image: url('../img/icons/match-details-country-league-divider-copy.svg');
+      //    }
+      //
+      //    &:hover{
+      //      & a{
+      //        color: #4186b1;
+      //      }
+      //    }
+      //  }
+      //}
 
       & .nm-page-maintext{
         display: flex;

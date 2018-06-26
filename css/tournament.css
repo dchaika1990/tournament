@@ -223,6 +223,38 @@
 .pr-favorite-container.above .pr-dropdown-favorite ul li:not(:last-child) {
   border-bottom: 1px solid #c9cccf;
 }
+.nm-breadcrumb {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-family: 'Gotham Pro', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.nm-breadcrumb li a {
+  color: #486e7c;
+}
+.nm-breadcrumb li:last-child a {
+  color: #b8bcc0;
+}
+.nm-breadcrumb li:first-child a {
+  color: #486e7c;
+}
+.nm-breadcrumb li:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 8px;
+  background-repeat: no-repeat;
+  margin: 0 7px;
+  background-image: url('../img/icons/match-details-country-league-divider-copy.svg');
+}
+.nm-breadcrumb li:hover a {
+  color: #4186b1;
+}
 .tournament .nm-big-wrapper {
   z-index: 11;
 }
@@ -274,37 +306,6 @@
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   text-transform: uppercase;
-}
-.tournament .above-content-block-homepage .nm-content .nm-breadcrumb {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  font-family: 'Gotham Pro', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.6px;
-}
-.tournament .above-content-block-homepage .nm-content .nm-breadcrumb li a {
-  color: #486e7c;
-}
-.tournament .above-content-block-homepage .nm-content .nm-breadcrumb li:last-child a {
-  color: #b8bcc0;
-}
-.tournament .above-content-block-homepage .nm-content .nm-breadcrumb li:first-child a {
-  color: #486e7c;
-}
-.tournament .above-content-block-homepage .nm-content .nm-breadcrumb li:not(:last-child)::after {
-  content: '';
-  display: inline-block;
-  width: 5px;
-  height: 8px;
-  background-repeat: no-repeat;
-  margin: 0 7px;
-  background-image: url('../img/icons/match-details-country-league-divider-copy.svg');
-}
-.tournament .above-content-block-homepage .nm-content .nm-breadcrumb li:hover a {
-  color: #4186b1;
 }
 .tournament .above-content-block-homepage .nm-content .nm-page-maintext {
   display: -webkit-box;

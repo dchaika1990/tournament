@@ -652,11 +652,11 @@ function createMobileTeamBack() {
 
 //Clipping text
 
-function clippingText( html, count ) {
+function clippingText( html, count, tag ) {
     html.each(function () {
         var htmlText = $(this).text();
         if ( htmlText.length > count ){
-            var result = htmlText.slice(0, count) + '.';
+            var result = htmlText.slice(0, count) + tag;
             $(this).text( result );
         }
     })
@@ -666,13 +666,13 @@ function clippingText( html, count ) {
 
 $(window).on('load',function () {
     if ( $(window).width() <= 768 ) {
-        clippingText( $('.team-player-box-mobile__position span'), 7);
+        clippingText( $('.team-player-box-mobile__position span'), 7, '.');
     }
 });
 
 $(window).on('resize',function () {
     if ( $(window).width() <= 768 ) {
-        clippingText( $('.team-player-box-mobile__position span'), 7);
+        clippingText( $('.team-player-box-mobile__position span'), 7, '.');
     }
 });
 
@@ -851,6 +851,8 @@ function createLaptopBlocksPlayer() {
 // Move blocks from desctop version to laptop
 
 function createLaptopBlocksPlayerBack() {
+    if ( $('.aside-right.aside-right-default.nm-block .block1').html() || $('.aside-right.aside-right-default.nm-block .block2') ) return false;
+
     var blockStats = $('.aside-right.aside-right-default.nm-block .block1'),
         blockMedia = $('.aside-right.aside-right-default.nm-block .block2');
 
@@ -1098,13 +1100,14 @@ $('.news-slider').slick({
 //Clipping text in title
 
 $(window).on('load',function () {
-    clippingText( $('.main-news .news-item__body .news-item__title'), 60);
-    clippingText( $('.news-item__banner .news-item__body .news-item__title'), 60);
+    clippingText( $('.news-item__category'), 45, '...');
+    clippingText( $('.main-news .news-item__body .news-item__title'), 57, '...');
+    clippingText( $('.news-item__banner .news-item__body .news-item__title'), 57, '...');
 });
 
 $(window).on('resize',function () {
-    clippingText( $('.main-news .news-item__body .news-item__title'), 60);
-    clippingText( $('.news-item__banner .news-item__body .news-item__title'), 60);
+    clippingText( $('.main-news .news-item__body .news-item__title'), 57, '...');
+    clippingText( $('.news-item__banner .news-item__body .news-item__title'), 57, '...');
 });
 
 // Too many tags-item
@@ -1144,6 +1147,12 @@ $(window).on('resize',function () {
         clippingTags( $('.main-news') , 30 );
     }
 });
+
+
+/*================================================*/
+/*                    Article             */
+/*================================================*/
+
 
 
 /*================================================*/
