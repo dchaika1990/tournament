@@ -580,7 +580,6 @@
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover::before {
   background: -webkit-gradient(linear, left bottom, left top, from(#486e7c), to(#3e80a9));
-  background: -webkit-linear-gradient(bottom, #486e7c, #3e80a9);
   background: linear-gradient(to top, #486e7c, #3e80a9);
   opacity: 1;
   -webkit-border-radius: 4px;

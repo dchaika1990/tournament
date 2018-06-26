@@ -1068,6 +1068,85 @@ $(window).on('resize', function () {
 });
 
 /*================================================*/
+/*              Sports news             */
+/*================================================*/
+
+$('.news-slider').slick({
+    infinite: true,
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+        {
+            breakpoint: 1020,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+            }
+        },
+        {
+            breakpoint: 880,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }
+    ]
+});
+
+
+//Clipping text in title
+
+$(window).on('load',function () {
+    clippingText( $('.main-news .news-item__body .news-item__title'), 60);
+    clippingText( $('.news-item__banner .news-item__body .news-item__title'), 60);
+});
+
+$(window).on('resize',function () {
+    clippingText( $('.main-news .news-item__body .news-item__title'), 60);
+    clippingText( $('.news-item__banner .news-item__body .news-item__title'), 60);
+});
+
+// Too many tags-item
+
+function clippingTags( html , count ) {
+    html.each(function () {
+        var tags = $(this).find('.tags-item');
+        if ( tags.length > count ){
+            var notNeedTags =  tags.splice(count);
+            for ( var i = 0; i <  notNeedTags.length; i++ ){
+                notNeedTags[i].remove();
+            }
+
+            $(this).find('.news-tags').append('<span class="tags-item">...</span>')
+        }
+    })
+}
+
+$(window).on('load',function () {
+    if ( $(window).width() < 620 ){
+        clippingTags( $('.main-news') , 1 );
+    } else if ( $(window).width() < 860 ){
+        clippingTags( $('.main-news') , 14);
+        clippingTags( $('.main-news.fun-news') , 14);
+    } else {
+        clippingTags( $('.main-news') , 30 );
+    }
+});
+
+$(window).on('resize',function () {
+    if ( $(window).width() < 620 ){
+        clippingTags( $('.main-news') , 1 );
+    } else if ( $(window).width() < 860 ){
+        clippingTags( $('.main-news') , 14);
+        clippingTags( $('.main-news.fun-news') , 14);
+    } else {
+        clippingTags( $('.main-news') , 30 );
+    }
+});
+
+
+/*================================================*/
 /*              Redraw Blure sections             */
 /*================================================*/
 function newsRedraw() {
