@@ -1161,113 +1161,177 @@ $('.main-block__slider .slider-wrap').slick({
 
 //Video player
 
-playerControls( $(".video-banner") );
+playerControls( document.getElementById('myVideo'),document.getElementById('myVideoContent') );
 
-function playerControls( html ) {
+function playerControls(html, controls) {
     var controls = {
-        video: html.find('video'),
-        playpause: html.find(".video-banner__play-button"),
-        playpauseCenter: html.find(".video-banner__play"),
-        total: html.find(".video-banner__progress"),
-        buffered: html.find(".video-banner__timeline"),
-        progress: html.find(".video-banner__buffered"),
-        currentTime: html.find(".video-banner__current-time"),
-        duration: html.find(".video-banner__current-time"),
-        hasHours: false,
-        togglePlayback: function() {
-            (video.paused) ? video.play() : video.pause();
+        player: html,
+        progress: controls.querySelector(".video-banner__progress"),
+        progress_field: controls.querySelector(".video-banner__timeline"),
+        toggle: controls.querySelector(".video-banner__play-button"),
+        toggle_center: controls.querySelector(".video-banner__play"),
+        toggle_play: function () {
+            (player.paused) ? player.play() : player.pause();
+        },
+        handle_progress_update: function () {
+            var percent = (player.currentTime / player.duration) * 100;
+            this.progress_field.style.width = `${percent}%`;
+        },
+        handle_time_update: function ( event_obj ) {
+            let time = (event_obj.offsetX / this.progress.offsetWidth) * player.duration ;
+            // console.log( event_obj.offsetX, this.progress[0].offsetWidth , player.duration, time);
+            console.log( time );
+            return player.currentTime = time;
         }
     };
 
-    var video = controls.video[0];
+    var player = controls.player;
+    console.log(controls.toggle)
 
-// Play/Pause
 
-    controls.playpause.click(function(){
-        controls.togglePlayback();
+    //Play / Pause
+    controls.toggle.addEventListener('click', function () {
+        controls.toggle_play();
     });
 
-    controls.playpauseCenter.click(function(){
-        controls.togglePlayback();
+    controls.toggle_center.addEventListener('click', function () {
+        controls.toggle_play();
     });
 
-    video.addEventListener("ended", function() {
-        video.pause();
-        controls.playpause.toggleClass("paused");
-        controls.playpauseCenter.toggleClass("paused");
+    // player.addEventListener("ended", function() {
+    //     player.pause();
+    //     controls.toggle.toggleClass("paused");
+    //     controls.toggle_center.toggleClass("paused");
+    // });
+    //
+    // player.addEventListener("play", function() {
+    //     controls.toggle.toggleClass("paused");
+    //     controls.toggle_center.toggleClass("paused");
+    // });
+    //
+    // player.addEventListener("pause", function() {
+    //     controls.toggle.toggleClass("paused");
+    //     controls.toggle_center.toggleClass("paused");
+    // });
+
+    // Progress
+
+    player.addEventListener('timeupdate', function () {
+        controls.handle_progress_update();
     });
 
-    video.addEventListener("play", function() {
-        controls.playpause.toggleClass("paused");
-        controls.playpauseCenter.toggleClass("paused");
-    });
+    // Change progress
+    controls.progress.addEventListener('click', (e) => {
+        controls.handle_time_update(e);
+    })
 
-    video.addEventListener("pause", function() {
-        controls.playpause.toggleClass("paused");
-        controls.playpauseCenter.toggleClass("paused");
-    });
-
-
-// Progress
-
-    video.addEventListener("canplay", function() {
-        controls.hasHours = (video.duration / 3600) >= 1.0;
-        controls.duration.text(formatTime(video.duration, controls.hasHours));
-        controls.currentTime.text(formatTime(0),controls.hasHours);
-    }, false);
-
-    function formatTime(time, hours) {
-        if (hours) {
-            var h = Math.floor(time / 3600);
-            time = time - h * 3600;
-
-            var m = Math.floor(time / 60);
-            var s = Math.floor(time % 60);
-
-            return h.lead0(2)  + ":" + m.lead0(2) + ":" + s.lead0(2);
-        } else {
-            var m = Math.floor(time / 60);
-            var s = Math.floor(time % 60);
-
-            return m.lead0(2) + ":" + s.lead0(2);
-        }
-    }
-
-    Number.prototype.lead0 = function(n) {
-        var nz = "" + this;
-        while (nz.length < n) {
-            nz = "0" + nz;
-        }
-        return nz;
-    };
-
-    video.addEventListener("timeupdate", function() {
-        controls.currentTime.text(formatTime(video.currentTime, controls.hasHours));
-
-        var progress = Math.floor(video.currentTime) / Math.floor(video.duration) * 100;
-        controls.progress[0].style.width = progress + "%";
-        console.log( video.currentTime, progress + "%", video.duration );
-    }, false);
-
-    // Progress click
-
-    controls.total.click(function(e) {
-        var x = (e.pageX - this.offsetLeft)/$(this).width();
-        console.log(  video.currentTime, x * video.duration );
-        video.currentTime = x * video.duration;
-        console.dir( video );
-    });
-
-    //Buffered
-
-    video.addEventListener("canplay", function() {
-
-        video.addEventListener("progress", function() {
-            var buffered = Math.floor(video.buffered.end(0)) / Math.floor(video.duration);
-            controls.buffered[0].style.width =  buffered * 100 + '%';
-        }, false);
-    }, false);
 }
+
+// function playerControls( html ) {
+//     var controls = {
+        // video: html.find('video'),
+        // playpause: html.find(".video-banner__play-button"),
+        // playpauseCenter: html.find(".video-banner__play"),
+        // total: html.find(".video-banner__progress"),
+        // buffered: html.find(".video-banner__timeline"),
+        // progress: html.find(".video-banner__buffered"),
+        // currentTime: html.find(".video-banner__current-time"),
+        // duration: html.find(".video-banner__current-time"),
+        // hasHours: false,
+        // togglePlayback: function() {
+        //     (video.paused) ? video.play() : video.pause();
+        // }
+    // };
+
+//     var video = controls.video[0];
+//
+// // Play/Pause
+//
+//     controls.playpause.click(function(){
+//         controls.togglePlayback();
+//     });
+//
+//     controls.playpauseCenter.click(function(){
+//         controls.togglePlayback();
+//     });
+//
+//     video.addEventListener("ended", function() {
+//         video.pause();
+//         controls.playpause.toggleClass("paused");
+//         controls.playpauseCenter.toggleClass("paused");
+//     });
+//
+//     video.addEventListener("play", function() {
+//         controls.playpause.toggleClass("paused");
+//         controls.playpauseCenter.toggleClass("paused");
+//     });
+//
+//     video.addEventListener("pause", function() {
+//         controls.playpause.toggleClass("paused");
+//         controls.playpauseCenter.toggleClass("paused");
+//     });
+//
+//
+// // Progress
+//
+//     video.addEventListener("canplay", function() {
+//         controls.hasHours = (video.duration / 3600) >= 1.0;
+//         controls.duration.text(formatTime(video.duration, controls.hasHours));
+//         controls.currentTime.text(formatTime(0),controls.hasHours);
+//     }, false);
+//
+//     function formatTime(time, hours) {
+//         if (hours) {
+//             var h = Math.floor(time / 3600);
+//             time = time - h * 3600;
+//
+//             var m = Math.floor(time / 60);
+//             var s = Math.floor(time % 60);
+//
+//             return h.lead0(2)  + ":" + m.lead0(2) + ":" + s.lead0(2);
+//         } else {
+//             var m = Math.floor(time / 60);
+//             var s = Math.floor(time % 60);
+//
+//             return m.lead0(2) + ":" + s.lead0(2);
+//         }
+//     }
+//
+//     Number.prototype.lead0 = function(n) {
+//         var nz = "" + this;
+//         while (nz.length < n) {
+//             nz = "0" + nz;
+//         }
+//         return nz;
+//     };
+//
+//     video.addEventListener("timeupdate", function() {
+//         controls.currentTime.text(formatTime(video.currentTime, controls.hasHours));
+//
+//         var progress = Math.floor(video.currentTime) / Math.floor(video.duration) * 100;
+//         controls.progress[0].style.width = progress + "%";
+//         console.log( video.currentTime, progress + "%", video.duration );
+//     }, false);
+//
+//     // Progress click
+//
+//     controls.total.click(function(e) {
+//         var x = (e.pageX - this.offsetLeft)/$(this).width();
+//         console.log(  video.currentTime, x * video.duration );
+//         video.currentTime = x * video.duration;
+//         console.dir( video );
+//     });
+//
+//     //Buffered
+//
+//     video.addEventListener("canplay", function() {
+//
+//         video.addEventListener("progress", function() {
+//             var buffered = Math.floor(video.buffered.end(0)) / Math.floor(video.duration);
+//             controls.buffered[0].style.width =  buffered * 100 + '%';
+//         }, false);
+//     }, false);
+// }
 
 
 
