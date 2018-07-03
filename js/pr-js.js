@@ -1161,9 +1161,7 @@ $('.main-block__slider .slider-wrap').slick({
 
 //Video player
 
-playerControls( document.getElementById('myVideo'),document.getElementById('myVideoContent') );
-
-function playerControls(html, controls) {
+var playerControls = function(html, controls) {
     var controls = {
         player: html,
         progress: controls.querySelector(".video-banner__progress"),
@@ -1333,7 +1331,7 @@ function playerControls(html, controls) {
 //     }, false);
 // }
 
-
+if ( $('.video-banner').html() ) playerControls( document.getElementById('myVideo'),document.getElementById('myVideoContent') );
 
 
 /*====
