@@ -255,6 +255,100 @@
 .nm-breadcrumb li:hover a {
   color: #4186b1;
 }
+.nm-table-standings .nm-thead .nm-tr .nm-table-last {
+  width: 99px;
+}
+.nm-table-standings .nm-thead .nm-tr .nm-td {
+  padding: 6px 0 9px 0;
+}
+.nm-table-standings .nm-thead .nm-tr .nm-table-count {
+  width: 23px;
+}
+.nm-table-standings .nm-thead .nm-tr .nm-table-goals {
+  width: 48px;
+}
+.nm-table-standings .nm-thead .nm-tr .nm-table-pts {
+  width: 32px;
+}
+.nm-table-standings .nm-tbody .nm-tr {
+  height: 26px;
+}
+.nm-table-standings .nm-tbody .nm-tr .nm-table-icon {
+  padding-right: 8px;
+}
+.nm-table-standings .nm-tbody .nm-tr .nm-table-icon img {
+  width: 16px;
+  height: 16px;
+}
+.nm-table-standings .nm-tbody .nm-tr .nm-table-position {
+  width: 29px;
+}
+.nm-table-standings .nm-tbody .nm-tr .nm-table-count {
+  width: 22px;
+}
+.nm-table-standings .nm-tbody .nm-tr .nm-table-goals {
+  width: 48px;
+}
+.nm-table-standings .nm-tbody .nm-tr .nm-table-pts {
+  width: 32px;
+}
+.nm-table-standings .nm-tbody .nm-tr .nm-table-last {
+  width: 99px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.nm-table-standings .nm-tbody .nm-tr .nm-table-last span {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  color: #fff;
+  font-size: 11px;
+}
+.nm-table-standings .nm-tbody .nm-tr .nm-table-last span + span {
+  margin-left: 3px;
+}
+.nm-table-standings .nm-tbody .nm-tr .nm-table-last span:first-child {
+  background-color: #ed334d;
+}
+.nm-table-standings .nm-tbody .nm-tr .nm-table-last span:nth-child(2) {
+  background-color: #ed334d;
+}
+.nm-table-standings .nm-tbody .nm-tr .nm-table-last span:nth-child(3),
+.nm-table-standings .nm-tbody .nm-tr .nm-table-last span:nth-child(4) {
+  background-color: #4befa8;
+}
+.nm-table-standings .nm-tbody .nm-tr .nm-table-last span:last-child {
+  background-color: #ed334d;
+}
+.nm-table-standings .nm-tbody .nm-tr.team-away {
+  background-color: rgba(72, 110, 124, 0.05);
+}
+.nm-table-standings .nm-tbody .nm-tr.team-home {
+  background-color: rgba(255, 220, 74, 0.15);
+}
 .tournament .nm-big-wrapper {
   z-index: 11;
 }
@@ -891,100 +985,6 @@
   padding-top: 45px;
   padding-left: 30px;
   padding-right: 30px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-thead .nm-tr .nm-table-last {
-  width: 99px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-thead .nm-tr .nm-td {
-  padding: 6px 0 9px 0;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-thead .nm-tr .nm-table-count {
-  width: 23px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-thead .nm-tr .nm-table-goals {
-  width: 48px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-thead .nm-tr .nm-table-pts {
-  width: 32px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr {
-  height: 26px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-icon {
-  padding-right: 8px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-icon img {
-  width: 16px;
-  height: 16px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-position {
-  width: 29px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-count {
-  width: 22px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-goals {
-  width: 48px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-pts {
-  width: 32px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-last {
-  width: 99px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-last span {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 15px;
-  height: 15px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  color: #fff;
-  font-size: 11px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-last span + span {
-  margin-left: 3px;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-last span:first-child {
-  background-color: #ed334d;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-last span:nth-child(2) {
-  background-color: #ed334d;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-last span:nth-child(3),
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-last span:nth-child(4) {
-  background-color: #4befa8;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr .nm-table-last span:last-child {
-  background-color: #ed334d;
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr.team-away {
-  background-color: rgba(72, 110, 124, 0.05);
-}
-.tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-mini-block .nm-tabs-content .nm-tbody .nm-tr.team-home {
-  background-color: rgba(255, 220, 74, 0.15);
 }
 .tournament .nm-grow main .pr-main-wrap.matches-sm .favorites {
   padding-bottom: 0;

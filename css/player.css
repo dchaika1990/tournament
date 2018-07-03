@@ -217,7 +217,10 @@
   width: 15px;
   height: 15px;
   margin-right: 8px;
-  background: url("../img/Флаги/Португалия.svg") center no-repeat / cover;
+  background-image: url("../img/Флаги/Португалия.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   -webkit-border-radius: 50%;
           border-radius: 50%;
 }
@@ -561,10 +564,10 @@
 }
 .player .nm-grow main .pr-main-wrap.player-skills .pr-main.position .pr-main-content .nm-players-lineups-block {
   padding-top: 17px;
-  padding-bottom: 22px;
+  padding-bottom: 26px;
 }
 .player .nm-grow main .pr-main-wrap.player-skills .pr-main.position .pr-main-content .nm-players-lineups-block .nm-field-wrap {
-  height: 160px;
+  height: 156px;
   width: 252px;
   -webkit-transform: none;
       -ms-transform: none;
@@ -708,13 +711,13 @@
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
   margin-right: 16px;
 }
 .player .nm-grow main .pr-main-wrap.transfers .pr-main-content .pr-main__schedule_about .pr-main__schedule_row .pr-main__icon img {
   max-width: 100%;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }
 .player .nm-grow main .pr-main-wrap.transfers .pr-main-content .pr-main__schedule_about .pr-main__schedule_row .pr-main__context {
   display: -webkit-box;

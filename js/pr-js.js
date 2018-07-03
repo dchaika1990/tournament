@@ -365,6 +365,7 @@ var LiActive = function ( elem ) {
 $('.bmenu .nm-header-bottom li').on('click', function () {
    var dataClasses = $(this).attr('data-tab');
    var dataClassesArr = dataClasses.split(',');
+    document.documentElement.scrollTop = 0
 
     hideAllElementsInMain();
 
@@ -1153,8 +1154,125 @@ $(window).on('resize',function () {
 /*                    Article             */
 /*================================================*/
 
+$('.main-block__slider .slider-wrap').slick({
+    dots: true,
+    infinite: true,
+});
+
+//Video player
+
+playerControls( $(".video-banner") );
+
+function playerControls( html ) {
+    var controls = {
+        video: html.find('video'),
+        playpause: html.find(".video-banner__play-button"),
+        playpauseCenter: html.find(".video-banner__play"),
+        total: html.find(".video-banner__progress"),
+        buffered: html.find(".video-banner__timeline"),
+        progress: html.find(".video-banner__buffered"),
+        currentTime: html.find(".video-banner__current-time"),
+        duration: html.find(".video-banner__current-time"),
+        hasHours: false,
+        togglePlayback: function() {
+            (video.paused) ? video.play() : video.pause();
+        }
+    };
+
+    var video = controls.video[0];
+
+// Play/Pause
+
+    controls.playpause.click(function(){
+        controls.togglePlayback();
+    });
+
+    controls.playpauseCenter.click(function(){
+        controls.togglePlayback();
+    });
+
+    video.addEventListener("ended", function() {
+        video.pause();
+        controls.playpause.toggleClass("paused");
+        controls.playpauseCenter.toggleClass("paused");
+    });
+
+    video.addEventListener("play", function() {
+        controls.playpause.toggleClass("paused");
+        controls.playpauseCenter.toggleClass("paused");
+    });
+
+    video.addEventListener("pause", function() {
+        controls.playpause.toggleClass("paused");
+        controls.playpauseCenter.toggleClass("paused");
+    });
 
 
+// Progress
+
+    video.addEventListener("canplay", function() {
+        controls.hasHours = (video.duration / 3600) >= 1.0;
+        controls.duration.text(formatTime(video.duration, controls.hasHours));
+        controls.currentTime.text(formatTime(0),controls.hasHours);
+    }, false);
+
+    function formatTime(time, hours) {
+        if (hours) {
+            var h = Math.floor(time / 3600);
+            time = time - h * 3600;
+
+            var m = Math.floor(time / 60);
+            var s = Math.floor(time % 60);
+
+            return h.lead0(2)  + ":" + m.lead0(2) + ":" + s.lead0(2);
+        } else {
+            var m = Math.floor(time / 60);
+            var s = Math.floor(time % 60);
+
+            return m.lead0(2) + ":" + s.lead0(2);
+        }
+    }
+
+    Number.prototype.lead0 = function(n) {
+        var nz = "" + this;
+        while (nz.length < n) {
+            nz = "0" + nz;
+        }
+        return nz;
+    };
+
+    video.addEventListener("timeupdate", function() {
+        controls.currentTime.text(formatTime(video.currentTime, controls.hasHours));
+
+        var progress = Math.floor(video.currentTime) / Math.floor(video.duration) * 100;
+        controls.progress[0].style.width = progress + "%";
+        console.log( video.currentTime, progress + "%", video.duration );
+    }, false);
+
+    // Progress click
+
+    controls.total.click(function(e) {
+        var x = (e.pageX - this.offsetLeft)/$(this).width();
+        console.log(  video.currentTime, x * video.duration );
+        video.currentTime = x * video.duration;
+        console.dir( video );
+    });
+
+    //Buffered
+
+    video.addEventListener("canplay", function() {
+
+        video.addEventListener("progress", function() {
+            var buffered = Math.floor(video.buffered.end(0)) / Math.floor(video.duration);
+            controls.buffered[0].style.width =  buffered * 100 + '%';
+        }, false);
+    }, false);
+}
+
+
+
+
+/*====
 /*================================================*/
 /*              Redraw Blure sections             */
 /*================================================*/

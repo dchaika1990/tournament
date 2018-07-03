@@ -274,6 +274,111 @@
   }
 }
 
+.nm-table-standings{
+  .nm-thead{
+
+    & .nm-tr{
+      & .nm-table-last{
+        width: 99px;
+      }
+
+      & .nm-td{
+        padding: 6px 0 9px 0;
+      }
+
+      & .nm-table-count{
+        width: 23px;
+      }
+
+      & .nm-table-goals{
+        width: 48px;
+      }
+
+      & .nm-table-pts{
+        width: 32px;
+      }
+    }
+  }
+
+  .nm-tbody{
+    & .nm-tr{
+      height: 26px;
+
+      & .nm-table-icon{
+        padding-right: 8px;
+
+        img{
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      & .nm-table-position{
+        width: 29px;
+      }
+
+      & .nm-table-count{
+        width: 22px;
+      }
+
+      & .nm-table-goals{
+        width: 48px;
+      }
+
+      & .nm-table-pts{
+        width: 32px;
+      }
+
+      & .nm-table-last{
+        width: 99px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          color: #fff;
+          font-size: 11px;
+
+          & + span{
+            margin-left: 3px;
+          }
+
+          &:first-child{
+            background-color: #ed334d;
+          }
+
+          &:nth-child(2){
+            background-color: #ed334d;
+          }
+
+          &:nth-child(3),
+          &:nth-child(4){
+            background-color: #4befa8;
+          }
+
+          &:last-child{
+            background-color: #ed334d;
+          }
+        }
+      }
+
+      &.team-away{
+        background-color: rgba(72,110,124,.05);
+      }
+
+      &.team-home{
+        background-color: rgba(255,220,74,.15);
+      }
+    }
+  }
+}
+
 .tournament{
 
   .nm-big-wrapper{
@@ -1154,108 +1259,108 @@
                   padding-left: 30px;
                   padding-right: 30px;
 
-                  & .nm-thead{
-
-                    & .nm-tr{
-                      & .nm-table-last{
-                        width: 99px;
-                      }
-
-                      & .nm-td{
-                        padding: 6px 0 9px 0;
-                      }
-
-                      & .nm-table-count{
-                        width: 23px;
-                      }
-
-                      & .nm-table-goals{
-                        width: 48px;
-                      }
-
-                      & .nm-table-pts{
-                        width: 32px;
-                      }
-                    }
-                  }
-
-                  & .nm-tbody{
-                    & .nm-tr{
-                      height: 26px;
-
-                      & .nm-table-icon{
-                        padding-right: 8px;
-
-                        img{
-                          width: 16px;
-                          height: 16px;
-                        }
-                      }
-
-                      & .nm-table-position{
-                        width: 29px;
-                      }
-
-                      & .nm-table-count{
-                        width: 22px;
-                      }
-
-                      & .nm-table-goals{
-                        width: 48px;
-                      }
-
-                      & .nm-table-pts{
-                        width: 32px;
-                      }
-
-                      & .nm-table-last{
-                        width: 99px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-
-                        span{
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          width: 15px;
-                          height: 15px;
-                          border-radius: 50%;
-                          color: #fff;
-                          font-size: 11px;
-
-                          & + span{
-                            margin-left: 3px;
-                          }
-
-                          &:first-child{
-                            background-color: #ed334d;
-                          }
-
-                          &:nth-child(2){
-                            background-color: #ed334d;
-                          }
-
-                          &:nth-child(3),
-                          &:nth-child(4){
-                            background-color: #4befa8;
-                          }
-
-                          &:last-child{
-                            background-color: #ed334d;
-                          }
-                        }
-                      }
-
-                      &.team-away{
-                        background-color: rgba(72,110,124,.05);
-                      }
-
-                      &.team-home{
-                        background-color: rgba(255,220,74,.15);
-                      }
-                    }
-                  }
+                  //& .nm-thead{
+                  //
+                  //  & .nm-tr{
+                  //    & .nm-table-last{
+                  //      width: 99px;
+                  //    }
+                  //
+                  //    & .nm-td{
+                  //      padding: 6px 0 9px 0;
+                  //    }
+                  //
+                  //    & .nm-table-count{
+                  //      width: 23px;
+                  //    }
+                  //
+                  //    & .nm-table-goals{
+                  //      width: 48px;
+                  //    }
+                  //
+                  //    & .nm-table-pts{
+                  //      width: 32px;
+                  //    }
+                  //  }
+                  //}
+                  //
+                  //& .nm-tbody{
+                  //  & .nm-tr{
+                  //    height: 26px;
+                  //
+                  //    & .nm-table-icon{
+                  //      padding-right: 8px;
+                  //
+                  //      img{
+                  //        width: 16px;
+                  //        height: 16px;
+                  //      }
+                  //    }
+                  //
+                  //    & .nm-table-position{
+                  //      width: 29px;
+                  //    }
+                  //
+                  //    & .nm-table-count{
+                  //      width: 22px;
+                  //    }
+                  //
+                  //    & .nm-table-goals{
+                  //      width: 48px;
+                  //    }
+                  //
+                  //    & .nm-table-pts{
+                  //      width: 32px;
+                  //    }
+                  //
+                  //    & .nm-table-last{
+                  //      width: 99px;
+                  //      display: flex;
+                  //      align-items: center;
+                  //      justify-content: center;
+                  //
+                  //      span{
+                  //        display: flex;
+                  //        align-items: center;
+                  //        justify-content: center;
+                  //        width: 15px;
+                  //        height: 15px;
+                  //        border-radius: 50%;
+                  //        color: #fff;
+                  //        font-size: 11px;
+                  //
+                  //        & + span{
+                  //          margin-left: 3px;
+                  //        }
+                  //
+                  //        &:first-child{
+                  //          background-color: #ed334d;
+                  //        }
+                  //
+                  //        &:nth-child(2){
+                  //          background-color: #ed334d;
+                  //        }
+                  //
+                  //        &:nth-child(3),
+                  //        &:nth-child(4){
+                  //          background-color: #4befa8;
+                  //        }
+                  //
+                  //        &:last-child{
+                  //          background-color: #ed334d;
+                  //        }
+                  //      }
+                  //    }
+                  //
+                  //    &.team-away{
+                  //      background-color: rgba(72,110,124,.05);
+                  //    }
+                  //
+                  //    &.team-home{
+                  //      background-color: rgba(255,220,74,.15);
+                  //    }
+                  //  }
+                  //}
                 }
               }
             }
