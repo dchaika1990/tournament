@@ -365,7 +365,7 @@ var LiActive = function ( elem ) {
 $('.bmenu .nm-header-bottom li').on('click', function () {
    var dataClasses = $(this).attr('data-tab');
    var dataClassesArr = dataClasses.split(',');
-    document.documentElement.scrollTop = 0
+    $('html, body').animate({scrollTop: 0},100);
 
     hideAllElementsInMain();
 
