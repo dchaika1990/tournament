@@ -1,98 +1,416 @@
 main.snc-main-wrapper
-    //HEADER BLOCK
-    .mv-item.main-news
-        .main-news__item
-            .main-news__banner
-                img(src="img/main-news-bg.jpg")
-            .main-news__content.news-item
-                .news-item__header
-                    span.news-item__category LALIGA, ROUND 35
-                    .date Yesterday
-                .news-item__body
-                    a(href="javascript:void(0)").news-item__title Espanyol vs Barcelona – Match Preview, team news
-                .news-item__footer
-                    .news-item__author
-                        img(src="img/ma/avatar127.png")
-                        | By&nbsp;
-                        a(href="javascript:void(0)")  Adeline Blesser
-                    .news-item__meta
-                        ul.meta-list
-                            li.meta-item
-                                img.meta-icon(src="img/icons/-e-like-icon.svg" width="12" height="10")
-                                | 23
-                            li.meta-item
-                                img.meta-icon(src="img/icons/comment-icon-white.svg" width="12" height="11")
-                                | 10
-                .news-tags
-                    a.tags-item(href="javascript:void(0)") OTHER SPORTS
 
-    // END ---- HEADER BLOCK
+    //MAIN BLOCK CONTENT
+    .main-big-wrapper
+        .mv-item.main-wrapper
+            .main-wrapper__block
+                .main-block__text
+                    .main-block__title
+                        h3 The Derbi Barceloní
+                    .main-block__content
+                        p Like many Spanish rivalries this one was also fueled by political differences. Espayol was founded by a Spanish-only fan base and on the other side Barca had more international make-up. The Blanc-i-blaus were also granted royal patronage and that is why they have the crown in the club logo.
+                        p During Franco’s years Espanyol were viewed by Catalan people as the club that supported the dictator and the central authority, a regime that was openly opposed by FC Barcelona and its supporters. During the Spanish Civil War an Espanyol supporter group would joined the fascists to show their approval of Franco.
+                        p In recent years the match-up between the two sides lost most of its political influence, as Espanyol translated its name and anthem from Spanish to Catalan. This derby is far more important to Espanyol fans as they regard Barcelona as their biggest rivals, while Barca’s main rival is Real Madrid.
+                .main-block__slider
+                    .slider-wrap
+                        div.slide
+                        div.slide
+                        div.slide
+                .main-block__text
+                    .main-block__title
+                        span Hilarious reaction to having his assist taken away
+                    .main-block__content
+                        p At the end of the day, the assist for the opening goal WAS given to Debi after it was decided that Fabio’s intervention hadn’t too much to change the course of the ball that was fed to Costa.
+                .main-block__video-html.video-banner
+                    video(controls='controls' poster='./img/video-banner.jpg')
+                        source(src='./video/soccet.mp4')
+                //.main-block__video-html.video-banner
+                //    video( id='myVideo')
+                //        source(  src='./img/actors.mp4' type='video/mp4' codecs="avc1.42E01E, mp4a.40.2" )
+                //    .video-banner__content(id='myVideoContent')
+                //        span.video-banner__title Reaction to having assist
+                //        .video-banner__play
+                //        .video-banner__controls
+                //            .video-banner__play-button
+                //            .video-banner__progress
+                //                .video-banner__timeline
+                //                    //.video-banner__buffered
+                //                //.video-banner__current-time
+                //                .video-banner__duration
+                //            .video-banner__quality
+                //                span 480p
+                //            .video-banner__volume
+                //                input(type="range" name="volume" class="player__slider" min=0 max="1" step="0.05" value="1")
+                //            .video-banner__fullscreen
+                //            .video-banner__logo
+                //.main-block__video
+                //    a.video-banner(href='javascript:void(0)' target='_blank')
+                //        .video-banner__img
+                //            img(src='./img/video-banner.jpg')
+                //        .video-banner__content
+                //            span.video-banner__title Reaction to having assist
+                //            .video-banner__play
+                //            .video-banner__controls
+                //                .video-banner__play-button
+                //                .video-banner__timeline
+                //                .video-banner__quality
+                //                    span 480p
+                //                .video-banner__volume
+                //                    input(type="range" name="volume" class="player__slider" min=0 max="1" step="0.05" value="1")
+                //                .video-banner__fullscreen
+                //                .video-banner__logo
+
+                .main-block__wrap
+                    .main-block__text
+                        .main-block__title
+                            span Copa Catalunya
+                        .main-block__content
+                            p Between 1903 and 1940, it was known as the Championship of Catalonia, and enjoyed great prestige and interest at a time where La Liga did not exist. The club that won the title participated with other regional champions in the Spanish Cup, which until the beginning of La Liga in 1929 was the most important tournament in Spanish football.
+                    .main-block__video
+                        a.video-banner.video-sm(href='javascript:void(0)' target='_blank')
+                            .video-banner__img
+                                img(src='./img/video-banner.jpg')
+                            .video-banner__content
+                                span.video-banner__title Reaction to having assist
+                                .video-banner__play
+                                .video-banner__controls
+                                    .video-banner__play-button
+                                    .video-banner__timeline
+                                    .video-banner__quality
+                                        span 480p
+                                    .video-banner__volume
+                                    .video-banner__fullscreen
+                                    .video-banner__logo
+                .main-block__text
+                    .main-block__title
+                        span Match Facts
+                    .main-block__content
+                        ul
+                            li Catalonia only had one shot on target in the first leg, their lowest tally in a Champions League game under Diego Simeone.
+                            li This is the fourth season in succession that these city rivals face off in the Champions League knockout phase; Atlético are yet to claim victory during this recent run (D2 L3).
+                            li Catalonia have also kept a clean sheet in 16 of their last 18 Champions League games at the Calderon.
+                            li Catalonia  have scored at least two goals in each of their 11 Champions League games this season. The first leg was also the only time they’ve kept a clean sheet in this season’s competition
+                            li Derbi has scored eight of Catalonia’s last nine goals in the Champions League – the other coming from Marco Asensio.
+                .main-block__table.aside-right
+                    .main-block__title
+                        span Current standings
+                        a.btn-more DOWNLOAD SOFASCORE APP
+                    .main-block__table-content
+                        - var standings_team = ["APOEL Niscotia", "Feyenoord", "AEK Athens", "Ajax Amsterdam", "PSV", "FC Utrecht", "FCVitesse", "AZ", "FC Twente", "PEC Zwolle", "ADO Den Haag", "FC Twente", "PEC Zwolle", "ADO Den Haag"];
+                        - var standings_icons = ['./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png'];
+                        - var standings_icons_alt = ['team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon', 'team-icon' ]
+                        - var standings_count1 = ["28", "28", "26", "22", "22", "20", "19", "22", "22", "20", "19", "22", "20", "19"];
+                        - var standings_count2 = ["21", "18", "18", "12", "12", "11", "10", "12", "12", "11", "10", "12", "11", "10"];
+                        - var standings_count3 = ["5", "5", "5", "8", "8", "9", "9", "8", "8", "9", "9", "8", "9", "9"];
+                        - var standings_count4 = ["2", "3", "3", "1", "1", "1", "2", "1", "1", "1", "2", "1", "1", "2"];
+                        - var standings_goals = ["65:16", "60:23", "59:11", "52:00", "52:00", "51:25", "50:58", "52:00", "52:00", "51:25", "50:58", "52:00", "51:25", "50:58"];
+                        - var standings_pts = ["68", "61", "56", "52", "52", "50", "48", "52", "52", "50", "48", "52", "50", "48"];
+                        - var standing_last = ['L','D','W','W','L'];
+                        - var Position_class = ["green_bg", "light_bg", "light_bg", "no_bg", "red_bg", "light_bg", "light_bg", "no_bg", "red_bg", "no_bg", "red_bg"];
+                        .nm-table.nm-table-standings
+                            .nm-thead
+                                .nm-tr
+                                    .nm-td.nm-table-position
+                                    .nm-td.nm-table-team
+                                    .nm-td.nm-table-count.nm-grey-normal P
+                                    .nm-td.nm-table-count.nm-grey-normal W
+                                    .nm-td.nm-table-count.nm-grey-normal D
+                                    .nm-td.nm-table-count.nm-grey-normal L
+                                    .nm-td.nm-table-goals.nm-grey-normal Goals
+                                    .nm-td.nm-table-last.nm-grey-normal Last 5
+                                    .nm-td.nm-table-pts Pts
+
+                            .nm-tbody
+                                - for (var m=0; m<11; m++) {
+                                div(class="nm-tr " + ((m === 0) ? "team-away" : "") + ((m === 2) ? "team-home" : ""))
+                                    div(class="nm-td nm-table-position " + Position_class[m])
+                                        .nm-number= (m + 1)
+                                    .nm-td.nm-table-icon
+                                        img(src=standings_icons[m] alt=standings_icons_alt[m])
+                                    .nm-td.nm-table-team
+                                        a(href="javascript:void(0)")= standings_team[m]
+                                    .nm-td.nm-table-count= standings_count1[m]
+                                    .nm-td.nm-table-count= standings_count2[m]
+                                    .nm-td.nm-table-count= standings_count3[m]
+                                    .nm-td.nm-table-count= standings_count4[m]
+                                    .nm-td.nm-table-goals= standings_goals[m]
+                                    .nm-td.nm-table-last
+                                        - for (var k=0; k<5; k++ ){
+                                        span #{standing_last[k]}
+                                        - }
+                                    .nm-td.nm-table-pts= standings_pts[m]
+                                - }
+
+                .main-block__iframe
+                    blockquote(class="twitter-tweet" data-lang="en")
+                        p(lang="en" dir="ltr") Race to rescue boys in cave in Thailand as new images of the trapped soccer team are captured.
+                            a(href="https://twitter.com/JamesAALongman?ref_src=twsrc%5Etfw") @JamesAALongman
+                            |  reports.
+                            a(href="https://t.co/5hJCxnmxYb") pic.twitter.com/5hJCxnmxYb
+                        p &mdash; Good Morning America (@GMA)
+                            a(href="https://twitter.com/GMA/status/1014466566946033665?ref_src=twsrc%5Etfw") July 4, 2018
+                .main-block__iframe
+                    blockquote(class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/jqAD3KMn9s/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);")
+                        div(style="padding:8px;")
+                            div(style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;")
+                                div(style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;")
+                            p(style=" margin:8px 0 0 0; padding:0 4px;")
+                                a(href="https://www.instagram.com/p/jqAD3KMn9s/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank") #Amazing , #nice and #crazy #skills | Like and tag your friends
+                            p(style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;") Публикация от
+                                //a(href="https://www.instagram.com/videos_soccer/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank") Soccer Videos
+                                time(style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2014-01-27T02:54:27+00:00") 26 Янв 2014 в 6:54 PST
+                .main-block__text
+                    .main-block__title
+                        span Templates to show some infographics
+                    .main-block__content
+                        p There are several templates listed below. Displaying various combinations of content. Even if it’s going to be in use in the future or not.
+                .main-block__match
+                    .main-block__match-gradient
+                        .match-commands
+                            .match-commands__team
+                                .match-commands__icon.icon-default
+                                .match-commands__subscribe
+                                    span Team 1 data / subheader
+                            .match-commands__title
+                                .match-commands__team-title
+                                    span Derbi Barceloni
+                                .match-commands__team-text
+                                    span.normal Overall
+                                    span.bold 123 matches
+                                    span.thin 41 draws
+                                .match-commands__team-subscribe
+                            .match-commands__team
+                                .match-commands__icon
+                                    img(src="./img/icons/badge-real-madrid.png" alt="team-icon")
+                                .match-commands__subscribe
+                                    span Real madrid 43 wins
+                        .match-commands__cup
+                            .match-titles-count
+                                span 8 Titles
+                            .match-cup-icon
+                                img(src="./img/icons/cup-big.png" alt="team-icon")
+                            .match-titles-count
+                                span 6 Titles
+                .main-block__match.small-banner
+                    .main-block__match-gradient
+                        .match-commands
+                            .match-commands__team
+                                .match-commands__icon
+                                    img( src="./img/icons/fcb-team.png" alt="default-bkg" )
+                            .match-commands__title
+                                .match-commands__team-title
+                                    span FC Barcelona
+                                    span.small vs
+                                    span Real madrid
+                            .match-commands__team
+                                .match-commands__icon
+                                    img(src="./img/icons/badge-real-madrid.png" alt="team-icon")
+                .main-block__match.small-banner-title
+                    .main-block__match-gradient
+                        .match-title
+                            span Signal Indua Park, Dortmund
+                            span.bold 15:00CET - 6/5/2017
+                        .match-commands
+                            .match-commands__team
+                                .match-commands__icon
+                                    img( src="./img/icons/fcb-team.png" alt="default-bkg" )
+                            .match-commands__title
+                                .match-commands__team-title
+                                    span vs
+                            .match-commands__team
+                                .match-commands__icon
+                                    img(src="./img/icons/badge-real-madrid.png" alt="team-icon")
+                .main-block__wrap
+                    .main-block__inner-wrap
+                        .main-block__text
+                            .main-block__title
+                                span The Championship
+                            .main-block__content
+                                p The Championship of Catalonia football was prohibited from taking place after 1940 by the Franco regime. Catalan clubs were forced to compete only in competitions organized by the Spanish Football Federation, which included La Liga and the Copa del Generalisimo.
+                                p In 2012 the format of the Copa Catalunya was changed. Henceforth there will be two competitions, one for the Copa Catalunya and one for the Supercopa de Catalunya. The latter will be held between the two biggest teams of the region.
+                    .main-block__inner-wrap
+                        .main-block__text
+                            .main-block__title
+                                span 2012
+                            .main-block__content
+                                p In 2012 the format of the Copa Catalunya was changed. Henceforth there will be two competitions, one for the Copa Catalunya and one for the Supercopa de Catalunya. The latter will be held between the two teams.
+                        .main-block__text
+                            .main-block__title
+                                span At july...
+                            .main-block__content
+                                p On 31 July 2012, Catalan Football Federation announced the permanent suspension of the Supercopa competition due to previous disagreements between Catalonia’s top football clubs FC Barcelona and RCD Espanyol.
+                .main-block__text
+                    .main-block__title
+                        span Must Listen! Talksport row over Rashford’s goal
+                    .main-block__content
+                        p The two are former Chelsea assistant manager Ray Wilkins and Neil Custis, who writes for The Sun. They just couldn’t concur whether the goal was really all that superb, all whether it had been gifted to the 19-year-old via a goalkeeping error.
+
+
+
+                .main-block__audio-html.audio-banner
+                    audio(controls='controls')
+                        source(src='./audio/Audio-Loving-the-Lord.mp3' type='audio/mp3')
+                .nm-share-block
+                    a.nm-share-toggle(href="javascript:void(0)")
+                        svg.nm-svg(width="14" height="15")
+                            use(xlink:href="#icon-share")
+
+                    a.nm-share-btn.nm-share-fb(href="javascript:void(0)")
+                        svg.nm-svg(width="6" height="10")
+                            use(xlink:href="#icon-share-facebook")
+
+                    a.nm-share-btn.nm-share-twitter(href="javascript:void(0)")
+                        svg.nm-svg(width="10" height="8")
+                            use(xlink:href="#icon-share-twitter")
+
+                    a.nm-share-btn.nm-share-google(href="javascript:void(0)")
+                        svg.nm-svg(width="12" height="8")
+                            use(xlink:href="#icon-share-google")
+
+                    a.nm-share-btn.nm-share-youtube(href="javascript:void(0)")
+                        svg.nm-svg(width="14" height="10")
+                            use(xlink:href="#icon-share-youtube")
+
+                    a.nm-share-btn.nm-share-inst(href="javascript:void(0)")
+                        svg.nm-svg(width="11" height="11")
+                            use(xlink:href="#icon-share-inst")
+
+        .mv-utem.thread
+            .thread__wrap
+                .thread__button
+                    a Show hidden
+                        span.thread__comment  6
+                        |  comments
+                form(method='get')
+                    .thread__parent
+                        .thread__user.parent
+                            .thread__user_icon
+                                img(src='./img/icons/user-icon.jpg' alt="user icon")
+                            .thread__user_content
+                                .thread__user_title
+                                    .thread__left
+                                        span.thread__user_name Nata Smirina
+                                        span.thread__user_date  at 11:00 3/5/2017
+                                    .thread__right
+                                        ul.meta-list
+                                            li.meta-item
+                                                img(src='./img/icons/icon-like-grey.svg' width="12" height="10" alr='icon like')
+                                                | 0
+                                            li.meta-item.make-reply
+                                                img(src='./img/icons/reply-icon.svg' width="12" height="10" alr='icon like')
+                                                | Reply
+                                .thread__user_text
+                                    p The first of all I’d like to admit he ain’t ready for this whole show, ohmygosh. Whatever. He’s dull.
+                        .thread__derived
+                            .thread__user
+                                .thread__user_icon
+                                    img(src='./img/icons/user-icon2.jpg' alt="user icon")
+                                .thread__user_content
+                                    .thread__user_title
+                                        .thread__left
+                                            span.thread__user_name Jonathan Ive
+                                            span.thread__user_date  at 11:00 3/5/2017
+                                        .thread__right
+                                            ul.meta-list
+                                                li.meta-item
+                                                    img(src='./img/icons/like-icon-blue.svg' width="12" height="10" alt='icon like')
+                                                    | 5
+                                                li.meta-item.make-reply
+                                                    img(src='./img/icons/reply-icon.svg' width="12" height="10" alt='icon like')
+                                                    | Reply
+                                    .thread__user_text
+                                        p When we designed iOS 7 we asked ourselves a simple question: why?
+                            .thread__reply
+                                .thread__user
+                                    .thread__user_icon
+                                        img(src='./img/icons/user-icon.jpg' alt="user icon")
+                                    .thread__user_content
+                                        .thread__user_form_title
+                                            span Reply to
+                                            span.reply-to  JONATHAN IVE
+                                        .thread__user_input
+                                            textarea(maxlength='1000' name="reply" data-from="Nata Smirina" data-to="Jonathan Ive")
+                                            button(type='submit').thread__user_input_submit
+                                                img(src="./img/icons/send-icon.svg" alt="icon send")
+                                            .thread__user_input_count-letters
+                                                span 0/1000
+                    .thread__wrap_input
+                        .thread__user
+                            .thread__user_icon
+                                img(src='./img/icons/user-icon.jpg' alt="user icon")
+                            .thread__user_content
+                                .thread__user_input
+                                    textarea(maxlength='1000' name="reply" data-from="Nata Smirina" data-to="Jonathan Ive" placeholder='Write your comment')
+                                    button(type='submit').thread__user_input_submit
+                                        img(src="./img/icons/send-icon.svg" alt="icon send")
+                                    .thread__user_input_count-letters
+                                        span 0/1000
+
+    // END ---- MAIN BLOCK CONTENT
 
     //ASIDE BEGIN
     .mv-item.r-sidebar
-        aside
-            .widget.widget__most-read
-                .widget__title MOST READ
-                .widget__content
-                    ul.news-list
-                        -for(var k=0; k<6; k++) {
-                        li.news-item
-                            a(href="javascript:void(0)").news-item__link
-                                .news-item__header
-                                    .news-item__category LALIGA, ROUND 35
-                                    .date April 28
-                                .news-item__body
-                                    .news-item__title Espanyol vs Barcelona – Match Preview, team news & lineups
-                                .news-item__footer
-                                    .news-item__author
-                                        img(src="img/temp/news-avatar-1.png")
-                                        span Luke Skywalker
-                                    .news-item__meta
-                                        ul.meta-list
-                                            li.meta-item
-                                                img.meta-icon(src="img/icons/icon-like-grey.svg" width="8" height="7")
-                                                | 23
-                                            li.meta-item
-                                                svg.nm-svg.like-icon(width="8" height="7")
-                                                    use(xlink:href="#icon-comment-xs")
-                                                | 10
-                        -}
-        aside
-            .widget.widget__facebook
-                img(src="img/facebook-banner.jpg" alt="Facebook Banner")
-        aside
-            .widget.widget__twitter
-                .widget__title.block-twitter__title
-                    a.block-twitter__title-link(href="javascript:void(0)")
-                        .twitter-site-logo
-                            img(src="img/logo.svg" alt="Logo" width="17" height="20")
-                        span SofaScore
-                    .twitter-logo
-                        img(src="img/icons/twitter-icon.svg" alt="Twitter Logo" width="18" height="15")
-                .widget__content
-                    ul.twitter-list
-                        -for(var i=0; i<5; i++) {
-                        li.twitter-item
-                            .twitter-item__content Confirmed lineups for &nbsp;
-                                a(href="javascript:void(0)") #RealMadridAtletico
-                                |  Isco starts for Real Madrid, Savic has to cover right-back for Atletico!
-                                .twitter-item__tags
-                                    a(href="javascript:void(0)") #UCL
-                                    a(href="javascript:void(0)")  #RMAATL
-                                a(href="javascript:void(0)")
-                                    img.twitter-item__img(src="img/field-with-players.jpg" alt="Stadium with " +
-                                    "players " +
-                                    "position" width="100%")
-                            .twitter-item__footer
-                                ul.meta-list
-                                    li.meta-item
-                                        img.meta-icon(src="img/icons/icon-like-grey.svg" width="8" height="7")
-                                        | 23
-                                    li.meta-item
+        .aside-block
+            aside
+                .widget.widget__most-read
+                    .widget__title MOST READ
+                    .widget__content
+                        ul.news-list
+                            -for(var k=0; k<6; k++) {
+                            li.news-item
+                                a(href="javascript:void(0)").news-item__link
+                                    .news-item__header
+                                        .news-item__category LALIGA, ROUND 35
                                         .date April 28
-                        -}
+                                    .news-item__body
+                                        .news-item__title Espanyol vs Barcelona – Match Preview, team news & lineups
+                                    .news-item__footer
+                                        .news-item__author
+                                            img(src="img/temp/news-avatar-1.png")
+                                            span Luke Skywalker
+                                        .news-item__meta
+                                            ul.meta-list
+                                                li.meta-item
+                                                    img.meta-icon(src="img/icons/icon-like-grey.svg" width="8" height="7")
+                                                    | 23
+                                                li.meta-item
+                                                    svg.nm-svg.like-icon(width="8" height="7")
+                                                        use(xlink:href="#icon-comment-xs")
+                                                    | 10
+                            -}
+        .aside-block
+            aside
+                .widget.widget__facebook
+                    img(src="img/facebook-banner.jpg" alt="Facebook Banner")
+            aside
+                .widget.widget__twitter
+                    .widget__title.block-twitter__title
+                        a.block-twitter__title-link(href="javascript:void(0)")
+                            .twitter-site-logo
+                                img(src="img/logo.svg" alt="Logo" width="17" height="20")
+                            span SofaScore
+                        .twitter-logo
+                            img(src="img/icons/twitter-icon.svg" alt="Twitter Logo" width="18" height="15")
+                    .widget__content
+                        ul.twitter-list
+                            -for(var i=0; i<5; i++) {
+                            li.twitter-item
+                                .twitter-item__content Confirmed lineups for &nbsp;
+                                    a(href="javascript:void(0)") #RealMadridAtletico
+                                    |  Isco starts for Real Madrid, Savic has to cover right-back for Atletico!
+                                    .twitter-item__tags
+                                        a(href="javascript:void(0)") #UCL
+                                        a(href="javascript:void(0)")  #RMAATL
+                                    a(href="javascript:void(0)")
+                                        img.twitter-item__img(src="img/field-with-players.jpg" alt="Stadium with " +
+                                        "players " +
+                                        "position" width="100%")
+                                .twitter-item__footer
+                                    ul.meta-list
+                                        li.meta-item
+                                            img.meta-icon(src="img/icons/icon-like-grey.svg" width="8" height="7")
+                                            | 23
+                                        li.meta-item
+                                            .date April 28
+                            -}
     // END ---- ASIDE
-
-    //MAIN BLOCK CONTENT
-
-    // END ---- MAIN BLOCK CONTENT

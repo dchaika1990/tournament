@@ -1159,6 +1159,74 @@ $('.main-block__slider .slider-wrap').slick({
     infinite: true,
 });
 
+// Thread
+var userName;
+$('.make-reply').on('click', function () {
+    var userName = $(this).closest('.thread__user_title').find('.thread__user_name').text();
+    console.log(userName);
+    if ( $(this).closest('.thread__user').hasClass('parent') ) {
+        $(this).closest('.thread__user.parent').next('.thread__derived').append( threadReplyDunc(userName) );
+    } else {
+        $(this).closest('.thread__user').after( threadReplyDunc(userName) );
+    }
+
+    console.log( threadReplyDunc(userName) );
+});
+
+var threadReplyDunc = function (userName) {
+    var threadReply = `
+        <div class="thread__reply">
+            <div class="thread__user">
+                <div class="thread__user_icon"><img src="./img/icons/user-icon.jpg"
+                                                    alt="user icon"></div>
+                <div class="thread__user_content">
+                    <div class="thread__user_form_title"><span>Reply to</span><span
+                            class="reply-to"> ${userName}</span></div>
+                    <div class="thread__user_input"><textarea maxlength="1000" name="reply"
+                                                              data-from="Nata Smirina"
+                                                              data-to="Jonathan Ive"></textarea><a
+                            class="thread__user_input_submit"><img
+                            src="./img/icons/send-icon.svg" alt="icon send"></a>
+                        <div class="thread__user_input_count-letters"><span>0/1000</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    return threadReply;
+};
+
+$('.thread__user_input textarea').keyup( function () {
+    var countPlace = $(this).parent().find('.thread__user_input_count-letters');
+    var length = $(this).val().length;
+    countPlace.find('span').remove();
+    countPlace.append( `<span>${length}/1000</span>` );
+});
+
+// Twitter widget
+
+var ifremeSize = function () {
+    setTimeout(function () {
+        if ( !document.querySelector('twitterwidget').shadowRoot ) {
+            return false
+        } else {
+            document.querySelector('twitterwidget').shadowRoot.querySelector('.EmbeddedTweet').classList.remove('EmbeddedTweet')
+        }
+        // if ( !document.querySelector('iframe.twitter-tweet').contentDocument ) {
+        //     return false
+        // } else {
+        //     document.querySelector('iframe.twitter-tweet').contentDocument.querySelector('.EmbeddedTweet').classList.remove('EmbeddedTweet')
+        // }
+    },300);
+};
+
+$(window).on('load',function () {
+    ifremeSize();
+});
+// $(window).on('resize', function () {
+//     ifremeSize();
+// });
+
 //Video player
 
 var playerControls = function(html, controls) {
@@ -1331,7 +1399,7 @@ var playerControls = function(html, controls) {
 //     }, false);
 // }
 
-if ( $('.video-banner').html() ) playerControls( document.getElementById('myVideo'),document.getElementById('myVideoContent') );
+// if ( $('.video-banner').html() ) playerControls( document.getElementById('myVideo'),document.getElementById('myVideoContent') );
 
 
 /*====
