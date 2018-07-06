@@ -1207,17 +1207,9 @@ $('.thread__user_input textarea').keyup( function () {
 
 var ifremeSize = function () {
     setTimeout(function () {
-        if ( !document.querySelector('twitterwidget').shadowRoot ) {
-            return false
-        } else {
-            document.querySelector('twitterwidget').shadowRoot.querySelector('.EmbeddedTweet').classList.remove('EmbeddedTweet')
-        }
-        // if ( !document.querySelector('iframe.twitter-tweet').contentDocument ) {
-        //     return false
-        // } else {
-        //     document.querySelector('iframe.twitter-tweet').contentDocument.querySelector('.EmbeddedTweet').classList.remove('EmbeddedTweet')
-        // }
-    },300);
+        if ( document.querySelector('twitterwidget') ) document.querySelector('twitterwidget').shadowRoot.querySelector('.EmbeddedTweet').classList.remove('EmbeddedTweet');
+        if ( document.querySelector('iframe.twitter-tweet') ) document.querySelector('iframe.twitter-tweet').contentDocument.querySelector('.EmbeddedTweet').classList.remove('EmbeddedTweet');
+    },100);
 };
 
 $(window).on('load',function () {
@@ -1227,179 +1219,238 @@ $(window).on('load',function () {
 //     ifremeSize();
 // });
 
-//Video player
+//Audio player
 
-var playerControls = function(html, controls) {
+$('.audio-banner').each(function () {
+    audioPlayerControls( $(this) );
+});
+
+function audioPlayerControls(html) {
     var controls = {
-        player: html,
-        progress: controls.querySelector(".video-banner__progress"),
-        progress_field: controls.querySelector(".video-banner__timeline"),
-        toggle: controls.querySelector(".video-banner__play-button"),
-        toggle_center: controls.querySelector(".video-banner__play"),
+        player: html.find('audio')[0],
+        progress: html.find(".audio-banner__progress"),
+        progress_field: html.find(".audio-banner__timeline"),
+        toggle: html.find(".audio-banner__play-button"),
+        toggle_volume: html.find(".audio-banner__volume"),
+        time: html.find(".audio-banner__duration"),
+        img: html.find(".audio-banner__album-image"),
         toggle_play: function () {
-            (player.paused) ? player.play() : player.pause();
+            (this.player.paused) ? this.player.play() : this.player.pause();
         },
         handle_progress_update: function () {
-            var percent = (player.currentTime / player.duration) * 100;
-            this.progress_field.style.width = `${percent}%`;
+            var percent = (this.player.currentTime / this.player.duration) * 100;
+            this.progress_field.css('width', `${percent}%`);
         },
         handle_time_update: function ( event_obj ) {
-            let time = (event_obj.offsetX / this.progress.offsetWidth) * player.duration ;
-            // console.log( event_obj.offsetX, this.progress[0].offsetWidth , player.duration, time);
-            console.log( time );
-            return player.currentTime = time;
+            var time = (event_obj.offsetX / this.progress.width()) * this.player.duration ;
+            this.player.currentTime = time;
+        },
+        change_volume: function () {
+            ( this.player.volume == 0 ) ? this.player.volume = 1 : this.player.volume = 0;
+        },
+        change_time: function () {
+            var current_time = calculateCurrentValue( this.player.currentTime );
+            this.time.text(current_time);
         }
+
     };
 
-    var player = controls.player;
-    console.log(controls.toggle)
-
-
     //Play / Pause
-    controls.toggle.addEventListener('click', function () {
+    controls.toggle.on('click', function () {
         controls.toggle_play();
     });
 
-    controls.toggle_center.addEventListener('click', function () {
-        controls.toggle_play();
+    controls.player.addEventListener("ended", function() {
+        controls.player.pause();
+        controls.toggle.toggleClass("paused");
     });
 
-    // player.addEventListener("ended", function() {
-    //     player.pause();
-    //     controls.toggle.toggleClass("paused");
-    //     controls.toggle_center.toggleClass("paused");
-    // });
-    //
-    // player.addEventListener("play", function() {
-    //     controls.toggle.toggleClass("paused");
-    //     controls.toggle_center.toggleClass("paused");
-    // });
-    //
-    // player.addEventListener("pause", function() {
-    //     controls.toggle.toggleClass("paused");
-    //     controls.toggle_center.toggleClass("paused");
-    // });
+    controls.player.addEventListener("play", function() {
+        controls.toggle.toggleClass("paused");
+        controls.img.addClass('play')
+    });
+
+    controls.player.addEventListener("pause", function() {
+        controls.toggle.toggleClass("paused");
+    });
+
 
     // Progress
 
-    player.addEventListener('timeupdate', function () {
+    controls.player.addEventListener('timeupdate', function () {
         controls.handle_progress_update();
     });
 
     // Change progress
-    controls.progress.addEventListener('click', (e) => {
+    controls.progress.on('click', function (e) {
         controls.handle_time_update(e);
+    });
+
+    // Volume
+    controls.toggle_volume.on('click', function () {
+        controls.change_volume();
+    });
+
+    controls.player.addEventListener('volumechange', function () {
+        if ( !controls.player.volume ) {
+            controls.toggle_volume.addClass('volumeNone')
+        } else {
+            controls.toggle_volume.removeClass('volumeNone')
+        }
+    });
+
+    //Function for calculate time
+
+    function calculateCurrentValue(currentTime) {
+        var current_hour = parseInt(currentTime / 3600) % 24,
+            current_minute = parseInt(currentTime / 60) % 60,
+            current_seconds_long = currentTime % 60,
+            current_seconds = current_seconds_long.toFixed(),
+            current_time = (current_minute < 10 ? "0" + current_minute : current_minute) + ":" + (current_seconds < 10 ? "0" + current_seconds : current_seconds);
+
+        return current_time;
+    }
+
+    controls.player.addEventListener('timeupdate', function () {
+        controls.change_time()
+    });
+}
+
+//Video player
+
+var videoArr = [
+    {src:'./video/soccet720.mp4', quality: '720'},
+    {src:'./video/soccet360.mp4', quality: '360'}
+];
+
+$('.video-banner').each(function () {
+    videoPlayerControls( $(this) )
+});
+
+function videoPlayerControls(html) {
+    var controls = {
+        player: html.find('video')[0],
+        source: html.find('source')[0],
+        progress: html.find(".video-banner__progress"),
+        progress_field: html.find(".video-banner__timeline"),
+        buffered: html.find(".video-banner__buffered"),
+        toggle: html.find(".video-banner__play-button"),
+        toggle_center: html.find(".video-banner__play"),
+        toggle_volume: html.find(".video-banner__volume"),
+        toggle_fullscreen: html.find(".video-banner__fullscreen"),
+        toggle_quality: html.find(".video-banner__quality li"),
+        toggle_play: function () {
+            (this.player.paused) ? this.player.play() : this.player.pause();
+        },
+        handle_progress_update: function () {
+            var percent = (this.player.currentTime / this.player.duration) * 100;
+            this.progress_field.css('width', `${percent}%`);
+        },
+        handle_time_update: function ( event_obj ) {
+            var time = (event_obj.offsetX / this.progress.width()) * this.player.duration ;
+            this.player.currentTime = time;
+        },
+        change_volume: function () {
+            ( this.player.volume == 0 ) ? this.player.volume = 1 : this.player.volume = 0;
+        }
+    };
+
+    //Play / Pause
+    controls.toggle.on('click', function () {
+        controls.toggle_play();
+    });
+
+    controls.toggle_center.on('click', function () {
+        controls.toggle_play();
+    });
+
+    controls.player.addEventListener("ended", function() {
+        controls.player.pause();
+        controls.toggle.toggleClass("paused");
+        controls.toggle_center.toggleClass("paused");
+    });
+
+    controls.player.addEventListener("play", function() {
+        controls.toggle.toggleClass("paused");
+        controls.toggle_center.toggleClass("paused");
+    });
+
+    controls.player.addEventListener("pause", function() {
+        controls.toggle.toggleClass("paused");
+        controls.toggle_center.toggleClass("paused");
+    });
+
+
+    // Progress
+
+    controls.player.addEventListener('timeupdate', function () {
+        controls.handle_progress_update();
+    });
+
+    // Change progress
+    controls.progress.on('click', function (e) {
+        controls.handle_time_update(e);
+    });
+
+    // Buffering
+
+    controls.player.addEventListener("progress", function() {
+        var buffered = Math.floor(controls.player.buffered.end(0)) / Math.floor(controls.player.duration);
+        controls.buffered.css( 'width' , Math.floor(buffered * controls.progress.width()) + "px");
+    }, false);
+
+    // Volume
+    controls.toggle_volume.on('click', function () {
+        controls.change_volume();
+    });
+
+    controls.player.addEventListener('volumechange', function () {
+        if ( !controls.player.volume ) {
+            controls.toggle_volume.addClass('volumeNone')
+        } else {
+            controls.toggle_volume.removeClass('volumeNone')
+        }
+    });
+
+    // Fullscreen
+
+    controls.toggle_fullscreen.on('click', function () {
+        var elem = controls.player;
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+        }
+        $(this).addClass('active')
+    });
+
+    $(window).on('keydown', function (e) {
+        if ( e.which == 27 ) {
+            controls.toggle_fullscreen.removeClass('active');
+        }
+    });
+
+    // Change quality
+    controls.toggle_quality.on('click', function () {
+        var number = $(this).attr('data-quality');
+        var needText = $(this).text();
+        var time = controls.player.currentTime;
+
+        $(this).closest('.video-banner__quality').find('.nm-toggler').text( needText ).removeClass('open');
+        $(this).closest('.video-banner__quality').find('.nm-dropdown').hide();
+
+        controls.source.src = videoArr[number].src;
+        controls.player.load();
+        controls.player.currentTime = time;
+        controls.player.play();
+        controls.toggle.removeClass("paused");
+        controls.toggle_center.removeClass("paused");
     })
 
 }
 
-// function playerControls( html ) {
-//     var controls = {
-        // video: html.find('video'),
-        // playpause: html.find(".video-banner__play-button"),
-        // playpauseCenter: html.find(".video-banner__play"),
-        // total: html.find(".video-banner__progress"),
-        // buffered: html.find(".video-banner__timeline"),
-        // progress: html.find(".video-banner__buffered"),
-        // currentTime: html.find(".video-banner__current-time"),
-        // duration: html.find(".video-banner__current-time"),
-        // hasHours: false,
-        // togglePlayback: function() {
-        //     (video.paused) ? video.play() : video.pause();
-        // }
-    // };
-
-//     var video = controls.video[0];
-//
-// // Play/Pause
-//
-//     controls.playpause.click(function(){
-//         controls.togglePlayback();
-//     });
-//
-//     controls.playpauseCenter.click(function(){
-//         controls.togglePlayback();
-//     });
-//
-//     video.addEventListener("ended", function() {
-//         video.pause();
-//         controls.playpause.toggleClass("paused");
-//         controls.playpauseCenter.toggleClass("paused");
-//     });
-//
-//     video.addEventListener("play", function() {
-//         controls.playpause.toggleClass("paused");
-//         controls.playpauseCenter.toggleClass("paused");
-//     });
-//
-//     video.addEventListener("pause", function() {
-//         controls.playpause.toggleClass("paused");
-//         controls.playpauseCenter.toggleClass("paused");
-//     });
-//
-//
-// // Progress
-//
-//     video.addEventListener("canplay", function() {
-//         controls.hasHours = (video.duration / 3600) >= 1.0;
-//         controls.duration.text(formatTime(video.duration, controls.hasHours));
-//         controls.currentTime.text(formatTime(0),controls.hasHours);
-//     }, false);
-//
-//     function formatTime(time, hours) {
-//         if (hours) {
-//             var h = Math.floor(time / 3600);
-//             time = time - h * 3600;
-//
-//             var m = Math.floor(time / 60);
-//             var s = Math.floor(time % 60);
-//
-//             return h.lead0(2)  + ":" + m.lead0(2) + ":" + s.lead0(2);
-//         } else {
-//             var m = Math.floor(time / 60);
-//             var s = Math.floor(time % 60);
-//
-//             return m.lead0(2) + ":" + s.lead0(2);
-//         }
-//     }
-//
-//     Number.prototype.lead0 = function(n) {
-//         var nz = "" + this;
-//         while (nz.length < n) {
-//             nz = "0" + nz;
-//         }
-//         return nz;
-//     };
-//
-//     video.addEventListener("timeupdate", function() {
-//         controls.currentTime.text(formatTime(video.currentTime, controls.hasHours));
-//
-//         var progress = Math.floor(video.currentTime) / Math.floor(video.duration) * 100;
-//         controls.progress[0].style.width = progress + "%";
-//         console.log( video.currentTime, progress + "%", video.duration );
-//     }, false);
-//
-//     // Progress click
-//
-//     controls.total.click(function(e) {
-//         var x = (e.pageX - this.offsetLeft)/$(this).width();
-//         console.log(  video.currentTime, x * video.duration );
-//         video.currentTime = x * video.duration;
-//         console.dir( video );
-//     });
-//
-//     //Buffered
-//
-//     video.addEventListener("canplay", function() {
-//
-//         video.addEventListener("progress", function() {
-//             var buffered = Math.floor(video.buffered.end(0)) / Math.floor(video.duration);
-//             controls.buffered[0].style.width =  buffered * 100 + '%';
-//         }, false);
-//     }, false);
-// }
-
-// if ( $('.video-banner').html() ) playerControls( document.getElementById('myVideo'),document.getElementById('myVideoContent') );
 
 
 /*====

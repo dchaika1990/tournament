@@ -22,27 +22,26 @@ main.snc-main-wrapper
                     .main-block__content
                         p At the end of the day, the assist for the opening goal WAS given to Debi after it was decided that Fabio’s intervention hadn’t too much to change the course of the ball that was fed to Costa.
                 .main-block__video-html.video-banner
-                    video(controls='controls' poster='./img/video-banner.jpg')
-                        source(src='./video/soccet.mp4')
-                //.main-block__video-html.video-banner
-                //    video( id='myVideo')
-                //        source(  src='./img/actors.mp4' type='video/mp4' codecs="avc1.42E01E, mp4a.40.2" )
-                //    .video-banner__content(id='myVideoContent')
-                //        span.video-banner__title Reaction to having assist
-                //        .video-banner__play
-                //        .video-banner__controls
-                //            .video-banner__play-button
-                //            .video-banner__progress
-                //                .video-banner__timeline
-                //                    //.video-banner__buffered
-                //                //.video-banner__current-time
-                //                .video-banner__duration
-                //            .video-banner__quality
-                //                span 480p
-                //            .video-banner__volume
-                //                input(type="range" name="volume" class="player__slider" min=0 max="1" step="0.05" value="1")
-                //            .video-banner__fullscreen
-                //            .video-banner__logo
+                    video( poster='./img/video-banner.jpg')
+                        source(  src='./video/soccet360.mp4' type='video/mp4')
+                    .video-banner__content
+                        span.video-banner__title Reaction to having assist
+                        .video-banner__play
+                        .video-banner__controls
+                            .video-banner__play-button
+                            .video-banner__progress
+                                .video-banner__timeline
+                                    .video-banner__buffered
+                                .video-banner__duration
+                            .video-banner__quality
+                                span.nm-toggler 360p
+                                .nm-dropdown
+                                    ul
+                                        li(data-quality='0') 720p
+                                        li(data-quality='1') 360p
+                            .video-banner__volume
+                            .video-banner__fullscreen
+                            .video-banner__logo
                 //.main-block__video
                 //    a.video-banner(href='javascript:void(0)' target='_blank')
                 //        .video-banner__img
@@ -66,21 +65,28 @@ main.snc-main-wrapper
                             span Copa Catalunya
                         .main-block__content
                             p Between 1903 and 1940, it was known as the Championship of Catalonia, and enjoyed great prestige and interest at a time where La Liga did not exist. The club that won the title participated with other regional champions in the Spanish Cup, which until the beginning of La Liga in 1929 was the most important tournament in Spanish football.
-                    .main-block__video
-                        a.video-banner.video-sm(href='javascript:void(0)' target='_blank')
-                            .video-banner__img
-                                img(src='./img/video-banner.jpg')
-                            .video-banner__content
-                                span.video-banner__title Reaction to having assist
-                                .video-banner__play
-                                .video-banner__controls
-                                    .video-banner__play-button
+                    .main-block__video.video-banner
+                        video( poster='./img/video-banner.jpg')
+                            source(  src='./video/soccet360.mp4' type='video/mp4')
+                        .video-banner__content
+                            span.video-banner__title Reaction to having assist
+                            .video-banner__play
+                            .video-banner__controls
+                                .video-banner__play-button
+                                .video-banner__progress
                                     .video-banner__timeline
-                                    .video-banner__quality
-                                        span 480p
-                                    .video-banner__volume
-                                    .video-banner__fullscreen
-                                    .video-banner__logo
+                                        .video-banner__buffered
+                                    .video-banner__duration
+                                .video-banner__quality
+                                    span.nm-toggler 360p
+                                    .nm-dropdown
+                                        ul
+                                            li(data-quality='0') 720p
+                                            li(data-quality='1') 360p
+                                .video-banner__volume
+                                .video-banner__fullscreen
+                                .video-banner__logo
+
                 .main-block__text
                     .main-block__title
                         span Match Facts
@@ -142,14 +148,6 @@ main.snc-main-wrapper
                                 - }
 
                 .main-block__iframe
-                    blockquote(class="twitter-tweet" data-lang="en")
-                        p(lang="en" dir="ltr") Race to rescue boys in cave in Thailand as new images of the trapped soccer team are captured.
-                            a(href="https://twitter.com/JamesAALongman?ref_src=twsrc%5Etfw") @JamesAALongman
-                            |  reports.
-                            a(href="https://t.co/5hJCxnmxYb") pic.twitter.com/5hJCxnmxYb
-                        p &mdash; Good Morning America (@GMA)
-                            a(href="https://twitter.com/GMA/status/1014466566946033665?ref_src=twsrc%5Etfw") July 4, 2018
-                .main-block__iframe
                     blockquote(class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/jqAD3KMn9s/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);")
                         div(style="padding:8px;")
                             div(style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;")
@@ -159,6 +157,14 @@ main.snc-main-wrapper
                             p(style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;") Публикация от
                                 //a(href="https://www.instagram.com/videos_soccer/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank") Soccer Videos
                                 time(style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2014-01-27T02:54:27+00:00") 26 Янв 2014 в 6:54 PST
+                .main-block__iframe
+                    blockquote(class="twitter-tweet" data-lang="en")
+                        p(lang="en" dir="ltr") Race to rescue boys in cave in Thailand as new images of the trapped soccer team are captured.
+                            a(href="https://twitter.com/JamesAALongman?ref_src=twsrc%5Etfw") @JamesAALongman
+                            |  reports.
+                            a(href="https://t.co/5hJCxnmxYb") pic.twitter.com/5hJCxnmxYb
+                        p &mdash; Good Morning America (@GMA)
+                            a(href="https://twitter.com/GMA/status/1014466566946033665?ref_src=twsrc%5Etfw") July 4, 2018
                 .main-block__text
                     .main-block__title
                         span Templates to show some infographics
@@ -248,8 +254,19 @@ main.snc-main-wrapper
 
 
                 .main-block__audio-html.audio-banner
-                    audio(controls='controls')
+                    audio()
                         source(src='./audio/Audio-Loving-the-Lord.mp3' type='audio/mp3')
+                    .audio-banner__content
+                        .audio-banner__album-image
+                        .audio-banner__controls
+                            .audio-banner__play-button
+                            .audio-banner__progress
+                                .audio-banner__title
+                                    span Derbi barceloni talks
+                                .audio-banner__timeline
+                                .audio-banner__duration
+                                    span 0:00
+                            .audio-banner__volume
                 .nm-share-block
                     a.nm-share-toggle(href="javascript:void(0)")
                         svg.nm-svg(width="14" height="15")
@@ -289,7 +306,7 @@ main.snc-main-wrapper
                             .thread__user_content
                                 .thread__user_title
                                     .thread__left
-                                        span.thread__user_name Nata Smirina
+                                        a(href="#").thread__user_name Nata Smirina
                                         span.thread__user_date  at 11:00 3/5/2017
                                     .thread__right
                                         ul.meta-list
@@ -308,7 +325,7 @@ main.snc-main-wrapper
                                 .thread__user_content
                                     .thread__user_title
                                         .thread__left
-                                            span.thread__user_name Jonathan Ive
+                                            a(href='#').thread__user_name Jonathan Ive
                                             span.thread__user_date  at 11:00 3/5/2017
                                         .thread__right
                                             ul.meta-list
