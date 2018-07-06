@@ -241,6 +241,7 @@
   width: 100%;
   -o-object-fit: fill;
      object-fit: fill;
+  background-color: #000;
 }
 .article-page .snc-main-wrapper {
   display: -webkit-box;
@@ -939,6 +940,7 @@
   height: 100%;
   margin-right: 18px;
   margin-left: 18px;
+  position: relative;
 }
 .article-page .snc-main-wrapper .audio-banner__volume.volumeNone {
   background-image: url("../img/icons/volume-off-grey.svg");
