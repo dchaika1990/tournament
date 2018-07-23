@@ -183,6 +183,7 @@
         color: #43474d;
         padding-right: 25px;
         line-height: 1.29;
+        overflow: hidden;
 
         &:focus,
         &:active{
@@ -326,7 +327,7 @@
         .slick-next{
           &::before,
           &::after{
-            position: absolute;
+            //position: absolute;
             width: 30px;
             height: 30px;
             background-size: 30px;
@@ -736,7 +737,7 @@
         position: absolute;
         opacity: 0;
         top: 50%;
-        left: 50%;
+        left: 47%;
         transform: translateY(-74%) translateX(-12%);
         width: 55px;
         height: 60px;
@@ -999,6 +1000,20 @@
   .twitter-tweet{
     width: 100%!important;
   }
+
+  .widget__twitter .twitter-list .twitter-item{
+    a{
+      display: inline-block;
+      width: 99%;
+    }
+    &__img{
+      max-width: 100%;
+    }
+  }
+
+  /*================================================*/
+  /*						  MEDIA				      */
+  /*================================================*/
 
   @media(max-width: 1229px) {
     .snc-main-wrapper{

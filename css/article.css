@@ -12,6 +12,11 @@
   max-width: 100%!important;
   width: 100%!important;
 }
+.article-page {
+  /*================================================*/
+  /*						  MEDIA				      */
+  /*================================================*/
+}
 .article-page .above-content-block-homepage {
   margin-bottom: 0;
   -webkit-flex-wrap: wrap;
@@ -169,6 +174,7 @@
   color: #43474d;
   padding-right: 25px;
   line-height: 1.29;
+  overflow: hidden;
 }
 .article-page .thread__user_input textarea:focus,
 .article-page .thread__user_input textarea:active {
@@ -327,7 +333,6 @@
 .article-page .snc-main-wrapper .main-block__slider .slick-next::before,
 .article-page .snc-main-wrapper .main-block__slider .slick-prev::after,
 .article-page .snc-main-wrapper .main-block__slider .slick-next::after {
-  position: absolute;
   width: 30px;
   height: 30px;
   background-size: 30px;
@@ -741,7 +746,7 @@
   position: absolute;
   opacity: 0;
   top: 50%;
-  left: 50%;
+  left: 47%;
   -webkit-transform: translateY(-74%) translateX(-12%);
       -ms-transform: translateY(-74%) translateX(-12%);
           transform: translateY(-74%) translateX(-12%);
@@ -993,6 +998,13 @@
 }
 .article-page .twitter-tweet {
   width: 100%!important;
+}
+.article-page .widget__twitter .twitter-list .twitter-item a {
+  display: inline-block;
+  width: 99%;
+}
+.article-page .widget__twitter .twitter-list .twitter-item__img {
+  max-width: 100%;
 }
 @media (max-width: 1229px) {
   .article-page .snc-main-wrapper .r-sidebar {

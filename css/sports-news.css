@@ -476,6 +476,9 @@
   background-color: #f5f5fd;
   color: #4186b0;
 }
+.main-news .news-tags .tags-item.hidden {
+  display: none;
+}
 .main-news .news-tags span.tags-item {
   text-align: center;
   width: 80px;
@@ -717,6 +720,7 @@
   font-weight: 100;
   color: #ffffff;
   height: 67px;
+  max-height: 70px;
   overflow: hidden;
   margin-bottom: 20px;
   display: block;
@@ -921,6 +925,13 @@
 }
 .slider-wrap .news-grid__link {
   padding-right: 0;
+}
+.widget__twitter .twitter-list .twitter-item a {
+  display: inline-block;
+  width: 99%;
+}
+.widget__twitter .twitter-list .twitter-item__img {
+  max-width: 100%;
 }
 /*================================================*/
 /*						  MEDIA				      */

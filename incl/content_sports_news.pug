@@ -16,12 +16,12 @@ main.snc-main-wrapper
                                     .news-item__title Espanyol vs Barcelona – Match Preview, team news & lineups
                                 .news-item__footer
                                     .news-item__author
-                                        img(src="img/temp/news-avatar-1.png")
+                                        img(src="img/temp/news-avatar-1.png" alt="avata img")
                                         span Luke Skywalker
                                     .news-item__meta
                                         ul.meta-list
                                             li.meta-item
-                                                img.meta-icon(src="img/icons/icon-like-grey.svg" width="8" height="7")
+                                                img.meta-icon(src="img/icons/icon-like-grey.svg" alt="icon like" width="8" height="7")
                                                 | 23
                                             li.meta-item
                                                 svg.nm-svg.like-icon(width="8" height="7")
@@ -53,11 +53,11 @@ main.snc-main-wrapper
                                 a(href="javascript:void(0)")
                                     img.twitter-item__img(src="img/field-with-players.jpg" alt="Stadium with " +
                                     "players " +
-                                    "position" width="100%")
+                                    "position")
                             .twitter-item__footer
                                 ul.meta-list
                                     li.meta-item
-                                        img.meta-icon(src="img/icons/icon-like-grey.svg" width="8" height="7")
+                                        img.meta-icon(src="img/icons/icon-like-grey.svg" alt="icon like" width="8" height="7")
                                         | 23
                                     li.meta-item
                                         .date April 28
@@ -66,7 +66,7 @@ main.snc-main-wrapper
     .mv-item.main-news
         .main-news__item
             .main-news__banner
-                img(src="img/main-news-bg.jpg")
+                img(src="img/main-news-bg.jpg" alt="news background")
             .main-news__content.news-item
                 .news-item__header
                     span.news-item__category LALIGA, ROUND 35
@@ -75,16 +75,16 @@ main.snc-main-wrapper
                     a(href="javascript:void(0)").news-item__title Espanyol vs Barcelona – Match Preview, team news
                 .news-item__footer
                     .news-item__author
-                        img(src="img/ma/avatar127.png")
+                        img(src="img/ma/avatar127.png" alt="avatar photo")
                         | By&nbsp;
                         a(href="javascript:void(0)")  Adeline Blesser
                     .news-item__meta
                         ul.meta-list
                             li.meta-item
-                                img.meta-icon(src="img/icons/-e-like-icon.svg" width="12" height="10")
+                                img.meta-icon(src="img/icons/-e-like-icon.svg" alt="icon like" width="12" height="10")
                                 | 23
                             li.meta-item
-                                img.meta-icon(src="img/icons/comment-icon-white.svg" width="12" height="11")
+                                img.meta-icon(src="img/icons/comment-icon-white.svg" alt="icon comment" width="12" height="11")
                                 | 10
                 .news-tags
                     a.tags-item(href="javascript:void(0)") OTHER SPORTS
@@ -166,13 +166,13 @@ main.snc-main-wrapper
                     .news-grid__item.news-item
                         .news-item__banner
                             - if(i==0) {
-                            img(src="img/temp/news-background-3.jpg")
+                            img(src="img/temp/news-background-3.jpg" alt="news background")
                             - }
                             - if(i==1) {
-                            img(style="display: none;")
+                            //img(style="display: none;")
                             - }
                             - if(i==2) {
-                            img(src="img/temp/news-background-2.png")
+                            img(src="img/temp/news-background-2.png" alt="news background")
                             - }
                         a.news-item__content(href="javascript:void(0)")
                             - if(i==0) {
@@ -216,41 +216,41 @@ main.snc-main-wrapper
                         .news-item__footer
                             - if(i==0) {
                             .news-item__author
-                                img(src="img/temp/news-avatar-0.png")
+                                img(src="img/temp/news-avatar-0.png" alt="avatar news img")
                                 a Odry Hepbern
                             .news-item__meta
                                 ul.meta-list
                                     li.meta-item
-                                        img.meta-icon(src="img/icons/icon-like-grey.svg" width="12" height="10")
+                                        img.meta-icon(src="img/icons/icon-like-grey.svg" alt='acon like' width="12" height="10")
                                         | 23
                                     li.meta-item
-                                        img.meta-icon(src="img/icons/comment-icon.svg" width="12" height="10")
+                                        img.meta-icon(src="img/icons/comment-icon.svg" alt="icon comment" width="12" height="10")
                                         | 10
                             - }
                             - if(i==1) {
                             .news-item__author
-                                img(src="img/temp/news-avatar-1.png")
+                                img(src="img/temp/news-avatar-1.png" alt="icon avatar")
                                 a Luke Skywalker
                             .news-item__meta
                                 ul.meta-list
                                     li.meta-item
-                                        img.meta-icon(src="img/icons/icon-like-grey.svg" width="12" height="10")
+                                        img.meta-icon(src="img/icons/icon-like-grey.svg" alt="icon like" width="12" height="10")
                                         | 23
                                     li.meta-item
-                                        img.meta-icon(src="img/icons/comment-icon.svg" width="12" height="10")
+                                        img.meta-icon(src="img/icons/comment-icon.svg" alt="icon comment" width="12" height="10")
                                         | 1
                             - }
                             - if(i==2) {
                             .news-item__author
-                                img(src="img/temp/news-avatar-1.png")
+                                img(src="img/temp/news-avatar-1.png" alt="icon avatar")
                                 a Luke Skywalker
                             .news-item__meta
                                 ul.meta-list
                                     li.meta-item
-                                        img.meta-icon(src="img/icons/icon-like-grey.svg" width="12" height="10")
+                                        img.meta-icon(src="img/icons/icon-like-grey.svg" alt="icon like" width="12" height="10")
                                         | 3
                                     li.meta-item
-                                        img.meta-icon(src="img/icons/comment-icon.svg" width="12" height="10")
+                                        img.meta-icon(src="img/icons/comment-icon.svg" alt="icon comment" width="12" height="10")
                                         | 10
                             - }
 
@@ -267,7 +267,7 @@ main.snc-main-wrapper
                 - for ( var i = 0; i < 9; i++ ){
                 .news-grid__item.news-item
                     .news-item__banner
-                        img(src='img/temp/news-background-2.png')
+                        img(src='img/temp/news-background-2.png' alt="news background")
                     a.news-item__content
                         .news-item__header
                             - if ( i == 0 || i ==3 || i ==6  ){
@@ -298,15 +298,15 @@ main.snc-main-wrapper
                             - }
                     .news-item__footer
                         .news-item__author
-                            img(src='img/temp/news-avatar-1.png')
+                            img(src='img/temp/news-avatar-1.png' alt="avatar img")
                             a Luke Skywalker
                         .news-item__meta
                             ul.meta-list
                                 li.meta-item
-                                    img.meta-icon(src="img/icons/icon-like-grey.svg" width="12" height="10")
+                                    img.meta-icon(src="img/icons/icon-like-grey.svg" alt="icon like" width="12" height="10")
                                     | 3
                                 li.meta-item
-                                    img.meta-icon(src="img/icons/comment-icon.svg" width="12" height="10")
+                                    img.meta-icon(src="img/icons/comment-icon.svg" alt="icon comments" width="12" height="10")
                                     | 10
 
                 - }
@@ -320,7 +320,7 @@ main.snc-main-wrapper
         .mv-item.main-news.fun-news
             .main-news__item
                 .main-news__banner
-                    img(src="img/main-news-bg.jpg")
+                    img(src="img/main-news-bg.jpg" alt="news background")
                 .main-news__content.news-item
                     .news-item__header
                         span.news-item__category
@@ -329,16 +329,16 @@ main.snc-main-wrapper
                         a(href="javascript:void(0)").news-item__title VIDEO: Ashley Young and Jesse Lingard prank Paul Pogba
                     .news-item__footer
                         .news-item__author
-                            img(src="img/temp/news-avatar-2.png")
+                            img(src="img/temp/news-avatar-2.png" alt="avatar img")
                             | By&nbsp;
                             a(href="javascript:void(0)")  Adeline Blesser
                         .news-item__meta
                             ul.meta-list
                                 li.meta-item
-                                    img.meta-icon(src="img/icons/-e-like-icon.svg" width="12" height="10")
+                                    img.meta-icon(src="img/icons/-e-like-icon.svg" alt="icon like" width="12" height="10")
                                     | 23
                                 li.meta-item
-                                    img.meta-icon(src="img/icons/comment-icon-white.svg" width="12" height="11")
+                                    img.meta-icon(src="img/icons/comment-icon-white.svg" alt="icon comment" width="12" height="11")
                                     | 10
                     .news-tags
                         a.tags-item(href="javascript:void(0)") VIDEOS
@@ -354,13 +354,13 @@ main.snc-main-wrapper
                     .news-grid__item.news-item
                         .news-item__banner
                             - if(i==0) {
-                            img(src="img/temp/news-background-3.jpg")
+                            img(src="img/temp/news-background-3.jpg" alt="news background")
                             - }
                             - if(i==1) {
-                            img(style="display: none;")
+                            //img(style="display: none;")
                             - }
                             - if(i==2) {
-                            img(src="img/temp/news-background-2.png")
+                            img(src="img/temp/news-background-2.png" alt="news background")
                             - }
                         a.news-item__content(href="javascript:void(0)")
                             - if(i==0) {
@@ -404,41 +404,41 @@ main.snc-main-wrapper
                         .news-item__footer
                             - if(i==0) {
                             .news-item__author
-                                img(src="img/temp/news-avatar-0.png")
+                                img(src="img/temp/news-avatar-0.png" alt="icon avatar")
                                 a Odry Hepbern
                             .news-item__meta
                                 ul.meta-list
                                     li.meta-item
-                                        img.meta-icon(src="img/icons/icon-like-grey.svg" width="12" height="10")
-                                        | 23
+                                        img.meta-icon(src="img/icons/icon-like-grey.svg" alt="icon like" width="12" height="10")
+                                        span 23
                                     li.meta-item
-                                        img.meta-icon(src="img/icons/comment-icon.svg" width="12" height="10")
-                                        | 10
+                                        img.meta-icon(src="img/icons/comment-icon.svg" alt="icon comments" width="12" height="10")
+                                        span 10
                             - }
                             - if(i==1) {
                             .news-item__author
-                                img(src="img/temp/news-avatar-1.png")
+                                img(src="img/temp/news-avatar-1.png" alt="icon avatar")
                                 a Luke Skywalker
                             .news-item__meta
                                 ul.meta-list
                                     li.meta-item
-                                        img.meta-icon(src="img/icons/icon-like-grey.svg" width="12" height="10")
+                                        img.meta-icon(src="img/icons/icon-like-grey.svg" alt="icon like" width="12" height="10")
                                         | 23
                                     li.meta-item
-                                        img.meta-icon(src="img/icons/comment-icon.svg" width="12" height="10")
+                                        img.meta-icon(src="img/icons/comment-icon.svg" alt="icon comments" width="12" height="10")
                                         | 1
                             - }
                             - if(i==2) {
                             .news-item__author
-                                img(src="img/temp/news-avatar-1.png")
+                                img(src="img/temp/news-avatar-1.png" alt="icon avatar")
                                 a Luke Skywalker
                             .news-item__meta
                                 ul.meta-list
                                     li.meta-item
-                                        img.meta-icon(src="img/icons/icon-like-grey.svg" width="12" height="10")
+                                        img.meta-icon(src="img/icons/icon-like-grey.svg" alt="icon like" width="12" height="10")
                                         | 3
                                     li.meta-item
-                                        img.meta-icon(src="img/icons/comment-icon.svg" width="12" height="10")
+                                        img.meta-icon(src="img/icons/comment-icon.svg" alt="icon comments" width="12" height="10")
                                         | 10
                             - }
 

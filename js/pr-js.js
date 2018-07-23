@@ -1115,11 +1115,16 @@ $(window).on('resize',function () {
 
 function clippingTags( html , count ) {
     html.each(function () {
-        var tags = $(this).find('.tags-item');
+
+        var tags = $(this).find('.tags-item' );
+        tagsArr = [].slice.call( tags );
+        tagsArr.forEach(function (elem) {
+            elem.classList.remove('hidden');
+        });
+
         if ( tags.length > count ){
-            var notNeedTags =  tags.splice(count);
-            for ( var i = 0; i <  notNeedTags.length; i++ ){
-                notNeedTags[i].remove();
+            for ( var i = tagsArr.length - 1; i >= count; i-- ){
+                tagsArr[i].classList.add('hidden');
             }
 
             $(this).find('.news-tags').append('<span class="tags-item">...</span>')
@@ -1129,7 +1134,7 @@ function clippingTags( html , count ) {
 
 $(window).on('load',function () {
     if ( $(window).width() < 620 ){
-        clippingTags( $('.main-news') , 1 );
+        clippingTags( $('.main-news'), 1 );
     } else if ( $(window).width() < 860 ){
         clippingTags( $('.main-news') , 14);
         clippingTags( $('.main-news.fun-news') , 14);
@@ -1213,18 +1218,33 @@ $('.thread__wrap').on('click','.meta-item.heard', function () {
 // Twitter widget
 
 var ifremeSize = function () {
-    setTimeout(function () {
-        if ( document.querySelector('twitterwidget') ) document.querySelector('twitterwidget').shadowRoot.querySelector('.EmbeddedTweet').classList.remove('EmbeddedTweet');
-        if ( document.querySelector('iframe.twitter-tweet') ) document.querySelector('iframe.twitter-tweet').contentDocument.querySelector('.EmbeddedTweet').classList.remove('EmbeddedTweet');
-    },100);
+    var version = detectIE();
+
+    var check = function ( time ) {
+        setTimeout(function () {
+            if ( document.querySelector('twitterwidget') ) document.querySelector('twitterwidget').shadowRoot.querySelector('.EmbeddedTweet').classList.remove('EmbeddedTweet');
+            if ( document.querySelector('iframe.twitter-tweet') ) {
+                document.querySelector('iframe.twitter-tweet').contentDocument.querySelector('.EmbeddedTweet').classList.remove('EmbeddedTweet')
+            }
+
+            if ( document.querySelector('twitterwidget') ) {
+                document.querySelector('twitterwidget').style.height = 'auto';
+            }
+            if ( document.querySelector('iframe.twitter-tweet') ) {
+                document.querySelector('iframe.twitter-tweet').style.height = 'auto';
+            }
+        },3000);
+    };
+    if ( version >= 11 ) {
+        check( 3000 );
+    } else {
+        check( 1000 );
+    }
 };
 
 $(window).on('load',function () {
     ifremeSize();
 });
-// $(window).on('resize', function () {
-//     ifremeSize();
-// });
 
 //Audio player
 

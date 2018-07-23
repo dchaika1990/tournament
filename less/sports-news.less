@@ -379,6 +379,10 @@
         background-color: #f5f5fd;
         color: @clr_hover;
       }
+
+      &.hidden{
+        display: none;
+      }
     }
 
     span.tags-item{
@@ -604,6 +608,7 @@
       font-weight: 100;
       color: #ffffff;
       height: 67px;
+      max-height: 70px;
       overflow: hidden;
       margin-bottom: 20px;
       display: block;
@@ -820,6 +825,16 @@
 .slider-wrap{
   .news-grid__link{
     padding-right: 0;
+  }
+}
+
+.widget__twitter .twitter-list .twitter-item{
+  a{
+    display: inline-block;
+    width: 99%;
+  }
+  &__img{
+    max-width: 100%;
   }
 }
 
