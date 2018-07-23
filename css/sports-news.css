@@ -342,6 +342,9 @@
   float: left;
   margin-bottom: 30px;
 }
+.snc-main-wrapper .content:last-child {
+  margin-bottom: 60px;
+}
 .news-item {
   position: relative;
   padding: 15px 30px;
@@ -719,10 +722,9 @@
   font-size: 20px;
   font-weight: 100;
   color: #ffffff;
-  height: 67px;
-  max-height: 70px;
+  height: 80px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: block;
 }
 .news-grid .news-item .news-tags {
@@ -1186,6 +1188,9 @@
     position: absolute;
     bottom: 7px;
     right: 11px;
+  }
+  .snc-main-wrapper .content:last-child {
+    margin-bottom: 30px;
   }
   .sport-news-category-page .topbar__block {
     margin-bottom: 0;
