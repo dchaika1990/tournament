@@ -22,7 +22,7 @@ main.snc-main-wrapper
                     .main-block__content
                         p At the end of the day, the assist for the opening goal WAS given to Debi after it was decided that Fabio’s intervention hadn’t too much to change the course of the ball that was fed to Costa.
                 .main-block__video-html.video-banner
-                    video( poster='./img/video-banner.jpg')
+                    video( poster='./img/video-banner.png')
                         source(  src='./video/soccet360.mp4' type='video/mp4')
                     .video-banner__content
                         span.video-banner__title Reaction to having assist
@@ -66,7 +66,7 @@ main.snc-main-wrapper
                         .main-block__content
                             p Between 1903 and 1940, it was known as the Championship of Catalonia, and enjoyed great prestige and interest at a time where La Liga did not exist. The club that won the title participated with other regional champions in the Spanish Cup, which until the beginning of La Liga in 1929 was the most important tournament in Spanish football.
                     .main-block__video.video-banner
-                        video( poster='./img/video-banner.jpg')
+                        video( poster='./img/video-banner.png')
                             source(  src='./video/soccet360.mp4' type='video/mp4')
                         .video-banner__content
                             span.video-banner__title Reaction to having assist
@@ -99,8 +99,11 @@ main.snc-main-wrapper
                             li Derbi has scored eight of Catalonia’s last nine goals in the Champions League – the other coming from Marco Asensio.
                 .main-block__table.aside-right
                     .main-block__title
-                        span Current standings
-                        a.btn-more DOWNLOAD SOFASCORE APP
+                        .main-block__title_left
+                            span Current standings
+                        .main-block__title_right
+                            a(href='#') Want to follow changes?
+                            a.btn-more DOWNLOAD SOFASCORE APP
                     .main-block__table-content
                         - var standings_team = ["APOEL Niscotia", "Feyenoord", "AEK Athens", "Ajax Amsterdam", "PSV", "FC Utrecht", "FCVitesse", "AZ", "FC Twente", "PEC Zwolle", "ADO Den Haag", "FC Twente", "PEC Zwolle", "ADO Den Haag"];
                         - var standings_icons = ['./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png','./img/icons/icon-team.png'];
@@ -310,11 +313,11 @@ main.snc-main-wrapper
                                         span.thread__user_date  at 11:00 3/5/2017
                                     .thread__right
                                         ul.meta-list
-                                            li.meta-item
-                                                img(src='./img/icons/icon-like-grey.svg' width="12" height="10" alr='icon like')
-                                                | 0
+                                            li.meta-item.heard
+                                                img(src='./img/icons/icon-like-grey.svg' width="12" height="10" alt='icon like')
+                                                span 0
                                             li.meta-item.make-reply
-                                                img(src='./img/icons/reply-icon.svg' width="12" height="10" alr='icon like')
+                                                img(src='./img/icons/reply-icon.svg' width="12" height="10" alt='icon like')
                                                 | Reply
                                 .thread__user_text
                                     p The first of all I’d like to admit he ain’t ready for this whole show, ohmygosh. Whatever. He’s dull.
@@ -329,9 +332,9 @@ main.snc-main-wrapper
                                             span.thread__user_date  at 11:00 3/5/2017
                                         .thread__right
                                             ul.meta-list
-                                                li.meta-item
-                                                    img(src='./img/icons/like-icon-blue.svg' width="12" height="10" alt='icon like')
-                                                    | 5
+                                                li.meta-item.heard.active
+                                                    img(src='./img/icons/icon-like-blue.svg' width="12" height="10" alt='icon like')
+                                                    span 5
                                                 li.meta-item.make-reply
                                                     img(src='./img/icons/reply-icon.svg' width="12" height="10" alt='icon like')
                                                     | Reply

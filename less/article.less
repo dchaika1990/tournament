@@ -319,6 +319,8 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          width: 30px;
+          height: 30px;
         }
         .slick-prev,
         .slick-next{
@@ -333,14 +335,14 @@
           }
         }
         .slick-prev{
-          left: 18px;
+          left: 30px;
           &::before{
-            background: url(../img/icons/slider-r-arrow.svg) center / cover;
+            background: url(../img/icons/slider-r-arrow.svg) center / contain;
             transform: rotate(180deg);
           }
 
           &::after{
-            background: url(../img/icons/slider-l-arrow-hover.svg) center / cover;
+            background: url(../img/icons/slider-l-arrow-hover.svg) center / contain;
             display: none;
           }
 
@@ -355,13 +357,13 @@
           }
         }
         .slick-next{
-          right: 18px;
+          right: 30px;
           &::before{
-            background: url(../img/icons/slider-r-arrow.svg) center / cover;
+            background: url(../img/icons/slider-r-arrow.svg) center / contain;
           }
 
           &::after{
-            background: url(../img/icons/slider-l-arrow-hover.svg) center  / cover;
+            background: url(../img/icons/slider-l-arrow-hover.svg) center  / contain;
             transform: rotate(180deg);
             display: none;
           }
@@ -450,8 +452,27 @@
       }
 
       &__table{
+        padding-top: 18px;
         padding-left: 70px;
         padding-right: 70px;
+
+        .main-block__title{
+          display: flex;
+          justify-content: space-between;
+          &_right{
+            display: flex;
+            align-items: center;
+
+            a:not(.btn-more){
+              color: #a6a6a6;
+              font-size: 14px;
+              letter-spacing: 0.1px;
+              text-transform: none;
+              font-weight: 400;
+              margin-right: 15px;
+            }
+          }
+        }
 
         .btn-more{
           margin: 4px 0 0 auto;
@@ -460,16 +481,16 @@
           position: relative;
 
           &::before{
-            content: 'Want to follow changes?';
-            color: #a6a6a6;
-            position: absolute;
-            top: 50%;
-            left: -94%;
-            font-weight: 400;
-            transform: translateY(-50%);
-            font-size: 14px;
-            letter-spacing: 0.1px;
-            text-transform: none;
+            //content: 'Want to follow changes?';
+            //color: #a6a6a6;
+            //position: absolute;
+            //top: 50%;
+            //left: -94%;
+            //font-weight: 400;
+            //transform: translateY(-50%);
+            //font-size: 14px;
+            //letter-spacing: 0.1px;
+            //text-transform: none;
           }
         }
       }
@@ -687,6 +708,11 @@
         bottom: 0;
         right: 0;
         left: 0;
+        background-image: linear-gradient(to top, rgba(72,110,124,.7), rgba(65,134,177,.7));
+
+        &.play{
+          background: none;
+        }
 
         &:hover .video-banner__controls{
           bottom: 0;
@@ -1092,7 +1118,16 @@
           padding-left: 30px;
 
           .main-block__title{
-            flex-wrap: wrap;
+            flex-direction: column;
+
+            &_right{
+              align-items: center;
+              justify-content: flex-end;
+            }
+
+            .btn-more{
+              margin-left: 0;
+            }
 
             span{
               width: 100%;
@@ -1177,6 +1212,7 @@
 
     iframe.instagram-media{
       margin-bottom: 0!important;
+      min-width: 280px!important;
     }
 
     .snc-main-wrapper{
@@ -1191,6 +1227,12 @@
           margin-top: 5px;
         }
         &__slider{
+          .slick-prev{
+            left: 15px;
+          }
+          .slick-next{
+            right: 15px;
+          }
           .slide{
             height: 174px;
           }
@@ -1209,14 +1251,15 @@
           padding-right: 8px;
 
           .main-block__title{
+
+            &_right{
+              flex-direction: column;
+              align-items: flex-start;
+              margin-top: 5px;
+            }
             .btn-more{
               margin-left: 0;
-              margin-top: 25px;
-
-              &::before{
-                top: -42%;
-                left: 0%;
-              }
+              margin-top: 5px;
             }
           }
         }

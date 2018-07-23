@@ -1163,44 +1163,51 @@ $('.main-block__slider .slider-wrap').slick({
 var userName;
 $('.make-reply').on('click', function () {
     var userName = $(this).closest('.thread__user_title').find('.thread__user_name').text();
-    console.log(userName);
     if ( $(this).closest('.thread__user').hasClass('parent') ) {
-        $(this).closest('.thread__user.parent').next('.thread__derived').append( threadReplyDunc(userName) );
+        console.log(1);
+        if ( $(this).closest('.thread__parent').find('.fromParent').html() ) {
+            $(this).closest('.thread__parent').find('.fromParent').remove();
+        } else {
+            $(this).closest('.thread__user.parent').next('.thread__derived').append( threadReplyDunc(userName, 'fromParent'));
+        }
     } else {
-        $(this).closest('.thread__user').after( threadReplyDunc(userName) );
+        if ( $(this).closest('.thread__parent').find('.fromThread').html() ) {
+            $(this).closest('.thread__parent').find('.fromThread').remove();
+        } else {
+            $(this).closest('.thread__derived').append( threadReplyDunc(userName, 'fromThread') );
+        }
     }
 
-    console.log( threadReplyDunc(userName) );
 });
 
-var threadReplyDunc = function (userName) {
-    var threadReply = `
-        <div class="thread__reply">
-            <div class="thread__user">
-                <div class="thread__user_icon"><img src="./img/icons/user-icon.jpg"
-                                                    alt="user icon"></div>
-                <div class="thread__user_content">
-                    <div class="thread__user_form_title"><span>Reply to</span><span
-                            class="reply-to"> ${userName}</span></div>
-                    <div class="thread__user_input"><textarea maxlength="1000" name="reply"
-                                                              data-from="Nata Smirina"
-                                                              data-to="Jonathan Ive"></textarea><a
-                            class="thread__user_input_submit"><img
-                            src="./img/icons/send-icon.svg" alt="icon send"></a>
-                        <div class="thread__user_input_count-letters"><span>0/1000</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
+var threadReplyDunc = function (userName, from) {
+    var threadReply = '<div class="thread__reply '+ from + '"><div class="thread__user"><div class="thread__user_icon"><img src="./img/icons/user-icon.jpg" alt="user icon"></div><div class="thread__user_content"><div class="thread__user_form_title"><span>Reply to </span><span class="reply-to">' + userName + '</span></div><div class="thread__user_input"><textarea maxlength="1000" name="reply" data-from="Nata Smirina" data-to="Jonathan Ive"></textarea><a class="thread__user_input_submit"><img src="./img/icons/send-icon.svg" alt="icon send"></a><div class="thread__user_input_count-letters"><span>0/1000</span></div></div></div></div></div>';
     return threadReply;
 };
 
-$('.thread__user_input textarea').keyup( function () {
+$(document).on('keyup' ,'.thread__user_input textarea', function () {
     var countPlace = $(this).parent().find('.thread__user_input_count-letters');
     var length = $(this).val().length;
     countPlace.find('span').remove();
-    countPlace.append( `<span>${length}/1000</span>` );
+    countPlace.append( '<span>' + length + '/1000</span>' );
+});
+
+//Icons heard
+
+$('.thread__wrap').on('click','.meta-item.heard', function () {
+    if ( $(this).hasClass('active') ){
+        var placeOfChange = $(this).children('img').attr('src').lastIndexOf('-');
+        var needSrc = $(this).children('img').attr('src').slice(0, placeOfChange) + '-grey.svg';
+        $(this).children('img').attr('src', needSrc);
+        $(this).removeClass('active');
+        $(this).children('span').text( +$(this).children('span').text() - 1 );
+    } else {
+        var placeOfChange = $(this).children('img').attr('src').lastIndexOf('-');
+        var needSrc = $(this).children('img').attr('src').slice(0, placeOfChange) + '-blue.svg';
+        $(this).children('img').attr('src', needSrc);
+        $(this).addClass('active');
+        $(this).children('span').text( +$(this).children('span').text() + 1 );
+    }
 });
 
 // Twitter widget
@@ -1239,7 +1246,7 @@ function audioPlayerControls(html) {
         },
         handle_progress_update: function () {
             var percent = (this.player.currentTime / this.player.duration) * 100;
-            this.progress_field.css('width', `${percent}%`);
+            this.progress_field.css('width', percent + '%');
         },
         handle_time_update: function ( event_obj ) {
             var time = (event_obj.offsetX / this.progress.width()) * this.player.duration ;
@@ -1331,6 +1338,7 @@ function videoPlayerControls(html) {
     var controls = {
         player: html.find('video')[0],
         source: html.find('source')[0],
+        content: html.find(".video-banner__content"),
         progress: html.find(".video-banner__progress"),
         progress_field: html.find(".video-banner__timeline"),
         buffered: html.find(".video-banner__buffered"),
@@ -1339,12 +1347,15 @@ function videoPlayerControls(html) {
         toggle_volume: html.find(".video-banner__volume"),
         toggle_fullscreen: html.find(".video-banner__fullscreen"),
         toggle_quality: html.find(".video-banner__quality li"),
+        toggle_bkg: function () {
+            (this.player.paused) ? this.content.removeClass('play') : this.content.addClass('play');
+        },
         toggle_play: function () {
             (this.player.paused) ? this.player.play() : this.player.pause();
         },
         handle_progress_update: function () {
             var percent = (this.player.currentTime / this.player.duration) * 100;
-            this.progress_field.css('width', `${percent}%`);
+            this.progress_field.css('width', percent + '%');
         },
         handle_time_update: function ( event_obj ) {
             var time = (event_obj.offsetX / this.progress.width()) * this.player.duration ;
@@ -1355,29 +1366,35 @@ function videoPlayerControls(html) {
         }
     };
 
+
     //Play / Pause
     controls.toggle.on('click', function () {
         controls.toggle_play();
+        controls.toggle_bkg();
     });
 
     controls.toggle_center.on('click', function () {
         controls.toggle_play();
+        controls.toggle_bkg();
     });
 
     controls.player.addEventListener("ended", function() {
         controls.player.pause();
         controls.toggle.toggleClass("paused");
+        controls.toggle_bkg();
         controls.toggle_center.toggleClass("paused");
     });
 
     controls.player.addEventListener("play", function() {
         controls.toggle.toggleClass("paused");
         controls.toggle_center.toggleClass("paused");
+        controls.toggle_bkg();
     });
 
     controls.player.addEventListener("pause", function() {
         controls.toggle.toggleClass("paused");
         controls.toggle_center.toggleClass("paused");
+        controls.toggle_bkg();
     });
 
 
