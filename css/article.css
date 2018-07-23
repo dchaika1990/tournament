@@ -102,6 +102,9 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.article-page .thread__left {
+  color: #b2b2b6;
+}
 .article-page .thread__user_name {
   color: #43474d;
 }
