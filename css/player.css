@@ -801,6 +801,9 @@
 .player .nm-grow main .pr-main-wrap.stats-wrap {
   display: none;
 }
+.player .nm-grow main .sr-main-wrapper .sr-player-empty-left img {
+  height: 140px;
+}
 .player .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.summary-btn::before {
   background: url("../img/icons/summary-player.svg") no-repeat center top;
 }
@@ -909,9 +912,6 @@
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
-  }
-  .player .nm-grow main .pr-main-wrap.transfers {
-    padding-top: 28px;
   }
   .player .nm-grow main .pr-main-wrap.about {
     display: block;
