@@ -541,13 +541,13 @@ $('.form-progress-wrapper .nm-toggler').on('click', function () {
 });
 
 //Circle progressbar
-console.dir(document.getElementById('canvas-foreign'));
+// console.dir(document.getElementById('canvas-foreign'));
 
 $(window).on('load', function () {
 
 	if ( $('.main-wrapper').hasClass('team') ) {
         var can1 = document.getElementById('canvas-foreign');
-            console.log(can1);
+            // console.log(can1);
             if ( !can1 ) return false;
             c1 = can1.getContext('2d'),
             can2 = document.getElementById('canvas-national'),
@@ -744,7 +744,7 @@ var countRounds = function () {
     var countShownBlocks = Math.floor(widthBoxScrollBody/155);
 
     countClickNext = lengthBoxScrollBody - countShownBlocks;
-    console.log(countClickPrev, countClickNext, widthBoxScrollBody, lengthBoxScrollBody, countShownBlocks);
+    // console.log(countClickPrev, countClickNext, widthBoxScrollBody, lengthBoxScrollBody, countShownBlocks);
 };
 
 $('.playoff-header .btn-next').on('click', function (e) {
@@ -831,39 +831,25 @@ $('#pr-switch').on('click', function (e) {
 
 // Move blocks on tablet version
 
+var key = 0;
+
 function createLaptopBlocksPlayer() {
-    if ( $('.player main .pr-main-wrap.stats-wrap').html() && $('.player main .pr-main-wrap.player-skills .pr-main.media-wrap').html() ) {
-        return false;
+
+    if ( !key ) {
+        var blockStats = $('aside.aside-right.aside-right-default.nm-block .block1'),
+            blockMedia = $('aside.aside-right.aside-right-default.nm-block .block2');
+
+        $('.player main .pr-main-wrap.stats-wrap').append( '<div class="aside-right aside-right-default nm-block">' );
+        $('.player main .pr-main.media-wrap').append( '<div class="aside-right aside-right-default nm-block">' );
+
+        $('.player main .pr-main-wrap.stats-wrap .aside-right').append( blockStats.clone() );
+        $('.player main .pr-main.media-wrap .aside-right').append( blockMedia.clone() );
+
+        key++;
     }
 
-    $('.player main .pr-main-wrap.player-skills').before('<div class="pr-main-wrap stats-wrap">');
-    $('.player main .pr-main-wrap.player-skills').append('<div class="pr-main media-wrap">');
-
-    var blockStats = $('aside.aside-right.aside-right-default.nm-block .block1'),
-        blockMedia = $('aside.aside-right.aside-right-default.nm-block .block2');
-
-    $('.player main .pr-main-wrap.stats-wrap').append( '<div class="aside-right aside-right-default nm-block">' );
-    $('.player main .pr-main.media-wrap').append( '<div class="aside-right aside-right-default nm-block">' );
-
-    $('.player main .pr-main-wrap.stats-wrap .aside-right').append(blockStats);
-    $('.player main .pr-main.media-wrap .aside-right').append(blockMedia);
 }
 
-// Move blocks from desctop version to laptop
-
-function createLaptopBlocksPlayerBack() {
-    if ( $('.aside-right.aside-right-default.nm-block .block1').html() || $('.aside-right.aside-right-default.nm-block .block2') ) return false;
-
-    var blockStats = $('.aside-right.aside-right-default.nm-block .block1'),
-        blockMedia = $('.aside-right.aside-right-default.nm-block .block2');
-
-    var motherBlock = $('aside.aside-right.aside-right-default.nm-block');
-    motherBlock.append(blockStats);
-    motherBlock.append(blockMedia);
-
-    $('.player main .pr-main-wrap.stats-wrap').remove();
-    $('.player main .pr-main-wrap.player-skills .pr-main.media-wrap').remove();
-}
 
 // Move blocks from laptop version to tablet
 
@@ -883,6 +869,8 @@ function createTabletBlocksSkills() {
 
 function createTabletBlocksSkillsBack() {
     if ( $('.player-skills > .pr-main.attributes').html() ) return false;
+
+    console.log('this');
 
     var attributes = $('.player-skills .pr-main.attributes'),
         position = $('.player-skills .pr-main.position'),
@@ -1042,7 +1030,6 @@ $(window).on('load', function () {
         createTabletBlocksSkillsBack();
         createMobileVersionBack();
     } else {
-        createLaptopBlocksPlayerBack();
         divideOnThreeBack();
         createTabletBlocksSkillsBack();
         createMobileVersionBack();
@@ -1053,6 +1040,7 @@ $(window).on('resize', function () {
     if ( $(window).width() <= 569 ) {
         createMobileVersionResize();
     } else if ( $(window).width() <= 869 ) {
+        divideOnThree();
         createLaptopBlocksPlayer();
         divideOnTwo();
         createTabletBlocksSkills();
@@ -1063,7 +1051,6 @@ $(window).on('resize', function () {
         createTabletBlocksSkillsBack();
         createMobileVersionBack();
     } else {
-        createLaptopBlocksPlayerBack();
         divideOnThreeBack();
         createTabletBlocksSkillsBack();
         createMobileVersionBack();
