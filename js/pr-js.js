@@ -1219,10 +1219,11 @@ var ifremeSize = function () {
                 document.querySelector('iframe.twitter-tweet').contentDocument.querySelector('.EmbeddedTweet').classList.remove('EmbeddedTweet');
                 setTimeout(function () {
                     document.querySelector('iframe.twitter-tweet').style.height = 'auto';
+                    document.querySelector('iframe.twitter-tweet').contentDocument.querySelector('.EmbeddedTweet-tweet').style.paddingBottom = 10;
                 },100)
             }
 
-        },3000);
+        },time);
     };
     if ( version >= 11 ) {
         check( 3000 );
