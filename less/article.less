@@ -181,13 +181,14 @@
         border-left: none;
         background-color: transparent;
         border-bottom: 1px solid  #e6e6e6;
-        resize: none;
+        resize: vertical!important;
         height: 36px;
         font-size: 14px;
         color: #43474d;
-        padding-right: 25px;
+        padding: 5px 35px 5px 0;
         line-height: 1.29;
-        overflow: hidden;
+        overflow-x: hidden!important;
+        overflow-y: hidden!important;
 
         &:focus,
         &:active{
@@ -905,7 +906,7 @@
       }
 
       &__play-button{
-        background: url('../img/icons/music-player-play-blue.svg') no-repeat center / cover;
+        background: url('../img/icons/music-player-play-blue.svg') no-repeat 56% 50%;
         background-size: 13px;
         width: 36px;
         height: 36px;
@@ -916,7 +917,8 @@
         margin-right: 16px;
 
         &.paused{
-          background-image: url('../img/icons/pause-button-blue.svg');
+          background: url('../img/icons/pause-button-blue.svg') no-repeat center;
+          background-size: 13px;
         }
       }
 

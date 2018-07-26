@@ -1211,11 +1211,15 @@ var ifremeSize = function () {
         setTimeout(function () {
             if ( document.querySelector('twitterwidget') ) {
                 document.querySelector('twitterwidget').shadowRoot.querySelector('.EmbeddedTweet').classList.remove('EmbeddedTweet');
-                document.querySelector('twitterwidget').style.height = 'auto';
+                setTimeout(function () {
+                    document.querySelector('twitterwidget').style.height = 'auto';
+                },100)
             }
             if ( document.querySelector('iframe.twitter-tweet') ) {
                 document.querySelector('iframe.twitter-tweet').contentDocument.querySelector('.EmbeddedTweet').classList.remove('EmbeddedTweet');
-                document.querySelector('iframe.twitter-tweet').style.height = 'auto';
+                setTimeout(function () {
+                    document.querySelector('iframe.twitter-tweet').style.height = 'auto';
+                },100)
             }
 
         },3000);
@@ -1223,7 +1227,7 @@ var ifremeSize = function () {
     if ( version >= 11 ) {
         check( 3000 );
     } else {
-        check( 1000 );
+        check( 100 );
     }
 };
 
