@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+    head
+        title MetaScore: matches cancelled
+        include incl/head.pug
+    body.homepage
+        include incl/svg.pug
+
+        .nm-main-overlay
+        //MAIN-WRAPPER BEGIN
+        .main-wrapper.tournament.bmenu.bblock.matches.statistics
+            include incl/header.pug
+            include incl/topbar.pug
+            include incl/above_matches.pug
+            include incl/header-bottom-fixed-matches_statistics.pug
+
+            //GROW BEGIN
+            .nm-grow.nm-big-wrapper
+                .nm-content-overlay
+                include incl/aside_left_matches_statistics.pug
+                include incl/content_matches_statistics.pug
+
+            //GROW END
+            include incl/newstape.pug
+            include incl/footer.pug
+        //MAIN-WRAPPER END
+        include incl/modals.pug
+        include incl/scripts.pug

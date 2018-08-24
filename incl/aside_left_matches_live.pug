@@ -1,0 +1,310 @@
+//ASIDE LEFT BEGIN
+aside.aside-left.aside-left-scrollable.nm-block.details-live__wrap
+    .aside-left-wrapper.aside-left-scrollable-wrapper
+        .nm-scroll-area.scrollbar-outer
+            .nm-aside-match-headblock
+                .nm-team-col.left
+                    .nm-team-badge
+                        img(src="img/icons/badge-apoel.png" alt="APOEL Niscotia")
+
+                    .nm-team-content
+                        .nm-team-name APOEL Niscotia
+                        a.nm-btn.nm-btn-border(href="javascript:void(0)") Follow
+
+                .nm-middle-col
+                    .nm-info
+                        .nm-score
+                            .nm-blue 3 - 0
+
+                .nm-team-col.right
+                    .nm-team-badge
+                        img(src="img/icons/badge-rsc-anderlecht.png" alt="RSC Anderlecht")
+                    .nm-team-content
+                        .nm-team-name RSC Anderlecht
+                        a.nm-btn.nm-btn-border(href="javascript:void(0)") Follow
+            .details
+                .cell.cell--justified.details__time
+                    .cell__section
+                        .cell__content 17 Mar 2017, 21:45
+                    .cell__section
+                        .cell__content.details__timer 45 + 01:46
+                .details__willwin.details-inner-wrap
+                    .s-title Who will win?
+                    .cell.vote__count
+                        .cell__section
+                            .cell__content 1017
+                        .cell__section
+                            .cell__content 373
+                        .cell__section
+                            .cell__content 150
+                    .details__vote.vote
+                        .cell
+                            .cell__section
+                                .cell__content
+                                    button.vote__button.vote__button-green 66%
+                            .cell__section
+                                .cell__content
+                                    button.vote__button 22.2%
+                            .cell__section
+                                .cell__content
+                                    button.vote__button.vote__button-blue 11.8%
+            .statistics-tab
+                .s-title Statistics
+                .nm-tabs-wrapper
+                    ul.nm-tabs-list.nm-small-tabs.nm-statistics-tabs
+                        li.active: a(href="javascript:void(0)") All
+                        li: a(href="javascript:void(0)") 1ST
+                        li: a(href="javascript:void(0)") 2ND
+
+                    .nm-tabs-content
+                        mixin stat(l, m, r, leftbets, rightbest)
+                            .nm-statistic-row
+                                div(class= leftbets ? "nm-best" : "")
+                                    if ((i == 0) || !(l > 0))
+                                        span= l
+                                    if ((i == 1) && (l > 0))
+                                        span= ++l
+                                    if ((i == 2) && (l > 0))
+                                        span= --l
+                                div
+                                    span= m
+                                div(class= rightbest ? "nm-best" : "")
+                                    if ((i == 0) || !(r > 0))
+                                        span= r
+                                    if ((i == 1) && (r > 0))
+                                        span= ++r
+                                    if ((i == 2) && (r > 0))
+                                        span= --r
+
+                        - for (i=0; i<3; i++) {
+                        div(class="nm-tab-content" + ((i == 0) ? " active" : ""))
+                            .nm-statistics-section
+                                .nm-statistics-block
+                                    +stat("47%", "Ball possession", "53%", "", "")
+
+                                .nm-statistics-block
+                                    +stat("13", "Total shot", "10", "+", "")
+                                    +stat("13", "Shots on target ", "10", "+", "")
+                                    +stat("13", "Shots off target ", "13", "", "")
+                                    +stat("3", " Blocked shots ", "12", "", "+")
+
+                                .nm-statistics-block
+                                    +stat("2", "Shots inside box", "4", "", "+")
+                                    +stat("6", "Shots outside box", "6", "", "")
+                                    +stat("6", "Big canses created", "6", "", "")
+                                    +stat("13", "Hit woodwork", "10", "+", "")
+                                    +stat("13", "Goalkeepers saves", "10", "+", "")
+
+                                .nm-statistics-block
+                                    +stat("6", "Corner kicks", "2", "+", "")
+                                    +stat("1", "Passes", "4", "", "+")
+                                    +stat("6", "Accurate passes", "6", "", "")
+                                    +stat("75%", "Accurate passes %", "75%", "", "")
+
+                                .nm-statistics-block
+                                    +stat("0", "Offsides", "0", "", "")
+                                    +stat("4", "Fouls", "4", "", "")
+                                    +stat("2", "Yellow cards", "2", "", "")
+
+                                .nm-statistics-block
+                                    +stat("6", "Duels won", "6", "", "")
+                                    +stat("2", "Aerials won", "2", "", "")
+                        -}
+
+
+            .details.bg-gray
+                .details__willwin.odds__wrap.details-inner-wrap
+                    a(href="javascript:void(0)").match__odds.odds
+                        .odds__left
+                            .odds__left-bottom
+                                .s-title Odds
+                                span()
+                                    span Full time
+                        .odds__right
+                            .odds__right-top
+                                div 1
+                                div Х
+                                div 2
+                            .odds__right-bottom
+                                span( data-tooltip='Tooltip text' class='odds__value up') 2.90
+                                span( data-tooltip='Tooltip text' class='odds__value down') 3.25
+                                span( class='odds__value up') 2.70
+                            .odds__right-bottom.odds__right-value
+                                span(class='odds__value') 3.75
+                                span(class='odds__value') 2.75
+                                span(class='odds__value') 2.25
+                    a(href="javascript:void(0)").match__odds.odds
+                        .odds__left
+                            .odds__left-bottom
+                                span()
+                                    span Double chanse
+                        .odds__right
+                            .odds__right-top
+                                div 1Х
+                                div Х2
+                                div 12
+                            .odds__right-bottom
+                                span.nm-blue-bg( class='odds__value up')
+                                    span(data-tooltip='Tooltip text') 2.90
+                                span( class='odds__value down')
+                                    span(data-tooltip='Tooltip text') 3.25
+                                span.nm-grey-bg( class='odds__value up')
+                                    span 2.70
+                            .odds__right-bottom.odds__right-value
+                                span(class='odds__value') 3.75
+                                span(class='odds__value') 2.75
+                                span(class='odds__value') 2.25
+                    a(href="javascript:void(0)").match__odds.odds
+                        .odds__left
+                            .odds__left-bottom
+                                span()
+                                    span 1st half
+                        .odds__right
+                            .odds__right-top
+                                div 1
+                                div Х
+                                div 2
+                            .odds__right-bottom
+                                span.nm-grey-bg( class='odds__value up')
+                                    span(data-tooltip='Tooltip text') 2.90
+                                span( class='odds__value down')
+                                    span(data-tooltip='Tooltip text') 3.25
+                                span( class='odds__value up')
+                                    span 2.70
+                            .odds__right-bottom.odds__right-value
+                                span(class='odds__value') 3.75
+                                span(class='odds__value') 2.75
+                                span(class='odds__value') 2.25
+                    a(href="javascript:void(0)").match__odds.odds
+                        .odds__left
+                            .odds__left-bottom
+                                span()
+                                    span Draw no bet
+                        .odds__right
+                            .odds__right-top
+                                div 1
+                                div
+                                div 2
+                            .odds__right-bottom
+                                span( data-tooltip='Tooltip text' class='odds__value up') 2.90
+                                span( data-tooltip='Tooltip text' class='odds__value')
+                                span( class='odds__value up') 2.70
+                            .odds__right-bottom.odds__right-value
+                                span(class='odds__value') 3.75
+                                span(class='odds__value') 2.75
+                                span(class='odds__value') 2.25
+                    a(href="javascript:void(0)").match__odds.odds
+                        .odds__left
+                            .odds__left-bottom
+                                span()
+                                    span Both teams to score
+                        .odds__right
+                            .odds__right-top
+                                div Yes
+                                div
+                                div No
+                            .odds__right-bottom
+                                span( data-tooltip='Tooltip text' class='odds__value up') 2.90
+                                span( data-tooltip='Tooltip text' class='odds__value')
+                                span( class='odds__value up') 2.70
+                            .odds__right-bottom.odds__right-value
+                                span(class='odds__value') 3.75
+                                span(class='odds__value') 2.75
+                                span(class='odds__value') 2.25
+                    a(href="javascript:void(0)").match__odds.odds
+                        .odds__left
+                            .odds__left-bottom
+                                span()
+                                    span First team to score
+                        .odds__right
+                            .odds__right-top
+                                div team1
+                                div no-goal
+                                div team2
+                            .odds__right-bottom
+                                span( data-tooltip='Tooltip text' class='odds__value up') 2.90
+                                span( data-tooltip='Tooltip text' class='odds__value down') 3.25
+                                span( class='odds__value up') 2.70
+                            .odds__right-bottom.odds__right-value
+                                span(class='odds__value') 3.75
+                                span(class='odds__value') 2.75
+                                span(class='odds__value') 2.25
+
+                    .odds__goals
+                        .odds
+                            .odds__right
+                                .odds__right-top
+                                    .odds__goals-title Match <br> goals
+                                    div Over
+                                    div Under
+                                .odds__right-bottom
+                                    a(href='#' class='odds__value') 0.5
+                                    a(href='#' class='odds__value up') 2.90
+                                    a(href='#' class='odds__value up') 2.70
+                        .odds
+                            .odds__right
+                                .odds__right-bottom
+                                    a(href='#' class='odds__value') 1.5
+                                    a(href='#' class='odds__value down') 2.90
+                                    a(href='#' class='odds__value up') 2.70
+                        .odds
+                            .odds__right
+                                .odds__right-bottom
+                                    a(href='#' class='odds__value') 2.5
+                                    a(href='#' class='odds__value down') 2.90
+                                    a(href='#' class='odds__value up') 2.70
+                        .odds
+                            .odds__right
+                                .odds__right-bottom
+                                    a(href='#' class='odds__value') 3.5
+                                    a(href='#' class='odds__value down') 2.90
+                                    a(href='#' class='odds__value up') 2.70
+                        .odds
+                            .odds__right
+                                .odds__right-bottom
+                                    a(href='#' class='odds__value') 4.5
+                                    a(href='#' class='odds__value down') 2.90
+                                    a(href='#' class='odds__value up') 2.70
+                        .odds
+                            .odds__right
+                                .odds__right-bottom
+                                    a(href='#' class='odds__value') 5.5
+                                    a(href='#' class='odds__value down') 2.90
+                                    a(href='#' class='odds__value up') 2.70
+            .matchinfo
+                .s-title Match info
+                .odds
+                    .odds__left
+                        div Start date
+                    .odds__right
+                        div 17. Mar 2017, 21:45
+            .about.bg-gray
+                .s-title About
+                p AOK Kerkyra Olympiacos live score (and video online live stream*) starts on 5.4.2017. at 16:30 UTC time at Kerkyra Stadium stadium, Kerkyra, Greece in Super League - Greece. Here on SofaScore livescore you can find all AOK Kerkyra vs Olympiacos previous results sorted by their H2H matches. Links to AOK Kerkyra vs. Olympiacos video highlights are collected in the Media tab for the most popular matches as soon as video appear on video hosting sites like Youtube or Dailymotion. We&apos;re not responsible for any video content, please contact video file owners or hosters for any legal complaints.
+                p You can watch AOK Kerkyra vs. Olympiacos live stream online if you are registered member of bet365, the leading online betting company that has streaming coverage for more than 70.000 live sports events with live betting during the year. If this match is covered by bet365 live streaming you can watch football match AOK Kerkyra Olympiacos on your iPhone, iPad, Android or Windows phone. It&apos;s also easy to find video highlights and news from the most popular sports leagues in the world. Live bet365 odds are viewable in SofaScore&apos;s football livescore section. We don&apos;t offer a TV schedule here, if you would like to watch this match on TV you&apos;ll probably find it it on some more popular channels like iTV, BBC, Al Jazeera Sports, Sky Sports, Gol TV, Canal+, SportTV, FOX Soccer, Setanta, ESPN, etc.
+                .about__event-details
+                    .about__title
+                        span Event details:
+                    ul
+                        li
+                            span.title name:
+                            span.name AOK Kerkyra - Olympiacos
+                        li
+                            span.title date:
+                            span.date April 5, 2017
+                        li
+                            span.title time:
+                            span.date 16:30 UTC
+                        li
+                            span.title venue:
+                            span.date Kerkyra Stadium, Kerkyra , Greece
+                .about__more-details
+                    .about__title
+                        span More details:
+                    a(href='javascript:void(0)') OK Kerkyra live score, schedule and results
+                    br
+                    a(href='javascript:void(0)') Olympiacos live score, schedule and results
+
+                    p SofaScore livescore is available as iPhone and iPad app, Android app on Google Play and Windows phone app. You can find us in all stores on different languages as &quot;SofaScore&quot;. Install SofaScore app on and follow AOK Kerkyra Olympiacos live on your mobile!
+
+//ASIDE LEFT END

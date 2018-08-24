@@ -297,6 +297,7 @@ $(document).ready(function () {
 		$(".nm-scroll-area").scrollbar({
 			disableBodyScroll: true
 		})
+
 	}
     
 	//hide search result tabs on tablet
@@ -520,32 +521,32 @@ $(document).on("mouseleave", ".nm-share-block", function() {
 })
 
 //aside tabs
-$(document).on("click", ".nm-tabs-list a", function (e) {
-	e.preventDefault();
-	console.log( e.target );
-	var list = $(this).closest(".nm-tabs-list");
-	var container = $(this).closest(".nm-tabs-wrapper").find(".nm-tabs-content:first");
-	var cur = 0;
-	var count = list.find("a").length;
-	if (!$(this).closest("li").hasClass("active")) {
-		$(this).closest("li").siblings("li").removeClass("active");
-		$(this).closest("li").addClass("active");
 
-		for (i = 0; i < count; i++) {
-			if (list.find("li").eq(i).hasClass("active")) {
-				cur = i
-			}
-		}
+$(".nm-tabs-list li a:not(#changeFormTab .nm-tabs-list li a)").on("click", function (e) {
+    e.preventDefault();
+    var list = $(this).closest(".nm-tabs-list");
+    var container = $(this).closest(".nm-tabs-wrapper").find(".nm-tabs-content:first");
+    var cur = 0;
+    var count = list.find("a").length;
+    if (!$(this).closest("li").hasClass("active")) {
+        $(this).closest("li").siblings("li").removeClass("active");
+        $(this).closest("li").addClass("active");
 
-		container.children(".nm-tab-content").removeClass("active");
-		container.children(".nm-tab-content").eq(cur).addClass("active");
-		
-		//lineups field swipe
-		if ($(this).closest(".nm-tabs-list").hasClass("nm-lineups-tabs")) {
-			$(this).closest(".nm-tabs-wrapper").find(".nm-field-wrap").toggleClass("left-side")
-		}
-	}
-})
+        for (i = 0; i < count; i++) {
+            if (list.find("li").eq(i).hasClass("active")) {
+                cur = i
+            }
+        }
+
+        container.children(".nm-tab-content").removeClass("active");
+        container.children(".nm-tab-content").eq(cur).addClass("active");
+
+        //lineups field swipe
+        if ($(this).closest(".nm-tabs-list").hasClass("nm-lineups-tabs")) {
+            $(this).closest(".nm-tabs-wrapper").find(".nm-field-wrap").toggleClass("left-side")
+        }
+    }
+});
 
 //fix for aside dropdown overflowing
 $(".aside-right .pr-favorite-btn.nm-toggler").on("click", function(){

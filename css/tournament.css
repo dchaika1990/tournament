@@ -1346,7 +1346,7 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 150;
+  z-index: 89;
   width: 100%;
   background-color: #fff;
   padding: 11px 0;
@@ -1390,7 +1390,8 @@
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.props-btn,
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.matches-btn,
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn,
-.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn {
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.details-btn {
   position: relative;
 }
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.summary-btn::before,
@@ -1399,7 +1400,8 @@
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.props-btn::before,
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.matches-btn::before,
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn::before,
-.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn::before {
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.details-btn::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1414,7 +1416,8 @@
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.props-btn::after,
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.matches-btn::after,
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn::after,
-.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn::after {
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.details-btn::after {
   content: '';
   position: absolute;
   top: 0;
@@ -1429,7 +1432,8 @@
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.props-btn.active::before,
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.matches-btn.active::before,
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn.active::before,
-.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn.active::before {
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn.active::before,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.details-btn.active::before {
   opacity: 0;
 }
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.summary-btn.active::after,
@@ -1438,7 +1442,8 @@
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.props-btn.active::after,
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.matches-btn.active::after,
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.team-btn.active::after,
-.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn.active::after {
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.media-btn.active::after,
+.tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.details-btn.active::after {
   opacity: 1;
 }
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul li.summary-btn::before {
@@ -1606,6 +1611,20 @@
     display: flex;
   }
 }
+@media (max-width: 1140px) {
+  .tournament.mblock .pr-favorites-main .pr-favorites-right {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    overflow: hidden;
+  }
+  .tournament.mblock .pr-favorites-right.pr-favorites-scrollable:not(.open) .aside-right-scrollable-wrapper {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+}
 @media (max-width: 1030px) {
   .tournament .nm-grow main .pr-main-wrap.progress .pr-main .progressbar ul li .li-popup.nm-dropdown {
     left: -12px;
@@ -1648,6 +1667,12 @@
   }
   .tournament .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-right .aside-right.nm-block .aside-right-wrapper.aside-right-scrollable-wrapper .scroll-element.scroll-y.scroll-scrolly_visible {
     right: 16px;
+  }
+  .tournament.mblock .pr-favorites-main .pr-favorites-right {
+    position: absolute;
+    top: 65px;
+    right: 29px;
+    overflow: visible;
   }
 }
 @media (max-width: 869px) {

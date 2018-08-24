@@ -861,45 +861,45 @@ main
                                                                         - var table_score1=["", "2"];
                                                                         - var table_score2=["", "3"];
                                                                         - for (m=0; m<2; m++) {
-                                                                        div(class="nm-tr " + ((m == 1) && (i == 2) ? "line_win" : "") + ((m == 1) && (i == 0) ? "line_lose" : ""))
-                                                                            .nm-td.nm-table-datetime
-                                                                                .nm-grey-normal 01 Apr 17
-                                                                                .nm-grey-normal 19:00
+                                                                            div(class="nm-tr " + ((m == 1) && (i == 2) ? "line_win" : "") + ((m == 1) && (i == 0) ? "line_lose" : ""))
+                                                                                .nm-td.nm-table-datetime
+                                                                                    .nm-grey-normal 01 Apr 17
+                                                                                    .nm-grey-normal 19:00
 
-                                                                            .nm-td.nm-table-teams
-                                                                                div APOEL Niscotia
-                                                                                div RSC Anderlecht
+                                                                                .nm-td.nm-table-teams
+                                                                                    div APOEL Niscotia
+                                                                                    div RSC Anderlecht
 
-                                                                            .nm-td.nm-table-score
-                                                                                div= table_score1[m]
-                                                                                div(class= (m == 1) ? "win" : "")= table_score2[m]
+                                                                                .nm-td.nm-table-score
+                                                                                    div= table_score1[m]
+                                                                                    div(class= (m == 1) ? "win" : "")= table_score2[m]
 
-                                                                            .nm-td.nm-table-icon
-                                                                                - if (m==0)
-                                                                                a(href="javascript:void(0)")
-                                                                                    img(src="img/icons/icon-matches-statistics.svg" alt="stat" width="9" height="9")
-                                                                                - if (m==1)
-                                                                                a(href="javascript:void(0)")
-                                                                                    img(src="img/icons/icon-matches-highlight.svg" alt="view" width="9" height="9")
+                                                                                .nm-td.nm-table-icon
+                                                                                    - if (m==0)
+                                                                                        a(href="javascript:void(0)")
+                                                                                            img(src="img/icons/icon-matches-statistics.svg" alt="stat" width="9" height="9")
+                                                                                    - if (m==1)
+                                                                                        a(href="javascript:void(0)")
+                                                                                            img(src="img/icons/icon-matches-highlight.svg" alt="view" width="9" height="9")
 
-                                                                            .nm-td.nm-table-result
-                                                                                - if (m==0||i==1) {
-                                                                                .pr-favorite-container.nm-toogle-div
-                                                                                    a.pr-favorite-btn.nm-toggler(href='javascript:void(0)')
-                                                                                        i(class='icon-icon-favorite')
-                                                                                    .nm-dropdown.pr-dropdown-favorite
-                                                                                        ul
-                                                                                            li
-                                                                                                a(href="javascript:void(0)").pr-remove
-                                                                                                    | Remove
-                                                                                            li
-                                                                                                a(href="javascript:void(0)").pr-mute
-                                                                                                    | Mute this event
-                                                                                -}
-                                                                                - if (m==1&&i==2)
-                                                                                .nm-res-letter W
-                                                                                - if (m==1&&i==0)
-                                                                                .nm-res-letter L
+                                                                                .nm-td.nm-table-result
+                                                                                    - if (m==0||i==1) {
+                                                                                        .pr-favorite-container.nm-toogle-div
+                                                                                            a.pr-favorite-btn.nm-toggler(href='javascript:void(0)')
+                                                                                                i(class='icon-icon-favorite')
+                                                                                            .nm-dropdown.pr-dropdown-favorite
+                                                                                                ul
+                                                                                                    li
+                                                                                                        a(href="javascript:void(0)").pr-remove
+                                                                                                            | Remove
+                                                                                                    li
+                                                                                                        a(href="javascript:void(0)").pr-mute
+                                                                                                            | Mute this event
+                                                                                    -}
+                                                                                    - if (m==1&&i==2)
+                                                                                        .nm-res-letter W
+                                                                                    - if (m==1&&i==0)
+                                                                                        .nm-res-letter L
                                                                         -}
 
                                                                 .nm-streaks-matches-block
@@ -909,40 +909,40 @@ main
                                                                         - var table_score3=["2", "3"];
                                                                         - var table_score4=["2", "2"];
                                                                         - for (m=0; m<2; m++) {
-                                                                        div(class="nm-tr " + ((m == 0) ? "line_draw" : "") + ((m == 1 && i == 2) ? "line_lose" : "") + ((m == 1 && i == 0) ? "line_win" : ""))
-                                                                            .nm-td.nm-table-datetime
-                                                                                .nm-grey-normal 01 Apr 17
-                                                                                .nm-grey-normal 19:00
+                                                                            div(class="nm-tr " + ((m == 0) ? "line_draw" : "") + ((m == 1 && i == 2) ? "line_lose" : "") + ((m == 1 && i == 0) ? "line_win" : ""))
+                                                                                .nm-td.nm-table-datetime
+                                                                                    .nm-grey-normal 01 Apr 17
+                                                                                    .nm-grey-normal 19:00
 
-                                                                            .nm-td.nm-table-teams
-                                                                                div APOEL Niscotia
-                                                                                div RSC Anderlecht
+                                                                                .nm-td.nm-table-teams
+                                                                                    div APOEL Niscotia
+                                                                                    div RSC Anderlecht
 
-                                                                            .nm-td.nm-table-score
-                                                                                div(class= (m == 1) ? "win" : "")= table_score3[m]
-                                                                                div= table_score4[m]
+                                                                                .nm-td.nm-table-score
+                                                                                    div(class= (m == 1) ? "win" : "")= table_score3[m]
+                                                                                    div= table_score4[m]
 
-                                                                            .nm-td.nm-table-icon
+                                                                                .nm-td.nm-table-icon
 
-                                                                            .nm-td.nm-table-result
-                                                                                - if (m==0&&i!==1)
-                                                                                .nm-res-letter D
-                                                                                - if (m==1 && i==2)
-                                                                                .nm-res-letter L
-                                                                                - if (m==1 && i==0)
-                                                                                .nm-res-letter W
-                                                                                - if (i==1)
-                                                                                .pr-favorite-container.nm-toogle-div
-                                                                                    a.pr-favorite-btn.nm-toggler(href='javascript:void(0)')
-                                                                                        i(class='icon-icon-favorite')
-                                                                                    .nm-dropdown.pr-dropdown-favorite
-                                                                                        ul
-                                                                                            li
-                                                                                                a(href="javascript:void(0)").pr-remove
-                                                                                                    | Remove
-                                                                                            li
-                                                                                                a(href="javascript:void(0)").pr-mute
-                                                                                                    | Mute this event
+                                                                                .nm-td.nm-table-result
+                                                                                    - if (m==0&&i!==1)
+                                                                                        .nm-res-letter D
+                                                                                    - if (m==1 && i==2)
+                                                                                        .nm-res-letter L
+                                                                                    - if (m==1 && i==0)
+                                                                                        .nm-res-letter W
+                                                                                    - if (i==1)
+                                                                                        .pr-favorite-container.nm-toogle-div
+                                                                                            a.pr-favorite-btn.nm-toggler(href='javascript:void(0)')
+                                                                                                i(class='icon-icon-favorite')
+                                                                                            .nm-dropdown.pr-dropdown-favorite
+                                                                                                ul
+                                                                                                    li
+                                                                                                        a(href="javascript:void(0)").pr-remove
+                                                                                                            | Remove
+                                                                                                    li
+                                                                                                        a(href="javascript:void(0)").pr-mute
+                                                                                                            | Mute this event
                                                                         -}
                                                         -}
 

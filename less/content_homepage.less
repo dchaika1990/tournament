@@ -139,10 +139,14 @@
 	&-content{
 		position: relative;
 		.pr-arrow{
-			position: absolute;
-			top: 26px;
-			right: 5px;
 			display: none;
+			position: absolute;
+			top: 20px;
+			right: 5px;
+			padding-left: 25px;
+			padding-top: 6px;
+			padding-bottom: 6px;
+
 			svg{
 				transform: rotate(90deg);
 				fill: #a8adb2;
@@ -834,12 +838,42 @@
 		&-content-row{
 			&-title{
 				&-left{
-				.pr-country-name{
-					.pr-cup-name{
-						a.pr-cup-link{
-							max-width: 165px;
+					.pr-country-name{
+						.pr-mainland-name{
+							a.pr-mainland-link{
+								&:hover{
+									color: #4186b1;
+								}
 							}
 						}
+						.pr-cup-name{
+							a.pr-cup-link{
+								max-width: 165px;
+
+								&:hover{
+									color: inherit;
+								}
+							}
+						}
+						&.open{
+							.pr-mainland-name{
+								a.pr-mainland-link{
+									&:hover{
+										color: #77b1d5;
+									}
+								}
+							}
+							.pr-cup-name{
+								a.pr-cup-link{
+									max-width: 165px;
+
+									&:hover{
+										color: #4186b1;
+									}
+								}
+							}
+						}
+
 					}
 				}
 				&-right{

@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+	head
+		title MetaScore: App Promo
+		include incl/head
+	body.app_promo
+		include incl/svg
+			
+		.nm-main-overlay
+		//MAIN-WRAPPER BEGIN
+		.main-wrapper
+			include incl/header
+			include incl/topbar
+
+			//GROW BEGIN
+			.nm-grow.nm-big-wrapper
+				.nm-content-overlay
+				
+				include incl/content_app_promo
+
+
+			//GROW END
+			include incl/newstape
+			include incl/footer
+		//MAIN-WRAPPER END
+		include incl/modals
+		include incl/scripts
