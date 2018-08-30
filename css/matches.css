@@ -12,6 +12,9 @@ header.indexOut,
 .nm-info {
   text-align: center;
 }
+.matches.chat .scrollbar-outer > .scroll-content.scroll-scrolly_visible {
+  left: 0;
+}
 .matches.chat .thread__wrap {
   width: 373px;
   -webkit-flex-shrink: 0;
@@ -132,10 +135,10 @@ header.indexOut,
   padding-bottom: 9px;
 }
 .matches.chat .thread__wrap .thread__content {
-  padding: 15px 30px 0 30px;
+  padding: 15px 30px 0 18px;
 }
 .matches.chat .thread__wrap .thread__content_block {
-  max-height: 246px;
+  max-height: 220px;
   padding-left: 30px;
   padding-right: 15px;
 }
@@ -209,11 +212,14 @@ header.indexOut,
   text-transform: uppercase;
   font-family: 'Gotham Pro', sans-serif;
   color: #a8adb2;
-  margin-left: 10px;
   font-weight: 500;
+}
+.matches.chat .thread__wrap .thread__radio input {
+  display: none;
 }
 .matches.chat .thread__wrap .thread__radio label {
   cursor: pointer;
+  margin-left: 15px;
 }
 .matches.chat .thread__wrap .thread__radio input[type=radio]:checked + label {
   color: #486e7c;
@@ -243,6 +249,7 @@ header.indexOut,
 }
 .matches.chat .thread__wrap .thread__btn button img {
   max-width: 100%;
+  max-height: 100%;
 }
 .matches.chat .thread__wrap .thread__left {
   display: -webkit-box;
@@ -285,6 +292,7 @@ header.indexOut,
   display: none;
 }
 .matches.chat .thread__wrap .thread__wrap_input {
+  background: #fff;
   border-top: 1px solid #f4f4f4;
   position: absolute;
   left: 0;
@@ -750,6 +758,18 @@ header.indexOut,
   -webkit-border-radius: 5px 0 0 5px;
           border-radius: 5px 0 0 5px;
 }
+.matches .nm-grow main .pr-main-wrap.video-stream .video-banner__play {
+  opacity: 1;
+}
+.matches .nm-grow main .pr-main-wrap.video-stream .video-banner__controls {
+  -webkit-transition: none;
+  transition: none;
+}
+.matches .nm-grow main .pr-main-wrap.video-stream .video-banner__content:hover .video-banner__controls {
+  opacity: 0;
+  -webkit-transition: none;
+  transition: none;
+}
 .matches .nm-grow main .pr-main-wrap.video-stream .video-about {
   width: 373px;
   -webkit-flex-shrink: 0;
@@ -992,6 +1012,12 @@ header.indexOut,
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
+}
+.matches .nm-grow main .pr-main-wrap.lineups .pr-main .nm-tabs-list li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .matches .nm-grow main .pr-main-wrap.lineups .pr-main .nm-tabs-list li:first-child {
   width: auto;
@@ -1416,7 +1442,7 @@ header.indexOut,
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  padding-left: 30px;
+  padding-left: 29px;
   padding-right: 30px;
   z-index: 151;
   width: 100%;
@@ -2160,6 +2186,7 @@ header.indexOut,
 .matches .aside-left .matchinfo .s-title {
   text-align: left;
   margin-left: 0;
+  border-bottom: none;
 }
 .matches .aside-left .matchinfo .odds {
   border-bottom: 1px solid #f4f4f4;
@@ -2453,6 +2480,7 @@ header.indexOut,
 .matches .aside-left .timing__eventtime {
   font-weight: bold;
   color: #3e80a9;
+  margin-right: 3px;
 }
 .matches .aside-left .timing__eventtime sup {
   position: relative;
@@ -2461,10 +2489,11 @@ header.indexOut,
   margin-left: 1px;
 }
 .matches .aside-left .timing__event {
-  -webkit-flex-basis: 16px;
-      -ms-flex-preferred-size: 16px;
-          flex-basis: 16px;
   position: relative;
+  width: 14px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }
 .matches .aside-left .timing__event img {
   position: absolute;
@@ -2494,10 +2523,12 @@ header.indexOut,
   .matches.live .nm-grow main .pr-main-wrap.video-stream {
     display: none;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.video-stream {
+  .matches.planned .nm-grow main .pr-main-wrap.video-stream,
+  .matches.postponed .nm-grow main .pr-main-wrap.video-stream {
     display: none;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.video-about {
+  .matches.planned .nm-grow main .pr-main-wrap.video-about,
+  .matches.postponed .nm-grow main .pr-main-wrap.video-about {
     display: none;
   }
   .matches aside.aside-left {
@@ -2805,6 +2836,12 @@ header.indexOut,
   .matches.statistics .nm-grow main .pr-main-wrap.lineups .lineups-tab {
     display: none;
   }
+  .matches.statistics .nm-grow main .pr-main-wrap.aside-center .aside-left-scrollable-wrapper > .scroll-wrapper > .scroll-content > .nm-tabs-list li:nth-child(2) {
+    display: none;
+  }
+  .matches.statistics .nm-grow main .pr-main-wrap.aside-center .aside-left-scrollable-wrapper > .scroll-wrapper > .scroll-content > .nm-tabs-content .nm-tab-content:nth-child(2) {
+    display: none;
+  }
   .matches.statistics .nm-grow main .pr-main-wrap.aside-center .ma_button.left {
     display: block;
   }
@@ -2827,7 +2864,8 @@ header.indexOut,
   .matches.live .nm-grow main .pr-main-wrap.video-stream {
     display: block;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.video-stream {
+  .matches.planned .nm-grow main .pr-main-wrap.video-stream,
+  .matches.postponed .nm-grow main .pr-main-wrap.video-stream {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2838,11 +2876,13 @@ header.indexOut,
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.video-stream .video-banner {
+  .matches.planned .nm-grow main .pr-main-wrap.video-stream .video-banner,
+  .matches.postponed .nm-grow main .pr-main-wrap.video-stream .video-banner {
     -webkit-border-radius: 5px 5px 0 0;
             border-radius: 5px 5px 0 0;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.video-stream .thread__wrap.pr-main {
+  .matches.planned .nm-grow main .pr-main-wrap.video-stream .thread__wrap.pr-main,
+  .matches.postponed .nm-grow main .pr-main-wrap.video-stream .thread__wrap.pr-main {
     height: 380px;
     width: 100%;
     margin-left: 0;
@@ -2855,7 +2895,7 @@ header.indexOut,
     width: calc( 100% - 269px );
   }
   .matches .nm-grow main .pr-main-wrap.aside-center .video-stream {
-    display: none;
+    display: none!important;
   }
   .matches .nm-grow main .pr-main-wrap.aside-center .nm-aside-match-headblock {
     padding-left: 8px;
@@ -3023,10 +3063,12 @@ header.indexOut,
     right: 0;
     top: 0px;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.aside-center .matchinfo-block {
+  .matches.planned .nm-grow main .pr-main-wrap.aside-center .matchinfo-block,
+  .matches.postponed .nm-grow main .pr-main-wrap.aside-center .matchinfo-block {
     display: none;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.aside-center .pr-main-wrap.video-stream {
+  .matches.planned .nm-grow main .pr-main-wrap.aside-center .pr-main-wrap.video-stream,
+  .matches.postponed .nm-grow main .pr-main-wrap.aside-center .pr-main-wrap.video-stream {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3036,44 +3078,47 @@ header.indexOut,
     padding-right: 8px;
     padding-bottom: 8px;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.aside-center .pr-main-wrap.video-stream .video-banner {
+  .matches.planned .nm-grow main .pr-main-wrap.aside-center .pr-main-wrap.video-stream .video-banner,
+  .matches.postponed .nm-grow main .pr-main-wrap.aside-center .pr-main-wrap.video-stream .video-banner {
     -webkit-border-radius: 5px;
             border-radius: 5px;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.aside-center .pr-main-wrap.video-stream .thread__wrap {
+  .matches.planned .nm-grow main .pr-main-wrap.aside-center .pr-main-wrap.video-stream .thread__wrap,
+  .matches.postponed .nm-grow main .pr-main-wrap.aside-center .pr-main-wrap.video-stream .thread__wrap {
     display: none;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.video-stream {
+  .matches.planned .nm-grow main .pr-main-wrap.video-stream,
+  .matches.postponed .nm-grow main .pr-main-wrap.video-stream {
     display: none;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.lineups .pr-main .pr-main-title {
+  .matches .nm-grow main .pr-main-wrap.lineups .pr-main .pr-main-title {
     display: block;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.lineups .pr-main .nm-tabs-list {
+  .matches .nm-grow main .pr-main-wrap.lineups .pr-main .nm-lineups-tabs {
     padding-left: 8px;
     padding-right: 8px;
     padding-bottom: 8px;
     width: 100%;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.lineups .pr-main .nm-tabs-list ul {
+  .matches .nm-grow main .pr-main-wrap.lineups .pr-main .nm-lineups-tabs ul {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.lineups .pr-main .nm-tabs-list li > a {
+  .matches .nm-grow main .pr-main-wrap.lineups .pr-main .nm-lineups-tabs li > a {
     font-size: 11px;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.lineups .pr-main .nm-tabs-list li > a img {
+  .matches .nm-grow main .pr-main-wrap.lineups .pr-main .nm-lineups-tabs li > a img {
     height: 20px;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.lineups .pr-main .nm-players-lineups-block {
+  .matches .nm-grow main .pr-main-wrap.lineups .pr-main .nm-players-lineups-block {
     padding-left: 8px;
     padding-right: 8px;
     padding-bottom: 8px;
     position: relative;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.lineups .pr-main .nm-players-lineups-block::after {
+  .matches .nm-grow main .pr-main-wrap.lineups .pr-main .nm-players-lineups-block::after {
     position: absolute;
     content: '';
     display: inline-block;
@@ -3085,24 +3130,21 @@ header.indexOut,
     bottom: 0;
     width: 65px;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.lineups .pr-main .nm-players-lineups-block .nm-field-wrap {
+  .matches .nm-grow main .pr-main-wrap.lineups .pr-main .nm-players-lineups-block .nm-field-wrap {
     height: 333px;
     width: 530px;
     -webkit-transform: translateX(-272px);
         -ms-transform: translateX(-272px);
             transform: translateX(-272px);
   }
-  .matches.planned .nm-grow main .pr-main-wrap.lineups .pr-main .nm-players-lineups-block .nm-field-wrap.left-side {
+  .matches .nm-grow main .pr-main-wrap.lineups .pr-main .nm-players-lineups-block .nm-field-wrap.left-side {
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
   }
-  .matches.planned .nm-grow main .pr-main-wrap.lineups .pr-main .nm-players-lineups-block .nm-field-wrap .nm-lineup-scheme {
+  .matches .nm-grow main .pr-main-wrap.lineups .pr-main .nm-players-lineups-block .nm-field-wrap .nm-lineup-scheme {
     bottom: 5px;
     font-size: 6px;
-  }
-  .matches.statistics .nm-grow main .pr-main-wrap.aside-center .matchinfo-block {
-    display: none;
   }
   .matches .nm-grow main .pr-main-wrap.rcors-modal {
     top: -222px;
@@ -3126,15 +3168,25 @@ header.indexOut,
   }
   .matches .nm-grow main .pr-main-wrap.league-standing,
   .matches .nm-grow main .pr-main-wrap.matches-block,
-  .matches .nm-grow main .pr-main-wrap.media,
   .matches .nm-grow main .pr-main-wrap.hth {
     display: none;
+  }
+  .matches .nm-grow main .pr-main-wrap.media {
+    visibility: hidden;
+    height: 0;
+  }
+  .matches .nm-grow main .pr-main-wrap.media.show {
+    visibility: visible;
+    height: auto;
   }
   .matches .nm-grow main .pr-main-wrap.show {
     display: block;
   }
   .matches .nm-grow main .pr-main-wrap.hide {
-    display: none;
+    display: none!important;
+  }
+  .matches .nm-grow main .pr-main-wrap.aside-center .matchinfo-block {
+    display: none!important;
   }
   .matches .nm-grow main .pr-main-wrap.aside-center .nm-tabs-content {
     overflow-x: hidden;
@@ -3151,6 +3203,7 @@ header.indexOut,
   }
   .matches .nm-grow main .pr-main-wrap.aside-center .details .odds__wrap .odds__right {
     max-width: 143px;
+    width: 143px;
   }
   .matches .nm-grow main .pr-main-wrap.aside-center .details .odds__goals .odds__right {
     max-width: 100%;
@@ -3340,6 +3393,7 @@ header.indexOut,
   .matches .nm-grow main .pr-main-wrap.chat-block .thread__wrap .thread__wrap_input {
     padding-left: 8px;
     padding-right: 8px;
+    background: #fff;
   }
   .matches .nm-grow main .pr-main-wrap.chat-block .thread__wrap .thread__user_content {
     padding-right: 0;

@@ -1353,6 +1353,11 @@
   -webkit-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
 }
+.tournament .nm-header-bottom.ap-around .nm-big-wrapper .nm-menu-content ul {
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
 .tournament .nm-header-bottom .nm-big-wrapper .nm-menu-content ul {
   display: -webkit-box;
   display: -webkit-flex;

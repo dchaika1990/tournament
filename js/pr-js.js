@@ -1088,11 +1088,21 @@ $(window).on('resize', function () {
 /*              Sports news             */
 /*================================================*/
 
+window.addEventListener('load', function () {
+    if ( $('.main-wrapper').hasClass('.statistics') ){
+        $('.media-btn').click();
+    }
+});
+
+
 $('.news-slider').slick({
     infinite: true,
     dots: true,
     slidesToShow: 3,
     slidesToScroll: 3,
+    onInit: function () {
+        $('.nm-header-bottom .nm-menu-content ul li:first-child').click();
+    },
     responsive: [
         {
             breakpoint: 1020,
@@ -1511,15 +1521,23 @@ function videoPlayerControls(html) {
 // Cancelled
 
 window.addEventListener('load', function () {
+    // changeVershionJQ();
     hideCommentsCount();
     createTabsMatchesBlock();
     hideText();
-    makeNeedHeight();
+    if ( $(' .main-wrapper.matches ').length ) makeNeedHeight();
 });
 
 window.addEventListener('resize', function () {
-    makeNeedHeight();
+    if ( $(' .main-wrapper.matches ').length ) makeNeedHeight();
 });
+
+function changeVershionJQ() {
+    if ( $(' .main-wrapper.matches ').length ){
+        console.log('aaa');
+        $('script[src="js/jquery-3.2.1.min.js"]').attr('src','js/jquery-2.2.4.min.js');
+    }
+}
 
 function createTabsMatchesBlock() {
     var title1 = $('.matches-block .nm-tab-content:first-child .winnings__item').clone();
@@ -1574,7 +1592,7 @@ $('.meta-item').on('click', function () {
 });
 
 function hideText() {
-    $('.planned .thread__user').each(function () {
+    $('.chat .thread__user').each(function () {
        var allText = $(this).find('.thread__user_content').text();
        if ( allText.length > 100 ) {
            var cuttingText = allText.slice(0,100) + '...' + ' <span class="toggleText">Read more</span>';
@@ -1609,20 +1627,32 @@ function makeNeedHeight() {
         $(".nm-scroll-area").scrollbar({
             disableBodyScroll: true
         });
-    } else if ( window.innerWidth > 1169 ){
-        if (  $('.thread__content_block').css('max-height') == "235px" ) return false;
-        $('.thread__content_block').css('max-height', '235px');
-    } else if ( window.innerWidth < 869 ){
-        if (  $('.thread__content_block').css('max-height') == "235px" ) return false;
-        $('.thread__content_block').css('max-height', '235px');
-    } else if ( window.innerWidth < 569 ){
+    }  else if ( window.innerWidth < 569 ){
         $('.nm-scroll-area').scrollbar('destroy');
         $('.thread__content_block').css('max-height', heightOfCommentsMobile() +'px');
         $(".nm-scroll-area").scrollbar({
             disableBodyScroll: true
         });
+    } else if ( window.innerWidth > 1169 ){
+        if (  $('.thread__content_block').css('max-height') == '220px' ) return false;
+        $('.nm-scroll-area').scrollbar('destroy');
+        $('.thread__content_block').css('max-height', '220px');
+        $(".nm-scroll-area").scrollbar({
+            disableBodyScroll: true
+        });
+    } else if ( window.innerWidth < 869 ){
+        if (  $('.thread__content_block').css('max-height') == '220px' ) return false;
+        $('.nm-scroll-area').scrollbar('destroy');
+        $('.thread__content_block').css('max-height', '220px');
+        $(".nm-scroll-area").scrollbar({
+            disableBodyScroll: true
+        });
     }
 
+}
+
+function heightOfCommentsDesctop() {
+    var needHeight = $('.pr-main-wrap.video-stream').height() - $('.aside-center .thread__head').height() - parseFloat($('.aside-center .thread__head').css('padding-bottom')) - $('.chat-block .thread__wrap_input').height() - 30 - 15;
 }
 
 function heightOfCommentsMobile() {
@@ -1631,14 +1661,14 @@ function heightOfCommentsMobile() {
 }
 
 function heightOfComments() {
-    var needHeight = $('.aside-center .aside-left .aside-left-wrapper').height() - $('.aside-center .video-banner').height() - $('.aside-center .thread__wrap_input').height() - $('.aside-center .thread__head').height() - 41;
+    var needHeight = $('.aside-center .aside-left .aside-left-wrapper').height() - $('.aside-center .video-banner').height() - $('.aside-center .thread__wrap_input').height() - $('.aside-center .thread__head').height() - parseFloat($('.aside-center .thread__head').css('padding-bottom')) - 30;
     return needHeight;
 }
 
 //Chat button
 
 $('.chat-button').on('click', function () {
-    $('.pr-main-wrap.chat-block').addClass('show');
+    $('.pr-main-wrap.chat-block').addClass('show').removeClass('hide');
     $('.nm-header-bottom').addClass('indexOut');
     $('header').addClass('indexOut');
     $('.nm-big-wrapper').addClass('indexOut');
@@ -1675,7 +1705,7 @@ $('.matches .pr-main-wrap.media .slide-wrap').slick({
             }
         },
         {
-            breakpoint: 569,
+            breakpoint: 570,
             settings: {
                 slidesToShow: 1
             }
@@ -1703,15 +1733,21 @@ $('.aside-left .details .ma_button').on('click', function (e) {
 // Modal window
 
 $('.ma_button.left').on('click', function() {
-    $('.nm-main-overlay').show();
-    $('.rcors-modal').show();
+    $('.nm-main-overlay').fadeIn(200);
+    $('.rcors-modal').fadeIn(200).removeClass('hide');
     $('.nm-grow.nm-big-wrapper').addClass('zIndexAuto');
+    $('html, body').animate({scrollTop: 0},100);
 });
 
-$('.modal-close').on('click', function () {
-    $('.nm-main-overlay').hide();
-    $('.rcors-modal').hide();
+$('.modal-close,.nm-main-overlay').on('click', function () {
+    $('.nm-main-overlay').fadeOut(200);
+    $('.rcors-modal').fadeOut(200);
     $('.nm-grow.nm-big-wrapper').removeClass('zIndexAuto');
+});
+
+$('.rcors-modal').on('click', function (e) {
+    e.preventDefault();
+   return false;
 });
 
 
@@ -1837,7 +1873,7 @@ $(document).ready(function () {
 						slidesToScroll: 1,
 						infinite: true,
 					}
-      },
+                },
 				{
 					breakpoint: 1200,
 					settings: {
@@ -1846,7 +1882,7 @@ $(document).ready(function () {
 						centerPadding: '105px',
 						centerMode: true,
 					}
-      },
+                },
 				{
 					breakpoint: 998,
 					settings: {
@@ -1854,7 +1890,7 @@ $(document).ready(function () {
 						slidesToScroll: 1,
 						centerPadding: '100px',
 					}
-      },
+                },
 				{
 					breakpoint: 768,
 					settings: {
@@ -1862,7 +1898,7 @@ $(document).ready(function () {
 						slidesToScroll: 1,
 						centerMode: false,
 					}
-      },
+                },
 				{
 					breakpoint: 620,
 					settings: {
@@ -1870,7 +1906,7 @@ $(document).ready(function () {
 						slidesToScroll: 1,
 						dots: true
 					}
-      },
+                },
     ]
 		});
 		down = false;

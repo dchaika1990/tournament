@@ -21,6 +21,9 @@ header,
 .matches{
 
   &.chat{
+    .scrollbar-outer > .scroll-content.scroll-scrolly_visible{
+      left: 0;
+    }
     .thread__wrap{
       width: 373px;
       flex-shrink: 0;
@@ -120,10 +123,10 @@ header,
           padding-bottom: 9px;
         }
         &__content{
-          padding: 15px 30px 0 30px;
+          padding: 15px 30px 0 18px;
         }
         &__content_block{
-          max-height: 246px;
+          max-height: 220px;
           padding-left: 30px;
           padding-right: 15px;
         }
@@ -194,11 +197,15 @@ header,
           text-transform: uppercase;
           font-family: 'Gotham Pro',sans-serif;
           color: #a8adb2;
-          margin-left: 10px;
           font-weight: 500;
+
+          input{
+            display: none;
+          }
 
           label{
             cursor: pointer;
+            margin-left: 15px;
           }
           input[type=radio]:checked + label{
             color: #486e7c;
@@ -218,6 +225,7 @@ header,
 
             img{
               max-width: 100%;
+              max-height: 100%;
             }
           }
         }
@@ -251,6 +259,7 @@ header,
           }
         }
         &__wrap_input{
+          background: #fff;
           border-top: 1px solid #f4f4f4;
           position: absolute;
           left: 0;
@@ -763,6 +772,17 @@ header,
 
           .video-banner{
             border-radius: 5px 0 0 5px;
+
+            &__play{
+              opacity: 1;
+            }
+            &__controls{
+              transition: none;
+            }
+            &__content:hover .video-banner__controls{
+              opacity: 0;
+              transition: none;
+            }
           }
 
           .video-about{
@@ -1012,6 +1032,10 @@ header,
               ul{
                 display: flex;
                 justify-content: space-around;
+              }
+
+              li{
+                display: flex;
               }
 
               li:first-child{
@@ -1557,7 +1581,7 @@ header,
           top: -155px;
           left: 50%;
           transform: translateX(-50%);
-          padding-left: 30px;
+          padding-left: 29px;
           padding-right: 30px;
           z-index: 151;
           width: 100%;
@@ -2283,6 +2307,7 @@ header,
       .s-title{
         text-align: left;
         margin-left: 0;
+        border-bottom: none;
       }
 
       .odds {
@@ -2543,6 +2568,8 @@ header,
       &__eventtime {
         font-weight: bold;
         color: #3e80a9;
+        margin-right: 3px;
+
         sup {
           position: relative;
           top: 1px;
@@ -2551,8 +2578,11 @@ header,
         }
       }
       &__event {
-        flex-basis: 16px;
         position: relative;
+        width: 14px;
+        flex-shrink: 0;
+
+
         img {
           position: absolute;
           top: 5px;
@@ -2607,7 +2637,8 @@ header,
         }
       }
     }
-    &.planned{
+    &.planned,
+    &.postponed {
       .nm-grow main .pr-main-wrap.video-stream{
         display: none;
       }
@@ -2944,6 +2975,22 @@ header,
               }
             }
             &.aside-center{
+              .aside-left-scrollable-wrapper{
+                & > .scroll-wrapper{
+                  & > .scroll-content{
+                    & > .nm-tabs-list{
+                      li:nth-child(2){
+                        display: none;
+                      }
+                    }
+                    & > .nm-tabs-content{
+                      .nm-tab-content:nth-child(2){
+                        display: none;
+                      }
+                    }
+                  }
+                }
+              }
               .ma_button.left{
                 display: block;
               }
@@ -2984,7 +3031,8 @@ header,
         }
       }
     }
-    &.planned{
+    &.planned,
+    &.postponed{
       .nm-grow main .pr-main-wrap.video-stream{
         display: flex;
         flex-direction: column;
@@ -3009,7 +3057,7 @@ header,
               width: ~'calc( 100% - 269px )';
             }
             .video-stream{
-              display: none;
+              display: none!important;
             }
             .nm-aside-match-headblock{
               padding-left: 8px;
@@ -3212,7 +3260,8 @@ header,
         top: 0px;
       }
     }
-    &.planned{
+    &.planned,
+    &.postponed{
       .nm-grow{
         main{
           .pr-main-wrap{
@@ -3239,75 +3288,6 @@ header,
             &.video-stream{
               display: none;
             }
-            &.lineups{
-              .pr-main{
-                .pr-main-title{
-                  display: block;
-                }
-                .nm-tabs-list{
-                  padding-left: 8px;
-                  padding-right: 8px;
-                  padding-bottom: 8px;
-                  width: 100%;
-                  ul{
-                    justify-content: flex-start;
-                  }
-                  li > a{
-                    font-size: 11px;
-
-                    img{
-                      height: 20px;
-                    }
-                  }
-                }
-                .nm-players-lineups-block{
-                  padding-left: 8px;
-                  padding-right: 8px;
-                  padding-bottom: 8px;
-                  position: relative;
-
-                  &::after{
-                    position: absolute;
-                    content: '';
-                    display: inline-block;
-                    height: 100%;
-                    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 50%, #ffffff 100%);
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                    width: 65px;
-                  }
-
-                  .nm-field-wrap{
-                    height: 333px;
-                    width: 530px;
-                    transform: translateX(-272px);
-
-                    &.left-side{
-                      transform: none;
-                    }
-
-                    .nm-lineup-scheme{
-                      bottom: 5px;
-                      font-size: 6px;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    &.statistics{
-      .nm-grow{
-        main{
-          .pr-main-wrap{
-            &.aside-center{
-              .matchinfo-block{
-                display: none;
-              }
-            }
           }
         }
       }
@@ -3315,6 +3295,62 @@ header,
     .nm-grow{
       main{
         .pr-main-wrap{
+          &.lineups{
+            .pr-main{
+              .pr-main-title{
+                display: block;
+              }
+              .nm-lineups-tabs{
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-bottom: 8px;
+                width: 100%;
+                ul{
+                  justify-content: flex-start;
+                }
+                li > a{
+                  font-size: 11px;
+
+                  img{
+                    height: 20px;
+                  }
+                }
+              }
+              .nm-players-lineups-block{
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-bottom: 8px;
+                position: relative;
+
+                &::after{
+                  position: absolute;
+                  content: '';
+                  display: inline-block;
+                  height: 100%;
+                  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 50%, #ffffff 100%);
+                  right: 0;
+                  top: 0;
+                  bottom: 0;
+                  width: 65px;
+                }
+
+                .nm-field-wrap{
+                  height: 333px;
+                  width: 530px;
+                  transform: translateX(-272px);
+
+                  &.left-side{
+                    transform: none;
+                  }
+
+                  .nm-lineup-scheme{
+                    bottom: 5px;
+                    font-size: 6px;
+                  }
+                }
+              }
+            }
+          }
           &.rcors-modal{
             top: -222px;
             padding: 0;
@@ -3342,19 +3378,30 @@ header,
 
           &.league-standing,
           &.matches-block,
-          &.media,
           &.hth{
             display: none;
           }
 
+          &.media{
+            visibility: hidden;
+            height: 0;
+          }
+
+          &.media.show{
+            visibility: visible;
+            height: auto;
+          }
           &.show{
             display: block;
           }
 
           &.hide{
-            display: none;
+            display: none!important;
           }
           &.aside-center{
+            .matchinfo-block{
+              display: none!important;
+            }
             .nm-tabs-content{
               overflow-x: hidden;
               width: 100%;
@@ -3373,6 +3420,7 @@ header,
               }
               .odds__wrap .odds__right{
                 max-width: 143px;
+                width: 143px;
               }
               .odds__goals{
                 .odds__right{
@@ -3575,6 +3623,7 @@ header,
                 &__wrap_input{
                   padding-left: 8px;
                   padding-right: 8px;
+                  background: #fff;
                 }
                 &__user_content{
                   padding-right: 0;

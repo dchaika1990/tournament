@@ -528,16 +528,16 @@ main
                                                 th.nm-td  #
                                                 th.nm-td
                                                     .team-radio
-                                                        input(type='radio' name='twoTeams' id='twoTeams')
-                                                        label(for='twoTeams' class='twoTeams')
+                                                        input(type='radio' name='twoTeams' id='twoTeams'+r)
+                                                        label(for='twoTeams'+r class='twoTeams')
                                                             img(src='./img/icons/badge-rsc-anderlecht.png' alt='Edis Ibarguen')
                                                             span +
                                                             img(src='./img/icons/badge-apoel.png' alt='Luis Alejandro Paz')
-                                                        input(type='radio' name='twoTeams' id='firstTeam')
-                                                        label(for='firstTeam' class='oneTeam')
+                                                        input(type='radio' name='twoTeams' id='firstTeam'+r)
+                                                        label(for='firstTeam'+r class='oneTeam')
                                                             img(src='./img/icons/badge-rsc-anderlecht.png' alt='Edis Ibarguen')
-                                                        input(type='radio' name='twoTeams' id='secondTeam')
-                                                        label(for='secondTeam' class='oneTeam')
+                                                        input(type='radio' name='twoTeams' id='secondTeam'+r)
+                                                        label(for='secondTeam'+r class='oneTeam')
                                                             img(src='./img/icons/badge-apoel.png' alt='Luis Alejandro Paz')
                                                 - for ( var l = 0; l < tableTitles[r].length; l++ )
                                                     th.nm-td= tableTitles[r][l]

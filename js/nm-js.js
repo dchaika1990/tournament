@@ -598,7 +598,7 @@ $(".nm-search-form .nm-search-toggle").on("click", function (e) {
 			$(".nm-search-form .nm-btn-close").stop().hide()
 		}
 	}
-})
+});
 
 //clear search btn showing
 $(".nm-search-form .nm-input").on("keydown keyup paste mousemove", function (e) {
@@ -613,7 +613,7 @@ $(".nm-search-form .nm-input").on("keydown keyup paste mousemove", function (e) 
 	} else {
 		$("header").removeClass("nm-searching")
 	}
-})
+});
 
 //clear search btn click
 $(".nm-search-form .nm-btn-clear").on("click", function (e) {
@@ -621,7 +621,7 @@ $(".nm-search-form .nm-btn-clear").on("click", function (e) {
 	e.preventDefault();
 	input.val("");
 	$("header").removeClass("nm-searching")
-})
+});
 
 //close search btn click
 $(".nm-search-form .nm-btn-close, .nm-main-overlay").on("click", function (e) {
@@ -634,7 +634,7 @@ $(".nm-search-form .nm-btn-close, .nm-main-overlay").on("click", function (e) {
 	$(this).stop().hide();
 	$("html").removeClass("remodal-is-locked");
 
-})
+});
 ////////////////////////////////////////
 
 

@@ -286,6 +286,22 @@
 .aside-right.aside-right-favorites .nm-tabs-content {
   padding: 0;
 }
+.aside-right .nm-share-block {
+  width: 54px;
+  top: 8px;
+}
+.aside-right .nm-share-block .nm-share-toggle {
+  right: 0;
+  background-image: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.aside-right .nm-share-block .nm-share-btn {
+  margin-right: 0;
+}
+aside.aside-right.aside-right-favorites {
+  overflow: hidden;
+}
 .aside-right.aside-right-favorites .nm-aside-bigtabs-block .nm-tabs-wrapper .nm-big-tabs {
   background-color: #fff;
 }
