@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+	head
+		title MetaScore: Sport News Category
+		include incl/head
+	body.sport-news-category-page
+		include incl/svg
+			
+		.nm-main-overlay
+		//MAIN-WRAPPER BEGIN
+		.main-wrapper
+			include incl/header
+			include incl/topbar
+			include incl/above_snc_page
+			
+			//BEGIN
+			.nm-big-wrapper
+				.nm-content-overlay
+				
+				include incl/sport_news_category_content
+				
+			//GROW END
+			include incl/footer
+		//MAIN-WRAPPER END
+		include incl/modals
+		include incl/scripts
+		

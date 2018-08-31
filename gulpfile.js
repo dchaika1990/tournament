@@ -5,6 +5,8 @@ var autoprefix = new LessAutoprefix({ browsers: ['last 15 versions', '> 1%', 'ie
 var rename = require('gulp-rename');
 var cssnano = require('gulp-cssnano');
 var cache = require('gulp-cache');
+var gutil = require('gulp-util');
+var ftp = require('gulp-ftp');
 
 /* Task to compile less */
 gulp.task('compile-less', function() {
@@ -21,6 +23,19 @@ gulp.task('css-libs', ['compile-less'], function() {
         .pipe(cssnano()) // Сжимаем
         .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
         .pipe(gulp.dest('./css/')); // Выгружаем в папку app/css
+});
+
+gulp.task('ftp', function () {
+    return gulp.src(['!node_modules','*'])
+        .pipe(ftp({
+            host: 'rocket01.ftp.tools',
+            user: 'rocket01_metascore',
+            pass: 'h1myF6OA3Af8'
+        }))
+        // you need to have some kind of stream after gulp-ftp to make sure it's flushed
+        // this can be a gulp plugin, gulp.dest, or any kind of stream
+        // here we use a passthrough stream
+        .pipe(gutil.noop());
 });
 
 gulp.task('clear', function () {
