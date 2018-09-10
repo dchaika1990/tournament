@@ -90,6 +90,7 @@
           transform: translateY(-44px);
   -webkit-transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.2s, visibility 0.5s linear 0.2s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.2s;
   transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.2s, visibility 0.5s linear 0.2s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.2s;
+  -o-transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.2s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.2s, visibility 0.5s linear 0.2s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.2s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.2s, visibility 0.5s linear 0.2s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.2s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.2s, visibility 0.5s linear 0.2s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.2s;
   z-index: 5;
@@ -100,6 +101,7 @@
           transform: translateY(-88px);
   -webkit-transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.5s linear 0.15s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s;
   transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.5s linear 0.15s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s;
+  -o-transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.5s linear 0.15s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.5s linear 0.15s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.5s linear 0.15s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s;
   z-index: 4;
@@ -110,6 +112,7 @@
           transform: translateY(-132px);
   -webkit-transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, visibility 0.5s linear 0.1s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s;
   transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, visibility 0.5s linear 0.1s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s;
+  -o-transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, visibility 0.5s linear 0.1s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, visibility 0.5s linear 0.1s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, visibility 0.5s linear 0.1s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s;
   z-index: 3;
@@ -120,6 +123,7 @@
           transform: translateY(-176px);
   -webkit-transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, visibility 0.5s linear 0.05s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s;
   transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, visibility 0.5s linear 0.05s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s;
+  -o-transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, visibility 0.5s linear 0.05s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, visibility 0.5s linear 0.05s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, visibility 0.5s linear 0.05s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s;
   z-index: 2;
@@ -130,6 +134,7 @@
           transform: translateY(-220px);
   -webkit-transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, visibility 0.5s linear 0s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0s;
   transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, visibility 0.5s linear 0s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0s;
+  -o-transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, visibility 0.5s linear 0s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, visibility 0.5s linear 0s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, visibility 0.5s linear 0s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0s;
   z-index: 1;
@@ -151,30 +156,35 @@
 .aside-right .nm-share-block.open .nm-share-btn:nth-child(2) {
   -webkit-transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, visibility 0.5s linear 0s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0s;
   transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, visibility 0.5s linear 0s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0s;
+  -o-transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, visibility 0.5s linear 0s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, visibility 0.5s linear 0s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0s, visibility 0.5s linear 0s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0s;
 }
 .aside-right .nm-share-block.open .nm-share-btn:nth-child(3) {
   -webkit-transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, visibility 0.5s linear 0.05s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s;
   transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, visibility 0.5s linear 0.05s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s;
+  -o-transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, visibility 0.5s linear 0.05s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, visibility 0.5s linear 0.05s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s, visibility 0.5s linear 0.05s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.05s;
 }
 .aside-right .nm-share-block.open .nm-share-btn:nth-child(4) {
   -webkit-transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, visibility 0.5s linear 0.1s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s;
   transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, visibility 0.5s linear 0.1s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s;
+  -o-transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, visibility 0.5s linear 0.1s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, visibility 0.5s linear 0.1s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s, visibility 0.5s linear 0.1s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.1s;
 }
 .aside-right .nm-share-block.open .nm-share-btn:nth-child(5) {
   -webkit-transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.5s linear 0.15s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.12s;
   transition: opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.5s linear 0.15s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.12s;
+  -o-transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.12s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.5s linear 0.15s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.12s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.5s linear 0.15s, background 0.2s linear 0s;
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.12s, opacity 0.4s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.5s linear 0.15s, background 0.2s linear 0s, -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.12s;
 }
 .aside-right .nm-share-block.open .nm-share-btn:nth-child(6) {
   -webkit-transition: opacity 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.6s linear 0.15s, background 0.2s linear 0s, -webkit-transform 0.6s cubic-bezier(0.875, 0.26, 0, 1.005) 0.12s;
   transition: opacity 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.6s linear 0.15s, background 0.2s linear 0s, -webkit-transform 0.6s cubic-bezier(0.875, 0.26, 0, 1.005) 0.12s;
+  -o-transition: transform 0.6s cubic-bezier(0.875, 0.26, 0, 1.005) 0.12s, opacity 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.6s linear 0.15s, background 0.2s linear 0s;
   transition: transform 0.6s cubic-bezier(0.875, 0.26, 0, 1.005) 0.12s, opacity 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.6s linear 0.15s, background 0.2s linear 0s;
   transition: transform 0.6s cubic-bezier(0.875, 0.26, 0, 1.005) 0.12s, opacity 0.5s cubic-bezier(0.875, 0.26, 0, 1.005) 0.15s, visibility 0.6s linear 0.15s, background 0.2s linear 0s, -webkit-transform 0.6s cubic-bezier(0.875, 0.26, 0, 1.005) 0.12s;
 }
@@ -190,7 +200,8 @@
   font-size: 11px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   max-width: 100%;
 }
 .aside-right .nm-aside-headblock .nm-mini-breadcrumbs li {
@@ -207,7 +218,8 @@
   content: "";
   background-image: url("../img/icons/icon-arrow-right-grey.svg");
   background-repeat: no-repeat;
-  background-size: 4px 6px;
+  -webkit-background-size: 4px 6px;
+          background-size: 4px 6px;
   width: 4px;
   height: 6px;
   right: 4px;
@@ -215,7 +227,8 @@
 }
 .aside-right .nm-aside-headblock .nm-mini-breadcrumbs li:not(:first-child) {
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 .aside-right .nm-aside-headblock .nm-mini-breadcrumbs li a {
   color: #b8bcc0;
@@ -291,7 +304,8 @@
   font-weight: 500;
   text-transform: uppercase;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   max-width: 85px;
   margin-bottom: 8px;
 }
@@ -368,8 +382,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .aside-right .nm-aside-bigtabs-block .nm-tabs-wrapper .nm-tabs-list li a:hover {
   color: #4186b1;
@@ -501,7 +516,8 @@
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
@@ -572,7 +588,8 @@
   text-transform: uppercase;
   padding-left: 12px;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   white-space: nowrap;
   width: 10%;
   -webkit-box-flex: 1;
@@ -646,14 +663,16 @@
   display: block;
   content: "";
   background-repeat: no-repeat;
-  background-size: contain;
+  -webkit-background-size: contain;
+          background-size: contain;
   background-position: center center;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .aside-right .nm-matches-filters-wrap .nm-matches-filters-row .nm-radio-block .nm-radio-label .nm-icon:before {
   background-image: url("../img/icons/icon-checker-unchecked.svg");
@@ -676,8 +695,9 @@
   color: #a1b1b7;
   font-size: 14px;
   font-weight: 400;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .aside-right .nm-matches-filters-wrap .nm-matches-filters-row .nm-radio-block input[type="checkbox"]:checked ~ .nm-radio-label .nm-svg {
   fill: #fff;
@@ -723,7 +743,8 @@
 }
 .aside-right .nm-table-group .nm-table-teams {
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   white-space: nowrap;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -735,7 +756,8 @@
 }
 .aside-right .nm-table-group .nm-table-teams div {
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   white-space: nowrap;
 }
 .aside-right .nm-table-group .nm-table-score {
@@ -749,7 +771,6 @@
 .aside-right .nm-table-group .nm-table-icon {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
-              -ms-grid-row-align: center;
           align-self: center;
   text-align: center;
   width: 20px;
@@ -759,7 +780,6 @@
 .aside-right .nm-table-group .nm-table-result {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
-              -ms-grid-row-align: center;
           align-self: center;
   text-align: center;
   width: 23px;
@@ -887,8 +907,9 @@
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .aside-right .pr-favorite-container .nm-dropdown ul.first-hover:before {
   border-color: transparent transparent #4186B1 transparent;
@@ -986,7 +1007,8 @@
           align-items: stretch;
   background-image: url("../img/icons/football-field.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
   background-position: top left;
   width: 449px;
   height: 348px;
@@ -994,6 +1016,7 @@
       -ms-transform: translateX(-240px);
           transform: translateX(-240px);
   -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   will-change: transform;
 }
@@ -1032,6 +1055,7 @@
           flex-grow: 1;
   opacity: 0;
   -webkit-transition: 0.3s ease-in-out 0.2s;
+  -o-transition: 0.3s ease-in-out 0.2s;
   transition: 0.3s ease-in-out 0.2s;
 }
 .aside-right .nm-players-lineups-block .nm-field-wrap .nm-column-central {
@@ -1249,7 +1273,8 @@
 }
 .aside-right .nm-lineups-info-block .nm-players-info-section .nm-player-info-row .nm-player-img {
   background-repeat: no-repeat;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center center;
   -webkit-border-radius: 50%;
           border-radius: 50%;
@@ -1260,7 +1285,8 @@
 }
 .aside-right .nm-lineups-info-block .nm-players-info-section .nm-player-info-row .nm-player-text {
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   width: 105px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1272,10 +1298,12 @@
   font-weight: 300;
   color: #43474d;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   white-space: nowrap;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .aside-right .nm-lineups-info-block .nm-players-info-section .nm-player-info-row .nm-player-text .nm-player-about {
   font-size: 11px;
@@ -1475,7 +1503,7 @@
 }
 .aside-right .match__team {
   font-weight: 500;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 .aside-right .match__team img {
   margin-bottom: 10px;
@@ -1648,7 +1676,8 @@
           box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.1);
   position: relative;
   color: #ffffff;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center;
   height: 252px;
   display: -webkit-box;
@@ -1681,6 +1710,8 @@
   right: 0;
   bottom: 0;
   background-image: -webkit-gradient(linear, left top, right top, from(#486e7c), to(#4186b1));
+  background-image: -webkit-linear-gradient(left, #486e7c 0%, #4186b1 100%);
+  background-image: -o-linear-gradient(left, #486e7c 0%, #4186b1 100%);
   background-image: linear-gradient(90deg, #486e7c 0%, #4186b1 100%);
   opacity: 0.71;
 }
@@ -1722,7 +1753,7 @@
 .aside-right .aside-slider__header {
   font-size: 10px;
   font-weight: 500;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
   font-family: 'Gotham Pro';
 }
@@ -1748,7 +1779,7 @@
 }
 .aside-right .aside-slider__wrap .slick-dots li button:before {
   color: #ffffff;
-  opacity: .25;
+  opacity: 0.25;
 }
 .aside-right .aside-slider__wrap .slick-dots li.slick-active button:before {
   opacity: 1;
@@ -1950,7 +1981,8 @@
 .aside-right .details__graph {
   background-image: url(../img/ma/team_timing.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   width: 100%;
   height: 51px;
   margin-bottom: 10px;
@@ -1970,8 +2002,9 @@
 .aside-right .details__timer {
   color: #308ae6;
   font-weight: 500;
-  -webkit-transition: all .1s;
-  transition: all .1s;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
 }
 .aside-right .details__timer-blink {
   opacity: 0;
@@ -2099,8 +2132,9 @@
           align-items: center;
 }
 .aside-right .pregame__odds .odds__left-bottom a div {
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .aside-right .pregame__odds .odds__left-bottom a:hover div:not(.odds__rank) {
   color: #4186b1;
@@ -2280,7 +2314,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .6;
+  opacity: 0.6;
   background-color: #30525f;
 }
 .aside-right .media .odds__left a::after {
@@ -2530,7 +2564,8 @@
   content: "";
   background-image: url("../img/icons/icon-check-green.svg");
   background-repeat: no-repeat;
-  background-size: 12px 9px;
+  -webkit-background-size: 12px 9px;
+          background-size: 12px 9px;
   background-position: center center;
   width: 12px;
   height: 9px;
@@ -2548,7 +2583,6 @@
   background-color: #fff;
   -webkit-align-self: stretch;
       -ms-flex-item-align: stretch;
-              -ms-grid-row-align: stretch;
           align-self: stretch;
 }
 .aside-right-scrollable-wrapper {
@@ -2556,6 +2590,7 @@
   margin-bottom: 0;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005);
   transition: -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005);
+  -o-transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005);
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005);
   transition: transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005), -webkit-transform 0.5s cubic-bezier(0.875, 0.26, 0, 1.005);
   will-change: transform;
@@ -2601,6 +2636,7 @@
 @media (min-width: 921px) {
   .aside-right-scrollable-wrapper > .scrollbar-outer > .scroll-element.scroll-y {
     -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
   }
   .aside-right-scrollable-wrapper:not(:hover) > .scrollbar-outer > .scroll-element.scroll-y:not(.scroll-draggable) {

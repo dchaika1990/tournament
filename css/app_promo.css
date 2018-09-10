@@ -120,6 +120,8 @@
 }
 .app-promo-main .app-promo-scores {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#b43263), to(#486e7c));
+  background-image: -webkit-linear-gradient(bottom, #b43263, #486e7c);
+  background-image: -o-linear-gradient(bottom, #b43263, #486e7c);
   background-image: linear-gradient(to top, #b43263, #486e7c);
   padding: 100px 238px 0 68px;
   display: -webkit-box;
@@ -187,6 +189,8 @@
 }
 .app-promo-main .app-promo-tablet {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#60a989), to(#486e7c));
+  background-image: -webkit-linear-gradient(bottom, #60a989, #486e7c);
+  background-image: -o-linear-gradient(bottom, #60a989, #486e7c);
   background-image: linear-gradient(to top, #60a989, #486e7c);
   padding: 169px 0 0 169px;
   display: -webkit-box;
@@ -440,7 +444,8 @@
     font-size: 11px;
   }
   .app-promo-main .app-promo-box .app-promo-left .ap-list li {
-    background-size: 9px 7px;
+    -webkit-background-size: 9px 7px;
+            background-size: 9px 7px;
     padding: 0 0 0 15px;
   }
   .app-promo-main .app-promo-box .app-promo-left .ap-social {
@@ -530,7 +535,6 @@
     margin-top: 0;
     -webkit-align-self: center;
         -ms-flex-item-align: center;
-                -ms-grid-row-align: center;
             align-self: center;
   }
   .app-promo-main .app-promo-tablet .tablet-right img.dek {

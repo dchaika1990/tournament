@@ -1,0 +1,322 @@
+
+/*================================================*/
+/*					 PRELOAD    			      */
+/*================================================*/
+
+.above-content-block-homepage{
+  .nm-icon-league{
+    img{
+      opacity: 0!important;
+    }
+  }
+  .nm-above-panel{
+    display: none!important;
+  }
+}
+
+.pr-main-wrap{
+  .pr-main{
+    .pr-main-title{
+      .pr-main-title-left{
+        line-height: 14px!important;
+        color: transparent!important;
+        background-color: #8d8d8d!important;
+      }
+      .pr-main-title-right{
+        p{
+          opacity: 0;
+        }
+        .pr-switch{
+          .pr-switch-circle{
+            width: 17px;
+            height: 17px;
+          }
+        }
+      }
+    }
+    .pr-main-content{
+      .pr-main-content-row{
+        .pr-main-content-row-title{
+          .pr-main-content-row-title-left{
+            .pr-country-icon{
+              border-radius: 50%;
+              background-color: #dce6ea;
+              width: 34px;
+              height: 34px;
+
+              svg{
+                display: none;
+              }
+
+              div{
+                display: none;
+              }
+            }
+            .pr-country-name{
+              .pr-mainland-name{
+                a{
+                  background-color: #aad8f4;
+                  color: transparent!important;
+                  display: inline-block;
+                  line-height: 7px;
+                }
+              }
+              .pr-cup-name{
+                a{
+                  background-color: #8198a0;
+                  line-height: 10px;
+                  color: transparent;
+                  display: inline-block;
+                }
+              }
+            }
+          }
+          .pr-main-content-row-title-right{
+            display: none;
+          }
+        }
+        .pr-match-row{
+          .pr-match-row-left{
+            .pr-left-col{
+              p{
+                display: inline-block;
+                color: transparent;
+                background-color: #a1a6aa;
+                line-height: 10px;
+              }
+              span{
+                color: transparent;
+              }
+            }
+            .pr-match-row-center{
+              .pr-match-row-center-left{
+                .pr-team-name-cont{
+                  &:first-child{
+                    margin-bottom: 7px;
+                  }
+                  p{
+                    display: inline-block;
+                    line-height: 10px;
+                    color: transparent;
+                    background-color: #c2c8cc;
+                  }
+                  div{
+                    display: none;
+                  }
+                }
+              }
+            }
+            .pr-match-row-center-right{
+              display: none;
+            }
+          }
+          .pr-match-row-right{
+
+            .pr-favorite-btn.nm-toggler{
+              border-color: #c9cccf;
+            }
+            .icon-icon-favorite{
+              border-radius: 50%;
+              background-color: #a1a6aa;
+              width: 12px;
+              height: 12px;
+
+              &::before{
+                color: transparent;
+              }
+            }
+          }
+
+          &.pr-match-row-active{
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    &.pr-curr-tournaments{
+      display: none;
+    }
+  }
+  &.progress{
+    .pr-main{
+      .progressbar{
+        .progress-date{
+          background-color: #d1d1d1!important;
+          color: transparent!important;
+          display: inline-block;
+          line-height: 10px!important;
+        }
+
+        ul{
+          li{
+            &::before{
+              background-color: #d1d1d1!important;
+            }
+            &::after{
+              background: none!important;
+              border-color: #d1d1d1!important;
+            }
+            &:not(:first-child):not(:last-child){
+              &::after{
+                border: none!important;
+              }
+            }
+            .li-popup.nm-dropdown{
+              display: none!important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.league-standing{
+    .pr-main{
+      .pr-main-title{
+        .pr-main-title-left{
+          background-color: transparent!important;
+          p{
+            background-color: #43474d!important;
+            color: transparent!important;
+            line-height: 10px!important;
+          }
+          span{
+            background-color: #d1d1d1!important;
+            color: transparent!important;
+            line-height: 9px!important;
+            display: inline-block;
+          }
+        }
+      }
+      .pr-main-tab{
+        .nm-tabs-list{
+          display: none!important;
+        }
+        .nm-mini-block{
+          .nm-tabs-content{
+            .nm-tab-content{
+              .nm-thead{
+                .nm-tr{
+                  .nm-td{
+                    padding: 0!important;
+                    margin: 6px 0 9px 0!important;
+                    background-color: #d1d1d1!important;
+                    color: #d1d1d1!important;
+                    display: inline-block!important;
+                    line-height: 8px!important;
+                  }
+                  .nm-table-pts{
+                    background-color: #43474d!important;
+                    color: #43474d!important;
+                    width: 16px!important;
+                  }
+                  .nm-table-last{
+                    margin-left: 40px!important;
+                    margin-right: 43px!important;
+                    width: 31px!important;
+                  }
+                  .nm-table-goals{
+                    display: none!important;
+                  }
+                }
+              }
+              .nm-tbody{
+                .nm-tr{
+                  .nm-table-position{
+                    &::before{
+                      background-color: #d1d1d1!important;
+                    }
+                    .nm-number{
+                      color: #d1d1d1!important;
+                    }
+                  }
+                  .nm-table-icon{
+                    display: none;
+                  }
+                  .nm-table-team{
+                    a{
+                      line-height: 6px!important;
+                      color: transparent!important;
+                      background-color: #43474d!important;
+                      display: inline-block!important;
+                    }
+                  }
+                  .nm-table-count,
+                  .nm-table-pts,
+                  .nm-table-goals{
+                    opacity: 0;
+                  }
+                  .nm-table-last{
+                    span{
+                      background-color: #d1d1d1!important;
+                      color: transparent!important;
+                    }
+                  }
+                  &.team-away,
+                  &.team-home{
+                    background-color: inherit;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.league-md.league-sm,
+  &.top-scores-md,
+  &.matches-sm{
+    display: none!important;
+  }
+}
+
+.aside-right.preload{
+  opacity: 0!important;
+}
+
+@media (max-width: 920px) {
+  .aside-right.preload{
+    display: none;
+  }
+}
+
+@media (max-width: 869px) {
+  .pr-main-wrap{
+    &.progress{
+      .pr-main{
+        .progressbar{
+          display: block!important;
+        }
+        .progressbar-sm{
+          display: none!important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .pr-main-content-row{
+    .pr-arrow{
+      opacity: 0;
+    }
+    .pr-match-rows-wrap{
+      display: block!important;
+    }
+  }
+}
+
+@media (max-width: 569px) {
+  .nm-header-bottom{
+    display: none!important;
+  }
+  .pr-main-wrap{
+    &.league-standing{
+      display: block!important;
+
+      .nm-tabs-list-mobile{
+        opacity: 0!important;
+      }
+    }
+  }
+}

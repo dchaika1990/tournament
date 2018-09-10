@@ -1,0 +1,217 @@
+/*================================================*/
+/*					 PRELOAD    			      */
+/*================================================*/
+.above-content-block-homepage .nm-icon-league img {
+  opacity: 0!important;
+}
+.above-content-block-homepage .nm-above-panel {
+  display: none!important;
+}
+.pr-main-wrap .pr-main .pr-main-title .pr-main-title-left {
+  line-height: 14px!important;
+  color: transparent!important;
+  background-color: #8d8d8d !important;
+}
+.pr-main-wrap .pr-main .pr-main-title .pr-main-title-right p {
+  opacity: 0;
+}
+.pr-main-wrap .pr-main .pr-main-title .pr-main-title-right .pr-switch .pr-switch-circle {
+  width: 17px;
+  height: 17px;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-main-content-row-title .pr-main-content-row-title-left .pr-country-icon {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #dce6ea;
+  width: 34px;
+  height: 34px;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-main-content-row-title .pr-main-content-row-title-left .pr-country-icon svg {
+  display: none;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-main-content-row-title .pr-main-content-row-title-left .pr-country-icon div {
+  display: none;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-main-content-row-title .pr-main-content-row-title-left .pr-country-name .pr-mainland-name a {
+  background-color: #aad8f4;
+  color: transparent!important;
+  display: inline-block;
+  line-height: 7px;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-main-content-row-title .pr-main-content-row-title-left .pr-country-name .pr-cup-name a {
+  background-color: #8198a0;
+  line-height: 10px;
+  color: transparent;
+  display: inline-block;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-main-content-row-title .pr-main-content-row-title-right {
+  display: none;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-left .pr-left-col p {
+  display: inline-block;
+  color: transparent;
+  background-color: #a1a6aa;
+  line-height: 10px;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-left .pr-left-col span {
+  color: transparent;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-left .pr-match-row-center .pr-match-row-center-left .pr-team-name-cont:first-child {
+  margin-bottom: 7px;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-left .pr-match-row-center .pr-match-row-center-left .pr-team-name-cont p {
+  display: inline-block;
+  line-height: 10px;
+  color: transparent;
+  background-color: #c2c8cc;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-left .pr-match-row-center .pr-match-row-center-left .pr-team-name-cont div {
+  display: none;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-left .pr-match-row-center-right {
+  display: none;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-right .pr-favorite-btn.nm-toggler {
+  border-color: #c9cccf;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-right .icon-icon-favorite {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #a1a6aa;
+  width: 12px;
+  height: 12px;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-match-row .pr-match-row-right .icon-icon-favorite::before {
+  color: transparent;
+}
+.pr-main-wrap .pr-main .pr-main-content .pr-main-content-row .pr-match-row.pr-match-row-active {
+  background-color: transparent;
+}
+.pr-main-wrap .pr-main.pr-curr-tournaments {
+  display: none;
+}
+.pr-main-wrap.progress .pr-main .progressbar .progress-date {
+  background-color: #d1d1d1 !important;
+  color: transparent!important;
+  display: inline-block;
+  line-height: 10px!important;
+}
+.pr-main-wrap.progress .pr-main .progressbar ul li::before {
+  background-color: #d1d1d1 !important;
+}
+.pr-main-wrap.progress .pr-main .progressbar ul li::after {
+  background: none!important;
+  border-color: #d1d1d1 !important;
+}
+.pr-main-wrap.progress .pr-main .progressbar ul li:not(:first-child):not(:last-child)::after {
+  border: none!important;
+}
+.pr-main-wrap.progress .pr-main .progressbar ul li .li-popup.nm-dropdown {
+  display: none!important;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-title .pr-main-title-left {
+  background-color: transparent!important;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-title .pr-main-title-left p {
+  background-color: #43474d !important;
+  color: transparent!important;
+  line-height: 10px!important;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-title .pr-main-title-left span {
+  background-color: #d1d1d1 !important;
+  color: transparent!important;
+  line-height: 9px!important;
+  display: inline-block;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-list {
+  display: none!important;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-thead .nm-tr .nm-td {
+  padding: 0!important;
+  margin: 6px 0 9px 0!important;
+  background-color: #d1d1d1 !important;
+  color: #d1d1d1 !important;
+  display: inline-block !important;
+  line-height: 8px!important;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-thead .nm-tr .nm-table-pts {
+  background-color: #43474d !important;
+  color: #43474d !important;
+  width: 16px!important;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-thead .nm-tr .nm-table-last {
+  margin-left: 40px!important;
+  margin-right: 43px!important;
+  width: 31px!important;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-thead .nm-tr .nm-table-goals {
+  display: none!important;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-tbody .nm-tr .nm-table-position::before {
+  background-color: #d1d1d1 !important;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-tbody .nm-tr .nm-table-position .nm-number {
+  color: #d1d1d1 !important;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-tbody .nm-tr .nm-table-icon {
+  display: none;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-tbody .nm-tr .nm-table-team a {
+  line-height: 6px!important;
+  color: transparent!important;
+  background-color: #43474d !important;
+  display: inline-block !important;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-tbody .nm-tr .nm-table-count,
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-tbody .nm-tr .nm-table-pts,
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-tbody .nm-tr .nm-table-goals {
+  opacity: 0;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-tbody .nm-tr .nm-table-last span {
+  background-color: #d1d1d1 !important;
+  color: transparent!important;
+}
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-tbody .nm-tr.team-away,
+.pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-mini-block .nm-tabs-content .nm-tab-content .nm-tbody .nm-tr.team-home {
+  background-color: inherit;
+}
+.pr-main-wrap.league-md.league-sm,
+.pr-main-wrap.top-scores-md,
+.pr-main-wrap.matches-sm {
+  display: none!important;
+}
+.aside-right.preload {
+  opacity: 0!important;
+}
+@media (max-width: 920px) {
+  .aside-right.preload {
+    display: none;
+  }
+}
+@media (max-width: 869px) {
+  .pr-main-wrap.progress .pr-main .progressbar {
+    display: block!important;
+  }
+  .pr-main-wrap.progress .pr-main .progressbar-sm {
+    display: none!important;
+  }
+}
+@media (max-width: 620px) {
+  .pr-main-content-row .pr-arrow {
+    opacity: 0;
+  }
+  .pr-main-content-row .pr-match-rows-wrap {
+    display: block!important;
+  }
+}
+@media (max-width: 569px) {
+  .nm-header-bottom {
+    display: none!important;
+  }
+  .pr-main-wrap.league-standing {
+    display: block!important;
+  }
+  .pr-main-wrap.league-standing .nm-tabs-list-mobile {
+    opacity: 0!important;
+  }
+}

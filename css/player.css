@@ -218,7 +218,8 @@
   height: 15px;
   margin-right: 8px;
   background-image: url("../img/Флаги/Португалия.svg");
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-border-radius: 50%;
@@ -642,7 +643,8 @@
 .player .nm-grow main .pr-main-wrap.player-skills .pr-main.props .pr-main-content .props-content .props-content__box .props-content__title span::before {
   content: '';
   position: absolute;
-  background-size: contain;
+  -webkit-background-size: contain;
+          background-size: contain;
   display: inline-block;
   left: 0;
   right: 0;

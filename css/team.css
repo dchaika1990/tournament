@@ -72,8 +72,9 @@
 }
 .division-dropdown .division-dropdown-list ul li {
   background-color: #fff;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   min-width: 175px;
   text-align: left;
   cursor: pointer;
@@ -204,7 +205,8 @@
   display: inline-block;
   width: 8px;
   height: 8px;
-  background-size: 8px;
+  -webkit-background-size: 8px 8px;
+          background-size: 8px;
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:first-child::after {
   background: url("../img/icons/left-arrow-blue.svg") 8% 50%;
@@ -218,7 +220,8 @@
           transform: translateY(-50%);
   width: 8px;
   height: 8px;
-  background-size: 8px;
+  -webkit-background-size: 8px 8px;
+          background-size: 8px;
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:last-child {
   padding-left: 8px;
@@ -235,7 +238,8 @@
   display: inline-block;
   width: 8px;
   height: 8px;
-  background-size: 8px;
+  -webkit-background-size: 8px 8px;
+          background-size: 8px;
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:last-child::after {
   background: url("../img/icons/right-arrow-blue.svg") 8% 50%;
@@ -249,7 +253,8 @@
           transform: translateY(-50%);
   width: 8px;
   height: 8px;
-  background-size: 8px;
+  -webkit-background-size: 8px 8px;
+          background-size: 8px;
 }
 .team .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover::before {
   display: none;
@@ -294,6 +299,7 @@
           border-radius: 4px;
   border: 1px solid #fff;
   -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .team-player-page-btn:hover {
@@ -401,8 +407,9 @@
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .team-player-favorite-btn .pr-dropdown-favorite ul.first-hover:before {
   border-color: transparent transparent #4186B1 transparent;
@@ -496,6 +503,7 @@
   position: relative;
   z-index: auto;
   -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-header {
@@ -531,7 +539,8 @@
   padding-bottom: 10px;
   text-align: center;
   border-bottom: 1px solid #f4f4f4;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -552,7 +561,8 @@
 .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item .team-player-footer .flag {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   display: inline-block;
   height: 16px;
   width: 16px;
@@ -576,10 +586,13 @@
   z-index: 1;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
 }
 .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper .team-player-box .team-player-item:hover::before {
   background: -webkit-gradient(linear, left bottom, left top, from(#486e7c), to(#3e80a9));
+  background: -webkit-linear-gradient(bottom, #486e7c, #3e80a9);
+  background: -o-linear-gradient(bottom, #486e7c, #3e80a9);
   background: linear-gradient(to top, #486e7c, #3e80a9);
   opacity: 1;
   -webkit-border-radius: 4px;
@@ -779,7 +792,8 @@
   .team .nm-grow main .pr-main-wrap.players .pr-main .pr-team-players-wrapper-mobile .team-player-box-mobile .team-player-country .flag {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
     display: inline-block;
     height: 16px;
     width: 16px;

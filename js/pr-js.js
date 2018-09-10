@@ -1750,9 +1750,9 @@ $('.rcors-modal').on('click', function (e) {
    return false;
 });
 
-
-
-// User page
+/*================================================*/
+/*              User page             */
+/*================================================*/
 
 $('.js-user-name-edit-btn').on('click', function() {
     var _that = $(this),
@@ -1794,26 +1794,27 @@ $('.js-user-name-submit').on('click', function(e) {
 var topPredictorsItems = $('.top-predictors-item'),
     topPredictorsItemsLen = topPredictorsItems.length,
     topPredictorsLimit = 10;
+if ( $('.js-aside-owl-carousel').length ) {
+    var asideOwlCarousel = $('.js-aside-owl-carousel').owlCarousel({
+        items: 1,
+        nav: true,
+        navContainer: '.aside-owl-nav-container > .title',
+        navText: [
+            '<svg class="svg-ic" width="6" height="9"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-left"></use></svg>',
+            '<svg class="svg-ic" width="6" height="9"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use></svg>'
+        ]
+    });
 
-var asideOwlCarousel = $('.js-aside-owl-carousel').owlCarousel({
-    items: 1,
-    nav: true,
-    navContainer: '.aside-owl-nav-container > .title',
-    navText: [
-        '<svg class="svg-ic" width="6" height="9"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-left"></use></svg>',
-        '<svg class="svg-ic" width="6" height="9"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use></svg>'
-    ]
-});
+    asideOwlCarousel.on('changed.owl.carousel', function(event) {
+        var page = event.page.index;
+        var _from = topPredictorsLimit * page + 1;
+        var _to = ((page + 1) * topPredictorsLimit) < topPredictorsItemsLen ?
+            ((page + 1) * topPredictorsLimit) : topPredictorsItemsLen;
 
-asideOwlCarousel.on('changed.owl.carousel', function(event) {
-    var page = event.page.index;
-    var _from = topPredictorsLimit * page + 1;
-    var _to = ((page + 1) * topPredictorsLimit) < topPredictorsItemsLen ?
-        ((page + 1) * topPredictorsLimit) : topPredictorsItemsLen;
-
-    $('.js-top-predictors-from').text(_from);
-    $('.js-top-predictors-to').text(_to);
-});
+        $('.js-top-predictors-from').text(_from);
+        $('.js-top-predictors-to').text(_to);
+    });
+}
 
 $('.js-user-file-input').on('change', function() {
     var _that = $(this)[0],
@@ -1857,7 +1858,6 @@ function validateImgSize(size) {
     alert('Image size should be less than 5mb');
     return false;
 }
-
 
 /*====
 /*================================================*/

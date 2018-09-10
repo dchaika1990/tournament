@@ -149,6 +149,8 @@
   width: 48px;
   height: 48px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#009adc), to(#486e7c));
+  background-image: -webkit-linear-gradient(top, #009adc, #486e7c);
+  background-image: -o-linear-gradient(top, #009adc, #486e7c);
   background-image: linear-gradient(to bottom, #009adc, #486e7c);
   display: -webkit-box;
   display: -webkit-flex;
@@ -534,6 +536,8 @@
   left: 0;
   opacity: 0.71;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#486e7c), to(#4186b1));
+  background-image: -webkit-linear-gradient(bottom, #486e7c, #4186b1);
+  background-image: -o-linear-gradient(bottom, #486e7c, #4186b1);
   background-image: linear-gradient(to top, #486e7c, #4186b1);
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -555,7 +559,8 @@
 .main-news__content .news-item__header .news-item__category {
   color: #ffffff;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 300px;
 }
@@ -677,6 +682,8 @@
 }
 .news-grid .news-item__banner {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#486e7c), to(#4186b1));
+  background-image: -webkit-linear-gradient(bottom, #486e7c, #4186b1);
+  background-image: -o-linear-gradient(bottom, #486e7c, #4186b1);
   background-image: linear-gradient(to top, #486e7c, #4186b1);
   min-height: 213px;
   height: 213px;
@@ -694,6 +701,8 @@
   left: 0;
   opacity: 0.71;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#486e7c), to(#4186b1));
+  background-image: -webkit-linear-gradient(bottom, #486e7c, #4186b1);
+  background-image: -o-linear-gradient(bottom, #486e7c, #4186b1);
   background-image: linear-gradient(to top, #486e7c, #4186b1);
   -webkit-border-radius: 4px 4px 0 0;
           border-radius: 4px 4px 0 0;
@@ -779,7 +788,8 @@
   color: #43474d;
   font-size: 14px;
   font-weight: 500;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -811,7 +821,8 @@
   position: absolute;
   width: 11px;
   height: 14px;
-  background-size: 14px;
+  -webkit-background-size: 14px 14px;
+          background-size: 14px;
   content: '';
   display: inline-block;
 }
@@ -825,6 +836,7 @@
   background: #000;
   opacity: 0.6;
   -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 .news-grid.news-slider .news-item:hover {
@@ -855,7 +867,8 @@
   position: absolute;
   width: 11px;
   height: 14px;
-  background-size: 14px;
+  -webkit-background-size: 14px 14px;
+          background-size: 14px;
   content: '';
   display: inline-block;
 }

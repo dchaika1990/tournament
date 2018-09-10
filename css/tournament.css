@@ -37,7 +37,8 @@
   content: "";
   position: absolute;
   background: url("../img/icons/icon-checker-unchecked.svg") no-repeat 50% 50%;
-  background-size: contain;
+  -webkit-background-size: contain;
+          background-size: contain;
   display: inline-block;
   left: 0;
   right: 0;
@@ -169,8 +170,9 @@
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .pr-favorite-container.above .pr-dropdown-favorite ul.first-hover:before {
   border-color: transparent transparent #4186B1 transparent;
@@ -485,13 +487,15 @@
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-time-period-btn .pr-dropdown-time-period ul li {
   background-color: #fff;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   min-width: 60px;
 }
 .tournament .above-content-block-homepage .nm-content .nm-page-maintext .pr-time-period-btn .pr-dropdown-time-period ul li + li {
@@ -950,8 +954,9 @@
   left: 0;
   right: 0;
   bottom: -14px;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .tournament .nm-grow main .pr-main-wrap.league-standing .pr-main-tab .nm-tabs-wrapper .nm-tabs-list li.active a {
   color: #4186b1;
@@ -1052,7 +1057,8 @@
   -webkit-border-radius: 0;
           border-radius: 0;
   background-color: #3e80a9;
-  background-size: 30%;
+  -webkit-background-size: 30% 30%;
+          background-size: 30%;
   border: none;
 }
 .tournament .nm-grow main .pr-main-wrap.matches-sm .favorites .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav .week .week-slider .nm-dropdown .nm-dropdown-content .prev:hover a,
@@ -1665,6 +1671,7 @@
   }
   .tournament .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-right .aside-right.nm-block .aside-right-wrapper.aside-right-scrollable-wrapper:not(:hover) > .scrollbar-outer > .scroll-element.scroll-y {
     -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
   }
   .tournament .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-right .aside-right.nm-block .aside-right-wrapper.aside-right-scrollable-wrapper:not(:hover) > .scrollbar-outer > .scroll-element.scroll-y:not(.scroll-draggable) {
@@ -1799,20 +1806,22 @@
     -webkit-transform: translateX(200%);
         -ms-transform: translateX(200%);
             transform: translateX(200%);
-    -webkit-transition: -webkit-transform .4s linear;
-    transition: -webkit-transform .4s linear;
-    transition: transform .4s linear;
-    transition: transform .4s linear, -webkit-transform .4s linear;
+    -webkit-transition: -webkit-transform 0.4s linear;
+    transition: -webkit-transform 0.4s linear;
+    -o-transition: transform 0.4s linear;
+    transition: transform 0.4s linear;
+    transition: transform 0.4s linear, -webkit-transform 0.4s linear;
   }
   .tournament .nm-grow main .pr-main-wrap.matches-sm .pr-main.favorites .pr-favorites-main .pr-favorites-right.pr-favorites-scrollable.open {
     border-left: 1px solid #f4f4f4;
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
-    -webkit-transition: -webkit-transform .2s linear;
-    transition: -webkit-transform .2s linear;
-    transition: transform .2s linear;
-    transition: transform .2s linear, -webkit-transform .2s linear;
+    -webkit-transition: -webkit-transform 0.2s linear;
+    transition: -webkit-transform 0.2s linear;
+    -o-transition: transform 0.2s linear;
+    transition: transform 0.2s linear;
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
     z-index: 91;
     width: 434px;
   }
@@ -2098,8 +2107,9 @@
   }
   .tournament .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-tabs-list-mobile .nm-tab-dropdown.nm-toogle-div .nm-dropdown ul.nm-tabs-list.nm-small-tabs.nm-triple-tabs li {
     background-color: #fff;
-    -webkit-transition: all .2s linear;
-    transition: all .2s linear;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
     min-width: 80px;
     text-align: left;
     cursor: pointer;
@@ -2120,8 +2130,9 @@
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    -webkit-transition: .2s;
-    transition: .2s;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
   }
   .tournament .nm-grow main .pr-main-wrap.league-standing .pr-main .pr-main-tab .nm-tabs-wrapper .nm-tabs-list-mobile .nm-tab-dropdown.nm-toogle-div .nm-dropdown ul.nm-tabs-list.nm-small-tabs.nm-triple-tabs li:first-child.active::before {
     border-color: transparent transparent #486e7c transparent;
@@ -2656,7 +2667,8 @@
 .tournament .aside-right-default.nm-block .aside-right-wrapper .top-scores .s-main-content .nm-player-info-row .nm-player-text div,
 .tournament .pr-main-wrap .aside-right-wrapper .top-scores .s-main-content .nm-player-info-row .nm-player-text div {
   width: 100%;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   font-weight: 400;

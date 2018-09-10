@@ -367,6 +367,8 @@ header.indexOut,
   -webkit-border-radius: 50%;
           border-radius: 50%;
   background: -webkit-gradient(linear, left top, left bottom, from(#4c9fbe), to(#8a9be3));
+  background: -webkit-linear-gradient(top, #4c9fbe 0%, #8a9be3 100%);
+  background: -o-linear-gradient(top, #4c9fbe 0%, #8a9be3 100%);
   background: linear-gradient(to bottom, #4c9fbe 0%, #8a9be3 100%);
   z-index: 200;
 }
@@ -500,7 +502,8 @@ header.indexOut,
   content: "";
   position: absolute;
   background: url("../img/icons/icon-checker-unchecked.svg") no-repeat 50% 50%;
-  background-size: contain;
+  -webkit-background-size: contain;
+          background-size: contain;
   display: inline-block;
   left: 0;
   right: 0;
@@ -716,6 +719,10 @@ header.indexOut,
   color: #262626;
   padding: 13px 0;
 }
+.matches.statistics .aside-left .details__timer {
+  opacity: 1;
+  color: #c9cccf;
+}
 .matches.planned .aside-left .details__timer {
   opacity: 1;
   color: #c9cccf;
@@ -725,9 +732,9 @@ header.indexOut,
   text-transform: uppercase;
 }
 .matches.planned .aside-left .details__vote .cell__section {
-  -webkit-flex-basis: 33.3%!important;
-      -ms-flex-preferred-size: 33.3%!important;
-          flex-basis: 33.3%!important;
+  -webkit-flex-basis: 33.3% !important;
+      -ms-flex-preferred-size: 33.3% !important;
+          flex-basis: 33.3% !important;
 }
 .matches.planned .nm-grow main .pr-main-wrap.lineups .pr-main .nm-field-wrap .nm-player-block .nm-player-info-block .nm-player-rating {
   display: none;
@@ -763,11 +770,13 @@ header.indexOut,
 }
 .matches .nm-grow main .pr-main-wrap.video-stream .video-banner__controls {
   -webkit-transition: none;
+  -o-transition: none;
   transition: none;
 }
 .matches .nm-grow main .pr-main-wrap.video-stream .video-banner__content:hover .video-banner__controls {
   opacity: 0;
   -webkit-transition: none;
+  -o-transition: none;
   transition: none;
 }
 .matches .nm-grow main .pr-main-wrap.video-stream .video-about {
@@ -1373,7 +1382,7 @@ header.indexOut,
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .6;
+  opacity: 0.6;
   background-color: #30525f;
   z-index: 10;
   overflow: hidden;
@@ -1545,8 +1554,9 @@ header.indexOut,
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .matches .aside-left .statistics-tab .nm-tabs-wrapper .nm-tabs-list li a:hover {
   color: #4186b1;
@@ -1750,7 +1760,8 @@ header.indexOut,
   font-weight: 500;
   text-transform: uppercase;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   max-width: 85px;
   margin-bottom: 8px;
 }
@@ -1763,7 +1774,8 @@ header.indexOut,
 .matches .aside-left .details__graph {
   background-image: url(../img/ma/team_timing.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   width: 100%;
   height: 51px;
   margin-bottom: 10px;
@@ -1877,8 +1889,9 @@ header.indexOut,
 .matches .aside-left .details__timer {
   color: #308ae6;
   font-weight: 500;
-  -webkit-transition: all .1s;
-  transition: all .1s;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
 }
 .matches .aside-left .details__timer-blink {
   opacity: 0;
@@ -2698,8 +2711,9 @@ header.indexOut,
     left: 0;
     right: 0;
     bottom: 0;
-    -webkit-transition: .2s;
-    transition: .2s;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
   }
   .matches .nm-grow main .pr-main-wrap.aside-center .nm-tabs-list li.active a {
     color: #4186b1;
@@ -2948,8 +2962,9 @@ header.indexOut,
     left: 0;
     right: 0;
     bottom: -6px;
-    -webkit-transition: .2s;
-    transition: .2s;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
   }
   .matches .nm-grow main .pr-main-wrap.matches-block .nm-small-tabs ul li.active > a::before {
     background-color: #4186b1;
@@ -3011,8 +3026,9 @@ header.indexOut,
     left: 0;
     right: 0;
     bottom: -6px;
-    -webkit-transition: .2s;
-    transition: .2s;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
   }
   .matches .nm-grow main .pr-main-wrap.lineups .pr-main .nm-tabs-list li.active > a::before {
     background-color: #4186b1;
@@ -3124,6 +3140,8 @@ header.indexOut,
     display: inline-block;
     height: 100%;
     background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.7)), to(#ffffff));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 50%, #ffffff 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 50%, #ffffff 100%);
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 50%, #ffffff 100%);
     right: 0;
     top: 0;
